@@ -1,0 +1,2852 @@
+# PhD Shortlist Builder — Comprehensive Implementation Plan
+**Assignment**: AI Engineer Take-Home — Ambitio PhD Shortlist Builder  
+**Perspective**: AI Application Developer / AI Engineer  
+**Time Budget**: 72 hours  
+**Core Framework**: LangChain + LangGraph  
+
+---
+
+## 📋 Executive Summary
+
+Build a system that ingests a student profile JSON and produces a ranked shortlist of 50–200 PhD supervisors + programs, each with verifiable paper/grant evidence and a personalised `why_match` blurb. The pipeline is orchestrated using **LangGraph** (stateful DAG with conditional routing and checkpointing) and **LangChain** (LLM chains, prompt templates, tools, and multi-provider fallback). The critical challenge is **data quality** — not the LLM call itself — specifically around entity disambiguation, career-stage verification, domain leakage prevention, and eligibility filtering.
+
+---
+
+## 1. Requirement Analysis
+
+### 1.1 Functional Requirements
+
+| # | Requirement | Priority | Notes |
+|---|-------------|----------|-------|
+| FR-01 | Ingest student profile JSON | Critical | Defined schema with education, skills, interests, countries |
+| FR-02 | Produce 50–200 ranked supervisor recommendations | Critical | Hard minimum of 50 |
+| FR-03 | 100% country adherence (hard constraint) | Critical | Hard fail if breached |
+| FR-04 | Attach verifiable evidence (papers/grants with links) | Critical | Must be verifiable, not hallucinated |
+| FR-05 | Generate personalised `why_match` blurb per supervisor | Critical | Must reference specific PI work |
+| FR-06 | Assign tier labels (reach/target/safety) | High | Relevance scoring |
+| FR-07 | Link PhD programs or open positions | High | Crawled from faculty pages |
+| FR-08 | Output consistent JSON schema documented in README | Critical | schema.md required |
+| FR-09 | Run end-to-end with single command | Critical | Reproducibility requirement |
+| FR-10 | Complete within 15 minutes per shortlist | High | Latency SLA |
+| FR-11 | Feedback loop: ingest outcome CSV to improve future shortlists | Bonus | ADMIT/REJECT signal |
+
+### 1.2 Non-Functional Requirements
+
+| # | Requirement | Target |
+|---|-------------|--------|
+| NFR-01 | Latency | < 15 min per shortlist on single laptop |
+| NFR-02 | Accuracy | ≥ 80% mentor-approved (bullseye + solid) in top 30 |
+| NFR-03 | Contamination rate | < 5% wrong-domain/wrong-person/non-PI entries |
+| NFR-04 | Reproducibility | Same input → same output (deterministic pipeline) |
+| NFR-05 | Data freshness | Papers ≤ 5 years; grants ≤ 3 years (active) |
+| NFR-06 | Observability | LangSmith tracing + full pipeline run logs |
+| NFR-07 | Extensibility | Add new LLM provider with 0 pipeline code changes |
+
+### 1.3 Input Schema
+
+```json
+{
+  "student_id": "string",
+  "education": [
+    {
+      "degree": "B.Tech / M.S. / M.Tech",
+      "institution": "IIT Delhi",
+      "gpa": "9.2/10",
+      "thesis_title": "Deep Learning for Medical Imaging",
+      "graduation_year": 2024
+    }
+  ],
+  "skills": ["Python", "PyTorch", "CUDA", "signal processing"],
+  "projects": [{"title": "...", "description": "..."}],
+  "publications": [{"title": "...", "venue": "...", "year": 2023, "url": "..."}],
+  "research_interests": ["medical image segmentation", "federated learning", "brain-computer interfaces"],
+  "target_countries": ["USA", "Canada", "UK"],
+  "target_intake": {"semester": "Fall", "year": 2025},
+  "intro_call_summary": "Free-text notes from advising session...",
+  "resume_text": "Raw resume content..."
+}
+```
+
+### 1.4 Output Schema
+
+```json
+{
+  "student_id": "string",
+  "generated_at": "ISO-8601 timestamp",
+  "pipeline_version": "1.0.0",
+  "shortlist": [
+    {
+      "rank": 1,
+      "supervisor": {
+        "name": "Dr. Jane Smith",
+        "institution": "MIT",
+        "department": "EECS",
+        "country": "USA",
+        "profile_url": "https://...",
+        "email": "jsmith@mit.edu",
+        "semantic_scholar_id": "A12345678",
+        "google_scholar_id": "abc123"
+      },
+      "research_focus": ["medical imaging", "deep learning"],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "...",
+          "venue": "NeurIPS 2024",
+          "year": 2024,
+          "url": "https://...",
+          "doi": "..."
+        }
+      ],
+      "why_match": "Dr. Smith's NeurIPS 2024 paper on federated radiology directly aligns with your thesis on distributed medical image analysis...",
+      "tier": "target",
+      "open_positions": [{"title": "PhD in Medical AI", "url": "...", "deadline": "Dec 2024"}],
+      "eligibility_flags": [],
+      "confidence_score": 0.87,
+      "match_dimensions": {
+        "research_overlap": 0.92,
+        "recent_activity": 0.85,
+        "is_pi_verified": true,
+        "h_index": 34,
+        "country_match": true
+      }
+    }
+  ],
+  "metadata": {
+    "total_candidates_considered": 850,
+    "data_sources": ["semantic_scholar", "openalex", "nih_reporter", "ukri_gateway"],
+    "llm_provider_used": "groq/llama-3.3-70b",
+    "langgraph_run_id": "uuid",
+    "run_duration_seconds": 305
+  }
+}
+```
+
+### 1.5 Key Data Quality Challenges (from assignment)
+
+| Challenge | Impact | LangChain/LangGraph Mitigation | Improvement Added |
+|-----------|--------|-------------------------------|------------------|
+| Same-name-different-person collisions | High | LangChain Tool returns structured disambiguation results; graph conditional edge routes to verification node | **3-Signal Lock**: require 2/3 of (ORCID ✓ + faculty page ✓ + embedding >0.70) |
+| Career-stage errors | High | Dedicated `verify_pi_node` in LangGraph with rule+LLM hybrid chain | **Faculty directory hard gate** + last paper year staleness check |
+| Wrong-domain leakage from keyword overlap | High | LangChain `domain_check_chain` with PydanticOutputParser; graph loops back if score < threshold | **Two-layer check**: keyword blacklist first → LLM only if passes (saves 40% LLM calls) |
+| Eligibility filters buried in ad text | Medium | LangChain `eligibility_extraction_chain` per open position | **Structured sources first** (FindAPhD, jobs.ac.uk) → LLM fallback on raw text |
+| Output quality (all challenges) | High | Pydantic schema validation | **Confidence breakdown** (6 sub-signals) + **Contamination self-audit** on top-30 |
+
+---
+
+## 2. System Architecture
+
+### 2.1 LangGraph-Powered End-to-End Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                    PhD SHORTLIST BUILDER — LangGraph Pipeline (Enhanced)         │
+│                                                                                  │
+│   CLI / FastAPI  ──▶  LangGraph StateGraph (graph/pipeline_graph.py)             │
+│                                                                                  │
+│   ┌──────────────────────────────────────────────────────────────────────────┐  │
+│   │                    LANGGRAPH STATE MACHINE (9 Nodes)                      │  │
+│   │                                                                            │  │
+│   │  ┌──────────┐   ┌──────────┐   ┌──────────┐   ┌──────────┐              │  │
+│   │  │  ingest_ │──▶│ retrieve_│──▶│ resolve_ │──▶│ verify_  │              │  │
+│   │  │   node   │   │   node   │   │   node   │   │ pi_node  │              │  │
+│   │  └──────────┘   └──────────┘   └──────────┘   └──────────┘              │  │
+│   │  (query expand) (Tools+ReAct)  (3-Signal Lock  (Faculty dir +             │  │
+│   │                                + 2-layer domain  last_paper_year)         │  │
+│   │                                  check)          conditional edge          │  │
+│   │                                                  retry if < 50            │  │
+│   │                                                       │                   │  │
+│   │                                                       ▼                   │  │
+│   │                                                 ┌──────────┐              │  │
+│   │                                                 │  score_  │              │  │
+│   │                                                 │   node   │              │  │
+│   │                                                 └──────────┘              │  │
+│   │                                                       │                   │  │
+│   │                                                       ▼                   │  │
+│   │                                                 ┌──────────┐              │  │
+│   │                                                 │  enrich_ │              │  │
+│   │                                                 │   node   │              │  │
+│   │                                                 └──────────┘              │  │
+│   │                                           (why_match + FindAPhD           │  │
+│   │                                            eligibility + confidence        │  │
+│   │                                            breakdown generation)           │  │
+│   │                                                       │                   │  │
+│   │                                                       ▼                   │  │
+│   │                                                 ┌──────────┐              │  │
+│   │                                                 │ validate_│              │  │
+│   │                                                 │   node   │              │  │
+│   │                                                 └──────────┘              │  │
+│   │                                                       │                   │  │
+│   │                                                       ▼                   │  │
+│   │                                                 ┌───────────┐             │  │
+│   │                                                 │  audit_   │  ← NEW      │  │
+│   │                                                 │   node    │  self-audit  │  │
+│   │                                                 └───────────┘  top-30     │  │
+│   │                                                       │                   │  │
+│   │                                                       ▼                   │  │
+│   │                                                 ┌──────────┐              │  │
+│   │                                                 │ output_  │──▶ END       │  │
+│   │                                                 │   node   │              │  │
+│   │                                                 └──────────┘              │  │
+│   └────────────────────────────────────────────────────────────────────────────┘  │
+│                                                                                  │
+│   ┌──────────────────────────────────────────────────────────────────────────┐  │
+│   │              LANGCHAIN COMPONENTS (used inside nodes)                     │  │
+│   │  LLM Chain (Groq→Ollama fallback)  │ PromptTemplates │ Output Parsers    │  │
+│   │  LangChain Tools (SS, OA, NIH)     │ ChromaDB VStore │ LangSmith         │  │
+│   │  Keyword Blacklist (domain filter) │ FindAPhD client │ Faculty Dir scraper│  │
+│   └──────────────────────────────────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────────────────────────────┘
+```
+
+### 2.2 LangGraph State Definition
+
+```python
+# graph/state.py
+from typing import TypedDict, Annotated
+from langgraph.graph.message import add_messages
+
+class ShortlistState(TypedDict):
+    """Shared state flowing through every LangGraph node."""
+    # Inputs
+    student_profile: dict              # Raw parsed JSON
+    target_countries: list[str]        # Hard constraint
+    search_queries: list[str]          # Expanded by LLM in ingest_node
+
+    # Pipeline data
+    raw_candidates: list[dict]         # After retrieval
+    resolved_candidates: list[dict]    # After entity resolution + PI verification
+    scored_candidates: list[dict]      # After embedding + scoring
+    enriched_candidates: list[dict]    # After LLM why-match generation
+    validated_shortlist: list[dict]    # After quality gates
+    audited_shortlist: list[dict]      # After contamination self-audit (NEW)
+
+    # 3-Signal Lock tracking (NEW — Challenge 1)
+    disambiguation_results: dict       # supervisor_id → {orcid_ok, faculty_ok, embed_ok}
+
+    # Domain check tracking (NEW — Challenge 3)
+    domain_blacklist_blocked: int      # count of candidates blocked by keyword blacklist
+    domain_llm_checked: int            # count sent to LLM for deep check
+
+    # Eligibility tracking (NEW — Challenge 4)
+    findhaphd_positions: list[dict]    # structured positions from FindAPhD / jobs.ac.uk
+
+    # Control flow
+    retrieval_attempts: int            # For retry conditional edge
+    messages: Annotated[list, add_messages]  # LangGraph agent messages
+
+    # Metadata
+    run_id: str
+    pipeline_version: str
+    llm_provider_used: str
+    data_sources_used: list[str]
+    run_start_time: str
+    audit_summary: dict                # contamination self-audit results (NEW)
+```
+
+### 2.3 Technology Stack
+
+| Layer | Technology | Rationale |
+|-------|-----------|-----------|
+| Language | Python 3.11+ | Rich AI/data ecosystem |
+| **Graph Orchestration** | **LangGraph 0.2+** | Stateful DAG, conditional edges, checkpointing, resume-on-failure |
+| **LLM Chains** | **LangChain 0.3+** | PromptTemplates, output parsers, tool calling, multi-provider |
+| **LLM Primary** | **ChatGroq (langchain-groq)** | `llama-3.3-70b-versatile`, fast inference, free tier |
+| **LLM Fallback** | **ChatOllama (langchain-ollama)** | Local, no rate limits, `llama3.2:3b` / `mistral:7b` |
+| **Fallback Mechanism** | **`.with_fallbacks()`** | LangChain native Groq→Ollama failover |
+| **Output Parsing** | **PydanticOutputParser** | Structured JSON from LLM, validated at runtime |
+| **Tools / Agents** | **LangChain Tools + ToolNode** | Data source tools usable by ReAct agent |
+| **Vector Store** | **LangChain Chroma** | Semantic candidate retrieval with metadata filtering |
+| **Embeddings** | **HuggingFaceEmbeddings** | `all-MiniLM-L6-v2`, local, no API cost |
+| **Observability** | **LangSmith** | Full trace of every chain/node/tool call |
+| **Checkpointing** | **LangGraph AsyncPostgresSaver** | Resume pipeline after failure, stored in PostgreSQL |
+| Web Framework | FastAPI | Async, OpenAPI auto-docs |
+| CLI | Typer | Single-command execution |
+| **Database** | **PostgreSQL 16 + SQLAlchemy 2 (async) + asyncpg** | JSONB, UUID, tsvector full-text search, pgvector ready |
+| **Migrations** | **Alembic** | Schema versioning, zero-downtime migrations |
+| **DB Driver** | **asyncpg** | Async PostgreSQL driver, 3× faster than psycopg2 |
+| Cache | diskcache (L2) + PostgreSQL (L3) | Persistent cross-run API cache + structured candidate cache |
+| Containerization | Docker + Docker Compose | Reproducible environment |
+
+---
+
+## 3. AI/LLM Integration Strategy
+
+### 3.1 LLM Use Cases Mapped to LangChain Chains
+
+| Use Case | LangChain Component | Node | Model |
+|----------|--------------------|----|-------|
+| Query expansion | `query_expansion_chain` (PromptTemplate + JsonOutputParser) | `ingest_node` | Groq llama-3.3-70b |
+| Domain relevance check | `domain_check_chain` (PromptTemplate + PydanticOutputParser) | `resolve_node` | Ollama (bulk) |
+| PI career-stage verification | `pi_verify_chain` (PromptTemplate + PydanticOutputParser) | `verify_pi_node` | Groq |
+| Eligibility extraction | `eligibility_chain` (PromptTemplate + PydanticOutputParser) | `enrich_node` | Groq |
+| `why_match` blurb generation | `why_match_chain` (PromptTemplate + StrOutputParser) | `enrich_node` | Groq llama-3.3-70b |
+| Feedback analysis | `feedback_analysis_chain` | (standalone) | Groq |
+
+### 3.2 Groq as Primary Provider (via LangChain ChatGroq)
+
+```python
+# llm/providers.py
+from langchain_groq import ChatGroq
+from langchain_ollama import ChatOllama
+
+# Primary: Groq
+groq_llm = ChatGroq(
+    model="llama-3.3-70b-versatile",
+    temperature=0,
+    max_tokens=1024,
+    api_key=settings.GROQ_API_KEY,
+    timeout=10,
+    max_retries=2,          # LangChain built-in retry on transient errors
+)
+
+# Fallback: Ollama (local)
+ollama_llm = ChatOllama(
+    model="llama3.2:3b",
+    base_url=settings.OLLAMA_BASE_URL,
+    temperature=0,
+    timeout=60,
+)
+```
+
+### 3.3 Groq → Ollama Fallback via `.with_fallbacks()`
+
+LangChain's `.with_fallbacks()` method provides a native, declarative fallback chain — no custom try/except needed:
+
+```python
+# llm/router.py — LANGCHAIN NATIVE FALLBACK
+
+from langchain_core.runnables import RunnableWithFallbacks
+
+# The primary chain automatically falls back to Ollama on:
+# - RateLimitError (429)
+# - ServiceUnavailableError (503)
+# - ConnectError / TimeoutError
+# - Any exception listed in exceptions_to_handle
+
+llm_with_fallback: RunnableWithFallbacks = groq_llm.with_fallbacks(
+    fallbacks=[ollama_llm],
+    exceptions_to_handle=(
+        Exception,          # catches RateLimitError, APIConnectionError, etc.
+    ),
+)
+
+# Usage in any chain — transparent, zero boilerplate:
+response = llm_with_fallback.invoke("Your prompt here")
+# → tries Groq first, silently falls back to Ollama if Groq fails
+```
+
+### 3.4 Fallback State Machine (LangChain Native)
+
+```
+LangChain .with_fallbacks() State Machine:
+
+  invoke(prompt)
+       │
+       ▼
+  ┌─────────────────────────────────┐
+  │   groq_llm.invoke(prompt)        │
+  │   ├── Success → return response  │
+  │   ├── RateLimitError (429)       │
+  │   │     → retry 2× (built-in)   │
+  │   │     → raise after 2 fails    │──▶ .with_fallbacks() catches
+  │   ├── ServiceUnavailable (503)   │        │
+  │   │     → raise immediately      │──▶ .with_fallbacks() catches
+  │   └── Timeout / ConnectError     │──▶ .with_fallbacks() catches
+  └─────────────────────────────────┘          │
+                                               ▼
+                                   ┌──────────────────────────┐
+                                   │  ollama_llm.invoke(prompt)│
+                                   │  ├── Success → return     │
+                                   │  └── Error → raise        │
+                                   └──────────────────────────┘
+                                               │
+                                               ▼ (if Ollama also fails)
+                                   Rule-based why_match fallback
+                                   (generate_rule_based_why_match())
+```
+
+### 3.5 Token Budget Management with LangChain Callbacks
+
+```python
+# llm/token_tracker.py
+from langchain_core.callbacks import BaseCallbackHandler
+
+class TokenBudgetCallback(BaseCallbackHandler):
+    """Track token usage and switch to Ollama if Groq budget exhausted."""
+    
+    def __init__(self, groq_budget_tpm: int = 5500):
+        self.groq_tokens_this_minute = 0
+        self.budget_tpm = groq_budget_tpm
+        self.window_start = time.time()
+    
+    def on_llm_end(self, response, **kwargs):
+        usage = response.llm_output.get("token_usage", {})
+        tokens = usage.get("total_tokens", 0)
+        
+        # Reset window every 60s
+        if time.time() - self.window_start > 60:
+            self.groq_tokens_this_minute = 0
+            self.window_start = time.time()
+        
+        self.groq_tokens_this_minute += tokens
+        
+        if self.groq_tokens_this_minute > self.budget_tpm:
+            logger.warning(f"Groq TPM budget exceeded — switching to Ollama")
+            # Signal the router to prefer Ollama for next N requests
+
+# Attach to LLM:
+groq_llm = ChatGroq(..., callbacks=[TokenBudgetCallback()])
+```
+
+---
+
+## 4. Multi-Provider LLM Architecture
+
+### 4.1 LangChain Provider Abstraction (Built-In)
+
+LangChain's `BaseChatModel` interface is already the provider abstraction layer — every provider (Groq, Ollama, OpenAI, Gemini, Claude) implements the same `invoke()` / `ainvoke()` / `stream()` / `batch()` interface. No custom abstract class needed.
+
+```
+LangChain BaseChatModel (built-in abstraction)
+         │
+         ├── ChatGroq          (langchain-groq)
+         ├── ChatOllama        (langchain-ollama)
+         ├── ChatOpenAI        (langchain-openai)
+         ├── ChatAnthropic     (langchain-anthropic)
+         ├── ChatGoogleGenerativeAI  (langchain-google-genai)
+         └── ChatMistralAI     (langchain-mistralai)
+
+All share the SAME interface:
+  llm.invoke(prompt)
+  await llm.ainvoke(prompt)
+  llm.batch([prompt1, prompt2])
+  llm | output_parser  (LCEL piping)
+```
+
+### 4.2 Adding a New Provider — Zero Pipeline Code Changes
+
+```python
+# To add Anthropic Claude: ONE config change only
+
+# .env (or settings.yaml):
+# LLM_PROVIDER=anthropic
+# ANTHROPIC_API_KEY=sk-ant-...
+# ANTHROPIC_MODEL=claude-3-5-sonnet-20241022
+
+# config/settings.py — provider factory
+from langchain_anthropic import ChatAnthropic   # pip install langchain-anthropic
+
+def build_llm_chain() -> RunnableWithFallbacks:
+    provider = settings.LLM_PRIMARY_PROVIDER
+    
+    providers = {
+        "groq": lambda: ChatGroq(model=settings.GROQ_MODEL, api_key=settings.GROQ_API_KEY),
+        "openai": lambda: ChatOpenAI(model=settings.OPENAI_MODEL, api_key=settings.OPENAI_API_KEY),
+        "anthropic": lambda: ChatAnthropic(model=settings.ANTHROPIC_MODEL, api_key=settings.ANTHROPIC_API_KEY),
+        "gemini": lambda: ChatGoogleGenerativeAI(model=settings.GEMINI_MODEL, google_api_key=settings.GOOGLE_API_KEY),
+        "ollama": lambda: ChatOllama(model=settings.OLLAMA_MODEL, base_url=settings.OLLAMA_BASE_URL),
+    }
+    
+    primary = providers[provider]()
+    fallback = providers["ollama"]()    # always fall back to local Ollama
+    
+    return primary.with_fallbacks([fallback])
+
+# ← Adding Claude requires ONLY: pip install langchain-anthropic + set env vars
+# ← ZERO changes to any graph node, chain, or tool
+```
+
+### 4.3 Provider Configuration (settings.yaml)
+
+```yaml
+llm:
+  primary_provider: groq          # swap to: openai | anthropic | gemini | ollama
+  groq:
+    model: llama-3.3-70b-versatile
+    api_key_env: GROQ_API_KEY
+    max_retries: 2
+    timeout_s: 10
+  ollama:
+    model: llama3.2:3b            # fallback model
+    base_url: http://localhost:11434
+    timeout_s: 60
+  # Uncomment to add new provider (no code changes needed):
+  # openai:
+  #   model: gpt-4o-mini
+  #   api_key_env: OPENAI_API_KEY
+  # anthropic:
+  #   model: claude-3-5-sonnet-20241022
+  #   api_key_env: ANTHROPIC_API_KEY
+  # gemini:
+  #   model: gemini-1.5-flash
+  #   api_key_env: GOOGLE_API_KEY
+
+langsmith:
+  enabled: true
+  project: phd-shortlist-builder
+  api_key_env: LANGCHAIN_API_KEY
+```
+
+---
+
+## 5. Project Structure
+
+```
+phd-shortlist-builder/
+│
+├── README.md                          # Approach, sources, how-to-run
+├── DECISIONS.md                       # Trade-offs & design choices
+├── schema.md                          # Output JSON schema documentation
+├── pyproject.toml                     # Dependencies
+├── .env.example                       # Environment variable template
+├── docker-compose.yml
+├── Dockerfile
+│
+├── main.py                            # CLI entry point (Typer)
+│
+├── config/
+│   ├── settings.py                    # Pydantic Settings + provider factory
+│   ├── settings.yaml                  # Default config values
+│   └── logging.yaml                   # Structured JSON logging config
+│
+├── graph/                             # ← LangGraph orchestration layer
+│   ├── __init__.py
+│   ├── pipeline_graph.py              # StateGraph definition & compilation (9 nodes)
+│   ├── state.py                       # ShortlistState TypedDict (enhanced)
+│   ├── nodes/                         # One file per graph node
+│   │   ├── ingest_node.py             # Parse profile + LangChain query expansion
+│   │   ├── retrieve_node.py           # ToolNode + FindAPhD/jobs.ac.uk structured sources
+│   │   ├── resolve_node.py            # 3-Signal Lock + two-layer domain check
+│   │   ├── verify_pi_node.py          # Faculty dir hard gate + staleness check
+│   │   ├── score_node.py              # Embedding similarity + confidence breakdown builder
+│   │   ├── enrich_node.py             # why_match chain + eligibility extraction
+│   │   ├── validate_node.py           # Quality gates (Pydantic + country + evidence)
+│   │   ├── audit_node.py              # Contamination self-audit on top-30  ← NEW
+│   │   └── output_node.py             # JSON assembly + file export
+│   └── edges.py                       # Conditional edge functions
+│
+├── chains/                            # ← LangChain LCEL chain definitions
+│   ├── __init__.py
+│   ├── query_expansion_chain.py       # PromptTemplate | LLM | JsonOutputParser
+│   ├── domain_check_chain.py          # Two-layer: keyword blacklist + LLM deep check
+│   ├── pi_verify_chain.py             # PromptTemplate | LLM | PydanticOutputParser
+│   ├── eligibility_chain.py           # FindAPhD structured → LLM fallback on raw text
+│   ├── why_match_chain.py             # PromptTemplate | LLM | StrOutputParser
+│   ├── confidence_breakdown_chain.py  # Builds 6-signal confidence score  ← NEW
+│   └── feedback_analysis_chain.py     # PromptTemplate | LLM | StructuredOutputParser
+│
+├── tools/                             # ← LangChain Tool definitions
+│   ├── __init__.py
+│   ├── semantic_scholar_tool.py       # @tool search_semantic_scholar()
+│   ├── openalex_tool.py               # @tool search_openalex()  [OpenAlex ID as master]
+│   ├── nih_reporter_tool.py           # @tool search_nih_grants()
+│   ├── ukri_gateway_tool.py           # @tool search_ukri_grants()
+│   ├── web_scraper_tool.py            # @tool scrape_faculty_page()
+│   ├── faculty_directory_tool.py      # @tool check_faculty_directory()  ← NEW
+│   └── findhaphd_tool.py              # @tool search_findhaphd()  ← NEW
+│
+├── data_sources/                      # ← Raw API clients (used by tools)
+│   ├── base.py
+│   ├── semantic_scholar.py
+│   ├── openalex.py                    # OpenAlex ID used as master supervisor identifier
+│   ├── nih_reporter.py
+│   ├── ukri_gateway.py
+│   ├── findhaphd.py                   # FindAPhD.com scraper (structured eligibility)  ← NEW
+│   ├── jobs_ac_uk.py                  # jobs.ac.uk scraper (UK positions)  ← NEW
+│   └── cache.py                       # diskcache wrapper
+│
+├── entity_resolution/                 # ← Logic called by resolve/verify nodes
+│   ├── name_disambiguator.py          # 3-Signal Lock implementation
+│   ├── pi_verifier.py                 # Faculty dir gate + staleness check
+│   ├── domain_classifier.py           # Keyword blacklist + venue classifier + LLM
+│   ├── eligibility_extractor.py       # FindAPhD structured + LLM fallback
+│   └── confidence_builder.py          # 6-signal confidence breakdown  ← NEW
+│
+├── llm/
+│   ├── providers.py                   # LLM provider factory (build_llm_chain())
+│   └── token_tracker.py              # TokenBudgetCallback
+│
+├── vectorstore/
+│   ├── __init__.py
+│   ├── chroma_store.py                # LangChain Chroma integration
+│   └── embedder.py                    # HuggingFaceEmbeddings wrapper
+│
+├── scoring/
+│   ├── scorer.py                      # Multi-signal scorer
+│   └── ranker.py                      # Tier assignment
+│
+├── db/
+│   ├── models.py                      # SQLAlchemy ORM models
+│   ├── repository.py
+│   └── migrations/
+│
+├── api/
+│   ├── app.py                         # FastAPI app
+│   ├── routes/
+│   │   ├── shortlist.py
+│   │   ├── feedback.py
+│   │   └── health.py
+│   └── schemas/
+│
+├── feedback/
+│   ├── ingester.py
+│   ├── analyzer.py
+│   └── improver.py
+│
+├── tests/
+│   ├── unit/
+│   │   ├── test_chains.py             # Test each LangChain chain in isolation
+│   │   ├── test_tools.py              # Test each LangChain tool
+│   │   ├── test_graph_nodes.py        # Test each LangGraph node
+│   │   ├── test_name_disambiguator.py
+│   │   ├── test_pi_verifier.py
+│   │   └── test_scorer.py
+│   ├── integration/
+│   │   ├── test_graph_edges.py        # Conditional edge routing
+│   │   ├── test_api_endpoints.py
+│   │   └── test_data_sources.py
+│   ├── e2e/
+│   │   └── test_full_pipeline.py
+│   └── fixtures/
+│       ├── sample_student_profile.json
+│       └── sample_outcomes.csv
+│
+└── sample_output/
+    └── <student_id>.json
+```
+
+---
+
+## 6. Implementation Roadmap
+
+### Phase 1: Foundation & LangGraph Scaffold (Hours 0–12)
+
+- [ ] Project scaffold, `pyproject.toml`, `.env.example`, Docker setup
+- [ ] Pydantic models: `StudentProfile`, `CandidateSupervisor`, `ShortlistOutput`
+- [ ] Config: `Settings` class + `settings.yaml`
+- [ ] **LLM providers**: `ChatGroq` + `ChatOllama` + `.with_fallbacks()` router
+- [ ] **LangGraph**: define `ShortlistState`, scaffold `StateGraph` with all 7 nodes + edges
+- [ ] **LangSmith**: configure tracing (`LANGCHAIN_TRACING_V2=true`)
+- [ ] **LangGraph AsyncPostgresSaver checkpointing**: enable resume-on-failure (stored in PostgreSQL)
+- [ ] Data source clients: Semantic Scholar, OpenAlex API wrappers
+- [ ] Basic cache layer (diskcache)
+- [ ] **PostgreSQL DB** via Docker Compose + SQLAlchemy async models + `asyncpg`
+- [ ] Alembic initial migration (`alembic revision --autogenerate -m "init"`)
+- [ ] `.env` configured with `DATABASE_URL=postgresql+asyncpg://...`
+
+**Milestone**: LangGraph pipeline runs end-to-end (even with stub nodes)
+
+### Phase 2: LangChain Chains + Tools (Hours 12–36)
+
+- [ ] **LangChain Tools**: `@tool` decorators for SS, OpenAlex, NIH Reporter, UKRI
+- [ ] **OpenAlex ID** set as master supervisor identifier (replaces name-based matching)
+- [ ] **`faculty_directory_tool`**: scrape university faculty pages to confirm PI status  ← NEW
+- [ ] **`findhaphd_tool`**: fetch structured positions with eligibility fields from FindAPhD  ← NEW
+- [ ] **ReAct retrieval agent** in `retrieve_node` (ToolNode + `create_react_agent`)
+- [ ] **`query_expansion_chain`**: `PromptTemplate | llm_with_fallback | JsonOutputParser`
+- [ ] **Two-layer `domain_check_chain`**: keyword blacklist first → LLM only if passes  ← IMPROVED
+- [ ] **`pi_verify_chain`**: faculty directory gate + h-index + last_paper_year check  ← IMPROVED
+- [ ] **`eligibility_chain`**: FindAPhD structured data first → LLM fallback on raw text  ← IMPROVED
+- [ ] **ChromaDB vectorstore**: index supervisor research summaries; LangChain retriever
+- [ ] `score_node`: embedding similarity + venue classifier + recency multi-signal scorer
+- [ ] Country adherence hard filter in `validate_node`
+- [ ] **Venue-based discipline classifier** in `resolve_node` (NeurIPS≠PMLA)  ← NEW
+
+**Milestone**: Can produce a basic shortlist JSON passing the hard constraints
+
+### Phase 3: Quality, Why-Match & Validation (Hours 36–52)
+
+- [ ] **`why_match_chain`**: grounded blurb generation, temperature=0.5, `StrOutputParser`
+- [ ] **3-Signal Lock** in `resolve_node`: require 2/3 of (ORCID + faculty page + embed >0.70)  ← NEW
+- [ ] LangGraph **conditional edge** in `verify_pi_node`: loop back to `retrieve_node` if count < 50
+- [ ] **`confidence_breakdown_chain`**: build 6-signal score per supervisor  ← NEW
+- [ ] **`audit_node`**: contamination self-audit on top-30 — flag `contamination_risk`  ← NEW
+- [ ] Quality gates in `validate_node`: evidence checker, schema validation, contamination flags
+- [ ] ORCID API cross-reference in `verify_pi_node`
+- [ ] Tier assignment (reach/target/safety) in `score_node`
+- [ ] Single-command CLI: `python main.py --profile student.json`
+- [ ] README.md, schema.md, DECISIONS.md drafts (document all 5 improvements)
+
+**Milestone**: Full end-to-end pipeline with validated, schema-compliant output
+
+### Phase 4: Polish, Feedback Loop & Submission (Hours 52–72)
+
+- [ ] **Feedback loop**: `feedback_analysis_chain` + `FeedbackImprover`
+- [ ] FastAPI async endpoints (invoke LangGraph graph asynchronously)
+- [ ] Comprehensive test suite (chains, nodes, tools, e2e)
+- [ ] Performance optimization (async `ainvoke` throughout, `abatch` for why-match)
+- [ ] Docker deployment testing
+- [ ] DECISIONS.md finalization (5+ challenges with LangChain/LangGraph examples)
+- [ ] Sample output generation
+- [ ] GitHub cleanup and submission
+
+**Milestone**: Submission-ready system with LangSmith traces as evidence
+
+---
+
+## 7. Database Design
+
+### 7.1 PostgreSQL Schema
+
+> **Why PostgreSQL?**  
+> - **JSONB**: store raw API payloads without separate serialization  
+> - **UUID**: globally unique IDs, safe for distributed inserts  
+> - **TEXT[]**: native arrays for research areas, skills, countries  
+> - **tsvector**: built-in full-text search on paper abstracts  
+> - **TIMESTAMPTZ**: timezone-aware timestamps (critical for multi-region)  
+> - **pgvector** (optional): store supervisor embeddings directly in Postgres  
+> - **LangGraph AsyncPostgresSaver**: checkpoints stored in the same DB — single infra
+
+```sql
+-- ─────────────────────────────────────────────
+-- Enable extensions
+-- ─────────────────────────────────────────────
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";    -- UUID generation
+CREATE EXTENSION IF NOT EXISTS "pg_trgm";      -- fuzzy name matching
+CREATE EXTENSION IF NOT EXISTS "vector";       -- pgvector (optional, for embedding storage)
+
+-- ─────────────────────────────────────────────
+-- Supervisor candidates
+-- ─────────────────────────────────────────────
+CREATE TABLE supervisors (
+    id                  TEXT PRIMARY KEY,        -- semantic_scholar_id or openalex_id
+    name                TEXT NOT NULL,
+    institution         TEXT,
+    department          TEXT,
+    country             TEXT,
+    email               TEXT,
+    profile_url         TEXT,
+    orcid               TEXT UNIQUE,
+    google_scholar_id   TEXT,
+    h_index             INTEGER,
+    paper_count         INTEGER,
+    is_pi_verified      BOOLEAN DEFAULT NULL,    -- NULL=unchecked, TRUE/FALSE=verified
+    career_stage        TEXT CHECK (career_stage IN ('faculty','postdoc','student','unknown')),
+    research_areas      TEXT[],                  -- PostgreSQL native array
+    raw_api_payload     JSONB,                   -- full API response for debugging
+    chroma_doc_id       TEXT,                    -- LangChain Chroma document ID
+    embedding           vector(384),             -- pgvector: all-MiniLM-L6-v2 dims (optional)
+    fetched_at          TIMESTAMPTZ DEFAULT NOW(),
+    last_paper_year     INTEGER,
+    
+    CONSTRAINT supervisor_name_institution UNIQUE (name, institution)
+);
+
+-- Indexes for common query patterns
+CREATE INDEX idx_supervisors_country   ON supervisors (country);
+CREATE INDEX idx_supervisors_h_index   ON supervisors (h_index DESC);
+CREATE INDEX idx_supervisors_pi        ON supervisors (is_pi_verified);
+CREATE INDEX idx_supervisors_areas_gin ON supervisors USING GIN (research_areas);
+CREATE INDEX idx_supervisors_name_trgm ON supervisors USING GIN (name gin_trgm_ops);  -- fuzzy search
+CREATE INDEX idx_supervisors_embedding ON supervisors USING ivfflat (embedding vector_cosine_ops); -- pgvector
+
+-- ─────────────────────────────────────────────
+-- Papers linked to supervisors
+-- ─────────────────────────────────────────────
+CREATE TABLE papers (
+    id              TEXT PRIMARY KEY,            -- DOI or Semantic Scholar paper ID
+    supervisor_id   TEXT REFERENCES supervisors(id) ON DELETE CASCADE,
+    title           TEXT NOT NULL,
+    venue           TEXT,
+    year            INTEGER,
+    url             TEXT,
+    doi             TEXT UNIQUE,
+    abstract        TEXT,
+    citation_count  INTEGER DEFAULT 0,
+    raw_payload     JSONB,
+    search_vector   tsvector GENERATED ALWAYS AS (
+                        to_tsvector('english', coalesce(title,'') || ' ' || coalesce(abstract,''))
+                    ) STORED,                   -- full-text search index
+    fetched_at      TIMESTAMPTZ DEFAULT NOW()
+);
+
+CREATE INDEX idx_papers_supervisor  ON papers (supervisor_id);
+CREATE INDEX idx_papers_year        ON papers (year DESC);
+CREATE INDEX idx_papers_fts         ON papers USING GIN (search_vector);  -- full-text search
+
+-- ─────────────────────────────────────────────
+-- Grants linked to supervisors
+-- ─────────────────────────────────────────────
+CREATE TABLE grants (
+    id              TEXT PRIMARY KEY,
+    supervisor_id   TEXT REFERENCES supervisors(id) ON DELETE CASCADE,
+    title           TEXT NOT NULL,
+    funder          TEXT,
+    amount_usd      INTEGER,
+    start_year      INTEGER,
+    end_year        INTEGER,
+    url             TEXT,
+    abstract        TEXT,
+    raw_payload     JSONB,
+    search_vector   tsvector GENERATED ALWAYS AS (
+                        to_tsvector('english', coalesce(title,'') || ' ' || coalesce(abstract,''))
+                    ) STORED,
+    fetched_at      TIMESTAMPTZ DEFAULT NOW()
+);
+
+CREATE INDEX idx_grants_supervisor  ON grants (supervisor_id);
+CREATE INDEX idx_grants_funder      ON grants (funder);
+CREATE INDEX idx_grants_fts         ON grants USING GIN (search_vector);
+
+-- ─────────────────────────────────────────────
+-- Generated shortlists
+-- ─────────────────────────────────────────────
+CREATE TABLE shortlists (
+    id                  UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    student_id          TEXT NOT NULL,
+    generated_at        TIMESTAMPTZ DEFAULT NOW(),
+    pipeline_version    TEXT,
+    output_json         JSONB NOT NULL,          -- full shortlist as native JSON
+    run_duration_s      INTEGER,
+    llm_provider        TEXT,
+    langgraph_thread_id TEXT,                   -- maps to AsyncPostgresSaver thread
+    langsmith_run_url   TEXT,
+    run_metadata        JSONB                    -- node timings, token counts, source stats
+);
+
+CREATE INDEX idx_shortlists_student     ON shortlists (student_id);
+CREATE INDEX idx_shortlists_generated   ON shortlists (generated_at DESC);
+CREATE INDEX idx_shortlists_output_gin  ON shortlists USING GIN (output_json);  -- query into JSON
+
+-- ─────────────────────────────────────────────
+-- Individual shortlist entries (normalized for feedback)
+-- ─────────────────────────────────────────────
+CREATE TABLE shortlist_entries (
+    id                  UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    shortlist_id        UUID REFERENCES shortlists(id) ON DELETE CASCADE,
+    supervisor_id       TEXT REFERENCES supervisors(id),
+    rank                INTEGER NOT NULL,
+    tier                TEXT CHECK (tier IN ('reach','target','safety','review_needed')),
+    confidence_score    NUMERIC(4,3),              -- e.g. 0.872 (overall)
+    confidence_breakdown JSONB,                   -- 6-signal breakdown (NEW)
+    --  Example: {
+    --    "orcid_verified": true,        "orcid_score": 0.25,
+    --    "faculty_page_confirmed": true, "faculty_score": 0.20,
+    --    "paper_topic_overlap": 0.82,   "overlap_score": 0.25,
+    --    "recent_activity": true,        "recency_score": 0.15,
+    --    "eligibility_clear": true,      "eligibility_score": 0.10,
+    --    "h_index": 34,                  "hindex_score": 0.05
+    --  }
+    why_match           TEXT,
+    match_dimensions    JSONB,                     -- research_overlap, recent_activity, etc.
+    evidence_snapshot   JSONB,                     -- papers/grants at time of generation
+    eligibility_flags   TEXT[],                    -- ["UK_only"] | ["unknown"] | []
+    contamination_risk  TEXT[],                    -- ["identity_unverified"] | [] (NEW)
+    disambiguation_signals JSONB,                  -- 3-signal lock results (NEW)
+    faculty_page_confirmed BOOLEAN DEFAULT NULL,   -- from faculty_directory_tool (NEW)
+    last_paper_year     INTEGER,                   -- staleness check (NEW)
+    created_at          TIMESTAMPTZ DEFAULT NOW()
+);
+
+CREATE INDEX idx_entries_shortlist   ON shortlist_entries (shortlist_id);
+CREATE INDEX idx_entries_supervisor  ON shortlist_entries (supervisor_id);
+CREATE INDEX idx_entries_rank        ON shortlist_entries (shortlist_id, rank);
+CREATE INDEX idx_entries_tier        ON shortlist_entries (tier);
+CREATE INDEX idx_entries_contamination ON shortlist_entries USING GIN (contamination_risk);
+
+-- ─────────────────────────────────────────────
+-- Contamination audit log (NEW — for DECISIONS.md evidence)
+-- ─────────────────────────────────────────────
+CREATE TABLE contamination_audit_log (
+    id               UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    shortlist_id     UUID REFERENCES shortlists(id) ON DELETE CASCADE,
+    supervisor_id    TEXT,
+    rank             INTEGER,
+    risk_flags       TEXT[],
+    stage_caught     TEXT,                    -- 'resolve_node' | 'verify_pi_node' | 'audit_node'
+    action_taken     TEXT,                    -- 'removed' | 'flagged' | 'tier_downgraded'
+    logged_at        TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- ─────────────────────────────────────────────
+-- Feedback / outcome stream
+-- ─────────────────────────────────────────────
+CREATE TYPE outcome_type AS ENUM (
+    'ADMIT', 'INTERVIEW', 'POSITIVE_REPLY',
+    'REJECT', 'NO_REPLY', 'BOUNCE',
+    'OUT_OF_OFFICE', 'WRONG_PERSON', 'NOT_RECRUITING'
+);
+
+CREATE TABLE outcomes (
+    id                  UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    student_id          TEXT NOT NULL,
+    supervisor_id       TEXT REFERENCES supervisors(id),
+    institution         TEXT,
+    area                TEXT,
+    sent_at             TIMESTAMPTZ,
+    outcome             outcome_type NOT NULL,   -- strongly typed ENUM
+    shortlist_entry_id  UUID REFERENCES shortlist_entries(id),
+    ingested_at         TIMESTAMPTZ DEFAULT NOW(),
+    raw_csv_row         JSONB                    -- original CSV row for audit
+);
+
+CREATE INDEX idx_outcomes_student    ON outcomes (student_id);
+CREATE INDEX idx_outcomes_supervisor ON outcomes (supervisor_id);
+CREATE INDEX idx_outcomes_outcome    ON outcomes (outcome);
+CREATE INDEX idx_outcomes_sent_at    ON outcomes (sent_at DESC);
+
+-- ─────────────────────────────────────────────
+-- Supervisor performance signals (derived from outcomes)
+-- ─────────────────────────────────────────────
+CREATE TABLE supervisor_signals (
+    supervisor_id       TEXT PRIMARY KEY REFERENCES supervisors(id),
+    total_emails        INTEGER DEFAULT 0,
+    positive_responses  INTEGER DEFAULT 0,       -- ADMIT + INTERVIEW + POSITIVE_REPLY
+    admit_count         INTEGER DEFAULT 0,
+    response_rate       NUMERIC(5,4),            -- 0.0000–1.0000
+    area_success        JSONB DEFAULT '{}',      -- {"medical_imaging": 0.75, ...}
+    last_updated        TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- ─────────────────────────────────────────────
+-- API response cache (replaces diskcache for shared deployments)
+-- ─────────────────────────────────────────────
+CREATE TABLE api_cache (
+    cache_key       TEXT PRIMARY KEY,
+    source          TEXT,                        -- 'semantic_scholar' | 'openalex' | etc.
+    response_json   JSONB NOT NULL,
+    fetched_at      TIMESTAMPTZ DEFAULT NOW(),
+    expires_at      TIMESTAMPTZ NOT NULL
+);
+
+CREATE INDEX idx_cache_expires ON api_cache (expires_at);
+-- Auto-cleanup: remove expired cache entries
+CREATE OR REPLACE FUNCTION purge_expired_cache() RETURNS void AS $$
+    DELETE FROM api_cache WHERE expires_at < NOW();
+$$ LANGUAGE SQL;
+```
+
+### 7.2 Key Relationships
+
+```
+supervisors ──< papers             (one supervisor → many papers, CASCADE delete)
+supervisors ──< grants             (one supervisor → many grants, CASCADE delete)
+supervisors ──< shortlist_entries  ──< outcomes
+shortlists  ──< shortlist_entries
+supervisor_signals — supervisors   (derived MATERIALIZED VIEW in production)
+supervisors.chroma_doc_id → ChromaDB collection "supervisors"
+supervisors.embedding (vector) → pgvector ANN search (alternative to Chroma)
+shortlists.langgraph_thread_id → LangGraph AsyncPostgresSaver checkpoints table
+```
+
+### 7.3 SQLAlchemy Async Models (asyncpg)
+
+```python
+# db/models.py
+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
+from sqlalchemy import String, Integer, Boolean, Numeric, Text, ARRAY, Enum as SAEnum
+from sqlalchemy.dialects.postgresql import UUID, JSONB, TIMESTAMPTZ
+import uuid
+
+class Base(DeclarativeBase):
+    pass
+
+class Supervisor(Base):
+    __tablename__ = "supervisors"
+    
+    id:               Mapped[str]           = mapped_column(String, primary_key=True)
+    name:             Mapped[str]           = mapped_column(String, nullable=False)
+    institution:      Mapped[str | None]    = mapped_column(String)
+    country:          Mapped[str | None]    = mapped_column(String)
+    h_index:          Mapped[int | None]    = mapped_column(Integer)
+    is_pi_verified:   Mapped[bool | None]   = mapped_column(Boolean)
+    research_areas:   Mapped[list[str]]     = mapped_column(ARRAY(Text), default=[])
+    raw_api_payload:  Mapped[dict | None]   = mapped_column(JSONB)
+    fetched_at:       Mapped[datetime]      = mapped_column(TIMESTAMPTZ)
+    
+    papers:           Mapped[list["Paper"]] = relationship(back_populates="supervisor", cascade="all, delete")
+    grants:           Mapped[list["Grant"]] = relationship(back_populates="supervisor", cascade="all, delete")
+
+class Shortlist(Base):
+    __tablename__ = "shortlists"
+    
+    id:                  Mapped[uuid.UUID]  = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    student_id:          Mapped[str]        = mapped_column(String, nullable=False)
+    output_json:         Mapped[dict]       = mapped_column(JSONB, nullable=False)
+    run_metadata:        Mapped[dict | None]= mapped_column(JSONB)
+    langgraph_thread_id: Mapped[str | None] = mapped_column(String)
+    generated_at:        Mapped[datetime]   = mapped_column(TIMESTAMPTZ, default=datetime.utcnow)
+```
+
+### 7.4 Database Connection (Async SQLAlchemy + asyncpg)
+
+```python
+# db/engine.py
+from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
+
+# DATABASE_URL format for asyncpg:
+# postgresql+asyncpg://user:password@host:5432/phd_shortlist
+engine = create_async_engine(
+    settings.DATABASE_URL,
+    pool_size=10,          # max persistent connections
+    max_overflow=20,       # temporary extra connections under load
+    pool_timeout=30,       # raise after 30s if no connection available
+    pool_pre_ping=True,    # verify connection health before use
+    echo=settings.DEBUG,   # log SQL in debug mode
+)
+
+AsyncSessionLocal = async_sessionmaker(
+    engine, class_=AsyncSession, expire_on_commit=False
+)
+
+# FastAPI dependency:
+async def get_db() -> AsyncGenerator[AsyncSession, None]:
+    async with AsyncSessionLocal() as session:
+        yield session
+```
+
+### 7.5 Alembic Migrations Setup
+
+```bash
+# Initial setup (run once):
+alembic init alembic
+# Edit alembic/env.py to point to async engine
+
+# Create first migration:
+alembic revision --autogenerate -m "init_schema"
+
+# Apply migrations:
+alembic upgrade head
+
+# Useful commands:
+alembic history           # view migration history
+alembic downgrade -1      # roll back one migration
+alembic current           # show current DB version
+```
+
+---
+
+## 8. API Design
+
+### 8.1 Endpoints
+
+#### `POST /api/v1/shortlist` — Generate Shortlist
+```http
+POST /api/v1/shortlist
+Content-Type: application/json
+Authorization: Bearer <API_KEY>
+
+{
+  "student_profile": { /* student profile JSON */ },
+  "options": {
+    "max_results": 100,
+    "require_open_positions": false,
+    "min_evidence_count": 1
+  }
+}
+```
+**Response** (202 Accepted — async):
+```json
+{
+  "job_id": "uuid-v4",
+  "langgraph_thread_id": "thread-uuid",
+  "status": "queued",
+  "estimated_duration_seconds": 305,
+  "poll_url": "/api/v1/shortlist/jobs/uuid-v4",
+  "langsmith_trace_url": "https://smith.langchain.com/..."
+}
+```
+
+#### `GET /api/v1/shortlist/jobs/{job_id}` — Poll Status
+```json
+{
+  "job_id": "uuid-v4",
+  "status": "completed",
+  "current_node": "output_node",
+  "shortlist_id": "uuid-v4",
+  "result_url": "/api/v1/shortlist/uuid-v4"
+}
+```
+
+#### `GET /api/v1/shortlist/{shortlist_id}` — Retrieve Result
+```json
+{
+  "student_id": "...",
+  "generated_at": "2025-01-15T10:30:00Z",
+  "shortlist": [...],
+  "metadata": {
+    "langgraph_run_id": "...",
+    "langsmith_trace_url": "https://smith.langchain.com/..."
+  }
+}
+```
+
+#### `POST /api/v1/feedback` — Ingest Outcome CSV
+```json
+{
+  "ingested_rows": 243,
+  "new_outcomes": 89,
+  "supervisor_signals_updated": 67,
+  "errors": []
+}
+```
+
+#### `GET /api/v1/health`
+```json
+{
+  "status": "healthy",
+  "groq_status": "available",
+  "ollama_status": "available",
+  "langsmith_enabled": true,
+  "database": "connected",
+  "vectorstore_docs": 4820
+}
+```
+
+### 8.2 Authentication & Security
+
+- API keys in `.env`, verified via FastAPI dependency injection
+- Input validation via Pydantic v2 (prevents prompt injection)
+- Rate limiting via `slowapi` (100 req/min per client)
+- LangSmith traces: project-scoped access controls
+
+---
+
+## 9. Error Handling & Monitoring
+
+### 9.1 LangSmith Observability (Primary)
+
+LangSmith provides full observability with zero additional code — every LangChain chain invocation, every LangGraph node transition, every tool call is automatically traced:
+
+```python
+# .env — enables full tracing automatically
+LANGCHAIN_TRACING_V2=true
+LANGCHAIN_API_KEY=ls__...
+LANGCHAIN_PROJECT=phd-shortlist-builder
+
+# Every chain, node, tool call is traced:
+# LangSmith dashboard shows:
+#   - Token usage per chain / per node
+#   - Latency breakdown by stage
+#   - LLM inputs/outputs for debugging
+#   - Which provider was used (Groq vs Ollama)
+#   - Error traces with full context
+```
+
+### 9.2 Structured Logging (Supplementary)
+
+```python
+# config/logging.yaml — JSON structured logs
+import structlog
+
+logger = structlog.get_logger()
+
+# Each node logs:
+logger.info(
+    "node_completed",
+    node="enrich_node",
+    student_id=state["student_profile"]["student_id"],
+    candidates_in=len(state["scored_candidates"]),
+    why_matches_generated=58,
+    provider_used=state["llm_provider_used"],
+    duration_ms=elapsed_ms
+)
+```
+
+### 9.3 LangGraph Checkpointing — Resume on Failure (PostgreSQL)
+
+LangGraph's **`AsyncPostgresSaver`** stores pipeline checkpoints directly in PostgreSQL — the same database used for supervisors, shortlists, and outcomes. No separate checkpointing infra needed.
+
+```python
+# graph/pipeline_graph.py
+from langgraph.checkpoint.postgres.aio import AsyncPostgresSaver
+import asyncpg
+
+async def build_pipeline_graph_with_checkpointer(settings) -> CompiledGraph:
+    # Reuse the same PostgreSQL connection pool
+    conn = await asyncpg.connect(settings.DATABASE_URL_SYNC)  # plain asyncpg DSN
+    
+    # AsyncPostgresSaver auto-creates its checkpoint tables on first use
+    checkpointer = AsyncPostgresSaver(conn)
+    await checkpointer.setup()   # creates langgraph_checkpoint* tables
+    
+    graph = build_pipeline_graph(settings)
+    return graph.compile(checkpointer=checkpointer)
+
+# Run with thread_id for resume capability:
+config = {"configurable": {"thread_id": run_id}}
+result = await graph.ainvoke(initial_state, config=config)
+
+# On ANY node failure — restart resumes from last successful checkpoint:
+# result = await graph.ainvoke(None, config=config)
+# e.g. if enrich_node failed, re-run skips ingest/retrieve/resolve/score
+```
+
+**Checkpoint tables auto-created by LangGraph in PostgreSQL:**
+```sql
+-- Auto-managed by AsyncPostgresSaver (do not edit manually):
+langgraph_checkpoints        -- full state snapshots at each node
+langgraph_checkpoint_blobs   -- large binary state blobs
+langgraph_checkpoint_writes  -- write-ahead log for atomic state updates
+```
+
+### 9.4 Error Classification & Recovery
+
+| Error Type | LangChain/LangGraph Recovery | Impact |
+|------------|---------------------------|--------|
+| Groq 429 rate limit | `.with_fallbacks()` → Ollama | Zero (transparent) |
+| Groq 503 service down | `.with_fallbacks()` → Ollama | Zero (transparent) |
+| Groq timeout | `max_retries=2` then `.with_fallbacks()` | Zero |
+| Ollama not running | Both providers fail → rule-based why_match | Medium (lower quality) |
+| Data source API down | diskcache hit, then skip source | Low |
+| < 50 candidates after resolve | LangGraph conditional edge → retry retrieve | Handled by graph |
+| Invalid student JSON | Pydantic validation → fail fast with clear error | User error |
+| Country constraint breach | Hard filter in validate_node, logged | Zero |
+
+### 9.5 Pipeline Run Report
+
+```json
+{
+  "run_id": "uuid",
+  "student_id": "12345",
+  "langgraph_thread_id": "thread-uuid",
+  "langsmith_trace_url": "https://smith.langchain.com/runs/...",
+  "duration_seconds": 305,
+  "nodes_executed": ["ingest_node", "retrieve_node", "resolve_node", "verify_pi_node", "score_node", "enrich_node", "validate_node", "output_node"],
+  "llm_usage": {
+    "groq_tokens": 45280,
+    "ollama_tokens": 12400,
+    "fallbacks_triggered": 3
+  },
+  "quality_metrics": {
+    "country_adherence": 1.0,
+    "evidence_coverage": 1.0,
+    "pi_verified_pct": 0.97,
+    "why_match_llm_enriched_pct": 0.89
+  }
+}
+```
+
+---
+
+## 10. Deployment Strategy
+
+### 10.1 Local Development (Single Command)
+
+```bash
+# 1. Clone & install
+git clone https://github.com/your-org/phd-shortlist-builder
+cd phd-shortlist-builder
+pip install -e ".[dev]"    # installs langchain, langgraph, langchain-groq, langchain-ollama, etc.
+
+# 2. Configure environment
+cp .env.example .env
+# Edit .env:
+#   GROQ_API_KEY=gsk_...
+#   LANGCHAIN_TRACING_V2=true       # optional but recommended
+#   LANGCHAIN_API_KEY=ls__...       # optional
+#   OLLAMA_BASE_URL=http://localhost:11434
+
+# 3. Optional: start Ollama (for fallback)
+ollama pull llama3.2:3b
+
+# 4. Run end-to-end with single command
+python main.py --profile tests/fixtures/sample_student_profile.json \
+               --output sample_output/
+```
+
+### 10.2 Docker-Based Deployment
+
+```yaml
+# docker-compose.yml
+version: "3.9"
+services:
+
+  # ── PostgreSQL Database ─────────────────────────────────────────────
+  postgres:
+    image: pgvector/pgvector:pg16        # includes pgvector extension
+    ports: ["5432:5432"]
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-phd_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-phd_pass}
+      POSTGRES_DB: ${POSTGRES_DB:-phd_shortlist}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql  # runs on first start
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U phd_user -d phd_shortlist"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ── Main Application ────────────────────────────────────────────────
+  app:
+    build: .
+    ports: ["8000:8000"]
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - LANGCHAIN_TRACING_V2=${LANGCHAIN_TRACING_V2:-false}
+      - LANGCHAIN_API_KEY=${LANGCHAIN_API_KEY:-}
+      - OLLAMA_BASE_URL=http://ollama:11434
+      # asyncpg DSN format:
+      - DATABASE_URL=postgresql+asyncpg://${POSTGRES_USER:-phd_user}:${POSTGRES_PASSWORD:-phd_pass}@postgres:5432/${POSTGRES_DB:-phd_shortlist}
+      # plain DSN for asyncpg direct (LangGraph checkpointer):
+      - DATABASE_URL_SYNC=postgresql://${POSTGRES_USER:-phd_user}:${POSTGRES_PASSWORD:-phd_pass}@postgres:5432/${POSTGRES_DB:-phd_shortlist}
+    volumes:
+      - ./cache:/app/cache
+      - ./sample_output:/app/sample_output
+      - ./logs:/app/logs
+    depends_on:
+      postgres:
+        condition: service_healthy   # wait for DB to be ready
+      ollama:
+        condition: service_started
+    command: >-
+      sh -c "alembic upgrade head &&
+             uvicorn api.app:app --host 0.0.0.0 --port 8000 --reload"
+
+  # ── Ollama (LLM Fallback) ───────────────────────────────────────────
+  ollama:
+    image: ollama/ollama:latest
+    ports: ["11434:11434"]
+    volumes:
+      - ollama_data:/root/.ollama
+    entrypoint: ["/bin/sh", "-c", "ollama serve & sleep 5 && ollama pull llama3.2:3b && wait"]
+
+volumes:
+  postgres_data:     # persistent PostgreSQL data
+  ollama_data:       # persistent model weights
+```
+
+**`.env.example` additions for PostgreSQL:**
+```bash
+# PostgreSQL
+POSTGRES_USER=phd_user
+POSTGRES_PASSWORD=phd_pass
+POSTGRES_DB=phd_shortlist
+
+# SQLAlchemy async URL (used by app)
+DATABASE_URL=postgresql+asyncpg://phd_user:phd_pass@localhost:5432/phd_shortlist
+
+# Plain asyncpg URL (used by LangGraph AsyncPostgresSaver)
+DATABASE_URL_SYNC=postgresql://phd_user:phd_pass@localhost:5432/phd_shortlist
+```
+
+```dockerfile
+FROM python:3.11-slim
+WORKDIR /app
+COPY pyproject.toml .
+RUN pip install --no-cache-dir -e ".[prod]"
+COPY . .
+RUN mkdir -p data cache logs sample_output
+CMD ["python", "main.py"]
+```
+
+### 10.3 Cloud Deployment (Production-Scale)
+
+```
+Recommended: Railway.app / Render.com / AWS ECS
+
+Infrastructure:
+  - App Server:   2 vCPU, 4GB RAM (FastAPI + LangGraph)
+  - PostgreSQL:   AWS RDS PostgreSQL 16 with pgvector extension
+                  OR Railway Postgres (simpler, managed)
+                  Connection pool: PgBouncer (transaction mode, 100 connections)
+  - Ollama:       GPU-enabled instance (A10G / T4) for local LLM fallback
+  - Cache:        Redis (upgrade diskcache → Redis for shared multi-pod cache)
+  - LangChain LLM Cache: PostgresCache (langchain-community) → same PG instance
+  - Queue:        Celery + Redis (async shortlist generation jobs)
+  - Object Store: S3 (large output JSONs as backup)
+  - Observability: LangSmith Cloud (zero-config, traces via env vars)
+  - Migrations:   Alembic run in app startup or CI/CD pipeline
+```
+
+**PgBouncer connection pooling for production:**
+```ini
+# pgbouncer.ini (transaction pooling — safe for async SQLAlchemy)
+[databases]
+phd_shortlist = host=postgres port=5432 dbname=phd_shortlist
+
+[pgbouncer]
+pool_mode = transaction
+max_client_conn = 1000
+default_pool_size = 25
+```
+
+---
+
+## 11. Scalability & Performance
+
+### 11.1 Caching Strategy
+
+```
+Cache Hierarchy:
+  L1: In-process (functools.lru_cache)  — same-run dedup of tool calls
+  L2: diskcache (persistent file)       — cross-run API response cache (TTL-based)
+  L3: ChromaDB (semantic)               — supervisor vector index for retrieval
+  L4: PostgreSQL api_cache table        — shared cross-pod API response cache
+                                          (replaces diskcache in production)
+
+LangChain LLM Cache (PostgreSQL-backed):
+  from langchain_community.cache import PostgresCache
+  from langchain_core.globals import set_llm_cache
+  set_llm_cache(PostgresCache(
+      connection_string=settings.DATABASE_URL_SYNC,
+      table_name="langchain_llm_cache"
+  ))
+  # Caches identical LLM prompts → saves tokens on duplicate domain checks
+  # Works across restarts and multiple app instances
+```
+
+**Cache TTLs**:
+- Semantic Scholar author data: 7 days
+- Paper abstracts: 30 days
+- Grant data: 3 days
+- LLM domain check results (via LangChain cache): 24 hours
+- ORCID lookups: 14 days
+
+### 11.2 Async Parallelism with LangChain `abatch`
+
+```python
+# All LangChain chains support .abatch() for parallel execution:
+
+# retrieve_node.py — parallel tool invocations
+results = await asyncio.gather(
+    semantic_scholar_tool.arun(queries),
+    openalex_tool.arun(queries),
+    nih_reporter_tool.arun(queries),
+    ukri_gateway_tool.arun(queries),
+)
+
+# enrich_node.py — parallel why-match generation (top 60 only)
+# LangChain abatch() handles concurrency + rate limiting
+why_matches = await why_match_chain.abatch(
+    [{"supervisor": c, "student": profile} for c in top_60_candidates],
+    config={"max_concurrency": 10}   # built-in semaphore in abatch()
+)
+```
+
+**Expected latency breakdown** (single student, no cache):
+```
+ingest_node  (query expansion):     ~5s
+retrieve_node (parallel sources):   ~60s
+resolve_node (domain checks):       ~30s  (Ollama bulk, concurrent)
+verify_pi_node (PI checks):         ~20s
+score_node (embeddings + ranking):  ~15s
+enrich_node (why-match abatch):     ~150s (60 × 2.5s avg, 10 concurrent)
+validate_node (quality gates):      ~10s
+output_node (JSON assembly):        ~5s
+Total:                              ~295s (~5 min)  ✓ < 15 min target
+```
+
+### 11.3 LangChain Chroma Vectorstore for Semantic Retrieval
+
+```python
+# vectorstore/chroma_store.py
+from langchain_chroma import Chroma
+from langchain_huggingface import HuggingFaceEmbeddings
+
+embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+
+vectorstore = Chroma(
+    collection_name="supervisors",
+    embedding_function=embeddings,
+    persist_directory="data/chromadb",
+)
+
+# Add supervisor research summaries:
+vectorstore.add_texts(
+    texts=[s.research_summary for s in supervisors],
+    ids=[s.id for s in supervisors],
+    metadatas=[{"country": s.country, "h_index": s.h_index} for s in supervisors]
+)
+
+# Semantic retrieval with hard country filter (score_node):
+retriever = vectorstore.as_retriever(
+    search_type="similarity",
+    search_kwargs={
+        "k": 200,
+        "filter": {"country": {"$in": student.target_countries}}
+    }
+)
+docs = retriever.invoke(", ".join(student.research_interests))
+```
+
+---
+
+## 12. Testing Strategy
+
+### 12.1 Unit Tests — LangChain Chains
+
+```python
+# tests/unit/test_chains.py
+import pytest
+from unittest.mock import patch, MagicMock
+from chains.query_expansion_chain import build_query_expansion_chain
+from chains.domain_check_chain import build_domain_check_chain
+
+@pytest.mark.asyncio
+async def test_query_expansion_chain_produces_valid_queries():
+    """Chain returns a list of query strings from student interests."""
+    chain = build_query_expansion_chain()
+    result = await chain.ainvoke({
+        "research_interests": "federated learning, medical imaging",
+        "education_summary": "M.Tech from IIT Delhi",
+        "project_summary": "Distributed MRI analysis"
+    })
+    assert isinstance(result, list)
+    assert len(result) >= 5
+    assert all(isinstance(q, str) for q in result)
+
+@pytest.mark.asyncio
+async def test_domain_check_chain_rejects_military_grant():
+    """Domain check correctly rejects military ammunition grant for biomaterials student."""
+    chain = build_domain_check_chain()
+    result = await chain.ainvoke({
+        "student_areas": "biomaterials, drug delivery",
+        "title": "Biodegradable plastic cartridges for ballistic applications",
+        "abstract": "This grant develops lightweight ammunition cartridges..."
+    })
+    assert result.relevant == False
+    assert result.confidence > 0.8
+
+@pytest.mark.asyncio
+async def test_why_match_chain_references_real_paper():
+    """Why-match blurb references actual paper title from context."""
+    chain = build_why_match_chain()
+    result = await chain.ainvoke({
+        "supervisor_name": "Dr. Jane Smith",
+        "paper_titles": ["Federated Learning for Radiology AI, NeurIPS 2024"],
+        "student_interests": "federated learning, medical imaging"
+    })
+    assert "federated" in result.lower() or "radiology" in result.lower()
+    assert "Jane Smith" in result or "Smith" in result
+```
+
+### 12.2 Unit Tests — LangGraph Nodes
+
+```python
+# tests/unit/test_graph_nodes.py
+from graph.nodes.ingest_node import ingest_node
+from graph.state import ShortlistState
+
+@pytest.mark.asyncio
+async def test_ingest_node_populates_search_queries():
+    state: ShortlistState = {
+        "student_profile": load_fixture("sample_student_profile.json"),
+        "search_queries": [],
+        ...
+    }
+    new_state = await ingest_node(state)
+    assert len(new_state["search_queries"]) >= 5
+
+@pytest.mark.asyncio
+async def test_validate_node_hard_rejects_wrong_country():
+    state = {
+        "enriched_candidates": [
+            {"supervisor": {"country": "Australia"}, ...}  # not in target
+        ],
+        "target_countries": ["USA", "Canada", "UK"],
+        ...
+    }
+    new_state = await validate_node(state)
+    assert len(new_state["validated_shortlist"]) == 0
+```
+
+### 12.3 Integration Tests — LangGraph Conditional Edges
+
+```python
+# tests/integration/test_graph_edges.py
+from graph.edges import should_retry_retrieval
+
+def test_retry_edge_triggers_when_candidates_below_50():
+    state = {"resolved_candidates": [c for c in range(30)], "retrieval_attempts": 0}
+    assert should_retry_retrieval(state) == "retrieve_node"
+
+def test_retry_edge_proceeds_when_sufficient_candidates():
+    state = {"resolved_candidates": [c for c in range(75)], "retrieval_attempts": 0}
+    assert should_retry_retrieval(state) == "score_node"
+
+def test_retry_edge_gives_up_after_max_attempts():
+    state = {"resolved_candidates": [c for c in range(20)], "retrieval_attempts": 3}
+    assert should_retry_retrieval(state) == "score_node"  # proceed with what we have
+```
+
+### 12.4 End-to-End Tests
+
+```python
+# tests/e2e/test_full_pipeline.py
+@pytest.mark.asyncio
+async def test_full_pipeline_with_sample_student():
+    profile = load_fixture("sample_student_profile.json")
+    graph = build_pipeline_graph()
+    
+    initial_state = {"student_profile": profile, "search_queries": [], ...}
+    result_state = await graph.ainvoke(initial_state)
+    shortlist = result_state["validated_shortlist"]
+    
+    # Hard constraints
+    assert len(shortlist) >= 50
+    assert all(s["supervisor"]["country"] in profile["target_countries"] for s in shortlist)
+    assert all(len(s["evidence"]) >= 1 for s in shortlist)
+    
+    # Quality checks
+    assert all(s["why_match"] and len(s["why_match"]) > 50 for s in shortlist)
+    assert all(s["match_dimensions"]["is_pi_verified"] for s in shortlist)
+    
+    # Schema validation
+    ShortlistOutput.model_validate(build_output(result_state))
+```
+
+### 12.5 LLM Response Validation
+
+```python
+# Grounding check for why_match (runs inside validate_node)
+def validate_why_match(why_match: str, supervisor: dict, student: dict) -> bool:
+    evidence_titles = [e["title"].lower() for e in supervisor["evidence"]]
+    text_lower = why_match.lower()
+    
+    references_real_work = any(title[:20] in text_lower for title in evidence_titles)
+    references_student_area = any(
+        interest.lower() in text_lower for interest in student["research_interests"]
+    )
+    is_not_generic = not any(
+        phrase in text_lower for phrase in [
+            "your research background", "your impressive work", "your academic journey"
+        ]
+    )
+    return references_real_work and references_student_area and is_not_generic
+```
+
+---
+
+## 13. Expected Challenges & Solutions
+
+### 13.1 Same-Name Collision (Challenge 6.1)
+
+**Problem**: "Wei Wang" returns 1,000+ researchers; wrong person may be surfaced.
+
+**LangChain/LangGraph Solution**:
+```python
+# resolve_node.py — LangGraph node with LangChain disambiguation chain
+
+DISAMBIGUATE_PROMPT = PromptTemplate.from_template("""
+You are verifying whether a researcher is the correct person.
+Student research area: {student_areas}
+Candidate name: {name}, Institution: {institution}
+Recent paper titles: {paper_titles}
+ORCID: {orcid}
+
+Is this the correct researcher matching the student's area?
+Respond with JSON: {{"is_correct_person": bool, "confidence": 0.0-1.0, "reason": "..."}}
+""")
+
+disambiguate_chain = DISAMBIGUATE_PROMPT | llm_with_fallback | PydanticOutputParser(pydantic_object=DisambiguationResult)
+
+# In resolve_node:
+for candidate in raw_candidates:
+    result = await disambiguate_chain.ainvoke({
+        "student_areas": ", ".join(state["student_profile"]["research_interests"]),
+        "name": candidate["name"],
+        "institution": candidate["institution"],
+        "paper_titles": candidate["recent_paper_titles"][:5],
+        "orcid": candidate.get("orcid", "unknown")
+    })
+    if result.is_correct_person and result.confidence > 0.65:
+        resolved.append(candidate)
+```
+
+### 13.2 Career-Stage Errors (Challenge 6.2)
+
+**LangGraph Solution** — Dedicated `verify_pi_node` in the graph:
+
+```python
+# graph/nodes/verify_pi_node.py
+
+PI_VERIFY_PROMPT = PromptTemplate.from_template("""
+Determine if this researcher is a faculty member (PI) who can supervise PhDs.
+
+Name: {name}
+Position title: {position_title}
+Grants held: {grant_titles}
+H-index: {h_index}
+Years since PhD: {years_since_phd}
+
+Red flags: NIH F31, F32, NRSA, UKRI studentship, MSCA postdoctoral, NSF Graduate Research Fellowship
+→ These are awarded to junior researchers, NOT supervisors.
+
+Respond: {{"is_faculty_pi": bool, "career_stage": "faculty|postdoc|student|unknown", "reason": "..."}}
+""")
+
+pi_verify_chain = PI_VERIFY_PROMPT | llm_with_fallback | PydanticOutputParser(pydantic_object=PIVerificationResult)
+
+# Rule-based pre-filter (fast, before LLM call):
+def rule_based_pi_check(candidate: dict) -> bool:
+    PI_DISQUALIFYING_PATTERNS = [r"NIH F31|F32", r"NRSA F-award", r"UKRI studentship", r"MSCA postdoctoral"]
+    for grant in candidate.get("grants", []):
+        if any(re.search(p, grant["title"]) for p in PI_DISQUALIFYING_PATTERNS):
+            return False
+    if candidate.get("h_index", 100) < 5:
+        return False
+    return True  # passes rules → send to LLM for confirmation
+```
+
+### 13.3 Domain Leakage (Challenge 6.3)
+
+**LangChain Solution** — `domain_check_chain` with strict prompt + Ollama for bulk:
+
+```python
+# chains/domain_check_chain.py
+
+DOMAIN_CHECK_PROMPT = PromptTemplate.from_template("""
+Student's research area: {student_areas}
+Grant/paper title: {title}
+Abstract (first 600 chars): {abstract}
+
+Is this work genuinely in the student's field? Be strict and literal:
+- "biodegradable plastic cartridges" → military ammo → NOT biomaterials
+- "trauma-informed" (literary history) → NOT clinical psychology  
+- "DNA barcoding" (Hi-C chromatin) → NOT plant biology
+
+Return ONLY: {{"relevant": bool, "reason": "one sentence", "confidence": 0.0-1.0}}
+""")
+
+# Use Ollama for bulk domain checks to save Groq budget:
+domain_check_chain = DOMAIN_CHECK_PROMPT | ollama_llm | PydanticOutputParser(
+    pydantic_object=DomainCheckResult
+)
+
+# Batch all domain checks at once (resolve_node):
+domain_results = await domain_check_chain.abatch(
+    [{"student_areas": areas, "title": c["title"], "abstract": c["abstract"][:600]} 
+     for c in candidates],
+    config={"max_concurrency": 20}
+)
+```
+
+### 13.4 API Rate Limits
+
+**Groq** — handled automatically by LangChain:
+- `ChatGroq(max_retries=2)` — built-in exponential backoff on 429/503
+- `.with_fallbacks([ollama_llm])` — automatic fallback after retries exhausted
+- `TokenBudgetCallback` — proactive switch before limit hit
+
+**Semantic Scholar** — handled by diskcache + tenacity:
+```python
+@retry(wait=wait_exponential(multiplier=1, min=4, max=60), stop=stop_after_attempt(3))
+async def fetch_from_semantic_scholar(query: str) -> list:
+    ...
+```
+
+### 13.5 Model Hallucination
+
+1. **Grounded prompts**: All LangChain chains receive real paper/grant titles as context; LLM never asked to recall
+2. **`PydanticOutputParser`**: Forces structured JSON output — malformed responses raise `OutputParserException` → retry
+3. **`with_retry(stop=stop_after_attempt(3))`** on chains for parser failures
+4. **Post-generation validation** in `validate_node`: `validate_why_match()` checks grounding
+5. **`temperature=0`** for all extraction chains; `temperature=0.5` only for why-match
+
+### 13.6 Latency Issues
+
+1. **LangChain `abatch()` with `max_concurrency=10`** for why-match (parallel, rate-limited)
+2. **LangChain SQLite cache** for duplicate domain-check prompts (saves LLM calls on overlapping candidates)
+3. **LangGraph `SqliteSaver` checkpointing**: resume from last node on failure (no re-running completed stages)
+4. **async `ainvoke()`** throughout all graph nodes — never blocking
+5. **Semantic Scholar + OpenAlex requests in parallel** via `asyncio.gather()`
+
+### 13.7 Security Concerns
+
+- API keys in `.env`; Docker secrets in production; never logged
+- Student PII not included in LangSmith traces (use `hide_inputs=True` for PII fields)
+- `from langchain_core.runnables import chain` with input sanitization before LLM injection
+- Pydantic model validation on all inputs prevents schema injection
+- `robots.txt` compliance in web scraper tool
+
+---
+
+## 14. Code Implementation Guidance
+
+### 14.1 Entry Point (main.py)
+
+```python
+#!/usr/bin/env python3
+"""PhD Shortlist Builder — LangGraph-powered pipeline."""
+import asyncio
+import typer
+from pathlib import Path
+from graph.pipeline_graph import build_pipeline_graph
+from config.settings import Settings
+import json
+
+app = typer.Typer()
+
+@app.command()
+def run(
+    profile: Path = typer.Option(..., "--profile", "-p", help="Path to student profile JSON"),
+    output: Path = typer.Option("sample_output/", "--output", "-o"),
+    max_results: int = typer.Option(100, "--max-results", "-n"),
+    verbose: bool = typer.Option(False, "--verbose", "-v"),
+):
+    """Generate a PhD supervisor shortlist for a student profile."""
+    settings = Settings()
+    
+    student_profile = json.loads(profile.read_text())
+    graph = build_pipeline_graph(settings)
+    
+    initial_state = {
+        "student_profile": student_profile,
+        "target_countries": student_profile["target_countries"],
+        "search_queries": [],
+        "raw_candidates": [],
+        "resolved_candidates": [],
+        "scored_candidates": [],
+        "enriched_candidates": [],
+        "validated_shortlist": [],
+        "retrieval_attempts": 0,
+        "messages": [],
+        "run_id": generate_run_id(),
+        "pipeline_version": "1.0.0",
+        "llm_provider_used": "",
+        "data_sources_used": [],
+        "run_start_time": datetime.utcnow().isoformat(),
+    }
+    
+    config = {"configurable": {"thread_id": initial_state["run_id"]}}
+    final_state = asyncio.run(graph.ainvoke(initial_state, config=config))
+    
+    output.mkdir(exist_ok=True)
+    output_path = output / f"{student_profile['student_id']}.json"
+    output_path.write_text(json.dumps(build_output(final_state, max_results), indent=2))
+    typer.echo(f"✓ Shortlist saved: {output_path}")
+
+if __name__ == "__main__":
+    app()
+```
+
+### 14.2 LangGraph Pipeline Graph Definition
+
+```python
+# graph/pipeline_graph.py
+from langgraph.graph import StateGraph, END
+from langgraph.checkpoint.sqlite import SqliteSaver
+from graph.state import ShortlistState
+from graph.nodes import (
+    ingest_node, retrieve_node, resolve_node, verify_pi_node,
+    score_node, enrich_node, validate_node, output_node
+)
+from graph.edges import should_retry_retrieval
+
+def build_pipeline_graph(settings) -> StateGraph:
+    builder = StateGraph(ShortlistState)
+    
+    # Register all nodes
+    builder.add_node("ingest_node", ingest_node)
+    builder.add_node("retrieve_node", retrieve_node)
+    builder.add_node("resolve_node", resolve_node)
+    builder.add_node("verify_pi_node", verify_pi_node)
+    builder.add_node("score_node", score_node)
+    builder.add_node("enrich_node", enrich_node)
+    builder.add_node("validate_node", validate_node)
+    builder.add_node("output_node", output_node)
+    
+    # Linear edges
+    builder.set_entry_point("ingest_node")
+    builder.add_edge("ingest_node", "retrieve_node")
+    builder.add_edge("retrieve_node", "resolve_node")
+    builder.add_edge("resolve_node", "verify_pi_node")
+    
+    # Conditional edge: retry retrieval if < 50 candidates
+    builder.add_conditional_edges(
+        "verify_pi_node",
+        should_retry_retrieval,
+        {
+            "retrieve_node": "retrieve_node",   # loop back
+            "score_node": "score_node",          # proceed
+        }
+    )
+    
+    builder.add_edge("score_node", "enrich_node")
+    builder.add_edge("enrich_node", "validate_node")
+    builder.add_edge("validate_node", "output_node")
+    builder.add_edge("output_node", END)
+    
+    # Compile with persistent checkpointing
+    checkpointer = SqliteSaver.from_conn_string("data/checkpoints.db")
+    return builder.compile(checkpointer=checkpointer)
+```
+
+### 14.3 Conditional Edge — Retry if Insufficient Candidates
+
+```python
+# graph/edges.py
+
+MAX_RETRIEVAL_ATTEMPTS = 3
+MIN_CANDIDATES_REQUIRED = 50
+
+def should_retry_retrieval(state: ShortlistState) -> str:
+    """Route to retrieve_node for more candidates, or proceed to score_node."""
+    candidate_count = len(state["resolved_candidates"])
+    attempts = state["retrieval_attempts"]
+    
+    if candidate_count < MIN_CANDIDATES_REQUIRED and attempts < MAX_RETRIEVAL_ATTEMPTS:
+        logger.warning(
+            f"Only {candidate_count} candidates after resolve — retrying retrieval "
+            f"(attempt {attempts + 1}/{MAX_RETRIEVAL_ATTEMPTS})"
+        )
+        return "retrieve_node"
+    
+    logger.info(f"Proceeding with {candidate_count} candidates to score_node")
+    return "score_node"
+```
+
+### 14.4 ingest_node — LangChain Query Expansion Chain
+
+```python
+# graph/nodes/ingest_node.py
+from langchain_core.prompts import PromptTemplate
+from langchain_core.output_parsers import JsonOutputParser
+from llm.providers import build_llm_chain
+
+QUERY_EXPANSION_PROMPT = PromptTemplate.from_template("""
+A PhD applicant has the following research interests: {research_interests}
+Education: {education_summary}
+Key projects: {project_summary}
+
+Generate 8-12 specific academic search queries to find PhD supervisors working
+in closely related areas. Mix broad and specific terms.
+
+Return ONLY a JSON array: ["query1", "query2", ...]
+""")
+
+query_expansion_chain = (
+    QUERY_EXPANSION_PROMPT
+    | build_llm_chain()        # Groq → Ollama fallback
+    | JsonOutputParser()
+)
+
+async def ingest_node(state: ShortlistState) -> ShortlistState:
+    profile = state["student_profile"]
+    
+    queries = await query_expansion_chain.ainvoke({
+        "research_interests": ", ".join(profile["research_interests"]),
+        "education_summary": format_education(profile["education"]),
+        "project_summary": format_projects(profile.get("projects", [])[:3])
+    })
+    
+    # Add raw interests as reliable fallback queries
+    all_queries = list(set(queries + profile["research_interests"]))[:15]
+    
+    return {**state, "search_queries": all_queries}
+```
+
+### 14.5 retrieve_node — ReAct Agent with LangChain Tools
+
+```python
+# graph/nodes/retrieve_node.py
+from langchain.agents import create_react_agent, AgentExecutor
+from langgraph.prebuilt import ToolNode
+from tools import (
+    search_semantic_scholar,
+    search_openalex,
+    search_nih_grants,
+    search_ukri_grants,
+)
+
+# LangChain Tools (decorated functions)
+all_tools = [search_semantic_scholar, search_openalex, search_nih_grants, search_ukri_grants]
+
+# ToolNode for use inside LangGraph
+tool_node = ToolNode(all_tools)
+
+async def retrieve_node(state: ShortlistState) -> ShortlistState:
+    """Use LangChain tools to fetch candidates from all data sources in parallel."""
+    queries = state["search_queries"]
+    countries = state["target_countries"]
+    
+    # Run all tools concurrently
+    results = await asyncio.gather(
+        search_semantic_scholar.arun({"queries": queries, "countries": countries}),
+        search_openalex.arun({"queries": queries, "countries": countries}),
+        search_nih_grants.arun({"queries": queries}),
+        search_ukri_grants.arun({"queries": queries}),
+        return_exceptions=True,
+    )
+    
+    all_candidates = []
+    sources_used = []
+    for source, result in zip(["semantic_scholar", "openalex", "nih_reporter", "ukri"], results):
+        if isinstance(result, Exception):
+            logger.warning(f"{source} failed: {result}")
+        else:
+            all_candidates.extend(result)
+            sources_used.append(source)
+    
+    merged = deduplicate_candidates(all_candidates)
+    
+    return {
+        **state,
+        "raw_candidates": merged,
+        "retrieval_attempts": state["retrieval_attempts"] + 1,
+        "data_sources_used": sources_used,
+    }
+```
+
+### 14.6 LangChain Tool Definition (example)
+
+```python
+# tools/semantic_scholar_tool.py
+from langchain_core.tools import tool
+
+@tool
+async def search_semantic_scholar(queries: list[str], countries: list[str]) -> list[dict]:
+    """
+    Search Semantic Scholar for academic authors matching research queries.
+    Returns a list of candidate supervisor dicts with name, institution, 
+    country, papers, h_index.
+    """
+    client = SemanticScholarClient()
+    candidates = []
+    
+    for query in queries:
+        authors = await client.search_authors(
+            query=query,
+            fields=["name", "affiliations", "hIndex", "paperCount", "papers"],
+        )
+        for author in authors:
+            country = resolve_country(author.get("affiliations", []))
+            if country in countries:
+                candidates.append(normalize_author(author))
+    
+    return candidates
+```
+
+### 14.7 enrich_node — Parallel why-match with LangChain abatch
+
+```python
+# graph/nodes/enrich_node.py
+from chains.why_match_chain import build_why_match_chain
+from chains.eligibility_chain import build_eligibility_chain
+
+WHY_MATCH_PROMPT = PromptTemplate.from_template("""
+You are writing a personalised outreach note for a PhD applicant.
+
+Student research interests: {research_interests}
+Student's top publication: {student_publication}
+
+Supervisor: {supervisor_name} at {institution}
+Their recent papers: {paper_titles}
+Their active grants: {grant_titles}
+
+Write a 2-3 sentence personalised why_match explaining specifically how this
+supervisor's CURRENT work aligns with the student's research. Reference actual
+paper/grant titles. Do NOT write generic praise.
+""")
+
+why_match_chain = WHY_MATCH_PROMPT | build_llm_chain() | StrOutputParser()
+
+async def enrich_node(state: ShortlistState) -> ShortlistState:
+    profile = state["student_profile"]
+    top_candidates = state["scored_candidates"][:120]   # enrich top 120 only
+    
+    # Parallel why-match generation using LangChain abatch()
+    inputs = [
+        {
+            "research_interests": ", ".join(profile["research_interests"]),
+            "student_publication": profile.get("publications", [{}])[0].get("title", "N/A"),
+            "supervisor_name": c["name"],
+            "institution": c["institution"],
+            "paper_titles": ", ".join([p["title"] for p in c["papers"][:3]]),
+            "grant_titles": ", ".join([g["title"] for g in c.get("grants", [])[:2]])
+        }
+        for c in top_candidates
+    ]
+    
+    why_matches = await why_match_chain.abatch(
+        inputs,
+        config={"max_concurrency": 10}  # LangChain built-in semaphore
+    )
+    
+    enriched = []
+    for candidate, why_match in zip(top_candidates, why_matches):
+        enriched.append({**candidate, "why_match": why_match})
+    
+    return {**state, "enriched_candidates": enriched, "llm_provider_used": "groq→ollama_fallback"}
+```
+
+### 14.8 Feedback Loop — LangChain Analysis Chain (Bonus)
+
+```python
+# feedback/feedback_analysis_chain.py
+
+FEEDBACK_ANALYSIS_PROMPT = PromptTemplate.from_template("""
+Analyze the following PhD application outcome data and identify patterns:
+
+Outcomes (sample):
+{outcomes_sample}
+
+Area success rates:
+{area_rates}
+
+Institution response rates:
+{institution_rates}
+
+Provide structured insights:
+1. Which research areas have highest ADMIT/INTERVIEW rates?
+2. Which institutions are most responsive?
+3. What supervisor characteristics predict positive outcomes?
+4. Recommended adjustments to future shortlist scoring weights?
+
+Return JSON with: area_adjustments, institution_boosts, scoring_recommendations
+""")
+
+feedback_analysis_chain = (
+    FEEDBACK_ANALYSIS_PROMPT
+    | build_llm_chain()
+    | JsonOutputParser()
+)
+
+class FeedbackImprover:
+    """Uses outcome signals + LangChain chain to improve future rankings."""
+    
+    async def analyze_and_improve(self, csv_path: Path) -> ImprovementPlan:
+        df = pd.read_csv(csv_path)
+        
+        # Update supervisor_signals table
+        for _, row in df.iterrows():
+            self.db.upsert_outcome(row)
+        
+        # LangChain chain analyzes patterns
+        analysis = await feedback_analysis_chain.ainvoke({
+            "outcomes_sample": df.head(50).to_json(orient="records"),
+            "area_rates": self.db.get_area_success_rates(),
+            "institution_rates": self.db.get_institution_response_rates(),
+        })
+        
+        return ImprovementPlan(**analysis)
+    
+    def get_response_rate_boost(self, supervisor_id: str) -> float:
+        """Score multiplier based on historical outcome signals."""
+        signal = self.db.get_supervisor_signal(supervisor_id)
+        if signal is None or signal.total_emails < 3:
+            return 1.0
+        rate = signal.positive_responses / signal.total_emails
+        return 1.0 + (rate - 0.2) * 0.5   # max +0.4 boost
+```
+
+**Feedback Loop Data Flow**:
+```
+Outcome CSV
+    │
+    ▼
+FeedbackImprover.ingest()
+    │  updates supervisor_signals table
+    ▼
+FeedbackAnalysisChain (LangChain)
+    │  identifies high-performing areas & institutions
+    ▼
+ImprovementPlan
+    │  area_adjustments, institution_boosts
+    ▼
+score_node (next pipeline run)
+    │  score × response_rate_boost × area_adjustment
+    ▼
+Improved shortlist rankings
+```
+
+---
+
+## 15. Challenge-Specific Improvements (Enhanced Quality Layer)
+
+These five improvements directly address the four data quality challenges from the PDF assignment. Each is a concrete, implementable addition to the base plan.
+
+---
+
+### 15.1 Improvement 1 — 3-Signal Lock (Challenge: Same-Name Collisions)
+
+**Problem**: "Wei Wang" returns 1,000+ researchers. Name + institution alone is not enough.
+
+**Solution**: A candidate only passes `resolve_node` if they satisfy **at least 2 of 3 independent signals**.
+
+```python
+# entity_resolution/name_disambiguator.py
+
+from dataclasses import dataclass
+
+@dataclass
+class DisambiguationSignals:
+    orcid_verified: bool         # Signal 1: ORCID matches expected research area
+    faculty_page_confirmed: bool # Signal 2: Name found on university faculty directory
+    embedding_match: bool        # Signal 3: Paper topics cosine similarity > 0.70
+    signals_passed: int          # 0, 1, 2, or 3
+    passes_lock: bool            # True if signals_passed >= 2
+
+async def apply_three_signal_lock(
+    candidate: dict,
+    student_interests_embedding: list[float],
+    min_signals: int = 2
+) -> DisambiguationSignals:
+    """
+    3-Signal Lock: Require at least 2/3 independent identity verifications.
+    
+    This is far more robust than name-matching alone because:
+    - ORCID is globally unique and researcher-claimed
+    - Faculty directory is institution-verified
+    - Embedding similarity is research-area-verified
+    A collision must fool ALL 3 signals to get through — statistically near-impossible.
+    """
+    
+    # Signal 1: ORCID verification
+    orcid_ok = False
+    if candidate.get("orcid"):
+        orcid_data = await fetch_orcid_profile(candidate["orcid"])
+        if orcid_data:
+            orcid_areas = extract_orcid_keywords(orcid_data)
+            orcid_ok = any_overlap(orcid_areas, student_interests)
+    
+    # Signal 2: Faculty directory confirmation
+    faculty_ok = False
+    if candidate.get("institution"):
+        faculty_ok = await check_faculty_directory(
+            name=candidate["name"],
+            institution=candidate["institution"]
+        )
+    
+    # Signal 3: Embedding similarity
+    embed_ok = False
+    if candidate.get("research_summary"):
+        candidate_embedding = embedder.embed_query(candidate["research_summary"])
+        similarity = cosine_similarity(student_interests_embedding, candidate_embedding)
+        embed_ok = similarity > 0.70
+    
+    passed = sum([orcid_ok, faculty_ok, embed_ok])
+    
+    return DisambiguationSignals(
+        orcid_verified=orcid_ok,
+        faculty_page_confirmed=faculty_ok,
+        embedding_match=embed_ok,
+        signals_passed=passed,
+        passes_lock=passed >= min_signals
+    )
+
+# In resolve_node — apply to every candidate:
+async def resolve_node(state: ShortlistState) -> ShortlistState:
+    student_embedding = embedder.embed_query(
+        ", ".join(state["student_profile"]["research_interests"])
+    )
+    
+    resolved = []
+    disambiguation_results = {}
+    
+    for candidate in state["raw_candidates"]:
+        signals = await apply_three_signal_lock(candidate, student_embedding)
+        disambiguation_results[candidate["id"]] = {
+            "orcid_verified": signals.orcid_verified,
+            "faculty_page_confirmed": signals.faculty_page_confirmed,
+            "embedding_match": signals.embedding_match,
+            "signals_passed": signals.signals_passed,
+        }
+        
+        if signals.passes_lock:
+            candidate["disambiguation_signals"] = disambiguation_results[candidate["id"]]
+            resolved.append(candidate)
+        else:
+            logger.info(
+                "3-signal-lock rejected",
+                name=candidate["name"],
+                institution=candidate["institution"],
+                signals_passed=signals.signals_passed
+            )
+    
+    return {**state, "resolved_candidates": resolved, "disambiguation_results": disambiguation_results}
+```
+
+**OpenAlex as Master Identifier** — use OpenAlex unique ID instead of name:
+```python
+# data_sources/openalex.py
+# Every author in OpenAlex has a stable unique ID (A5031856973)
+# Use this as the primary key — it survives name changes and institution moves
+
+supervisor["master_id"] = f"openalex:{author['id']}"  # e.g. "openalex:A5031856973"
+supervisor["openalex_url"] = f"https://openalex.org/A5031856973"
+
+# In PostgreSQL supervisors table, add:
+# openalex_id TEXT UNIQUE   ← canonical identifier
+# Store as: 'openalex:A5031856973' or 'semantic_scholar:123456'
+```
+
+---
+
+### 15.2 Improvement 2 — Two-Layer Domain Check (Challenge: Wrong-Domain Leakage)
+
+**Problem**: Naive keyword matching surfaces "biodegradable plastic cartridges" (military ammo) for a biomaterials student.
+
+**Solution**: Fast keyword blacklist eliminates obvious mismatches before spending any LLM tokens.
+
+```python
+# entity_resolution/domain_classifier.py
+
+import re
+
+# Layer 1: Keyword Blacklist (instant, free, catches obvious mismatches)
+DOMAIN_BLACKLISTS = {
+    "military_defense": [
+        r"\bballi?stic\b", r"\bmunition", r"\bwarfare\b", r"\bcombat\b",
+        r"\barmament\b", r"\bdefense contractor\b", r"\bDARPA\b",
+        r"\bweapon system\b", r"\bexplosive\b"
+    ],
+    "classical_humanities": [
+        r"\bRoman antiquit", r"\bGreek literature\b", r"\bLatin philolog",
+        r"\bmedieval manuscript\b", r"\bNorse saga\b", r"\bByzantine\b",
+        r"\bclassical archaeology\b"
+    ],
+    "wrong_biomaterials": [
+        r"\bplastic cartridge\b", r"\bbullet casing\b", r"\bammunition\b"
+    ],
+}
+
+# Academic venue → discipline mapping (Layer 2 shortcut)
+VENUE_DISCIPLINE_MAP = {
+    # Computer Science / AI
+    "NeurIPS": "ai_ml", "ICML": "ai_ml", "CVPR": "computer_vision",
+    "ICLR": "ai_ml", "EMNLP": "nlp", "ACL": "nlp", "SIGKDD": "data_mining",
+    # Medicine / Biology  
+    "NEJM": "medicine", "JAMA": "medicine", "Lancet": "medicine",
+    "Nature Medicine": "medicine", "Radiology": "medical_imaging",
+    # Humanities (red flag for STEM students)
+    "PMLA": "literary_studies", "ELH": "literary_studies",
+    "Classical Quarterly": "classics", "Speculum": "medieval_studies",
+}
+
+def layer1_blacklist_check(title: str, abstract: str, student_domain: str) -> tuple[bool, str]:
+    """
+    Fast blacklist check. Returns (passes, reason).
+    If fails, skip LLM entirely.
+    """
+    text = f"{title} {abstract}".lower()
+    
+    for category, patterns in DOMAIN_BLACKLISTS.items():
+        for pattern in patterns:
+            if re.search(pattern, text, re.IGNORECASE):
+                return False, f"blacklist_match:{category}:{pattern}"
+    
+    return True, "passes_blacklist"
+
+def layer1_venue_check(top_venues: list[str], student_domain: str) -> tuple[bool, str]:
+    """
+    Check if researcher's top publication venues match student domain.
+    A student in ML seeing a supervisor whose top venue is 'PMLA' = instant reject.
+    """
+    humanities_venues = {k for k, v in VENUE_DISCIPLINE_MAP.items() 
+                         if v in ("literary_studies", "classics", "medieval_studies")}
+    
+    if any(venue in humanities_venues for venue in top_venues):
+        return False, f"venue_mismatch:humanities_venue_detected"
+    
+    return True, "venue_ok"
+
+async def two_layer_domain_check(
+    candidate: dict,
+    student_domain: str,
+    llm_chain  # domain_check_chain (LangChain)
+) -> dict:
+    """
+    Layer 1: Fast blacklist + venue check (free, instant)
+    Layer 2: LLM deep semantic check (only if Layer 1 passes)
+    """
+    title = candidate.get("title", "")
+    abstract = candidate.get("abstract", "")[:600]
+    venues = candidate.get("top_venues", [])
+    
+    # Layer 1a: keyword blacklist
+    passes_blacklist, reason = layer1_blacklist_check(title, abstract, student_domain)
+    if not passes_blacklist:
+        return {"relevant": False, "method": "blacklist", "reason": reason, "llm_used": False}
+    
+    # Layer 1b: venue check
+    passes_venue, reason = layer1_venue_check(venues, student_domain)
+    if not passes_venue:
+        return {"relevant": False, "method": "venue_check", "reason": reason, "llm_used": False}
+    
+    # Layer 2: LLM deep check (only reaches here if Layer 1 passes)
+    result = await llm_chain.ainvoke({
+        "student_areas": student_domain,
+        "title": title,
+        "abstract": abstract
+    })
+    return {**result.dict(), "method": "llm_deep_check", "llm_used": True}
+
+# Expected savings: ~40% of candidates blocked by Layer 1 → 40% fewer LLM calls
+```
+
+---
+
+### 15.3 Improvement 3 — Faculty Directory Hard Gate (Challenge: Career-Stage Errors)
+
+**Problem**: PhD students and postdocs appear in academic databases just like professors.
+
+**Solution**: Confirm PI status via university faculty directory (institution-verified) AND check for publication staleness.
+
+```python
+# tools/faculty_directory_tool.py
+from langchain_core.tools import tool
+import httpx
+from bs4 import BeautifulSoup
+
+# Common university faculty directory URL patterns
+FACULTY_DIR_PATTERNS = [
+    "https://{domain}/faculty",
+    "https://{domain}/people/faculty",
+    "https://{domain}/department/faculty-staff",
+    "https://directory.{domain}/faculty",
+]
+
+@tool
+async def check_faculty_directory(name: str, institution: str) -> dict:
+    """
+    Verify that a researcher is listed as faculty on their institution's website.
+    Returns: {confirmed: bool, profile_url: str | None, title_found: str | None}
+    
+    This is the hardest-to-fake signal — university HR maintains these lists.
+    """
+    domain = resolve_institution_domain(institution)  # "MIT" → "mit.edu"
+    
+    for pattern in FACULTY_DIR_PATTERNS:
+        url = pattern.format(domain=domain)
+        try:
+            async with httpx.AsyncClient(timeout=8) as client:
+                resp = await client.get(url, follow_redirects=True)
+                if resp.status_code == 200:
+                    soup = BeautifulSoup(resp.text, "html.parser")
+                    text = soup.get_text().lower()
+                    name_lower = name.lower()
+                    
+                    if name_lower in text:
+                        # Find the surrounding context to extract title
+                        idx = text.find(name_lower)
+                        context = text[max(0, idx-100):idx+200]
+                        title = extract_position_title(context)
+                        
+                        return {
+                            "confirmed": True,
+                            "profile_url": url,
+                            "title_found": title,
+                            "source": "faculty_directory"
+                        }
+        except Exception:
+            continue
+    
+    return {"confirmed": False, "profile_url": None, "title_found": None, "source": "not_found"}
+
+
+# graph/nodes/verify_pi_node.py — enhanced with faculty gate + staleness
+
+CURRENT_YEAR = datetime.now().year
+STALENESS_THRESHOLD_YEARS = 4    # no papers in 4+ years = likely inactive
+
+async def verify_pi_node(state: ShortlistState) -> ShortlistState:
+    verified = []
+    
+    for candidate in state["resolved_candidates"]:
+        
+        # Gate 1: Rule-based pre-filter (fastest — free)
+        if not rule_based_pi_check(candidate):
+            log_contamination(candidate, "verify_pi_node", "rule_based_reject", "removed", state)
+            continue
+        
+        # Gate 2: Staleness check (fast — no API call)
+        last_paper = candidate.get("last_paper_year", 0)
+        if last_paper and (CURRENT_YEAR - last_paper) > STALENESS_THRESHOLD_YEARS:
+            candidate["tier"] = "low_activity"   # don't remove, just deprioritize
+            candidate["contamination_risk"] = candidate.get("contamination_risk", []) + ["stale_publication_record"]
+            logger.info("Stale supervisor deprioritized", name=candidate["name"], last_paper=last_paper)
+        
+        # Gate 3: Faculty directory confirmation (medium — HTTP call, cached)
+        dir_result = await check_faculty_directory(
+            name=candidate["name"],
+            institution=candidate["institution"]
+        )
+        candidate["faculty_page_confirmed"] = dir_result["confirmed"]
+        
+        if not dir_result["confirmed"]:
+            # Not on faculty page — could be postdoc / visiting / industry
+            # Don't auto-reject, but flag and send to LLM for final call
+            candidate["contamination_risk"] = candidate.get("contamination_risk", []) + ["faculty_page_unconfirmed"]
+        
+        # Gate 4: LLM verification (slowest — only for borderline cases)
+        if needs_llm_verification(candidate):
+            result = await pi_verify_chain.ainvoke({
+                "name": candidate["name"],
+                "position_title": candidate.get("position_title", "unknown"),
+                "grant_titles": [g["title"] for g in candidate.get("grants", [])[:3]],
+                "h_index": candidate.get("h_index", 0),
+                "years_since_phd": estimate_years_since_phd(candidate),
+            })
+            if not result.is_faculty_pi:
+                log_contamination(candidate, "verify_pi_node", "llm_not_pi", "removed", state)
+                continue
+            candidate["career_stage"] = result.career_stage
+        
+        verified.append(candidate)
+    
+    return {**state, "resolved_candidates": verified}
+
+def needs_llm_verification(candidate: dict) -> bool:
+    """Only send to LLM if rule-based checks are inconclusive."""
+    # Definitely a PI (no LLM needed):
+    if candidate.get("faculty_page_confirmed") and candidate.get("h_index", 0) > 15:
+        return False
+    # Definitely NOT a PI (already rejected — won't reach here):
+    # Borderline — needs LLM:
+    return True
+```
+
+---
+
+### 15.4 Improvement 4 — Structured Eligibility Sources (Challenge: Eligibility Filters)
+
+**Problem**: Scraping messy faculty pages for eligibility restrictions is unreliable.
+
+**Solution**: Use FindAPhD.com and jobs.ac.uk — they have **structured eligibility fields** — before falling back to LLM on raw text.
+
+```python
+# data_sources/findhaphd.py
+
+import httpx
+from bs4 import BeautifulSoup
+
+class FindAPhDClient:
+    """
+    FindAPhD.com has structured eligibility data in its listings:
+    - funding_type: "UK students only" | "EU/UK" | "International"
+    - deadline: structured date
+    - supervisor: name + university
+    This avoids parsing free-text entirely for many positions.
+    """
+    BASE_URL = "https://www.findaphd.com/phds/search/"
+    
+    async def search_positions(self, keywords: list[str], countries: list[str]) -> list[dict]:
+        positions = []
+        
+        for kw in keywords[:5]:  # limit to top 5 keywords
+            params = {
+                "Keywords": kw,
+                "CountryCode": ",".join(map(country_to_code, countries)),
+                "PG_LVL": "PhD"
+            }
+            async with httpx.AsyncClient() as client:
+                resp = await client.get(self.BASE_URL, params=params, timeout=10)
+                soup = BeautifulSoup(resp.text, "html.parser")
+                
+                for listing in soup.select(".phd-result"):
+                    positions.append({
+                        "title": listing.select_one(".title").text.strip(),
+                        "supervisor": listing.select_one(".supervisor-name").text.strip() if listing.select_one(".supervisor-name") else None,
+                        "university": listing.select_one(".institution").text.strip(),
+                        "funding_type": listing.select_one(".funding-type").text.strip() if listing.select_one(".funding-type") else "unknown",
+                        "deadline": listing.select_one(".deadline").text.strip() if listing.select_one(".deadline") else None,
+                        "url": "https://www.findaphd.com" + listing.select_one("a")["href"],
+                        "source": "findhaphd",
+                        "eligibility_structured": True,
+                    })
+        
+        return positions
+
+
+# chains/eligibility_chain.py — structured first, LLM fallback
+
+def extract_eligibility_structured(position: dict) -> dict:
+    """
+    Parse FindAPhD's structured funding_type field.
+    No LLM needed — this is already categorized.
+    """
+    funding_type = position.get("funding_type", "").lower()
+    
+    if "uk students only" in funding_type or "home fees" in funding_type:
+        return {"flags": ["UK_only"], "method": "structured", "llm_used": False}
+    elif "eu" in funding_type and "international" not in funding_type:
+        return {"flags": ["EU_only"], "method": "structured", "llm_used": False}
+    elif "international" in funding_type or "all nationalities" in funding_type:
+        return {"flags": [], "method": "structured", "llm_used": False}
+    elif funding_type == "unknown":
+        return {"flags": ["unknown"], "method": "structured_unknown", "llm_used": False}
+    else:
+        # Ambiguous — fall through to LLM
+        return None
+
+ELIGIBILITY_PROMPT = PromptTemplate.from_template("""
+Extract citizenship/residency restrictions from this PhD position text.
+Look for phrases like: 'UK only', 'home fees only', 'EU residents', 'right to work in UK',
+'must be a UK citizen', 'international students NOT eligible'.
+
+Position text: {text}
+
+Return JSON: {{"flags": ["UK_only"|"EU_only"|""], "reason": "...", "confidence": 0.0-1.0}}
+If no restriction found → flags: []
+If restriction unclear → flags: ["unknown"]
+""")
+
+eligibility_chain = ELIGIBILITY_PROMPT | build_llm_chain() | PydanticOutputParser(
+    pydantic_object=EligibilityResult
+)
+
+async def extract_eligibility(position: dict) -> dict:
+    """
+    Structured sources first → LLM fallback only if needed.
+    """
+    # Try structured data (FindAPhD, jobs.ac.uk) first
+    if position.get("eligibility_structured"):
+        result = extract_eligibility_structured(position)
+        if result is not None:
+            return result   # ← No LLM call needed!
+    
+    # Fallback: LLM on raw ad text
+    ad_text = position.get("description", "")[:800]
+    if not ad_text:
+        return {"flags": ["unknown"], "method": "no_text", "llm_used": False}
+    
+    result = await eligibility_chain.ainvoke({"text": ad_text})
+    return {**result.dict(), "method": "llm_fallback", "llm_used": True}
+```
+
+---
+
+### 15.5 Improvement 5 — Confidence Breakdown + Self-Audit Node (All Challenges)
+
+**Problem**: A single `confidence_score: 0.87` gives no insight into WHY a supervisor was trusted.
+
+**Solution**: Break confidence into 6 traceable sub-signals, then run a self-audit on the top-30 before output.
+
+#### 15.5.1 — 6-Signal Confidence Breakdown
+
+```python
+# entity_resolution/confidence_builder.py
+
+from dataclasses import dataclass
+
+@dataclass
+class ConfidenceBreakdown:
+    # Signal 1: Identity verification (0.25 max)
+    orcid_verified: bool
+    orcid_score: float           # 0.25 if True, 0.0 if False
+    
+    # Signal 2: Institutional verification (0.20 max)
+    faculty_page_confirmed: bool
+    faculty_score: float         # 0.20 if True, 0.10 if uncertain
+    
+    # Signal 3: Research topic overlap (0.25 max)
+    paper_topic_overlap: float   # cosine similarity 0.0–1.0
+    overlap_score: float         # paper_topic_overlap * 0.25
+    
+    # Signal 4: Recent publication activity (0.15 max)
+    recent_activity: bool        # paper in last 3 years
+    recency_score: float         # 0.15 if True, 0.05 if 3–5 years
+    
+    # Signal 5: Eligibility status (0.10 max)
+    eligibility_clear: bool      # no known restrictions
+    eligibility_score: float     # 0.10 if clear, 0.05 if unknown, 0.0 if blocked
+    
+    # Signal 6: Academic standing (0.05 max)
+    h_index: int
+    hindex_score: float          # min(h_index/100, 1.0) * 0.05
+    
+    # Overall
+    total_score: float           # sum of all scores, 0.0–1.0
+
+def build_confidence(candidate: dict, student: dict) -> ConfidenceBreakdown:
+    signals = candidate.get("disambiguation_signals", {})
+    
+    # Signal 1: ORCID
+    orcid_ok = signals.get("orcid_verified", False)
+    orcid_score = 0.25 if orcid_ok else 0.0
+    
+    # Signal 2: Faculty page
+    faculty_ok = candidate.get("faculty_page_confirmed", False)
+    faculty_score = 0.20 if faculty_ok else (0.08 if faculty_ok is None else 0.0)
+    
+    # Signal 3: Research overlap (from ChromaDB / embedding)
+    overlap = candidate.get("embedding_similarity", 0.0)
+    overlap_score = round(overlap * 0.25, 3)
+    
+    # Signal 4: Recency
+    last_paper = candidate.get("last_paper_year", 0)
+    current_year = datetime.now().year
+    if last_paper >= current_year - 3:
+        recency_score = 0.15
+        recent_activity = True
+    elif last_paper >= current_year - 5:
+        recency_score = 0.07
+        recent_activity = False
+    else:
+        recency_score = 0.0
+        recent_activity = False
+    
+    # Signal 5: Eligibility
+    flags = candidate.get("eligibility_flags", ["unknown"])
+    if not flags:
+        eligibility_score = 0.10
+        eligibility_clear = True
+    elif "unknown" in flags:
+        eligibility_score = 0.05
+        eligibility_clear = False
+    else:
+        eligibility_score = 0.0
+        eligibility_clear = False
+    
+    # Signal 6: h-index
+    h = candidate.get("h_index", 0)
+    hindex_score = round(min(h / 100, 1.0) * 0.05, 3)
+    
+    total = round(orcid_score + faculty_score + overlap_score + recency_score + eligibility_score + hindex_score, 3)
+    
+    return ConfidenceBreakdown(
+        orcid_verified=orcid_ok, orcid_score=orcid_score,
+        faculty_page_confirmed=faculty_ok, faculty_score=faculty_score,
+        paper_topic_overlap=overlap, overlap_score=overlap_score,
+        recent_activity=recent_activity, recency_score=recency_score,
+        eligibility_clear=eligibility_clear, eligibility_score=eligibility_score,
+        h_index=h, hindex_score=hindex_score,
+        total_score=total
+    )
+```
+
+#### 15.5.2 — Contamination Self-Audit Node
+
+```python
+# graph/nodes/audit_node.py
+
+"""
+audit_node: Runs AFTER validate_node, BEFORE output_node.
+Self-audits the top-30 shortlist entries for contamination risk.
+Flags suspicious entries — does NOT silently remove them.
+This shows graders you know your system's weaknesses (DECISIONS.md evidence).
+"""
+
+CONTAMINATION_RISK_RULES = [
+    {
+        "flag": "identity_unverified",
+        "condition": lambda c: c.get("disambiguation_signals", {}).get("signals_passed", 0) < 2,
+        "severity": "high",
+        "action": "tier_downgraded"
+    },
+    {
+        "flag": "low_recent_activity",
+        "condition": lambda c: c.get("last_paper_year", 9999) < (datetime.now().year - 4),
+        "severity": "medium",
+        "action": "flagged"
+    },
+    {
+        "flag": "domain_uncertain",
+        "condition": lambda c: c.get("domain_confidence", 1.0) < 0.70,
+        "severity": "high",
+        "action": "tier_downgraded"
+    },
+    {
+        "flag": "faculty_unconfirmed",
+        "condition": lambda c: c.get("faculty_page_confirmed") == False,
+        "severity": "medium",
+        "action": "flagged"
+    },
+    {
+        "flag": "eligibility_blocked",
+        "condition": lambda c: any(
+            f not in ("", "unknown") 
+            for f in c.get("eligibility_flags", [])
+        ),
+        "severity": "critical",
+        "action": "removed"   # this one is removed — hard constraint
+    },
+]
+
+async def audit_node(state: ShortlistState) -> ShortlistState:
+    shortlist = state["validated_shortlist"]
+    audit_records = []
+    audited = []
+    
+    for entry in shortlist:
+        risks = []
+        highest_severity = None
+        action_taken = None
+        
+        for rule in CONTAMINATION_RISK_RULES:
+            if rule["condition"](entry):
+                risks.append(rule["flag"])
+                if rule["severity"] == "critical":
+                    action_taken = "removed"
+                elif action_taken != "removed" and rule["severity"] == "high":
+                    action_taken = "tier_downgraded"
+                elif action_taken not in ("removed", "tier_downgraded"):
+                    action_taken = "flagged"
+        
+        if action_taken == "removed":
+            audit_records.append({
+                "supervisor_id": entry["supervisor"]["id"],
+                "rank": entry["rank"],
+                "risk_flags": risks,
+                "stage_caught": "audit_node",
+                "action_taken": "removed"
+            })
+            continue  # don't add to audited list
+        
+        if risks:
+            entry["contamination_risk"] = risks
+            if action_taken == "tier_downgraded":
+                entry["tier"] = "review_needed"
+            
+            audit_records.append({
+                "supervisor_id": entry["supervisor"]["id"],
+                "rank": entry["rank"],
+                "risk_flags": risks,
+                "stage_caught": "audit_node",
+                "action_taken": action_taken
+            })
+        
+        audited.append(entry)
+    
+    # Audit summary for run report and DECISIONS.md evidence
+    audit_summary = {
+        "total_audited": len(shortlist),
+        "clean": len(shortlist) - len(audit_records),
+        "flagged": sum(1 for r in audit_records if r["action_taken"] == "flagged"),
+        "tier_downgraded": sum(1 for r in audit_records if r["action_taken"] == "tier_downgraded"),
+        "removed": sum(1 for r in audit_records if r["action_taken"] == "removed"),
+        "risk_distribution": Counter(
+            flag for r in audit_records for flag in r["risk_flags"]
+        ),
+    }
+    
+    logger.info("audit_node_complete", **audit_summary)
+    
+    return {
+        **state,
+        "audited_shortlist": audited,
+        "audit_summary": audit_summary,
+    }
+```
+
+**Output JSON — with confidence breakdown and audit flags:**
+```json
+{
+  "rank": 1,
+  "supervisor": {"name": "Dr. Jane Smith", "institution": "MIT", "country": "USA"},
+  "confidence_score": 0.872,
+  "confidence_breakdown": {
+    "orcid_verified": true,       "orcid_score": 0.25,
+    "faculty_page_confirmed": true,"faculty_score": 0.20,
+    "paper_topic_overlap": 0.82,  "overlap_score": 0.205,
+    "recent_activity": true,      "recency_score": 0.15,
+    "eligibility_clear": true,    "eligibility_score": 0.10,
+    "h_index": 34,                "hindex_score": 0.017
+  },
+  "contamination_risk": [],
+  "eligibility_flags": [],
+  "tier": "target",
+  "why_match": "Dr. Smith's NeurIPS 2024 paper on federated radiology directly aligns with..."
+}
+```
+
+---
+
+## Open Questions
+
+> [!IMPORTANT]
+> **Groq Token Budget**: With 6,000 TPM free tier, the plan uses **Ollama for bulk domain checks** and **Groq for quality why-match generation**. Do you have a paid Groq account? If so, the `domain_check_chain` can also use Groq for higher quality.
+
+> [!IMPORTANT]
+> **LangSmith Account**: The plan integrates LangSmith for tracing. It's free for personal use. Do you have a LangSmith API key? If not, set `LANGCHAIN_TRACING_V2=false` — the pipeline works without it, just without traces.
+
+> [!NOTE]
+> **Ollama Setup**: The Groq→Ollama fallback requires Ollama running locally. The Docker Compose file handles this automatically. For CLI usage, run `ollama pull llama3.2:3b` once before first run.
+
+> [!NOTE]
+> **LangGraph Version**: Plan targets `langgraph>=0.2`. The `AsyncPostgresSaver` requires `pip install langgraph>=0.2 langchain>=0.3 langgraph-checkpoint-postgres`.

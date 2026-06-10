@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: phd_user
+          POSTGRES_PASSWORD: phd_pass
+          POSTGRES_DB: phd_shortlist
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready -U phd_user -d phd_shortlist
+          --health-interval 10s --health-timeout 5s --health-retries 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run unit-style script tests
+        run: |
+          python scripts/run_retrieve_node_test.py
+          python scripts/run_resolve_node_test.py
+          python scripts/run_score_node_test.py
+          python scripts/run_enrich_node_test.py
+          python scripts/run_validate_node_test.py
+          python scripts/run_output_node_test.py
+          python scripts/run_audit_node_test.py
+
+      - name: End-to-end smoke run
+        run: |
+          python scripts/run_e2e_smoke.py
+
+      - name: Build Docker image (validation)
+        uses: docker/build-push-action@v4
+        with:
+          push: false
+          tags: phd-shortlist-builder:ci

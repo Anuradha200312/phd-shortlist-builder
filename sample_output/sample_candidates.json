@@ -1,0 +1,16 @@
+[
+  {
+    "id": "c1",
+    "supervisor": {"name": "Dr A", "semantic_scholar_id": "S1"},
+    "title": "Deep learning for medical imaging",
+    "abstract": "We propose a method for segmentation...",
+    "research_areas": ["medical imaging", "deep learning"]
+  },
+  {
+    "id": "c2",
+    "supervisor": {"name": "Dr B", "semantic_scholar_id": "S2"},
+    "title": "Federated learning in healthcare",
+    "abstract": "This paper explores federated approaches...",
+    "research_areas": ["federated learning", "privacy"]
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "student_id": "test_001",
+  "generated_at": "2026-06-10T11:08:53.096681Z",
+  "pipeline_version": "1.0.0",
+  "shortlist": [],
+  "metadata": {
+    "total_candidates_considered": 0,
+    "data_sources": [],
+    "llm_provider_used": "stub",
+    "langgraph_run_id": "d483d1b8",
+    "run_duration_seconds": 0.0,
+    "audit_summary": {
+      "total_audited": 0,
+      "clean": 0,
+      "flagged": 0,
+      "tier_downgraded": 0,
+      "removed": 0
+    }
+  }
+}

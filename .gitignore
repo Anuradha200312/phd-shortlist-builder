@@ -1,0 +1,49 @@
+# Byte-compiled
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Cache
+cache/
+.diskcache/
+
+# Logs
+logs/
+*.log
+
+# Data
+data/
+*.db
+
+# Output (keep sample_output/ but ignore generated files)
+# sample_output/*.json
+
+# PDF (assignment)
+*.pdf
+CODEBASE_ANALYSIS.md

@@ -1,0 +1,156 @@
+--- PAGE 1 ---
+AI Engineer — Take-Home Assignment
+PhD Shortlist Builder
+Time: 72 hours from receipt Submission: GitHub link via Google Form (link in covering email)
+1. Context
+Ambitio helps international students apply to PhD programs abroad. A core part of our product is the PhD
+Shortlist — a personalised list of supervisors, programs, and funded opportunities surfaced for each
+student, used downstream to draft personalised cold-emails to professors.
+For each student, we need to produce a shortlist of ~50–200 actionable supervisor + program matches
+that a domain mentor would unhesitatingly approve as worth contacting.
+The challenge is not the LLM call. The challenge is the data: surfacing the right humans, with the right
+evidence, in the right context, with no embarrassing mismatches.
+2. Goal
+Build a system that ingests a student profile and produces a ranked shortlist of PhD supervisors +
+programs, each with grant/paper evidence and a personalised why_match  that a student can reference
+when emailing the professor.
+3. Input
+A student profile JSON containing:
+Education history (degrees, institutions, grades, theses)
+Skills, projects, publications
+Research interests (3–5 stated areas)
+Target countries (hard constraint)
+Target intake (semester + year)
+Intro call summary (free text)
+Raw resume text
+
+
+--- PAGE 2 ---
+4. Output
+For each student, produce a single JSON shortlist:
+50–200 supervisor recommendations
+For each: name, institution, country, contact email (if obtainable), research focus, evidence (papers
+and/or grants), why_match  blurb
+Tier (reach / target / safety) if relevant
+Linked PhD programs or open positions
+A consistent, documented schema
+5. Requirements
+#
+Requirement
+1
+Coverage — ≥50 actionable recommendations spread across the student's stated areas
+2
+Country adherence — 100% within target countries (hard constraint)
+3
+Evidence — every supervisor must carry verifiable paper(s) or grant(s) with links
+4
+Personalisation — why_match  must reference specific PI work that maps onto the student's profile, not
+generic praise
+5
+Machine-readable output — consistent JSON schema, documented in the README
+6
+Reproducibility — given the same input, the system should run end-to-end with a single command
+7
+Latency — target wall-clock < 15 minutes per shortlist on a single laptop / one cloud VM
+6. Data Quality Challenges to Consider
+The following are real failure modes we have observed. Your design should address as many as you can
+in 72 hours. We do not expect you to solve all of them — we will grade on which ones you noticed, what
+trade-offs you chose, and how well you justified them.
+6.1 Same-name-different-person collisions
+"Yang Shi", "Yu Meng", "Ying Ma", "Wei Wang", "Rong Zheng", "Sharma" are extremely common. The
+supervisor you surface may be confused with an unrelated researcher of the same name. Catching the
+mistake from a paper title alone is not enough — you need to verify the human matches the student's
+research area before trusting them.
+
+
+--- PAGE 3 ---
+6.2 Career-stage errors
+PhD students and fresh postdocs appear in author databases with their own first-author papers, but they
+cannot supervise PhDs. If you treat any name in an author list as a "PI", you will surface 24-year-old grad
+students. Personal-award fellowships (NIH F31/F32, UKRI studentships, MSCA postdoc grants) list the
+awardee — usually a junior researcher, not the supervisor.
+6.3 Wrong-domain leakage from keyword overlap
+A grant titled "biodegradable plastic cartridges" can leak into a biomaterials student's list — it is
+actually military ammunition R&D.
+A grant on "high-elevation social-ecological systems" can leak into a Himalayan pilgrimage student's
+list — it is actually Pacific Northwest fire archaeology.
+A "trauma-informed" grant can leak into a clinical psychology student's list — it is actually a literary-
+history project on grief in Roman antiquity.
+A "DNA barcoding" grant can leak into a plant biology student's list — it is actually single-cell
+barcoding for human Hi-C chromatin work.
+How do you tell discipline (humanities vs STEM vs medical) and region (which country / continent /
+ecosystem) from a grant abstract before deciding it matches a student?
+6.4 Eligibility filters in free-text ads
+Many PhD vacancies have citizenship/residency restrictions ("UK only", "home fees", "EU residents")
+buried in the ad. Surfacing an ineligible position to an Indian student is worse than not surfacing it.
+Consider how you would extract eligibility from unstructured ad text.
+7. How We Grade
+We will run your system against 1-2 real student profiles and evaluate:
+Dimension
+Method
+Mentor-eye audit
+A domain mentor reviews your top 30 picks and rates each as bullseye / solid / stretch /
+wrong. We compute (bullseye + solid) / 30. Past systems score 60–85%.
+Contamination
+count
+Number of clear wrong-domain / wrong-person / non-PI entries out of total. Past systems:
+5–20%.
+Coverage
+≥50 recommendations spread across stated areas.
+Country
+adherence
+100% in target countries. Hard fail if breached.
+Latency
+Wall-clock per shortlist.
+
+
+--- PAGE 4 ---
+Dimension
+Method
+Process quality
+Your DECISIONS.md  — what trade-offs you saw, what you chose, why. We weight this
+heavily for a 72-hour exercise.
+We weight contamination heavier than coverage. Surfacing a wrong-person is worse than missing a
+borderline-correct one. An 80%-mentor-approved shortlist of 60 PIs beats a 60%-mentor-approved
+shortlist of 150 PIs.
+8. Deliverables
+A GitHub repository (public, or shared privately with the email in the covering message) containing:
+1. **README.md ** — your approach overview, data sources, how to run, design trade-offs, known
+limitations.
+2. Code that runs end-to-end on a provided sample student profile with one command.
+3. **sample_output/<student_id>.json ** — at least one full shortlist JSON for a sample student
+profile we send you.
+4. **DECISIONS.md  — 1–2 page writeup explaining how you addressed at least 5** of the 15 data
+quality challenges above, with concrete examples from your own output. We read this carefully.
+5. **schema.md ** — your output JSON schema, documented.
+Submit the GitHub repository URL via the Google Form linked in your covering email.
+9. Constraints & Permissions
+You may use any commercial API, open dataset, scraping, LLM, vector DB, or framework you want.
+Cite your data sources clearly in the README.
+Use of LLMs is expected; we are evaluating system design, not whether you can call an API.
+You may NOT submit code/output produced by another candidate or shared between candidates.
+If you spend more than 3 days, you are over-investing — we are grading the trade-offs you made in a
+constrained window.
+10. Bonus — Closing the Feedback Loop
+Imagine your shortlist has been used. Each student emailed some subset of the supervisors you surfaced.
+Weeks or months later, we receive back a CSV with outcomes for every email sent:
+
+
+--- PAGE 5 ---
+student_id, supervisor_id, institution, area, sent_at, outcome
+106419,    A5031856973,    UNSW,         PTSD,  2026-07-12, ADMIT
+106419,    A5055000569,    UNSW,         PTSD,  2026-07-12, REJECT
+106419,    A5089892421,    Ohio State,   Pilgrim, 2026-07-12, NO_REPLY
+...
+Possible outcome  values include: ADMIT , INTERVIEW , POSITIVE_REPLY , REJECT , NO_REPLY , BOUNCE ,
+OUT_OF_OFFICE , WRONG_PERSON , NOT_RECRUITING .
+Design question
+How would you build a system that uses this outcome stream to automatically improve future
+shortlists?
+We are not looking for a single "right" answer. We want to see how you reason about it. Consider — and
+pick the angles you find most interesting:
+Deliverable for this bonus
+A working implementation that ingests the outcomes CSV and improves the system for next shortlist
+and documentation around approach
+
+

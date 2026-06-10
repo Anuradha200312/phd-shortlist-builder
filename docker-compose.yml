@@ -1,0 +1,53 @@
+version: "3.9"
+services:
+
+  # ── PostgreSQL Database ─────────────────────────────────────────
+  postgres:
+    image: pgvector/pgvector:pg16
+    ports: ["5432:5432"]
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-phd_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-phd_pass}
+      POSTGRES_DB: ${POSTGRES_DB:-phd_shortlist}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U phd_user -d phd_shortlist"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ── Main Application ────────────────────────────────────────────
+  app:
+    build: .
+    ports: ["8000:8000"]
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - LANGCHAIN_TRACING_V2=${LANGCHAIN_TRACING_V2:-false}
+      - LANGCHAIN_API_KEY=${LANGCHAIN_API_KEY:-}
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - DATABASE_URL=postgresql+asyncpg://${POSTGRES_USER:-phd_user}:${POSTGRES_PASSWORD:-phd_pass}@postgres:5432/${POSTGRES_DB:-phd_shortlist}
+      - DATABASE_URL_SYNC=postgresql://${POSTGRES_USER:-phd_user}:${POSTGRES_PASSWORD:-phd_pass}@postgres:5432/${POSTGRES_DB:-phd_shortlist}
+    volumes:
+      - ./cache:/app/cache
+      - ./sample_output:/app/sample_output
+      - ./logs:/app/logs
+    depends_on:
+      postgres:
+        condition: service_healthy
+      ollama:
+        condition: service_started
+    command: >-
+      sh -c "uvicorn api.app:app --host 0.0.0.0 --port 8000 --reload"
+
+  # ── Ollama (LLM Fallback) ──────────────────────────────────────
+  ollama:
+    image: ollama/ollama:latest
+    ports: ["11434:11434"]
+    volumes:
+      - ollama_data:/root/.ollama
+    entrypoint: ["/bin/sh", "-c", "ollama serve & sleep 5 && ollama pull llama3.2:3b && wait"]
+
+volumes:
+  postgres_data:
+  ollama_data:

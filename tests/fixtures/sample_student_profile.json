@@ -1,0 +1,53 @@
+{
+  "student_id": "test_001",
+  "education": [
+    {
+      "degree": "M.Tech",
+      "institution": "IIT Delhi",
+      "gpa": "9.1/10",
+      "thesis_title": "Deep Learning for Medical Image Segmentation",
+      "graduation_year": 2024
+    },
+    {
+      "degree": "B.Tech",
+      "institution": "NIT Trichy",
+      "gpa": "8.7/10",
+      "thesis_title": null,
+      "graduation_year": 2022
+    }
+  ],
+  "skills": ["Python", "PyTorch", "TensorFlow", "CUDA", "Docker", "signal processing", "computer vision"],
+  "projects": [
+    {
+      "title": "Federated Learning for Privacy-Preserving Medical AI",
+      "description": "Developed a federated learning framework that enables collaborative training of medical image segmentation models across 5 hospitals without sharing patient data."
+    },
+    {
+      "title": "Real-time Brain-Computer Interface using EEG Signals",
+      "description": "Built a BCI system that classifies motor imagery EEG signals in real-time using a transformer-based architecture."
+    }
+  ],
+  "publications": [
+    {
+      "title": "FedSeg: Federated Learning for Multi-Organ Segmentation in CT Scans",
+      "venue": "MICCAI 2024",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2401.00000",
+      "doi": "10.1007/978-3-031-00000-0_1"
+    }
+  ],
+  "research_interests": [
+    "medical image segmentation",
+    "federated learning",
+    "brain-computer interfaces",
+    "privacy-preserving machine learning",
+    "neural signal processing"
+  ],
+  "target_countries": ["USA", "Canada", "UK"],
+  "target_intake": {
+    "semester": "Fall",
+    "year": 2025
+  },
+  "intro_call_summary": "Student has strong background in medical imaging and federated learning. Published at MICCAI. Interested in labs working on intersection of privacy-preserving ML and clinical imaging. Open to both CS and biomedical engineering departments. Prefers research-intensive universities with hospital affiliations.",
+  "resume_text": "Anuradha Sharma | IIT Delhi M.Tech | MICCAI 2024 | PyTorch | Federated Learning | Medical AI"
+}

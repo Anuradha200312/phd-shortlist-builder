@@ -3,7 +3,10 @@ from __future__ import annotations
 import time
 import structlog
 from langchain_groq import ChatGroq
-from langchain_ollama import ChatOllama
+try:
+    from langchain_ollama import ChatOllama
+except ImportError:
+    ChatOllama = None  # type: ignore[assignment,misc]
 from langchain_core.runnables import RunnableWithFallbacks
 from langchain_core.callbacks import BaseCallbackHandler
 from config.settings import get_settings
@@ -99,7 +102,7 @@ def build_llm_chain(
     fallbacks = [groq_fallback_llm, mixtral_fallback_llm]
 
     # Add Ollama Cloud Fallback if credentials are provided
-    if settings.ollama_api_url and settings.ollama_api_key:
+    if ChatOllama is not None and settings.ollama_api_url and settings.ollama_api_key:
         ollama_cloud_llm = ChatOllama(
             model=settings.ollama_model,
             base_url=settings.ollama_api_url,
@@ -109,14 +112,15 @@ def build_llm_chain(
         )
         fallbacks.append(ollama_cloud_llm)
 
-    # Add Local Ollama Fallback as a final backup
-    ollama_local_llm = ChatOllama(
-        model=settings.ollama_model,
-        base_url=settings.ollama_base_url,
-        temperature=temperature,
-        timeout=90,
-    )
-    fallbacks.append(ollama_local_llm)
+    # Add Local Ollama Fallback as a final backup (only if library is available)
+    if ChatOllama is not None:
+        ollama_local_llm = ChatOllama(
+            model=settings.ollama_model,
+            base_url=settings.ollama_base_url,
+            temperature=temperature,
+            timeout=90,
+        )
+        fallbacks.append(ollama_local_llm)
 
     return groq_llm.with_fallbacks(
         fallbacks=fallbacks,
@@ -127,7 +131,7 @@ def build_llm_chain(
 def get_ollama_llm(temperature: float = 0.0):
     """Return the cloud-based Ollama model if configured, otherwise fallback to Groq."""
     settings = get_settings()
-    if settings.ollama_api_url and settings.ollama_api_key:
+    if ChatOllama is not None and settings.ollama_api_url and settings.ollama_api_key:
         return ChatOllama(
             model=settings.ollama_model,
             base_url=settings.ollama_api_url,

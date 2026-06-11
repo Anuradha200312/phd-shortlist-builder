@@ -10,6 +10,9 @@ async def validate_node(state: Dict[str, Any]) -> Dict[str, Any]:
     - Enforces country hard constraint (must be in `target_countries`).
     - Ensures each candidate has at least one piece of `evidence`.
     - Produces `validated_shortlist` in state.
+
+    NOTE: candidates are flat dicts at this stage; the nested `supervisor`
+    sub-object only exists in the final output built by output_node.
     """
     enriched: List[Dict[str, Any]] = state.get("enriched_candidates", []) or []
     target_countries = state.get("target_countries") or []
@@ -19,8 +22,10 @@ async def validate_node(state: Dict[str, Any]) -> Dict[str, Any]:
     blocked_by_evidence = 0
 
     for c in enriched:
-        sup = c.get("supervisor", {})
-        country = sup.get("country")
+        # Candidates in the real pipeline are flat dicts; some test fixtures
+        # use a nested `supervisor` sub-dict. Support both.
+        sup = c.get("supervisor") or {}
+        country = c.get("country") or sup.get("country")
 
         if target_countries and country and country not in target_countries:
             blocked_by_country += 1
@@ -44,4 +49,3 @@ async def validate_node(state: Dict[str, Any]) -> Dict[str, Any]:
 
     logger.info("validate_node_complete", **state["validation_summary"]) if logger else None
     return state
-

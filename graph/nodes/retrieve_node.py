@@ -43,20 +43,50 @@ async def _call_all_tools(query: str, limit: int) -> List[dict]:
     return out
 
 
+def _supervisor_key(c: dict) -> str:
+    """Build a stable identity key from supervisor name + institution + orcid.
+
+    Falls back to paper id/url so we never lose a record entirely.
+    """
+    name = (c.get("name") or "").strip().lower()
+    institution = (c.get("institution") or "").strip().lower()
+    orcid = (c.get("orcid") or "").strip()
+    if name and institution:
+        return f"{name}|{institution}"
+    if orcid:
+        return orcid
+    # last resort — paper-level key
+    return c.get("id") or c.get("url") or (str(c.get("title")) + str(c.get("year")))
+
+
 def _dedupe_candidates(candidates: List[dict]) -> List[dict]:
-    seen = {}
+    """Deduplicate by supervisor identity, merging evidence from duplicates."""
+    seen: dict = {}
     for c in candidates:
-        cid = c.get("id") or c.get("url") or (c.get("title") + str(c.get("year")))
-        if not cid:
+        key = _supervisor_key(c)
+        if not key:
             continue
-        if cid in seen:
-            # merge fields preferring non-null values
-            existing = seen[cid]
+        if key in seen:
+            existing = seen[key]
+            # Merge scalar fields: prefer non-null values
             for k, v in c.items():
+                if k in ("papers", "grants", "evidence"):
+                    continue  # handle lists separately
                 if not existing.get(k) and v:
                     existing[k] = v
+            # Merge list evidence fields (dedupe by title)
+            for list_key in ("papers", "grants", "evidence"):
+                new_items = c.get(list_key) or []
+                old_items = existing.get(list_key) or []
+                old_titles = {(i.get("title") or "").lower() for i in old_items}
+                for item in new_items:
+                    t = (item.get("title") or "").lower()
+                    if t and t not in old_titles:
+                        old_items.append(item)
+                        old_titles.add(t)
+                existing[list_key] = old_items
         else:
-            seen[cid] = dict(c)
+            seen[key] = dict(c)
     return list(seen.values())
 
 
@@ -74,8 +104,8 @@ async def retrieve_node(state: ShortlistState) -> dict:
     attempt = state.get("retrieval_attempts", 0)
 
     settings = get_settings()
-    per_tool_limit = 8
-    max_queries = min(len(queries), 8)
+    per_tool_limit = 15
+    max_queries = min(len(queries), 12)
 
     logger.info(
         "retrieve_node_start",

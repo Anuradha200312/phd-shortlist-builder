@@ -5,6 +5,8 @@ Behavior:
 - Operates on `scored_candidates` and processes top `max_candidates_to_enrich` from settings
 - Calls `generate_why_match_batch` to produce `why_match` strings for each candidate
 - Updates `enriched_candidates` with `why_match` and `eligibility` fields
+
+Key fix: why_match_batch keys on candidate name (stable across pipeline ID mutations).
 """
 from __future__ import annotations
 import asyncio
@@ -18,6 +20,24 @@ logger = structlog.get_logger()
 
 # Lazy import of chains to avoid heavy imports during test runs
 _generate_why_match_batch = None
+
+
+def _candidate_lookup_key(c: dict) -> str:
+    """Stable key used to match candidates to why_match results.
+
+    Priority: name > openalex_id > semantic_scholar_id > id > url
+    Using name as the primary key because it survives all pipeline node transitions.
+    """
+    name = (c.get("name") or "").strip()
+    if name and name != "Unknown":
+        return name
+    return (
+        c.get("openalex_id")
+        or c.get("semantic_scholar_id")
+        or c.get("id")
+        or c.get("url")
+        or ""
+    )
 
 
 async def enrich_node(state: ShortlistState) -> dict:
@@ -43,7 +63,10 @@ async def enrich_node(state: ShortlistState) -> dict:
         out = []
         for c in top:
             c2 = dict(c)
-            c2["why_match"] = f"Candidate {c.get('id')} is a match based on title '{c.get('title')}'."
+            c2["why_match"] = (
+                f"Candidate {c.get('name', c.get('id'))} is a match based on "
+                f"research areas: {', '.join(c.get('research_areas', []) or ['N/A'])}."
+            )
             c2["eligibility"] = {"open_positions": False}
             out.append(c2)
 
@@ -53,12 +76,34 @@ async def enrich_node(state: ShortlistState) -> dict:
     # Otherwise call the chain batch generator
     try:
         student_profile = state.get("student_profile", {})
-        why_map = await _generate_why_match_batch(top, student_profile, concurrency=settings.why_match_concurrency)
 
-        enriched = []
+        # Patch each candidate with a stable _key field so the batch function
+        # can return results keyed by name.
+        keyed_top = []
         for c in top:
             c2 = dict(c)
-            c2["why_match"] = why_map.get(c.get("id")) or why_map.get(c.get("url")) or ""
+            c2["_enrich_key"] = _candidate_lookup_key(c)
+            keyed_top.append(c2)
+
+        why_map = await _generate_why_match_batch(
+            keyed_top, student_profile, concurrency=settings.why_match_concurrency
+        )
+
+        enriched = []
+        for c in keyed_top:
+            c2 = dict(c)
+            key = c2.pop("_enrich_key", "")
+            # Try multiple fallback keys in order
+            why = (
+                why_map.get(key)
+                or why_map.get(c.get("name"))
+                or why_map.get(c.get("id"))
+                or why_map.get(c.get("openalex_id"))
+                or why_map.get(c.get("semantic_scholar_id"))
+                or why_map.get(c.get("url"))
+                or ""
+            )
+            c2["why_match"] = why
             c2["eligibility"] = {"open_positions": bool(c.get("open_positions"))}
             enriched.append(c2)
 

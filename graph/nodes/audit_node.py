@@ -13,7 +13,7 @@ def _domain_from_url(url: str) -> str:
         return ""
 
 
-async def audit_node(state: Dict[str, Any], top_n: int = 30) -> Dict[str, Any]:
+async def audit_node(state: Dict[str, Any], top_n: int = 60) -> Dict[str, Any]:
     """Perform a lightweight contamination self-audit on the top-N candidates.
 
     Signals checked (basic heuristics):
@@ -23,6 +23,10 @@ async def audit_node(state: Dict[str, Any], top_n: int = 30) -> Dict[str, Any]:
     - missing_pi_verified: supervisor.is_pi_verified is False or None
 
     Adds `contamination_risk` list to each flagged candidate and writes `audit_summary`.
+
+    NOTE: candidates are flat dicts at this stage — `supervisor` sub-object only exists
+    in the final JSON built by output_node. Fields like `name`, `institution`, `country`
+    are top-level keys.
     """
     scored = state.get("scored_candidates") or state.get("validated_shortlist") or []
     if not scored:
@@ -33,17 +37,21 @@ async def audit_node(state: Dict[str, Any], top_n: int = 30) -> Dict[str, Any]:
     sorted_candidates = sorted(scored, key=lambda x: x.get("rank", 9999))
     top = sorted_candidates[:top_n]
 
-    # build name frequency map
+    # build name frequency map (using flat-dict `name` field)
     name_counts: Dict[str, int] = {}
     for c in top:
-        name = (c.get("supervisor") or {}).get("name") or ""
+        sup = c.get("supervisor") or {}
+        name = c.get("name") or sup.get("name") or ""
         name_counts[name] = name_counts.get(name, 0) + 1
 
     flagged: List[Dict[str, Any]] = []
     for c in top:
         reasons: List[str] = []
+        # Candidates in the real pipeline are flat dicts; test fixtures may use nested `supervisor`.
         sup = c.get("supervisor") or {}
-        name = sup.get("name") or ""
+        name = c.get("name") or sup.get("name") or ""
+        inst = (c.get("institution") or sup.get("institution") or "").lower()
+        is_pi_verified = c.get("is_pi_verified", sup.get("is_pi_verified"))
 
         # duplicate name
         if name and name_counts.get(name, 0) > 1:
@@ -55,12 +63,11 @@ async def audit_node(state: Dict[str, Any], top_n: int = 30) -> Dict[str, Any]:
             reasons.append("low_confidence")
 
         # missing PI verification
-        if sup.get("is_pi_verified") is not True:
+        if is_pi_verified is not True:
             reasons.append("missing_pi_verified")
 
         # evidence domain mismatch heuristic
-        evidence = c.get("evidence") or []
-        inst = (sup.get("institution") or "").lower()
+        evidence = c.get("evidence") or c.get("papers") or []
         mismatch_found = False
         for e in evidence:
             url = e.get("url") or e.get("doi") or ""
@@ -84,4 +91,3 @@ async def audit_node(state: Dict[str, Any], top_n: int = 30) -> Dict[str, Any]:
         "audited_shortlist": top,
         "audit_summary": state["audit_summary"]
     }
-

@@ -64,6 +64,17 @@ async def enrich_paper_to_supervisor(c: dict) -> dict:
                 if insts:
                     sup["institution"] = insts[0].get("display_name")
                     sup["country"] = normalize_country(insts[0].get("country_code"))
+
+                # Extract research areas from x_concepts
+                concepts = author.get("x_concepts") or author.get("topics") or []
+                if concepts:
+                    sup["research_areas"] = [
+                        x.get("display_name") or x.get("name")
+                        for x in sorted(concepts, key=lambda x: x.get("score", 0), reverse=True)
+                        if (x.get("display_name") or x.get("name")) and x.get("level", 0) >= 1
+                    ][:10]
+                elif not sup.get("research_areas"):
+                    sup["research_areas"] = []
                 
                 # Fetch recent works to find last paper year
                 if sup["openalex_id"]:
@@ -121,6 +132,14 @@ async def enrich_paper_to_supervisor(c: dict) -> dict:
     sup["institution"] = sup.get("institution") or "Unknown"
     sup["country"] = sup.get("country") or "Unknown"
     sup["last_paper_year"] = sup.get("last_paper_year") or c.get("year")
+    # Carry forward research_areas from original candidate if enrichment didn't set them
+    if not sup.get("research_areas"):
+        sup["research_areas"] = (
+            c.get("research_areas")
+            or c.get("keywords")
+            or c.get("topics")
+            or []
+        )
     
     return sup
 

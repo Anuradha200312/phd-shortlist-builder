@@ -179,7 +179,15 @@ async def generate_why_match_batch(
     async def generate_with_semaphore(candidate):
         async with semaphore:
             why_match = await generate_why_match(candidate, student_profile)
-            return candidate.get("id"), why_match
+            # Use the stable _enrich_key injected by enrich_node, then fallback to name/id
+            key = (
+                candidate.get("_enrich_key")
+                or candidate.get("name")
+                or candidate.get("id")
+                or candidate.get("url")
+                or ""
+            )
+            return key, why_match
     
     tasks = [generate_with_semaphore(c) for c in candidates]
     

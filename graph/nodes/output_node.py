@@ -40,7 +40,12 @@ def build_shortlist_output(state: ShortlistState, max_results: int = 100) -> dic
                 "google_scholar_id": c.get("google_scholar_id"),
                 "orcid": c.get("orcid"),
             },
-            "research_focus": c.get("research_areas", []),
+            "research_focus": (
+                c.get("research_areas")
+                or c.get("keywords")
+                or c.get("topics")
+                or []
+            ),
             "evidence": (c.get("papers", []) or [])[:5] + (c.get("grants", []) or [])[:3],
             "why_match": c.get("why_match", ""),
             "tier": c.get("tier", "target"),

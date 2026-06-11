@@ -61,6 +61,9 @@ async def resolve_node(state: ShortlistState) -> dict:
             # Already checked in a previous attempt, skip to avoid duplicate LLM/API calls
             info = disambiguation[cid]
             if info.get("passed_lock") and info.get("domain_passed"):
+                # Restore domain_confidence from cache so downstream nodes have it
+                c = dict(c)
+                c["domain_confidence"] = info.get("domain_confidence", 0.0)
                 resolved.append(c)
             continue
 
@@ -87,6 +90,7 @@ async def resolve_node(state: ShortlistState) -> dict:
 
 
         # Run domain check (two-layer chain); import lazily and be permissive on failure
+        domain_result = {"passed": True, "domain_confidence": 0.5, "layer": "llm"}  # safe default
         try:
             global check_domain_two_layer
             if check_domain_two_layer is None:
@@ -104,6 +108,9 @@ async def resolve_node(state: ShortlistState) -> dict:
             logger.warning("domain_check_failed", error=str(e), candidate=cid)
             domain_passed = True  # be permissive on error
 
+        # Write domain_confidence onto candidate so output_node can read it
+        c["domain_confidence"] = domain_result.get("domain_confidence", 0.0)
+
         # Candidate is resolved only if lock passes AND domain check passed
         if passed_lock and domain_passed:
             resolved.append(c)
@@ -114,13 +121,14 @@ async def resolve_node(state: ShortlistState) -> dict:
             "embed_ok": embed_ok,
             "passed_lock": passed_lock,
             "domain_passed": domain_passed,
+            "domain_confidence": domain_result.get("domain_confidence", 0.0),
         }
 
     logger.info("resolve_node_complete", resolved=len(resolved), raw_total=len(raw))
 
     return {
         "resolved_candidates": state.get("resolved_candidates", []) + resolved,
-        "disambiguation_results": {**disambiguation, **disambiguation},
+        "disambiguation_results": disambiguation,
         "domain_blacklist_blocked": bb,
         "domain_llm_checked": llm_checked,
     }

@@ -1,0 +1,48 @@
+{
+  "student_id": "s1",
+  "generated_at": "2026-06-11T17:33:46.575906Z",
+  "pipeline_version": "1.0.0",
+  "shortlist": [
+    {
+      "rank": 1,
+      "supervisor": {
+        "name": "Alice",
+        "institution": "MIT",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": null,
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [],
+      "why_match": "ok",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.8,
+      "confidence_breakdown": null,
+      "match_dimensions": {
+        "research_overlap": 0.0,
+        "recent_activity": false,
+        "is_pi_verified": false,
+        "h_index": 0,
+        "country_match": false,
+        "domain_confidence": 0.0,
+        "last_paper_year": null
+      }
+    }
+  ],
+  "metadata": {
+    "total_candidates_considered": 0,
+    "data_sources": [],
+    "llm_provider_used": "",
+    "langgraph_run_id": "r1",
+    "run_duration_seconds": 0.0,
+    "audit_summary": {}
+  }
+}

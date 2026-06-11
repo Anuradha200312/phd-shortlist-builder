@@ -1,0 +1,381 @@
+{
+  "student_id": "test_001",
+  "generated_at": "2026-06-11T16:58:15.296349Z",
+  "pipeline_version": "1.0.0",
+  "shortlist": [
+    {
+      "rank": 1,
+      "supervisor": {
+        "name": "Taghi M. Khoshgoftaar",
+        "institution": "Florida Atlantic University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5089170562",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "A survey on Image Data Augmentation for Deep Learning",
+          "venue": null,
+          "year": 2019,
+          "url": "https://openalex.org/W2954996726",
+          "doi": "https://doi.org/10.1186/s40537-019-0197-0"
+        },
+        {
+          "type": "paper",
+          "title": "PoS-FedFraud: A Robust Proof-of-Stake Framework for Decentralized Financial Fraud Detection in Federated Learning",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/ichora69329.2026.11537106"
+        },
+        {
+          "type": "paper",
+          "title": "Predictive modeling for auto repossession success: a comparative evaluation",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01428-2"
+        },
+        {
+          "type": "paper",
+          "title": "Order-based frameworks for predicting and classifying absence duration following an occupational injury",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01445-1"
+        },
+        {
+          "type": "paper",
+          "title": "A bibliometric analysis of the first decade of the Journal of Big Data",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01412-w"
+        }
+      ],
+      "why_match": "Taghi M. Khoshgoftaar, a professor at Florida Atlantic University, presents a strong potential match for this PhD student due to their shared research interests in federated learning and medical image segmentation. The student's recent publication, FedSeg: Federated Learning for Multi-Organ Segmentation in CT Scans (MICCAI 2024), demonstrates their expertise in this area, and Khoshgoftaar's recent work on PoS-FedFraud: A Robust Proof-of-Stake Framework for Decentralized Financial Fraud Detection in Federated Learning (2026) showcases his expertise in federated learning, aligning with the student's research goals.\n\nAdditionally, Khoshgoftaar has worked on predictive modeling in various domains, as evident from his paper \"Predictive modeling for auto repossession success: a comparative evaluation\" (2026). Although the specific focus on medical image segmentation is not evident from his publications, his general interest in predictive modeling could provide a foundation for exploring this area with the student.\n\nWhile there is limited information available on Khoshgoftaar's h-index and citation count, his recent publications suggest active engagement in research. The institution, Florida Atlantic University, offers a research environment that can facilitate interdisciplinary collaborations, which could be beneficial for the student's work on brain-computer interfaces and neural signal processing.\n\nThe student's background in deep learning for medical image segmentation, as demonstrated by their M.Tech thesis, aligns with Khoshgoftaar's potential for guidance in this area. Collaborative opportunities could arise from exploring the intersection of federated learning, medical image segmentation, and predictive modeling, allowing the student to tap into Khoshgoftaar's expertise and experience.",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.41657894736842105,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.10526315789473684,
+        "overlap_score": 0.10526315789473684,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 82,
+        "hindex_score": 1.0,
+        "total_score": 0.41657894736842105
+      },
+      "match_dimensions": {
+        "research_overlap": 0.10526315789473684,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 82,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 2,
+      "supervisor": {
+        "name": "Dimitris Metaxas",
+        "institution": "Rutgers, The State University of New Jersey",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5109600054",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Physics-Based Deformable Models: Applications to Computer Vision, Graphics, and Medical Imaging",
+          "venue": null,
+          "year": 1996,
+          "url": "https://openalex.org/W1539631312",
+          "doi": "https://doi.org/10.1007/978-1-4615-6335-8"
+        },
+        {
+          "type": "paper",
+          "title": "Large Sign Language Models: Toward 3D American Sign Language Translation",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/wacv61042.2026.00304"
+        },
+        {
+          "type": "paper",
+          "title": "DTop-p MoE: Sparsity-Controlled Dynamic Top-p MoE for Foundation Model Pre-training",
+          "year": 2025,
+          "doi": "https://doi.org/10.48550/arxiv.2512.13996"
+        },
+        {
+          "type": "paper",
+          "title": "Toward Modality- and Sampling-Universal Learning Strategies for Accelerating Cardiovascular Imaging: Summary of the CMRxRecon2024 Challenge",
+          "year": 2025,
+          "doi": "https://doi.org/10.1109/tmi.2025.3641610"
+        },
+        {
+          "type": "paper",
+          "title": "Test-Time Spectrum-Aware Latent Steering for Zero-Shot Generalization in Vision-Language Models",
+          "year": 2025,
+          "doi": "https://doi.org/10.48550/arxiv.2511.09809"
+        }
+      ],
+      "why_match": "Dimitris Metaxas, a renowned expert in computer vision and graphics, is an excellent match for a PhD student with interests in medical image segmentation, federated learning, and neural signal processing. His recent work on Physics-Based Deformable Models (1996) and its applications to medical imaging demonstrates a strong foundation in the field, which aligns with the student's research interests in medical image segmentation.\n\nMoreover, Metaxas' recent publications, such as \"Toward Modality- and Sampling-Universal Learning Strategies for Accelerating Cardiovascular Imaging\" (2025), showcase his expertise in developing innovative solutions for medical imaging challenges. This aligns with the student's MICCAI 2024 publication, \"FedSeg: Federated Learning for Multi-Organ Segmentation in CT Scans,\" highlighting a shared interest in medical image segmentation and federated learning.\n\nAs a researcher at Rutgers, The State University of New Jersey, Metaxas benefits from a strong research environment with opportunities for collaboration and knowledge sharing. The institution's emphasis on interdisciplinary research and its reputation for innovation in medical imaging and computer vision provide an ideal setting for the student to explore their research interests.\n\nMetaxas' research group may also offer valuable expertise in neural signal processing, another area of interest for the student. While specific grant information is not available, the university's research funding and resources can support the student's research endeavors.\n\nIn terms of metrics, Metaxas has a significant publication record, and although specific citation counts are not provided, his h-index (not available) likely reflects his impact in the field. Overall, Dimitris Metaxas offers a strong research environment, expertise, and alignment with the student's interests, making him an excellent match for a PhD student with interests in medical image segmentation, federated learning, and neural signal processing.",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.3986363636363637,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.045454545454545456,
+        "overlap_score": 0.045454545454545456,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 67,
+        "hindex_score": 1.0,
+        "total_score": 0.3986363636363637
+      },
+      "match_dimensions": {
+        "research_overlap": 0.045454545454545456,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 67,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 3,
+      "supervisor": {
+        "name": "Vijay Devabhaktuni",
+        "institution": "Illinois State University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5111712571",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "U-Net and Its Variants for Medical Image Segmentation: A Review of Theory and Applications",
+          "venue": null,
+          "year": 2021,
+          "url": "https://openalex.org/W3096947210",
+          "doi": "https://doi.org/10.1109/access.2021.3086020"
+        },
+        {
+          "type": "paper",
+          "title": "Artificial Intelligence in Healthcare: Applications, Benefits, Challenges, and Future Directions",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/iatmsi68868.2026.11465943"
+        },
+        {
+          "type": "paper",
+          "title": "A Distributed Policy Gradient Method for Multiagent Control with Uncertain Cost Functions",
+          "year": 2025,
+          "doi": "https://doi.org/10.1109/indin64977.2025.11279131"
+        },
+        {
+          "type": "paper",
+          "title": "A framework for mitigating malicious RLHF feedback in LLM training using consensus based reward",
+          "year": 2025,
+          "doi": "https://doi.org/10.1038/s41598-025-92889-7"
+        },
+        {
+          "type": "paper",
+          "title": "A return-to-home unmanned aerial vehicle navigation solution in global positioning system denied environments via bidirectional long short-term memory reverse flightpath prediction",
+          "year": 2024,
+          "doi": "https://doi.org/10.1016/j.engappai.2024.109729"
+        }
+      ],
+      "why_match": "Based on the provided information, Vijay Devabhaktuni appears to be a suitable supervisor for the PhD student due to the alignment of their research interests and expertise. The student's research interests in medical image segmentation, federated learning, and neural signal processing are closely related to the topics covered in Vijay Devabhaktuni's recent papers, including \"U-Net and Its Variants for Medical Image Segmentation: A Review of Theory and Applications\" (2021) and \"A Distributed Policy Gradient Method for Multiagent Control with Uncertain Cost Functions\" (2025).\n\nThe student's experience with federated learning, as demonstrated by their publication \"FedSeg: Federated Learning for Multi-Organ Segmentation in CT Scans\" (MICCAI 2024), aligns with Vijay Devabhaktuni's work on distributed algorithms, such as the \"A Distributed Policy Gradient Method for Multiagent Control with Uncertain Cost Functions\" (2025). This shared expertise could facilitate collaborative research opportunities and facilitate knowledge exchange.\n\nWhile Vijay Devabhaktuni does not have any grants available, his recent publications and research interests suggest that he is actively engaged in the field and has the potential to provide valuable guidance and mentorship. The institution, Illinois State University, may offer opportunities for interdisciplinary collaboration and access to resources, which could complement Vijay Devabhaktuni's expertise and support the student's research goals.\n\nIn terms of metrics, Vijay Devabhaktuni's recent publications suggest a strong research output, although more information about his citation count and h-index would provide a clearer picture of his academic impact. Nevertheless, the alignment of their research interests and expertise makes Vijay Devabhaktuni a suitable supervisor for the PhD student.",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.38108695652173913,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.08695652173913043,
+        "overlap_score": 0.08695652173913043,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 35,
+        "hindex_score": 0.7,
+        "total_score": 0.38108695652173913
+      },
+      "match_dimensions": {
+        "research_overlap": 0.08695652173913043,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 35,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 4,
+      "supervisor": {
+        "name": "Brent J Lance",
+        "institution": "DEVCOM Army Research Laboratory",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5042017468",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "EEGNet: a compact convolutional neural network for EEG-based brain\u2013computer interfaces",
+          "venue": null,
+          "year": 2018,
+          "url": "https://openalex.org/W2559463885",
+          "doi": "https://doi.org/10.1088/1741-2552/aace8c"
+        },
+        {
+          "type": "paper",
+          "title": "Modeling and analysis of motion data from dynamic soldier state estimation to enable situational understanding",
+          "year": 2022,
+          "doi": "https://doi.org/10.1117/12.2618634"
+        },
+        {
+          "type": "paper",
+          "title": "Does Optimal Source Task Performance Imply Optimal Pre-training for a\\n Target Task?",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2106.11174"
+        },
+        {
+          "type": "paper",
+          "title": "Does Optimal Source Task Performance Imply Optimal Pre-training for a Target Task?",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2106.11174"
+        },
+        {
+          "type": "paper",
+          "title": "Alpha Correlates of Practice During Mental Preparation for Motor Imagery",
+          "year": 2020,
+          "doi": "https://doi.org/10.1109/tcds.2020.3026530"
+        }
+      ],
+      "why_match": "Based on the provided information, a strong connection exists between Brent J Lance and the PhD student due to their shared interest in brain-computer interfaces. Lance's 2018 paper, \"EEGNet: a compact convolutional neural network for EEG-based brain\u2013computer interfaces,\" demonstrates his expertise in this area. The student's research interests include brain-computer interfaces, which makes Lance a suitable supervisor for exploring this topic.\n\nFurthermore, Lance's work on neural signal processing, as evident from his 2020 paper \"Alpha Correlates of Practice During Mental Preparation for Motor Imagery,\" aligns with the student's interests. The student's background in deep learning for medical image segmentation, as seen in their M.Tech thesis, also complements Lance's work on neural signal processing.\n\nWhile there are no grants available for Lance, his research environment at the DEVCOM Army Research Laboratory provides a unique opportunity for the student to work with cutting-edge technologies and collaborate with experts in the field. The institution's focus on research and development can offer the student valuable experience in applying theoretical concepts to real-world problems.\n\nLance's publication record, although limited in the provided information, suggests a moderate level of productivity. However, his h-index and citation count are not available. Nevertheless, his research experience and expertise in brain-computer interfaces make him a suitable supervisor for the student to explore their research interests.\n\nIn terms of collaboration, Lance's work on neural signal processing and brain-computer interfaces creates opportunities for the student to engage in interdisciplinary research. The student's expertise in federated learning and medical image segmentation can also contribute to the development of novel brain-computer interface systems. Overall, the connection between Lance's research and the student's interests provides a solid foundation for a productive and collaborative working relationship.",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.286,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.1,
+        "overlap_score": 0.1,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 23,
+        "hindex_score": 0.46,
+        "total_score": 0.286
+      },
+      "match_dimensions": {
+        "research_overlap": 0.1,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 23,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2022
+      }
+    }
+  ],
+  "metadata": {
+    "total_candidates_considered": 300,
+    "data_sources": [
+      "nih_reporter",
+      "openalex"
+    ],
+    "llm_provider_used": "",
+    "langgraph_run_id": "f22ba941",
+    "run_duration_seconds": 2098.1,
+    "audit_summary": {
+      "top_n": 4,
+      "flagged_count": 4,
+      "flagged": [
+        {
+          "id": "https://openalex.org/W2954996726",
+          "reasons": [
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1539631312",
+          "reasons": [
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W3096947210",
+          "reasons": [
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2559463885",
+          "reasons": [
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,4907 @@
+{
+  "student_id": "test_001",
+  "generated_at": "2026-06-11T13:58:01.321930Z",
+  "pipeline_version": "1.0.0",
+  "shortlist": [
+    {
+      "rank": 1,
+      "supervisor": {
+        "name": "Taghi M. Khoshgoftaar",
+        "institution": "Florida Atlantic University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5089170562",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "A survey on Image Data Augmentation for Deep Learning",
+          "venue": null,
+          "year": 2019,
+          "url": "https://openalex.org/W2954996726",
+          "doi": "https://doi.org/10.1186/s40537-019-0197-0"
+        },
+        {
+          "type": "paper",
+          "title": "PoS-FedFraud: A Robust Proof-of-Stake Framework for Decentralized Financial Fraud Detection in Federated Learning",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/ichora69329.2026.11537106"
+        },
+        {
+          "type": "paper",
+          "title": "Predictive modeling for auto repossession success: a comparative evaluation",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01428-2"
+        },
+        {
+          "type": "paper",
+          "title": "Order-based frameworks for predicting and classifying absence duration following an occupational injury",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01445-1"
+        },
+        {
+          "type": "paper",
+          "title": "A bibliometric analysis of the first decade of the Journal of Big Data",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01412-w"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.41657894736842105,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.10526315789473684,
+        "overlap_score": 0.10526315789473684,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 82,
+        "hindex_score": 1.0,
+        "total_score": 0.41657894736842105
+      },
+      "match_dimensions": {
+        "research_overlap": 0.10526315789473684,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 82,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 2,
+      "supervisor": {
+        "name": "Taghi M. Khoshgoftaar",
+        "institution": "Florida Atlantic University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5089170562",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "A survey on Image Data Augmentation for Deep Learning",
+          "venue": null,
+          "year": 2019,
+          "url": "https://openalex.org/W2954996726",
+          "doi": "https://doi.org/10.1186/s40537-019-0197-0"
+        },
+        {
+          "type": "paper",
+          "title": "PoS-FedFraud: A Robust Proof-of-Stake Framework for Decentralized Financial Fraud Detection in Federated Learning",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/ichora69329.2026.11537106"
+        },
+        {
+          "type": "paper",
+          "title": "Predictive modeling for auto repossession success: a comparative evaluation",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01428-2"
+        },
+        {
+          "type": "paper",
+          "title": "Order-based frameworks for predicting and classifying absence duration following an occupational injury",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01445-1"
+        },
+        {
+          "type": "paper",
+          "title": "A bibliometric analysis of the first decade of the Journal of Big Data",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01412-w"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.41657894736842105,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.10526315789473684,
+        "overlap_score": 0.10526315789473684,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 82,
+        "hindex_score": 1.0,
+        "total_score": 0.41657894736842105
+      },
+      "match_dimensions": {
+        "research_overlap": 0.10526315789473684,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 82,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 3,
+      "supervisor": {
+        "name": "Taghi M. Khoshgoftaar",
+        "institution": "Florida Atlantic University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5089170562",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "A survey on Image Data Augmentation for Deep Learning",
+          "venue": null,
+          "year": 2019,
+          "url": "https://openalex.org/W2954996726",
+          "doi": "https://doi.org/10.1186/s40537-019-0197-0"
+        },
+        {
+          "type": "paper",
+          "title": "PoS-FedFraud: A Robust Proof-of-Stake Framework for Decentralized Financial Fraud Detection in Federated Learning",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/ichora69329.2026.11537106"
+        },
+        {
+          "type": "paper",
+          "title": "Predictive modeling for auto repossession success: a comparative evaluation",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01428-2"
+        },
+        {
+          "type": "paper",
+          "title": "Order-based frameworks for predicting and classifying absence duration following an occupational injury",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01445-1"
+        },
+        {
+          "type": "paper",
+          "title": "A bibliometric analysis of the first decade of the Journal of Big Data",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01412-w"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.41657894736842105,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.10526315789473684,
+        "overlap_score": 0.10526315789473684,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 82,
+        "hindex_score": 1.0,
+        "total_score": 0.41657894736842105
+      },
+      "match_dimensions": {
+        "research_overlap": 0.10526315789473684,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 82,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 4,
+      "supervisor": {
+        "name": "Taghi M. Khoshgoftaar",
+        "institution": "Florida Atlantic University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5089170562",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "A survey on Image Data Augmentation for Deep Learning",
+          "venue": null,
+          "year": 2019,
+          "url": "https://openalex.org/W2954996726",
+          "doi": "https://doi.org/10.1186/s40537-019-0197-0"
+        },
+        {
+          "type": "paper",
+          "title": "PoS-FedFraud: A Robust Proof-of-Stake Framework for Decentralized Financial Fraud Detection in Federated Learning",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/ichora69329.2026.11537106"
+        },
+        {
+          "type": "paper",
+          "title": "Predictive modeling for auto repossession success: a comparative evaluation",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01428-2"
+        },
+        {
+          "type": "paper",
+          "title": "Order-based frameworks for predicting and classifying absence duration following an occupational injury",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01445-1"
+        },
+        {
+          "type": "paper",
+          "title": "A bibliometric analysis of the first decade of the Journal of Big Data",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01412-w"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.41657894736842105,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.10526315789473684,
+        "overlap_score": 0.10526315789473684,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 82,
+        "hindex_score": 1.0,
+        "total_score": 0.41657894736842105
+      },
+      "match_dimensions": {
+        "research_overlap": 0.10526315789473684,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 82,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 5,
+      "supervisor": {
+        "name": "Taghi M. Khoshgoftaar",
+        "institution": "Florida Atlantic University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5089170562",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "A survey on Image Data Augmentation for Deep Learning",
+          "venue": null,
+          "year": 2019,
+          "url": "https://openalex.org/W2954996726",
+          "doi": "https://doi.org/10.1186/s40537-019-0197-0"
+        },
+        {
+          "type": "paper",
+          "title": "PoS-FedFraud: A Robust Proof-of-Stake Framework for Decentralized Financial Fraud Detection in Federated Learning",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/ichora69329.2026.11537106"
+        },
+        {
+          "type": "paper",
+          "title": "Predictive modeling for auto repossession success: a comparative evaluation",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01428-2"
+        },
+        {
+          "type": "paper",
+          "title": "Order-based frameworks for predicting and classifying absence duration following an occupational injury",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01445-1"
+        },
+        {
+          "type": "paper",
+          "title": "A bibliometric analysis of the first decade of the Journal of Big Data",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01412-w"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.41657894736842105,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.10526315789473684,
+        "overlap_score": 0.10526315789473684,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 82,
+        "hindex_score": 1.0,
+        "total_score": 0.41657894736842105
+      },
+      "match_dimensions": {
+        "research_overlap": 0.10526315789473684,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 82,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 6,
+      "supervisor": {
+        "name": "Taghi M. Khoshgoftaar",
+        "institution": "Florida Atlantic University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5089170562",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "A survey on Image Data Augmentation for Deep Learning",
+          "venue": null,
+          "year": 2019,
+          "url": "https://openalex.org/W2954996726",
+          "doi": "https://doi.org/10.1186/s40537-019-0197-0"
+        },
+        {
+          "type": "paper",
+          "title": "PoS-FedFraud: A Robust Proof-of-Stake Framework for Decentralized Financial Fraud Detection in Federated Learning",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/ichora69329.2026.11537106"
+        },
+        {
+          "type": "paper",
+          "title": "Predictive modeling for auto repossession success: a comparative evaluation",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01428-2"
+        },
+        {
+          "type": "paper",
+          "title": "Order-based frameworks for predicting and classifying absence duration following an occupational injury",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01445-1"
+        },
+        {
+          "type": "paper",
+          "title": "A bibliometric analysis of the first decade of the Journal of Big Data",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01412-w"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.41657894736842105,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.10526315789473684,
+        "overlap_score": 0.10526315789473684,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 82,
+        "hindex_score": 1.0,
+        "total_score": 0.41657894736842105
+      },
+      "match_dimensions": {
+        "research_overlap": 0.10526315789473684,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 82,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 7,
+      "supervisor": {
+        "name": "Dimitris Metaxas",
+        "institution": "Rutgers, The State University of New Jersey",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5109600054",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Physics-Based Deformable Models: Applications to Computer Vision, Graphics, and Medical Imaging",
+          "venue": null,
+          "year": 1996,
+          "url": "https://openalex.org/W1539631312",
+          "doi": "https://doi.org/10.1007/978-1-4615-6335-8"
+        },
+        {
+          "type": "paper",
+          "title": "Large Sign Language Models: Toward 3D American Sign Language Translation",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/wacv61042.2026.00304"
+        },
+        {
+          "type": "paper",
+          "title": "DTop-p MoE: Sparsity-Controlled Dynamic Top-p MoE for Foundation Model Pre-training",
+          "year": 2025,
+          "doi": "https://doi.org/10.48550/arxiv.2512.13996"
+        },
+        {
+          "type": "paper",
+          "title": "Toward Modality- and Sampling-Universal Learning Strategies for Accelerating Cardiovascular Imaging: Summary of the CMRxRecon2024 Challenge",
+          "year": 2025,
+          "doi": "https://doi.org/10.1109/tmi.2025.3641610"
+        },
+        {
+          "type": "paper",
+          "title": "Test-Time Spectrum-Aware Latent Steering for Zero-Shot Generalization in Vision-Language Models",
+          "year": 2025,
+          "doi": "https://doi.org/10.48550/arxiv.2511.09809"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.3986363636363637,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.045454545454545456,
+        "overlap_score": 0.045454545454545456,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 67,
+        "hindex_score": 1.0,
+        "total_score": 0.3986363636363637
+      },
+      "match_dimensions": {
+        "research_overlap": 0.045454545454545456,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 67,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 8,
+      "supervisor": {
+        "name": "Dimitris Metaxas",
+        "institution": "Rutgers, The State University of New Jersey",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5109600054",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Physics-Based Deformable Models: Applications to Computer Vision, Graphics, and Medical Imaging",
+          "venue": null,
+          "year": 1996,
+          "url": "https://openalex.org/W1539631312",
+          "doi": "https://doi.org/10.1007/978-1-4615-6335-8"
+        },
+        {
+          "type": "paper",
+          "title": "Large Sign Language Models: Toward 3D American Sign Language Translation",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/wacv61042.2026.00304"
+        },
+        {
+          "type": "paper",
+          "title": "DTop-p MoE: Sparsity-Controlled Dynamic Top-p MoE for Foundation Model Pre-training",
+          "year": 2025,
+          "doi": "https://doi.org/10.48550/arxiv.2512.13996"
+        },
+        {
+          "type": "paper",
+          "title": "Toward Modality- and Sampling-Universal Learning Strategies for Accelerating Cardiovascular Imaging: Summary of the CMRxRecon2024 Challenge",
+          "year": 2025,
+          "doi": "https://doi.org/10.1109/tmi.2025.3641610"
+        },
+        {
+          "type": "paper",
+          "title": "Test-Time Spectrum-Aware Latent Steering for Zero-Shot Generalization in Vision-Language Models",
+          "year": 2025,
+          "doi": "https://doi.org/10.48550/arxiv.2511.09809"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.3986363636363637,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.045454545454545456,
+        "overlap_score": 0.045454545454545456,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 67,
+        "hindex_score": 1.0,
+        "total_score": 0.3986363636363637
+      },
+      "match_dimensions": {
+        "research_overlap": 0.045454545454545456,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 67,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 9,
+      "supervisor": {
+        "name": "Dimitris Metaxas",
+        "institution": "Rutgers, The State University of New Jersey",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5109600054",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Physics-Based Deformable Models: Applications to Computer Vision, Graphics, and Medical Imaging",
+          "venue": null,
+          "year": 1996,
+          "url": "https://openalex.org/W1539631312",
+          "doi": "https://doi.org/10.1007/978-1-4615-6335-8"
+        },
+        {
+          "type": "paper",
+          "title": "Large Sign Language Models: Toward 3D American Sign Language Translation",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/wacv61042.2026.00304"
+        },
+        {
+          "type": "paper",
+          "title": "DTop-p MoE: Sparsity-Controlled Dynamic Top-p MoE for Foundation Model Pre-training",
+          "year": 2025,
+          "doi": "https://doi.org/10.48550/arxiv.2512.13996"
+        },
+        {
+          "type": "paper",
+          "title": "Toward Modality- and Sampling-Universal Learning Strategies for Accelerating Cardiovascular Imaging: Summary of the CMRxRecon2024 Challenge",
+          "year": 2025,
+          "doi": "https://doi.org/10.1109/tmi.2025.3641610"
+        },
+        {
+          "type": "paper",
+          "title": "Test-Time Spectrum-Aware Latent Steering for Zero-Shot Generalization in Vision-Language Models",
+          "year": 2025,
+          "doi": "https://doi.org/10.48550/arxiv.2511.09809"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.3986363636363637,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.045454545454545456,
+        "overlap_score": 0.045454545454545456,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 67,
+        "hindex_score": 1.0,
+        "total_score": 0.3986363636363637
+      },
+      "match_dimensions": {
+        "research_overlap": 0.045454545454545456,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 67,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 10,
+      "supervisor": {
+        "name": "Dimitris Metaxas",
+        "institution": "Rutgers, The State University of New Jersey",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5109600054",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Physics-Based Deformable Models: Applications to Computer Vision, Graphics, and Medical Imaging",
+          "venue": null,
+          "year": 1996,
+          "url": "https://openalex.org/W1539631312",
+          "doi": "https://doi.org/10.1007/978-1-4615-6335-8"
+        },
+        {
+          "type": "paper",
+          "title": "Large Sign Language Models: Toward 3D American Sign Language Translation",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/wacv61042.2026.00304"
+        },
+        {
+          "type": "paper",
+          "title": "DTop-p MoE: Sparsity-Controlled Dynamic Top-p MoE for Foundation Model Pre-training",
+          "year": 2025,
+          "doi": "https://doi.org/10.48550/arxiv.2512.13996"
+        },
+        {
+          "type": "paper",
+          "title": "Toward Modality- and Sampling-Universal Learning Strategies for Accelerating Cardiovascular Imaging: Summary of the CMRxRecon2024 Challenge",
+          "year": 2025,
+          "doi": "https://doi.org/10.1109/tmi.2025.3641610"
+        },
+        {
+          "type": "paper",
+          "title": "Test-Time Spectrum-Aware Latent Steering for Zero-Shot Generalization in Vision-Language Models",
+          "year": 2025,
+          "doi": "https://doi.org/10.48550/arxiv.2511.09809"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.3986363636363637,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.045454545454545456,
+        "overlap_score": 0.045454545454545456,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 67,
+        "hindex_score": 1.0,
+        "total_score": 0.3986363636363637
+      },
+      "match_dimensions": {
+        "research_overlap": 0.045454545454545456,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 67,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 11,
+      "supervisor": {
+        "name": "Dimitris Metaxas",
+        "institution": "Rutgers, The State University of New Jersey",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5109600054",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Physics-Based Deformable Models: Applications to Computer Vision, Graphics, and Medical Imaging",
+          "venue": null,
+          "year": 1996,
+          "url": "https://openalex.org/W1539631312",
+          "doi": "https://doi.org/10.1007/978-1-4615-6335-8"
+        },
+        {
+          "type": "paper",
+          "title": "Large Sign Language Models: Toward 3D American Sign Language Translation",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/wacv61042.2026.00304"
+        },
+        {
+          "type": "paper",
+          "title": "DTop-p MoE: Sparsity-Controlled Dynamic Top-p MoE for Foundation Model Pre-training",
+          "year": 2025,
+          "doi": "https://doi.org/10.48550/arxiv.2512.13996"
+        },
+        {
+          "type": "paper",
+          "title": "Toward Modality- and Sampling-Universal Learning Strategies for Accelerating Cardiovascular Imaging: Summary of the CMRxRecon2024 Challenge",
+          "year": 2025,
+          "doi": "https://doi.org/10.1109/tmi.2025.3641610"
+        },
+        {
+          "type": "paper",
+          "title": "Test-Time Spectrum-Aware Latent Steering for Zero-Shot Generalization in Vision-Language Models",
+          "year": 2025,
+          "doi": "https://doi.org/10.48550/arxiv.2511.09809"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.3986363636363637,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.045454545454545456,
+        "overlap_score": 0.045454545454545456,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 67,
+        "hindex_score": 1.0,
+        "total_score": 0.3986363636363637
+      },
+      "match_dimensions": {
+        "research_overlap": 0.045454545454545456,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 67,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 12,
+      "supervisor": {
+        "name": "Dimitris Metaxas",
+        "institution": "Rutgers, The State University of New Jersey",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5109600054",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Physics-Based Deformable Models: Applications to Computer Vision, Graphics, and Medical Imaging",
+          "venue": null,
+          "year": 1996,
+          "url": "https://openalex.org/W1539631312",
+          "doi": "https://doi.org/10.1007/978-1-4615-6335-8"
+        },
+        {
+          "type": "paper",
+          "title": "Large Sign Language Models: Toward 3D American Sign Language Translation",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/wacv61042.2026.00304"
+        },
+        {
+          "type": "paper",
+          "title": "DTop-p MoE: Sparsity-Controlled Dynamic Top-p MoE for Foundation Model Pre-training",
+          "year": 2025,
+          "doi": "https://doi.org/10.48550/arxiv.2512.13996"
+        },
+        {
+          "type": "paper",
+          "title": "Toward Modality- and Sampling-Universal Learning Strategies for Accelerating Cardiovascular Imaging: Summary of the CMRxRecon2024 Challenge",
+          "year": 2025,
+          "doi": "https://doi.org/10.1109/tmi.2025.3641610"
+        },
+        {
+          "type": "paper",
+          "title": "Test-Time Spectrum-Aware Latent Steering for Zero-Shot Generalization in Vision-Language Models",
+          "year": 2025,
+          "doi": "https://doi.org/10.48550/arxiv.2511.09809"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.3986363636363637,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.045454545454545456,
+        "overlap_score": 0.045454545454545456,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 67,
+        "hindex_score": 1.0,
+        "total_score": 0.3986363636363637
+      },
+      "match_dimensions": {
+        "research_overlap": 0.045454545454545456,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 67,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 13,
+      "supervisor": {
+        "name": "Vijay Devabhaktuni",
+        "institution": "Illinois State University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5111712571",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "U-Net and Its Variants for Medical Image Segmentation: A Review of Theory and Applications",
+          "venue": null,
+          "year": 2021,
+          "url": "https://openalex.org/W3096947210",
+          "doi": "https://doi.org/10.1109/access.2021.3086020"
+        },
+        {
+          "type": "paper",
+          "title": "Artificial Intelligence in Healthcare: Applications, Benefits, Challenges, and Future Directions",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/iatmsi68868.2026.11465943"
+        },
+        {
+          "type": "paper",
+          "title": "A Distributed Policy Gradient Method for Multiagent Control with Uncertain Cost Functions",
+          "year": 2025,
+          "doi": "https://doi.org/10.1109/indin64977.2025.11279131"
+        },
+        {
+          "type": "paper",
+          "title": "A framework for mitigating malicious RLHF feedback in LLM training using consensus based reward",
+          "year": 2025,
+          "doi": "https://doi.org/10.1038/s41598-025-92889-7"
+        },
+        {
+          "type": "paper",
+          "title": "A return-to-home unmanned aerial vehicle navigation solution in global positioning system denied environments via bidirectional long short-term memory reverse flightpath prediction",
+          "year": 2024,
+          "doi": "https://doi.org/10.1016/j.engappai.2024.109729"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.38108695652173913,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.08695652173913043,
+        "overlap_score": 0.08695652173913043,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 35,
+        "hindex_score": 0.7,
+        "total_score": 0.38108695652173913
+      },
+      "match_dimensions": {
+        "research_overlap": 0.08695652173913043,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 35,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 14,
+      "supervisor": {
+        "name": "Vijay Devabhaktuni",
+        "institution": "Illinois State University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5111712571",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "U-Net and Its Variants for Medical Image Segmentation: A Review of Theory and Applications",
+          "venue": null,
+          "year": 2021,
+          "url": "https://openalex.org/W3096947210",
+          "doi": "https://doi.org/10.1109/access.2021.3086020"
+        },
+        {
+          "type": "paper",
+          "title": "Artificial Intelligence in Healthcare: Applications, Benefits, Challenges, and Future Directions",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/iatmsi68868.2026.11465943"
+        },
+        {
+          "type": "paper",
+          "title": "A Distributed Policy Gradient Method for Multiagent Control with Uncertain Cost Functions",
+          "year": 2025,
+          "doi": "https://doi.org/10.1109/indin64977.2025.11279131"
+        },
+        {
+          "type": "paper",
+          "title": "A framework for mitigating malicious RLHF feedback in LLM training using consensus based reward",
+          "year": 2025,
+          "doi": "https://doi.org/10.1038/s41598-025-92889-7"
+        },
+        {
+          "type": "paper",
+          "title": "A return-to-home unmanned aerial vehicle navigation solution in global positioning system denied environments via bidirectional long short-term memory reverse flightpath prediction",
+          "year": 2024,
+          "doi": "https://doi.org/10.1016/j.engappai.2024.109729"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.38108695652173913,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.08695652173913043,
+        "overlap_score": 0.08695652173913043,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 35,
+        "hindex_score": 0.7,
+        "total_score": 0.38108695652173913
+      },
+      "match_dimensions": {
+        "research_overlap": 0.08695652173913043,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 35,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 15,
+      "supervisor": {
+        "name": "Vijay Devabhaktuni",
+        "institution": "Illinois State University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5111712571",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "U-Net and Its Variants for Medical Image Segmentation: A Review of Theory and Applications",
+          "venue": null,
+          "year": 2021,
+          "url": "https://openalex.org/W3096947210",
+          "doi": "https://doi.org/10.1109/access.2021.3086020"
+        },
+        {
+          "type": "paper",
+          "title": "Artificial Intelligence in Healthcare: Applications, Benefits, Challenges, and Future Directions",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/iatmsi68868.2026.11465943"
+        },
+        {
+          "type": "paper",
+          "title": "A Distributed Policy Gradient Method for Multiagent Control with Uncertain Cost Functions",
+          "year": 2025,
+          "doi": "https://doi.org/10.1109/indin64977.2025.11279131"
+        },
+        {
+          "type": "paper",
+          "title": "A framework for mitigating malicious RLHF feedback in LLM training using consensus based reward",
+          "year": 2025,
+          "doi": "https://doi.org/10.1038/s41598-025-92889-7"
+        },
+        {
+          "type": "paper",
+          "title": "A return-to-home unmanned aerial vehicle navigation solution in global positioning system denied environments via bidirectional long short-term memory reverse flightpath prediction",
+          "year": 2024,
+          "doi": "https://doi.org/10.1016/j.engappai.2024.109729"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.38108695652173913,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.08695652173913043,
+        "overlap_score": 0.08695652173913043,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 35,
+        "hindex_score": 0.7,
+        "total_score": 0.38108695652173913
+      },
+      "match_dimensions": {
+        "research_overlap": 0.08695652173913043,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 35,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 16,
+      "supervisor": {
+        "name": "Vijay Devabhaktuni",
+        "institution": "Illinois State University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5111712571",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "U-Net and Its Variants for Medical Image Segmentation: A Review of Theory and Applications",
+          "venue": null,
+          "year": 2021,
+          "url": "https://openalex.org/W3096947210",
+          "doi": "https://doi.org/10.1109/access.2021.3086020"
+        },
+        {
+          "type": "paper",
+          "title": "Artificial Intelligence in Healthcare: Applications, Benefits, Challenges, and Future Directions",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/iatmsi68868.2026.11465943"
+        },
+        {
+          "type": "paper",
+          "title": "A Distributed Policy Gradient Method for Multiagent Control with Uncertain Cost Functions",
+          "year": 2025,
+          "doi": "https://doi.org/10.1109/indin64977.2025.11279131"
+        },
+        {
+          "type": "paper",
+          "title": "A framework for mitigating malicious RLHF feedback in LLM training using consensus based reward",
+          "year": 2025,
+          "doi": "https://doi.org/10.1038/s41598-025-92889-7"
+        },
+        {
+          "type": "paper",
+          "title": "A return-to-home unmanned aerial vehicle navigation solution in global positioning system denied environments via bidirectional long short-term memory reverse flightpath prediction",
+          "year": 2024,
+          "doi": "https://doi.org/10.1016/j.engappai.2024.109729"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.38108695652173913,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.08695652173913043,
+        "overlap_score": 0.08695652173913043,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 35,
+        "hindex_score": 0.7,
+        "total_score": 0.38108695652173913
+      },
+      "match_dimensions": {
+        "research_overlap": 0.08695652173913043,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 35,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 17,
+      "supervisor": {
+        "name": "Vijay Devabhaktuni",
+        "institution": "Illinois State University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5111712571",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "U-Net and Its Variants for Medical Image Segmentation: A Review of Theory and Applications",
+          "venue": null,
+          "year": 2021,
+          "url": "https://openalex.org/W3096947210",
+          "doi": "https://doi.org/10.1109/access.2021.3086020"
+        },
+        {
+          "type": "paper",
+          "title": "Artificial Intelligence in Healthcare: Applications, Benefits, Challenges, and Future Directions",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/iatmsi68868.2026.11465943"
+        },
+        {
+          "type": "paper",
+          "title": "A Distributed Policy Gradient Method for Multiagent Control with Uncertain Cost Functions",
+          "year": 2025,
+          "doi": "https://doi.org/10.1109/indin64977.2025.11279131"
+        },
+        {
+          "type": "paper",
+          "title": "A framework for mitigating malicious RLHF feedback in LLM training using consensus based reward",
+          "year": 2025,
+          "doi": "https://doi.org/10.1038/s41598-025-92889-7"
+        },
+        {
+          "type": "paper",
+          "title": "A return-to-home unmanned aerial vehicle navigation solution in global positioning system denied environments via bidirectional long short-term memory reverse flightpath prediction",
+          "year": 2024,
+          "doi": "https://doi.org/10.1016/j.engappai.2024.109729"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.38108695652173913,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.08695652173913043,
+        "overlap_score": 0.08695652173913043,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 35,
+        "hindex_score": 0.7,
+        "total_score": 0.38108695652173913
+      },
+      "match_dimensions": {
+        "research_overlap": 0.08695652173913043,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 35,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 18,
+      "supervisor": {
+        "name": "Vijay Devabhaktuni",
+        "institution": "Illinois State University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5111712571",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "U-Net and Its Variants for Medical Image Segmentation: A Review of Theory and Applications",
+          "venue": null,
+          "year": 2021,
+          "url": "https://openalex.org/W3096947210",
+          "doi": "https://doi.org/10.1109/access.2021.3086020"
+        },
+        {
+          "type": "paper",
+          "title": "Artificial Intelligence in Healthcare: Applications, Benefits, Challenges, and Future Directions",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/iatmsi68868.2026.11465943"
+        },
+        {
+          "type": "paper",
+          "title": "A Distributed Policy Gradient Method for Multiagent Control with Uncertain Cost Functions",
+          "year": 2025,
+          "doi": "https://doi.org/10.1109/indin64977.2025.11279131"
+        },
+        {
+          "type": "paper",
+          "title": "A framework for mitigating malicious RLHF feedback in LLM training using consensus based reward",
+          "year": 2025,
+          "doi": "https://doi.org/10.1038/s41598-025-92889-7"
+        },
+        {
+          "type": "paper",
+          "title": "A return-to-home unmanned aerial vehicle navigation solution in global positioning system denied environments via bidirectional long short-term memory reverse flightpath prediction",
+          "year": 2024,
+          "doi": "https://doi.org/10.1016/j.engappai.2024.109729"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.38108695652173913,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.08695652173913043,
+        "overlap_score": 0.08695652173913043,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 35,
+        "hindex_score": 0.7,
+        "total_score": 0.38108695652173913
+      },
+      "match_dimensions": {
+        "research_overlap": 0.08695652173913043,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 35,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 19,
+      "supervisor": {
+        "name": "Nicholas Ayache",
+        "institution": "Institut national de recherche en sciences et technologies du num\u00e9rique",
+        "department": null,
+        "country": "FR",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5110261261",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Medical image analysis: progress over two decades and the challenges ahead",
+          "venue": null,
+          "year": 2000,
+          "url": "https://openalex.org/W2098979973",
+          "doi": "https://doi.org/10.1109/34.824822"
+        },
+        {
+          "type": "paper",
+          "title": "TBDM: Temporal Boundary Distillation Module for Surgical Gesture Segmentation",
+          "year": 2026,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "Towards real-time alignment of 3D CT and 2D X-Ray with multi-stage CNNs",
+          "year": 2026,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "Multi-stage CNN for\u00a0Fast Registration of\u00a03D Preoperative CTs to\u00a02D Intraoperative X-Rays",
+          "year": 2026,
+          "doi": "https://doi.org/10.1007/978-3-032-09784-2_14"
+        },
+        {
+          "type": "paper",
+          "title": "Data Exfiltration by Compression Attack: Definition and Evaluation on Medical Image Data",
+          "year": 2025,
+          "doi": "https://doi.org/10.59275/j.melba.2025-113f"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.35357142857142854,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.09523809523809523,
+        "overlap_score": 0.09523809523809523,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 99,
+        "hindex_score": 1.0,
+        "total_score": 0.35357142857142854
+      },
+      "match_dimensions": {
+        "research_overlap": 0.09523809523809523,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 99,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 20,
+      "supervisor": {
+        "name": "Nicholas Ayache",
+        "institution": "Institut national de recherche en sciences et technologies du num\u00e9rique",
+        "department": null,
+        "country": "FR",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5110261261",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Medical image analysis: progress over two decades and the challenges ahead",
+          "venue": null,
+          "year": 2000,
+          "url": "https://openalex.org/W2098979973",
+          "doi": "https://doi.org/10.1109/34.824822"
+        },
+        {
+          "type": "paper",
+          "title": "TBDM: Temporal Boundary Distillation Module for Surgical Gesture Segmentation",
+          "year": 2026,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "Towards real-time alignment of 3D CT and 2D X-Ray with multi-stage CNNs",
+          "year": 2026,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "Multi-stage CNN for\u00a0Fast Registration of\u00a03D Preoperative CTs to\u00a02D Intraoperative X-Rays",
+          "year": 2026,
+          "doi": "https://doi.org/10.1007/978-3-032-09784-2_14"
+        },
+        {
+          "type": "paper",
+          "title": "Data Exfiltration by Compression Attack: Definition and Evaluation on Medical Image Data",
+          "year": 2025,
+          "doi": "https://doi.org/10.59275/j.melba.2025-113f"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.35357142857142854,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.09523809523809523,
+        "overlap_score": 0.09523809523809523,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 99,
+        "hindex_score": 1.0,
+        "total_score": 0.35357142857142854
+      },
+      "match_dimensions": {
+        "research_overlap": 0.09523809523809523,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 99,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 21,
+      "supervisor": {
+        "name": "Nicholas Ayache",
+        "institution": "Institut national de recherche en sciences et technologies du num\u00e9rique",
+        "department": null,
+        "country": "FR",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5110261261",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Medical image analysis: progress over two decades and the challenges ahead",
+          "venue": null,
+          "year": 2000,
+          "url": "https://openalex.org/W2098979973",
+          "doi": "https://doi.org/10.1109/34.824822"
+        },
+        {
+          "type": "paper",
+          "title": "TBDM: Temporal Boundary Distillation Module for Surgical Gesture Segmentation",
+          "year": 2026,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "Towards real-time alignment of 3D CT and 2D X-Ray with multi-stage CNNs",
+          "year": 2026,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "Multi-stage CNN for\u00a0Fast Registration of\u00a03D Preoperative CTs to\u00a02D Intraoperative X-Rays",
+          "year": 2026,
+          "doi": "https://doi.org/10.1007/978-3-032-09784-2_14"
+        },
+        {
+          "type": "paper",
+          "title": "Data Exfiltration by Compression Attack: Definition and Evaluation on Medical Image Data",
+          "year": 2025,
+          "doi": "https://doi.org/10.59275/j.melba.2025-113f"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.35357142857142854,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.09523809523809523,
+        "overlap_score": 0.09523809523809523,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 99,
+        "hindex_score": 1.0,
+        "total_score": 0.35357142857142854
+      },
+      "match_dimensions": {
+        "research_overlap": 0.09523809523809523,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 99,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 22,
+      "supervisor": {
+        "name": "Nicholas Ayache",
+        "institution": "Institut national de recherche en sciences et technologies du num\u00e9rique",
+        "department": null,
+        "country": "FR",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5110261261",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Medical image analysis: progress over two decades and the challenges ahead",
+          "venue": null,
+          "year": 2000,
+          "url": "https://openalex.org/W2098979973",
+          "doi": "https://doi.org/10.1109/34.824822"
+        },
+        {
+          "type": "paper",
+          "title": "TBDM: Temporal Boundary Distillation Module for Surgical Gesture Segmentation",
+          "year": 2026,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "Towards real-time alignment of 3D CT and 2D X-Ray with multi-stage CNNs",
+          "year": 2026,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "Multi-stage CNN for\u00a0Fast Registration of\u00a03D Preoperative CTs to\u00a02D Intraoperative X-Rays",
+          "year": 2026,
+          "doi": "https://doi.org/10.1007/978-3-032-09784-2_14"
+        },
+        {
+          "type": "paper",
+          "title": "Data Exfiltration by Compression Attack: Definition and Evaluation on Medical Image Data",
+          "year": 2025,
+          "doi": "https://doi.org/10.59275/j.melba.2025-113f"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.35357142857142854,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.09523809523809523,
+        "overlap_score": 0.09523809523809523,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 99,
+        "hindex_score": 1.0,
+        "total_score": 0.35357142857142854
+      },
+      "match_dimensions": {
+        "research_overlap": 0.09523809523809523,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 99,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 23,
+      "supervisor": {
+        "name": "Nicholas Ayache",
+        "institution": "Institut national de recherche en sciences et technologies du num\u00e9rique",
+        "department": null,
+        "country": "FR",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5110261261",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Medical image analysis: progress over two decades and the challenges ahead",
+          "venue": null,
+          "year": 2000,
+          "url": "https://openalex.org/W2098979973",
+          "doi": "https://doi.org/10.1109/34.824822"
+        },
+        {
+          "type": "paper",
+          "title": "TBDM: Temporal Boundary Distillation Module for Surgical Gesture Segmentation",
+          "year": 2026,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "Towards real-time alignment of 3D CT and 2D X-Ray with multi-stage CNNs",
+          "year": 2026,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "Multi-stage CNN for\u00a0Fast Registration of\u00a03D Preoperative CTs to\u00a02D Intraoperative X-Rays",
+          "year": 2026,
+          "doi": "https://doi.org/10.1007/978-3-032-09784-2_14"
+        },
+        {
+          "type": "paper",
+          "title": "Data Exfiltration by Compression Attack: Definition and Evaluation on Medical Image Data",
+          "year": 2025,
+          "doi": "https://doi.org/10.59275/j.melba.2025-113f"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.35357142857142854,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.09523809523809523,
+        "overlap_score": 0.09523809523809523,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 99,
+        "hindex_score": 1.0,
+        "total_score": 0.35357142857142854
+      },
+      "match_dimensions": {
+        "research_overlap": 0.09523809523809523,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 99,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 24,
+      "supervisor": {
+        "name": "Nicholas Ayache",
+        "institution": "Institut national de recherche en sciences et technologies du num\u00e9rique",
+        "department": null,
+        "country": "FR",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5110261261",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Medical image analysis: progress over two decades and the challenges ahead",
+          "venue": null,
+          "year": 2000,
+          "url": "https://openalex.org/W2098979973",
+          "doi": "https://doi.org/10.1109/34.824822"
+        },
+        {
+          "type": "paper",
+          "title": "TBDM: Temporal Boundary Distillation Module for Surgical Gesture Segmentation",
+          "year": 2026,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "Towards real-time alignment of 3D CT and 2D X-Ray with multi-stage CNNs",
+          "year": 2026,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "Multi-stage CNN for\u00a0Fast Registration of\u00a03D Preoperative CTs to\u00a02D Intraoperative X-Rays",
+          "year": 2026,
+          "doi": "https://doi.org/10.1007/978-3-032-09784-2_14"
+        },
+        {
+          "type": "paper",
+          "title": "Data Exfiltration by Compression Attack: Definition and Evaluation on Medical Image Data",
+          "year": 2025,
+          "doi": "https://doi.org/10.59275/j.melba.2025-113f"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.35357142857142854,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.09523809523809523,
+        "overlap_score": 0.09523809523809523,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 99,
+        "hindex_score": 1.0,
+        "total_score": 0.35357142857142854
+      },
+      "match_dimensions": {
+        "research_overlap": 0.09523809523809523,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 99,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 25,
+      "supervisor": {
+        "name": "H. Brendan McMahan",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5040311844",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Advances and Open Problems in Federated Learning",
+          "venue": null,
+          "year": 2020,
+          "url": "https://openalex.org/W2995022099",
+          "doi": "https://doi.org/10.1561/2200000083"
+        },
+        {
+          "type": "paper",
+          "title": "A Hassle-free Algorithm for Strong Differential Privacy in Federated Learning Systems",
+          "year": 2024,
+          "doi": "https://doi.org/10.18653/v1/2024.emnlp-industry.64"
+        },
+        {
+          "type": "paper",
+          "title": "Differentially Private Learning with Adaptive Clipping",
+          "year": 2021,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "A Field Guide to Federated Optimization",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2107.06917"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.3322941176470588,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.11764705882352941,
+        "overlap_score": 0.11764705882352941,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 36,
+        "hindex_score": 0.72,
+        "total_score": 0.3322941176470588
+      },
+      "match_dimensions": {
+        "research_overlap": 0.11764705882352941,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 36,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2024
+      }
+    },
+    {
+      "rank": 26,
+      "supervisor": {
+        "name": "H. Brendan McMahan",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5040311844",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Advances and Open Problems in Federated Learning",
+          "venue": null,
+          "year": 2020,
+          "url": "https://openalex.org/W2995022099",
+          "doi": "https://doi.org/10.1561/2200000083"
+        },
+        {
+          "type": "paper",
+          "title": "A Hassle-free Algorithm for Strong Differential Privacy in Federated Learning Systems",
+          "year": 2024,
+          "doi": "https://doi.org/10.18653/v1/2024.emnlp-industry.64"
+        },
+        {
+          "type": "paper",
+          "title": "Differentially Private Learning with Adaptive Clipping",
+          "year": 2021,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "A Field Guide to Federated Optimization",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2107.06917"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.3322941176470588,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.11764705882352941,
+        "overlap_score": 0.11764705882352941,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 36,
+        "hindex_score": 0.72,
+        "total_score": 0.3322941176470588
+      },
+      "match_dimensions": {
+        "research_overlap": 0.11764705882352941,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 36,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2024
+      }
+    },
+    {
+      "rank": 27,
+      "supervisor": {
+        "name": "H. Brendan McMahan",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5040311844",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Advances and Open Problems in Federated Learning",
+          "venue": null,
+          "year": 2020,
+          "url": "https://openalex.org/W2995022099",
+          "doi": "https://doi.org/10.1561/2200000083"
+        },
+        {
+          "type": "paper",
+          "title": "A Hassle-free Algorithm for Strong Differential Privacy in Federated Learning Systems",
+          "year": 2024,
+          "doi": "https://doi.org/10.18653/v1/2024.emnlp-industry.64"
+        },
+        {
+          "type": "paper",
+          "title": "Differentially Private Learning with Adaptive Clipping",
+          "year": 2021,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "A Field Guide to Federated Optimization",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2107.06917"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.3322941176470588,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.11764705882352941,
+        "overlap_score": 0.11764705882352941,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 36,
+        "hindex_score": 0.72,
+        "total_score": 0.3322941176470588
+      },
+      "match_dimensions": {
+        "research_overlap": 0.11764705882352941,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 36,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2024
+      }
+    },
+    {
+      "rank": 28,
+      "supervisor": {
+        "name": "H. Brendan McMahan",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5040311844",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Advances and Open Problems in Federated Learning",
+          "venue": null,
+          "year": 2020,
+          "url": "https://openalex.org/W2995022099",
+          "doi": "https://doi.org/10.1561/2200000083"
+        },
+        {
+          "type": "paper",
+          "title": "A Hassle-free Algorithm for Strong Differential Privacy in Federated Learning Systems",
+          "year": 2024,
+          "doi": "https://doi.org/10.18653/v1/2024.emnlp-industry.64"
+        },
+        {
+          "type": "paper",
+          "title": "Differentially Private Learning with Adaptive Clipping",
+          "year": 2021,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "A Field Guide to Federated Optimization",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2107.06917"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.3322941176470588,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.11764705882352941,
+        "overlap_score": 0.11764705882352941,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 36,
+        "hindex_score": 0.72,
+        "total_score": 0.3322941176470588
+      },
+      "match_dimensions": {
+        "research_overlap": 0.11764705882352941,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 36,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2024
+      }
+    },
+    {
+      "rank": 29,
+      "supervisor": {
+        "name": "H. Brendan McMahan",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5040311844",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Advances and Open Problems in Federated Learning",
+          "venue": null,
+          "year": 2020,
+          "url": "https://openalex.org/W2995022099",
+          "doi": "https://doi.org/10.1561/2200000083"
+        },
+        {
+          "type": "paper",
+          "title": "A Hassle-free Algorithm for Strong Differential Privacy in Federated Learning Systems",
+          "year": 2024,
+          "doi": "https://doi.org/10.18653/v1/2024.emnlp-industry.64"
+        },
+        {
+          "type": "paper",
+          "title": "Differentially Private Learning with Adaptive Clipping",
+          "year": 2021,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "A Field Guide to Federated Optimization",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2107.06917"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.3322941176470588,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.11764705882352941,
+        "overlap_score": 0.11764705882352941,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 36,
+        "hindex_score": 0.72,
+        "total_score": 0.3322941176470588
+      },
+      "match_dimensions": {
+        "research_overlap": 0.11764705882352941,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 36,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2024
+      }
+    },
+    {
+      "rank": 30,
+      "supervisor": {
+        "name": "H. Brendan McMahan",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5040311844",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Advances and Open Problems in Federated Learning",
+          "venue": null,
+          "year": 2020,
+          "url": "https://openalex.org/W2995022099",
+          "doi": "https://doi.org/10.1561/2200000083"
+        },
+        {
+          "type": "paper",
+          "title": "A Hassle-free Algorithm for Strong Differential Privacy in Federated Learning Systems",
+          "year": 2024,
+          "doi": "https://doi.org/10.18653/v1/2024.emnlp-industry.64"
+        },
+        {
+          "type": "paper",
+          "title": "Differentially Private Learning with Adaptive Clipping",
+          "year": 2021,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "A Field Guide to Federated Optimization",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2107.06917"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.3322941176470588,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.11764705882352941,
+        "overlap_score": 0.11764705882352941,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 36,
+        "hindex_score": 0.72,
+        "total_score": 0.3322941176470588
+      },
+      "match_dimensions": {
+        "research_overlap": 0.11764705882352941,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 36,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2024
+      }
+    },
+    {
+      "rank": 31,
+      "supervisor": {
+        "name": "Dianbo Hua",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5045731596",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Review on security of federated learning and its application in healthcare",
+          "venue": null,
+          "year": 2023,
+          "url": "https://openalex.org/W4321766338",
+          "doi": "https://doi.org/10.1016/j.future.2023.02.021"
+        },
+        {
+          "type": "paper",
+          "title": "A review of federated learning technology and its research progress in healthcare applications",
+          "year": 2025,
+          "doi": "https://doi.org/10.1007/s10489-025-06627-7"
+        },
+        {
+          "type": "paper",
+          "title": "A review of big data technology and its application in cancer care",
+          "year": 2024,
+          "doi": "https://doi.org/10.1016/j.compbiomed.2024.108577"
+        },
+        {
+          "type": "paper",
+          "title": "FS-WOA-stacking: A novel ensemble model for early diagnosis of breast cancer",
+          "year": 2024,
+          "doi": "https://doi.org/10.1016/j.bspc.2024.106374"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.31357142857142856,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.09523809523809523,
+        "overlap_score": 0.09523809523809523,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 6,
+        "hindex_score": 0.6,
+        "total_score": 0.31357142857142856
+      },
+      "match_dimensions": {
+        "research_overlap": 0.09523809523809523,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 6,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2025
+      }
+    },
+    {
+      "rank": 32,
+      "supervisor": {
+        "name": "Dianbo Hua",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5045731596",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Review on security of federated learning and its application in healthcare",
+          "venue": null,
+          "year": 2023,
+          "url": "https://openalex.org/W4321766338",
+          "doi": "https://doi.org/10.1016/j.future.2023.02.021"
+        },
+        {
+          "type": "paper",
+          "title": "A review of federated learning technology and its research progress in healthcare applications",
+          "year": 2025,
+          "doi": "https://doi.org/10.1007/s10489-025-06627-7"
+        },
+        {
+          "type": "paper",
+          "title": "A review of big data technology and its application in cancer care",
+          "year": 2024,
+          "doi": "https://doi.org/10.1016/j.compbiomed.2024.108577"
+        },
+        {
+          "type": "paper",
+          "title": "FS-WOA-stacking: A novel ensemble model for early diagnosis of breast cancer",
+          "year": 2024,
+          "doi": "https://doi.org/10.1016/j.bspc.2024.106374"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.31357142857142856,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.09523809523809523,
+        "overlap_score": 0.09523809523809523,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 6,
+        "hindex_score": 0.6,
+        "total_score": 0.31357142857142856
+      },
+      "match_dimensions": {
+        "research_overlap": 0.09523809523809523,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 6,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2025
+      }
+    },
+    {
+      "rank": 33,
+      "supervisor": {
+        "name": "Dianbo Hua",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5045731596",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Review on security of federated learning and its application in healthcare",
+          "venue": null,
+          "year": 2023,
+          "url": "https://openalex.org/W4321766338",
+          "doi": "https://doi.org/10.1016/j.future.2023.02.021"
+        },
+        {
+          "type": "paper",
+          "title": "A review of federated learning technology and its research progress in healthcare applications",
+          "year": 2025,
+          "doi": "https://doi.org/10.1007/s10489-025-06627-7"
+        },
+        {
+          "type": "paper",
+          "title": "A review of big data technology and its application in cancer care",
+          "year": 2024,
+          "doi": "https://doi.org/10.1016/j.compbiomed.2024.108577"
+        },
+        {
+          "type": "paper",
+          "title": "FS-WOA-stacking: A novel ensemble model for early diagnosis of breast cancer",
+          "year": 2024,
+          "doi": "https://doi.org/10.1016/j.bspc.2024.106374"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.31357142857142856,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.09523809523809523,
+        "overlap_score": 0.09523809523809523,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 6,
+        "hindex_score": 0.6,
+        "total_score": 0.31357142857142856
+      },
+      "match_dimensions": {
+        "research_overlap": 0.09523809523809523,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 6,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2025
+      }
+    },
+    {
+      "rank": 34,
+      "supervisor": {
+        "name": "Dianbo Hua",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5045731596",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Review on security of federated learning and its application in healthcare",
+          "venue": null,
+          "year": 2023,
+          "url": "https://openalex.org/W4321766338",
+          "doi": "https://doi.org/10.1016/j.future.2023.02.021"
+        },
+        {
+          "type": "paper",
+          "title": "A review of federated learning technology and its research progress in healthcare applications",
+          "year": 2025,
+          "doi": "https://doi.org/10.1007/s10489-025-06627-7"
+        },
+        {
+          "type": "paper",
+          "title": "A review of big data technology and its application in cancer care",
+          "year": 2024,
+          "doi": "https://doi.org/10.1016/j.compbiomed.2024.108577"
+        },
+        {
+          "type": "paper",
+          "title": "FS-WOA-stacking: A novel ensemble model for early diagnosis of breast cancer",
+          "year": 2024,
+          "doi": "https://doi.org/10.1016/j.bspc.2024.106374"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.31357142857142856,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.09523809523809523,
+        "overlap_score": 0.09523809523809523,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 6,
+        "hindex_score": 0.6,
+        "total_score": 0.31357142857142856
+      },
+      "match_dimensions": {
+        "research_overlap": 0.09523809523809523,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 6,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2025
+      }
+    },
+    {
+      "rank": 35,
+      "supervisor": {
+        "name": "Dianbo Hua",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5045731596",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Review on security of federated learning and its application in healthcare",
+          "venue": null,
+          "year": 2023,
+          "url": "https://openalex.org/W4321766338",
+          "doi": "https://doi.org/10.1016/j.future.2023.02.021"
+        },
+        {
+          "type": "paper",
+          "title": "A review of federated learning technology and its research progress in healthcare applications",
+          "year": 2025,
+          "doi": "https://doi.org/10.1007/s10489-025-06627-7"
+        },
+        {
+          "type": "paper",
+          "title": "A review of big data technology and its application in cancer care",
+          "year": 2024,
+          "doi": "https://doi.org/10.1016/j.compbiomed.2024.108577"
+        },
+        {
+          "type": "paper",
+          "title": "FS-WOA-stacking: A novel ensemble model for early diagnosis of breast cancer",
+          "year": 2024,
+          "doi": "https://doi.org/10.1016/j.bspc.2024.106374"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.31357142857142856,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.09523809523809523,
+        "overlap_score": 0.09523809523809523,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 6,
+        "hindex_score": 0.6,
+        "total_score": 0.31357142857142856
+      },
+      "match_dimensions": {
+        "research_overlap": 0.09523809523809523,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 6,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2025
+      }
+    },
+    {
+      "rank": 36,
+      "supervisor": {
+        "name": "Dianbo Hua",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5045731596",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Review on security of federated learning and its application in healthcare",
+          "venue": null,
+          "year": 2023,
+          "url": "https://openalex.org/W4321766338",
+          "doi": "https://doi.org/10.1016/j.future.2023.02.021"
+        },
+        {
+          "type": "paper",
+          "title": "A review of federated learning technology and its research progress in healthcare applications",
+          "year": 2025,
+          "doi": "https://doi.org/10.1007/s10489-025-06627-7"
+        },
+        {
+          "type": "paper",
+          "title": "A review of big data technology and its application in cancer care",
+          "year": 2024,
+          "doi": "https://doi.org/10.1016/j.compbiomed.2024.108577"
+        },
+        {
+          "type": "paper",
+          "title": "FS-WOA-stacking: A novel ensemble model for early diagnosis of breast cancer",
+          "year": 2024,
+          "doi": "https://doi.org/10.1016/j.bspc.2024.106374"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.31357142857142856,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.09523809523809523,
+        "overlap_score": 0.09523809523809523,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 6,
+        "hindex_score": 0.6,
+        "total_score": 0.31357142857142856
+      },
+      "match_dimensions": {
+        "research_overlap": 0.09523809523809523,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 6,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2025
+      }
+    },
+    {
+      "rank": 37,
+      "supervisor": {
+        "name": "Brent J Lance",
+        "institution": "DEVCOM Army Research Laboratory",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5042017468",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "EEGNet: a compact convolutional neural network for EEG-based brain\u2013computer interfaces",
+          "venue": null,
+          "year": 2018,
+          "url": "https://openalex.org/W2559463885",
+          "doi": "https://doi.org/10.1088/1741-2552/aace8c"
+        },
+        {
+          "type": "paper",
+          "title": "Modeling and analysis of motion data from dynamic soldier state estimation to enable situational understanding",
+          "year": 2022,
+          "doi": "https://doi.org/10.1117/12.2618634"
+        },
+        {
+          "type": "paper",
+          "title": "Does Optimal Source Task Performance Imply Optimal Pre-training for a\\n Target Task?",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2106.11174"
+        },
+        {
+          "type": "paper",
+          "title": "Does Optimal Source Task Performance Imply Optimal Pre-training for a Target Task?",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2106.11174"
+        },
+        {
+          "type": "paper",
+          "title": "Alpha Correlates of Practice During Mental Preparation for Motor Imagery",
+          "year": 2020,
+          "doi": "https://doi.org/10.1109/tcds.2020.3026530"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.286,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.1,
+        "overlap_score": 0.1,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 23,
+        "hindex_score": 0.46,
+        "total_score": 0.286
+      },
+      "match_dimensions": {
+        "research_overlap": 0.1,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 23,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2022
+      }
+    },
+    {
+      "rank": 38,
+      "supervisor": {
+        "name": "Brent J Lance",
+        "institution": "DEVCOM Army Research Laboratory",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5042017468",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "EEGNet: a compact convolutional neural network for EEG-based brain\u2013computer interfaces",
+          "venue": null,
+          "year": 2018,
+          "url": "https://openalex.org/W2559463885",
+          "doi": "https://doi.org/10.1088/1741-2552/aace8c"
+        },
+        {
+          "type": "paper",
+          "title": "Modeling and analysis of motion data from dynamic soldier state estimation to enable situational understanding",
+          "year": 2022,
+          "doi": "https://doi.org/10.1117/12.2618634"
+        },
+        {
+          "type": "paper",
+          "title": "Does Optimal Source Task Performance Imply Optimal Pre-training for a\\n Target Task?",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2106.11174"
+        },
+        {
+          "type": "paper",
+          "title": "Does Optimal Source Task Performance Imply Optimal Pre-training for a Target Task?",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2106.11174"
+        },
+        {
+          "type": "paper",
+          "title": "Alpha Correlates of Practice During Mental Preparation for Motor Imagery",
+          "year": 2020,
+          "doi": "https://doi.org/10.1109/tcds.2020.3026530"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.286,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.1,
+        "overlap_score": 0.1,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 23,
+        "hindex_score": 0.46,
+        "total_score": 0.286
+      },
+      "match_dimensions": {
+        "research_overlap": 0.1,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 23,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2022
+      }
+    },
+    {
+      "rank": 39,
+      "supervisor": {
+        "name": "Brent J Lance",
+        "institution": "DEVCOM Army Research Laboratory",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5042017468",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "EEGNet: a compact convolutional neural network for EEG-based brain\u2013computer interfaces",
+          "venue": null,
+          "year": 2018,
+          "url": "https://openalex.org/W2559463885",
+          "doi": "https://doi.org/10.1088/1741-2552/aace8c"
+        },
+        {
+          "type": "paper",
+          "title": "Modeling and analysis of motion data from dynamic soldier state estimation to enable situational understanding",
+          "year": 2022,
+          "doi": "https://doi.org/10.1117/12.2618634"
+        },
+        {
+          "type": "paper",
+          "title": "Does Optimal Source Task Performance Imply Optimal Pre-training for a\\n Target Task?",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2106.11174"
+        },
+        {
+          "type": "paper",
+          "title": "Does Optimal Source Task Performance Imply Optimal Pre-training for a Target Task?",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2106.11174"
+        },
+        {
+          "type": "paper",
+          "title": "Alpha Correlates of Practice During Mental Preparation for Motor Imagery",
+          "year": 2020,
+          "doi": "https://doi.org/10.1109/tcds.2020.3026530"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.286,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.1,
+        "overlap_score": 0.1,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 23,
+        "hindex_score": 0.46,
+        "total_score": 0.286
+      },
+      "match_dimensions": {
+        "research_overlap": 0.1,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 23,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2022
+      }
+    },
+    {
+      "rank": 40,
+      "supervisor": {
+        "name": "Brent J Lance",
+        "institution": "DEVCOM Army Research Laboratory",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5042017468",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "EEGNet: a compact convolutional neural network for EEG-based brain\u2013computer interfaces",
+          "venue": null,
+          "year": 2018,
+          "url": "https://openalex.org/W2559463885",
+          "doi": "https://doi.org/10.1088/1741-2552/aace8c"
+        },
+        {
+          "type": "paper",
+          "title": "Modeling and analysis of motion data from dynamic soldier state estimation to enable situational understanding",
+          "year": 2022,
+          "doi": "https://doi.org/10.1117/12.2618634"
+        },
+        {
+          "type": "paper",
+          "title": "Does Optimal Source Task Performance Imply Optimal Pre-training for a\\n Target Task?",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2106.11174"
+        },
+        {
+          "type": "paper",
+          "title": "Does Optimal Source Task Performance Imply Optimal Pre-training for a Target Task?",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2106.11174"
+        },
+        {
+          "type": "paper",
+          "title": "Alpha Correlates of Practice During Mental Preparation for Motor Imagery",
+          "year": 2020,
+          "doi": "https://doi.org/10.1109/tcds.2020.3026530"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.286,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.1,
+        "overlap_score": 0.1,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 23,
+        "hindex_score": 0.46,
+        "total_score": 0.286
+      },
+      "match_dimensions": {
+        "research_overlap": 0.1,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 23,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2022
+      }
+    },
+    {
+      "rank": 41,
+      "supervisor": {
+        "name": "Brent J Lance",
+        "institution": "DEVCOM Army Research Laboratory",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5042017468",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "EEGNet: a compact convolutional neural network for EEG-based brain\u2013computer interfaces",
+          "venue": null,
+          "year": 2018,
+          "url": "https://openalex.org/W2559463885",
+          "doi": "https://doi.org/10.1088/1741-2552/aace8c"
+        },
+        {
+          "type": "paper",
+          "title": "Modeling and analysis of motion data from dynamic soldier state estimation to enable situational understanding",
+          "year": 2022,
+          "doi": "https://doi.org/10.1117/12.2618634"
+        },
+        {
+          "type": "paper",
+          "title": "Does Optimal Source Task Performance Imply Optimal Pre-training for a\\n Target Task?",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2106.11174"
+        },
+        {
+          "type": "paper",
+          "title": "Does Optimal Source Task Performance Imply Optimal Pre-training for a Target Task?",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2106.11174"
+        },
+        {
+          "type": "paper",
+          "title": "Alpha Correlates of Practice During Mental Preparation for Motor Imagery",
+          "year": 2020,
+          "doi": "https://doi.org/10.1109/tcds.2020.3026530"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.286,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.1,
+        "overlap_score": 0.1,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 23,
+        "hindex_score": 0.46,
+        "total_score": 0.286
+      },
+      "match_dimensions": {
+        "research_overlap": 0.1,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 23,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2022
+      }
+    },
+    {
+      "rank": 42,
+      "supervisor": {
+        "name": "Brent J Lance",
+        "institution": "DEVCOM Army Research Laboratory",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5042017468",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "EEGNet: a compact convolutional neural network for EEG-based brain\u2013computer interfaces",
+          "venue": null,
+          "year": 2018,
+          "url": "https://openalex.org/W2559463885",
+          "doi": "https://doi.org/10.1088/1741-2552/aace8c"
+        },
+        {
+          "type": "paper",
+          "title": "Modeling and analysis of motion data from dynamic soldier state estimation to enable situational understanding",
+          "year": 2022,
+          "doi": "https://doi.org/10.1117/12.2618634"
+        },
+        {
+          "type": "paper",
+          "title": "Does Optimal Source Task Performance Imply Optimal Pre-training for a\\n Target Task?",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2106.11174"
+        },
+        {
+          "type": "paper",
+          "title": "Does Optimal Source Task Performance Imply Optimal Pre-training for a Target Task?",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2106.11174"
+        },
+        {
+          "type": "paper",
+          "title": "Alpha Correlates of Practice During Mental Preparation for Motor Imagery",
+          "year": 2020,
+          "doi": "https://doi.org/10.1109/tcds.2020.3026530"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.286,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.1,
+        "overlap_score": 0.1,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 23,
+        "hindex_score": 0.46,
+        "total_score": 0.286
+      },
+      "match_dimensions": {
+        "research_overlap": 0.1,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 23,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2022
+      }
+    },
+    {
+      "rank": 43,
+      "supervisor": {
+        "name": "B. Kannapiran",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5001138313",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "EEG signal classification using Principal Component Analysis with Neural Network in Brain Computer Interface applications",
+          "venue": null,
+          "year": 2013,
+          "url": "https://openalex.org/W1996852245",
+          "doi": "https://doi.org/10.1109/ice-ccn.2013.6528498"
+        },
+        {
+          "type": "paper",
+          "title": "A revolutionary Partial Resonant Inverter and doubler rectifier with MPPT based on Sliding Mode Controller for\u00a0harvesting Solar photovoltaic sources",
+          "year": 2022,
+          "doi": "https://doi.org/10.1016/j.suscom.2022.100811"
+        },
+        {
+          "type": "paper",
+          "title": "Averaged state space modeling and the applicability of the series Compensated Buck-Boost converter for harvesting solar Photo Voltaic energy",
+          "year": 2022,
+          "doi": "https://doi.org/10.1016/j.seta.2022.102611"
+        },
+        {
+          "type": "paper",
+          "title": "Minimally parametrized segmentation framework with dual metaheuristic optimisation algorithms and FCM for detection of anomalies in MR brain images",
+          "year": 2022,
+          "doi": "https://doi.org/10.1016/j.bspc.2022.103866"
+        },
+        {
+          "type": "paper",
+          "title": "Review on Brain MRI Segmentation Methods",
+          "year": 2021,
+          "doi": "https://doi.org/10.1007/978-981-15-8221-9_33"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.23399999999999999,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.08,
+        "overlap_score": 0.08,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 6,
+        "hindex_score": 0.6,
+        "total_score": 0.23399999999999999
+      },
+      "match_dimensions": {
+        "research_overlap": 0.08,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 6,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2022
+      }
+    },
+    {
+      "rank": 44,
+      "supervisor": {
+        "name": "B. Kannapiran",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5001138313",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "EEG signal classification using Principal Component Analysis with Neural Network in Brain Computer Interface applications",
+          "venue": null,
+          "year": 2013,
+          "url": "https://openalex.org/W1996852245",
+          "doi": "https://doi.org/10.1109/ice-ccn.2013.6528498"
+        },
+        {
+          "type": "paper",
+          "title": "A revolutionary Partial Resonant Inverter and doubler rectifier with MPPT based on Sliding Mode Controller for\u00a0harvesting Solar photovoltaic sources",
+          "year": 2022,
+          "doi": "https://doi.org/10.1016/j.suscom.2022.100811"
+        },
+        {
+          "type": "paper",
+          "title": "Averaged state space modeling and the applicability of the series Compensated Buck-Boost converter for harvesting solar Photo Voltaic energy",
+          "year": 2022,
+          "doi": "https://doi.org/10.1016/j.seta.2022.102611"
+        },
+        {
+          "type": "paper",
+          "title": "Minimally parametrized segmentation framework with dual metaheuristic optimisation algorithms and FCM for detection of anomalies in MR brain images",
+          "year": 2022,
+          "doi": "https://doi.org/10.1016/j.bspc.2022.103866"
+        },
+        {
+          "type": "paper",
+          "title": "Review on Brain MRI Segmentation Methods",
+          "year": 2021,
+          "doi": "https://doi.org/10.1007/978-981-15-8221-9_33"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.23399999999999999,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.08,
+        "overlap_score": 0.08,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 6,
+        "hindex_score": 0.6,
+        "total_score": 0.23399999999999999
+      },
+      "match_dimensions": {
+        "research_overlap": 0.08,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 6,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2022
+      }
+    },
+    {
+      "rank": 45,
+      "supervisor": {
+        "name": "B. Kannapiran",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5001138313",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "EEG signal classification using Principal Component Analysis with Neural Network in Brain Computer Interface applications",
+          "venue": null,
+          "year": 2013,
+          "url": "https://openalex.org/W1996852245",
+          "doi": "https://doi.org/10.1109/ice-ccn.2013.6528498"
+        },
+        {
+          "type": "paper",
+          "title": "A revolutionary Partial Resonant Inverter and doubler rectifier with MPPT based on Sliding Mode Controller for\u00a0harvesting Solar photovoltaic sources",
+          "year": 2022,
+          "doi": "https://doi.org/10.1016/j.suscom.2022.100811"
+        },
+        {
+          "type": "paper",
+          "title": "Averaged state space modeling and the applicability of the series Compensated Buck-Boost converter for harvesting solar Photo Voltaic energy",
+          "year": 2022,
+          "doi": "https://doi.org/10.1016/j.seta.2022.102611"
+        },
+        {
+          "type": "paper",
+          "title": "Minimally parametrized segmentation framework with dual metaheuristic optimisation algorithms and FCM for detection of anomalies in MR brain images",
+          "year": 2022,
+          "doi": "https://doi.org/10.1016/j.bspc.2022.103866"
+        },
+        {
+          "type": "paper",
+          "title": "Review on Brain MRI Segmentation Methods",
+          "year": 2021,
+          "doi": "https://doi.org/10.1007/978-981-15-8221-9_33"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.23399999999999999,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.08,
+        "overlap_score": 0.08,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 6,
+        "hindex_score": 0.6,
+        "total_score": 0.23399999999999999
+      },
+      "match_dimensions": {
+        "research_overlap": 0.08,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 6,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2022
+      }
+    },
+    {
+      "rank": 46,
+      "supervisor": {
+        "name": "B. Kannapiran",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5001138313",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "EEG signal classification using Principal Component Analysis with Neural Network in Brain Computer Interface applications",
+          "venue": null,
+          "year": 2013,
+          "url": "https://openalex.org/W1996852245",
+          "doi": "https://doi.org/10.1109/ice-ccn.2013.6528498"
+        },
+        {
+          "type": "paper",
+          "title": "A revolutionary Partial Resonant Inverter and doubler rectifier with MPPT based on Sliding Mode Controller for\u00a0harvesting Solar photovoltaic sources",
+          "year": 2022,
+          "doi": "https://doi.org/10.1016/j.suscom.2022.100811"
+        },
+        {
+          "type": "paper",
+          "title": "Averaged state space modeling and the applicability of the series Compensated Buck-Boost converter for harvesting solar Photo Voltaic energy",
+          "year": 2022,
+          "doi": "https://doi.org/10.1016/j.seta.2022.102611"
+        },
+        {
+          "type": "paper",
+          "title": "Minimally parametrized segmentation framework with dual metaheuristic optimisation algorithms and FCM for detection of anomalies in MR brain images",
+          "year": 2022,
+          "doi": "https://doi.org/10.1016/j.bspc.2022.103866"
+        },
+        {
+          "type": "paper",
+          "title": "Review on Brain MRI Segmentation Methods",
+          "year": 2021,
+          "doi": "https://doi.org/10.1007/978-981-15-8221-9_33"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.23399999999999999,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.08,
+        "overlap_score": 0.08,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 6,
+        "hindex_score": 0.6,
+        "total_score": 0.23399999999999999
+      },
+      "match_dimensions": {
+        "research_overlap": 0.08,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 6,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2022
+      }
+    },
+    {
+      "rank": 47,
+      "supervisor": {
+        "name": "B. Kannapiran",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5001138313",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "EEG signal classification using Principal Component Analysis with Neural Network in Brain Computer Interface applications",
+          "venue": null,
+          "year": 2013,
+          "url": "https://openalex.org/W1996852245",
+          "doi": "https://doi.org/10.1109/ice-ccn.2013.6528498"
+        },
+        {
+          "type": "paper",
+          "title": "A revolutionary Partial Resonant Inverter and doubler rectifier with MPPT based on Sliding Mode Controller for\u00a0harvesting Solar photovoltaic sources",
+          "year": 2022,
+          "doi": "https://doi.org/10.1016/j.suscom.2022.100811"
+        },
+        {
+          "type": "paper",
+          "title": "Averaged state space modeling and the applicability of the series Compensated Buck-Boost converter for harvesting solar Photo Voltaic energy",
+          "year": 2022,
+          "doi": "https://doi.org/10.1016/j.seta.2022.102611"
+        },
+        {
+          "type": "paper",
+          "title": "Minimally parametrized segmentation framework with dual metaheuristic optimisation algorithms and FCM for detection of anomalies in MR brain images",
+          "year": 2022,
+          "doi": "https://doi.org/10.1016/j.bspc.2022.103866"
+        },
+        {
+          "type": "paper",
+          "title": "Review on Brain MRI Segmentation Methods",
+          "year": 2021,
+          "doi": "https://doi.org/10.1007/978-981-15-8221-9_33"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.23399999999999999,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.08,
+        "overlap_score": 0.08,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 6,
+        "hindex_score": 0.6,
+        "total_score": 0.23399999999999999
+      },
+      "match_dimensions": {
+        "research_overlap": 0.08,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 6,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2022
+      }
+    },
+    {
+      "rank": 48,
+      "supervisor": {
+        "name": "B. Kannapiran",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5001138313",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "EEG signal classification using Principal Component Analysis with Neural Network in Brain Computer Interface applications",
+          "venue": null,
+          "year": 2013,
+          "url": "https://openalex.org/W1996852245",
+          "doi": "https://doi.org/10.1109/ice-ccn.2013.6528498"
+        },
+        {
+          "type": "paper",
+          "title": "A revolutionary Partial Resonant Inverter and doubler rectifier with MPPT based on Sliding Mode Controller for\u00a0harvesting Solar photovoltaic sources",
+          "year": 2022,
+          "doi": "https://doi.org/10.1016/j.suscom.2022.100811"
+        },
+        {
+          "type": "paper",
+          "title": "Averaged state space modeling and the applicability of the series Compensated Buck-Boost converter for harvesting solar Photo Voltaic energy",
+          "year": 2022,
+          "doi": "https://doi.org/10.1016/j.seta.2022.102611"
+        },
+        {
+          "type": "paper",
+          "title": "Minimally parametrized segmentation framework with dual metaheuristic optimisation algorithms and FCM for detection of anomalies in MR brain images",
+          "year": 2022,
+          "doi": "https://doi.org/10.1016/j.bspc.2022.103866"
+        },
+        {
+          "type": "paper",
+          "title": "Review on Brain MRI Segmentation Methods",
+          "year": 2021,
+          "doi": "https://doi.org/10.1007/978-981-15-8221-9_33"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.23399999999999999,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.08,
+        "overlap_score": 0.08,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 6,
+        "hindex_score": 0.6,
+        "total_score": 0.23399999999999999
+      },
+      "match_dimensions": {
+        "research_overlap": 0.08,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 6,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2022
+      }
+    },
+    {
+      "rank": 49,
+      "supervisor": {
+        "name": "J.J. Vidal",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5108113353",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Toward Direct Brain-Computer Communication",
+          "venue": null,
+          "year": 1973,
+          "url": "https://openalex.org/W2164497299",
+          "doi": "https://doi.org/10.1146/annurev.bb.02.060173.001105"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Data Release 2. Observations of solar system objects",
+          "year": 2021,
+          "doi": "https://doi.org/10.48350/158410"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Data Release 2. Observational Hertzsprung-Russell diagrams",
+          "year": 2021,
+          "doi": "https://doi.org/10.48350/158408"
+        },
+        {
+          "type": "paper",
+          "title": "<i>Gaia</i> Early Data Release 3",
+          "year": 2021,
+          "doi": "https://doi.org/10.1051/0004-6361/202140735"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Photometric Science Alerts",
+          "year": 2021,
+          "doi": "https://doi.org/10.26093/cds/vizier.36520076"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.216,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.06666666666666667,
+        "overlap_score": 0.06666666666666667,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 23,
+        "hindex_score": 0.46,
+        "total_score": 0.216
+      },
+      "match_dimensions": {
+        "research_overlap": 0.06666666666666667,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 23,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2021
+      }
+    },
+    {
+      "rank": 50,
+      "supervisor": {
+        "name": "J.J. Vidal",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5108113353",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Toward Direct Brain-Computer Communication",
+          "venue": null,
+          "year": 1973,
+          "url": "https://openalex.org/W2164497299",
+          "doi": "https://doi.org/10.1146/annurev.bb.02.060173.001105"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Data Release 2. Observations of solar system objects",
+          "year": 2021,
+          "doi": "https://doi.org/10.48350/158410"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Data Release 2. Observational Hertzsprung-Russell diagrams",
+          "year": 2021,
+          "doi": "https://doi.org/10.48350/158408"
+        },
+        {
+          "type": "paper",
+          "title": "<i>Gaia</i> Early Data Release 3",
+          "year": 2021,
+          "doi": "https://doi.org/10.1051/0004-6361/202140735"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Photometric Science Alerts",
+          "year": 2021,
+          "doi": "https://doi.org/10.26093/cds/vizier.36520076"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.216,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.06666666666666667,
+        "overlap_score": 0.06666666666666667,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 23,
+        "hindex_score": 0.46,
+        "total_score": 0.216
+      },
+      "match_dimensions": {
+        "research_overlap": 0.06666666666666667,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 23,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2021
+      }
+    },
+    {
+      "rank": 51,
+      "supervisor": {
+        "name": "J.J. Vidal",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5108113353",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Toward Direct Brain-Computer Communication",
+          "venue": null,
+          "year": 1973,
+          "url": "https://openalex.org/W2164497299",
+          "doi": "https://doi.org/10.1146/annurev.bb.02.060173.001105"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Data Release 2. Observations of solar system objects",
+          "year": 2021,
+          "doi": "https://doi.org/10.48350/158410"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Data Release 2. Observational Hertzsprung-Russell diagrams",
+          "year": 2021,
+          "doi": "https://doi.org/10.48350/158408"
+        },
+        {
+          "type": "paper",
+          "title": "<i>Gaia</i> Early Data Release 3",
+          "year": 2021,
+          "doi": "https://doi.org/10.1051/0004-6361/202140735"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Photometric Science Alerts",
+          "year": 2021,
+          "doi": "https://doi.org/10.26093/cds/vizier.36520076"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.216,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.06666666666666667,
+        "overlap_score": 0.06666666666666667,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 23,
+        "hindex_score": 0.46,
+        "total_score": 0.216
+      },
+      "match_dimensions": {
+        "research_overlap": 0.06666666666666667,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 23,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2021
+      }
+    },
+    {
+      "rank": 52,
+      "supervisor": {
+        "name": "J.J. Vidal",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5108113353",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Toward Direct Brain-Computer Communication",
+          "venue": null,
+          "year": 1973,
+          "url": "https://openalex.org/W2164497299",
+          "doi": "https://doi.org/10.1146/annurev.bb.02.060173.001105"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Data Release 2. Observations of solar system objects",
+          "year": 2021,
+          "doi": "https://doi.org/10.48350/158410"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Data Release 2. Observational Hertzsprung-Russell diagrams",
+          "year": 2021,
+          "doi": "https://doi.org/10.48350/158408"
+        },
+        {
+          "type": "paper",
+          "title": "<i>Gaia</i> Early Data Release 3",
+          "year": 2021,
+          "doi": "https://doi.org/10.1051/0004-6361/202140735"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Photometric Science Alerts",
+          "year": 2021,
+          "doi": "https://doi.org/10.26093/cds/vizier.36520076"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.216,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.06666666666666667,
+        "overlap_score": 0.06666666666666667,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 23,
+        "hindex_score": 0.46,
+        "total_score": 0.216
+      },
+      "match_dimensions": {
+        "research_overlap": 0.06666666666666667,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 23,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2021
+      }
+    },
+    {
+      "rank": 53,
+      "supervisor": {
+        "name": "J.J. Vidal",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5108113353",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Toward Direct Brain-Computer Communication",
+          "venue": null,
+          "year": 1973,
+          "url": "https://openalex.org/W2164497299",
+          "doi": "https://doi.org/10.1146/annurev.bb.02.060173.001105"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Data Release 2. Observations of solar system objects",
+          "year": 2021,
+          "doi": "https://doi.org/10.48350/158410"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Data Release 2. Observational Hertzsprung-Russell diagrams",
+          "year": 2021,
+          "doi": "https://doi.org/10.48350/158408"
+        },
+        {
+          "type": "paper",
+          "title": "<i>Gaia</i> Early Data Release 3",
+          "year": 2021,
+          "doi": "https://doi.org/10.1051/0004-6361/202140735"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Photometric Science Alerts",
+          "year": 2021,
+          "doi": "https://doi.org/10.26093/cds/vizier.36520076"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.216,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.06666666666666667,
+        "overlap_score": 0.06666666666666667,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 23,
+        "hindex_score": 0.46,
+        "total_score": 0.216
+      },
+      "match_dimensions": {
+        "research_overlap": 0.06666666666666667,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 23,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2021
+      }
+    },
+    {
+      "rank": 54,
+      "supervisor": {
+        "name": "J.J. Vidal",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5108113353",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Toward Direct Brain-Computer Communication",
+          "venue": null,
+          "year": 1973,
+          "url": "https://openalex.org/W2164497299",
+          "doi": "https://doi.org/10.1146/annurev.bb.02.060173.001105"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Data Release 2. Observations of solar system objects",
+          "year": 2021,
+          "doi": "https://doi.org/10.48350/158410"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Data Release 2. Observational Hertzsprung-Russell diagrams",
+          "year": 2021,
+          "doi": "https://doi.org/10.48350/158408"
+        },
+        {
+          "type": "paper",
+          "title": "<i>Gaia</i> Early Data Release 3",
+          "year": 2021,
+          "doi": "https://doi.org/10.1051/0004-6361/202140735"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Photometric Science Alerts",
+          "year": 2021,
+          "doi": "https://doi.org/10.26093/cds/vizier.36520076"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "duplicate_name",
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.216,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.06666666666666667,
+        "overlap_score": 0.06666666666666667,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 23,
+        "hindex_score": 0.46,
+        "total_score": 0.216
+      },
+      "match_dimensions": {
+        "research_overlap": 0.06666666666666667,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 23,
+        "country_match": false,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2021
+      }
+    }
+  ],
+  "metadata": {
+    "total_candidates_considered": 300,
+    "data_sources": [
+      "nih_reporter",
+      "openalex"
+    ],
+    "llm_provider_used": "",
+    "langgraph_run_id": "4bf11a37",
+    "run_duration_seconds": 1595.6,
+    "audit_summary": {
+      "top_n": 54,
+      "flagged_count": 54,
+      "flagged": [
+        {
+          "id": "https://openalex.org/W2954996726",
+          "reasons": [
+            "duplicate_name",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2954996726",
+          "reasons": [
+            "duplicate_name",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2954996726",
+          "reasons": [
+            "duplicate_name",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2954996726",
+          "reasons": [
+            "duplicate_name",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2954996726",
+          "reasons": [
+            "duplicate_name",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2954996726",
+          "reasons": [
+            "duplicate_name",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1539631312",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1539631312",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1539631312",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1539631312",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1539631312",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1539631312",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W3096947210",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W3096947210",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W3096947210",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W3096947210",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W3096947210",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W3096947210",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2098979973",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2098979973",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2098979973",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2098979973",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2098979973",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2098979973",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2995022099",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2995022099",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2995022099",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2995022099",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2995022099",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2995022099",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4321766338",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4321766338",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4321766338",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4321766338",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4321766338",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4321766338",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2559463885",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2559463885",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2559463885",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2559463885",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2559463885",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2559463885",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1996852245",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1996852245",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1996852245",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1996852245",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1996852245",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1996852245",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2164497299",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2164497299",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2164497299",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2164497299",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2164497299",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2164497299",
+          "reasons": [
+            "duplicate_name",
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        }
+      ]
+    }
+  }
+}

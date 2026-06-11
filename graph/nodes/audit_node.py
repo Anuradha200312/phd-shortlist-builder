@@ -28,7 +28,8 @@ async def audit_node(state: Dict[str, Any], top_n: int = 60) -> Dict[str, Any]:
     in the final JSON built by output_node. Fields like `name`, `institution`, `country`
     are top-level keys.
     """
-    scored = state.get("scored_candidates") or state.get("validated_shortlist") or []
+    # Prefer validated_shortlist (already country+evidence filtered) over raw scored_candidates
+    scored = state.get("validated_shortlist") or state.get("scored_candidates") or []
     if not scored:
         state.setdefault("audit_summary", {})
         return state

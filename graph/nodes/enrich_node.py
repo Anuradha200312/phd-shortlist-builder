@@ -6,7 +6,10 @@ Behavior:
 - Calls `generate_why_match_batch` to produce `why_match` strings for each candidate
 - Updates `enriched_candidates` with `why_match` and `eligibility` fields
 
-Key fix: why_match_batch keys on candidate name (stable across pipeline ID mutations).
+Key fixes:
+- Lazy import retried every call (not cached as None permanently on first failure)
+- why_match is NEVER empty: LLM → fallback template → evidence-based summary
+- _enrich_key uses supervisor name as stable lookup key
 """
 from __future__ import annotations
 import asyncio
@@ -18,9 +21,6 @@ from graph.state import ShortlistState
 
 logger = structlog.get_logger()
 
-# Lazy import of chains to avoid heavy imports during test runs
-_generate_why_match_batch = None
-
 
 def _candidate_lookup_key(c: dict) -> str:
     """Stable key used to match candidates to why_match results.
@@ -29,7 +29,7 @@ def _candidate_lookup_key(c: dict) -> str:
     Using name as the primary key because it survives all pipeline node transitions.
     """
     name = (c.get("name") or "").strip()
-    if name and name != "Unknown":
+    if name and name not in ("Unknown", ""):
         return name
     return (
         c.get("openalex_id")
@@ -40,6 +40,51 @@ def _candidate_lookup_key(c: dict) -> str:
     )
 
 
+def _build_fallback_why_match(c: dict, student_profile: dict) -> str:
+    """Generate a meaningful why_match without LLM when chain is unavailable."""
+    name = c.get("name", "This supervisor")
+    institution = c.get("institution", "their institution")
+    areas = c.get("research_areas") or []
+    interests = student_profile.get("research_interests", [])
+    papers = c.get("papers") or c.get("evidence") or []
+    h_index = c.get("h_index", 0)
+
+    # Find overlapping areas
+    overlap = [a for a in areas if any(i.lower() in a.lower() or a.lower() in i.lower()
+                                        for i in interests)]
+
+    # Pick top 2 evidence papers
+    top_papers = [p.get("title") for p in papers[:2] if p.get("title")]
+
+    parts = []
+    if overlap:
+        parts.append(
+            f"{name} at {institution} actively researches {', '.join(overlap[:3])}, "
+            f"which directly aligns with your stated interest in {', '.join(interests[:2])}."
+        )
+    elif areas:
+        parts.append(
+            f"{name} at {institution} works on {', '.join(areas[:3])}, "
+            f"with potential overlap with your research in {', '.join(interests[:2])}."
+        )
+    else:
+        parts.append(
+            f"{name} at {institution} has an established research programme "
+            f"relevant to {', '.join(interests[:2])}."
+        )
+
+    if top_papers:
+        parts.append(
+            f"Recent work includes: \"{top_papers[0]}\""
+            + (f" and \"{top_papers[1]}\"" if len(top_papers) > 1 else "") + "."
+        )
+
+    if h_index and h_index > 10:
+        parts.append(f"With an h-index of {h_index}, they are a productive and established PI.")
+
+    return " ".join(parts)
+
+
 async def enrich_node(state: ShortlistState) -> dict:
     scored = state.get("scored_candidates", []) or []
     settings = get_settings()
@@ -48,37 +93,31 @@ async def enrich_node(state: ShortlistState) -> dict:
     # Select top-K
     top = scored[:max_enrich]
 
-    # Lazy import
-    global _generate_why_match_batch
-    if _generate_why_match_batch is None:
-        try:
-            from chains import generate_why_match_batch as _gwb
+    student_profile = state.get("student_profile", {})
 
-            _generate_why_match_batch = _gwb
-        except Exception:
-            _generate_why_match_batch = None
+    # Try to import the LLM chain — retry every call (don't cache None permanently)
+    _generate_why_match_batch = None
+    try:
+        from chains import generate_why_match_batch as _gwb
+        _generate_why_match_batch = _gwb
+    except Exception as e:
+        logger.warning("enrich_node_chain_import_failed", error=str(e))
 
-    # If chain isn't available (tests), synthesize simple why_match strings
+    # If chain is not available, use meaningful fallback for every candidate
     if _generate_why_match_batch is None:
         out = []
         for c in top:
             c2 = dict(c)
-            c2["why_match"] = (
-                f"Candidate {c.get('name', c.get('id'))} is a match based on "
-                f"research areas: {', '.join(c.get('research_areas', []) or ['N/A'])}."
-            )
-            c2["eligibility"] = {"open_positions": False}
+            c2["why_match"] = _build_fallback_why_match(c, student_profile)
+            c2["eligibility"] = {"open_positions": bool(c.get("open_positions"))}
             out.append(c2)
 
-        logger.info("enrich_node_complete_stub", enriched=len(out))
+        logger.info("enrich_node_complete_fallback", enriched=len(out))
         return {"enriched_candidates": state.get("enriched_candidates", []) + out}
 
-    # Otherwise call the chain batch generator
+    # Call the LLM batch generator
     try:
-        student_profile = state.get("student_profile", {})
-
-        # Patch each candidate with a stable _key field so the batch function
-        # can return results keyed by name.
+        # Patch each candidate with a stable _key field
         keyed_top = []
         for c in top:
             c2 = dict(c)
@@ -103,6 +142,10 @@ async def enrich_node(state: ShortlistState) -> dict:
                 or why_map.get(c.get("url"))
                 or ""
             )
+            # NEVER leave why_match blank — use meaningful fallback if LLM returned nothing
+            if not why or not why.strip():
+                why = _build_fallback_why_match(c, student_profile)
+
             c2["why_match"] = why
             c2["eligibility"] = {"open_positions": bool(c.get("open_positions"))}
             enriched.append(c2)
@@ -111,5 +154,11 @@ async def enrich_node(state: ShortlistState) -> dict:
         return {"enriched_candidates": state.get("enriched_candidates", []) + enriched}
     except Exception as e:
         logger.error("enrich_node_failed", error=str(e))
-        # Fall back to stub behaviour
-        return await enrich_node({**state, "scored_candidates": top})
+        # Full fallback — generate non-empty why_match for all
+        out = []
+        for c in top:
+            c2 = dict(c)
+            c2["why_match"] = _build_fallback_why_match(c, student_profile)
+            c2["eligibility"] = {"open_positions": bool(c.get("open_positions"))}
+            out.append(c2)
+        return {"enriched_candidates": state.get("enriched_candidates", []) + out}

@@ -11,13 +11,52 @@ logger = structlog.get_logger()
 
 def normalize_country(country: str) -> str:
     if not country:
-        return "Unknown"
+        return ""
     c = country.upper().strip()
     if c in ("US", "USA", "UNITED STATES", "UNITED STATES OF AMERICA"):
         return "USA"
     if c in ("GB", "UK", "UNITED KINGDOM", "GREAT BRITAIN"):
         return "UK"
+    if c in ("CA", "CAN", "CANADA"):
+        return "Canada"
     return country
+
+
+# Institution name fragments → country mapping (covers NIH & OpenAlex gaps)
+_INST_COUNTRY_MAP = [
+    # USA
+    (["university", "college", "institute", "hospital", "nih", "national institutes",
+      "stanford", "mit", "harvard", "yale", "princeton", "columbia", "caltech",
+      "johns hopkins", "carnegie", "rutgers", "purdue", "cornell", "penn state",
+      "michigan", "ohio", "florida", "texas", "california", "washington",
+      "new york", "boston", "georgia", "illinois", "wisconsin", "minnesota",
+      "arizona", "indiana", "virginia", "maryland", "north carolina",
+      "pittsburgh", "mayo clinic", "veterans affairs"], "USA"),
+    # UK
+    (["oxford", "cambridge", "imperial", "ucl", "king's college london",
+      "london school", "edinburgh", "manchester", "birmingham", "bristol",
+      "southampton", "nottingham", "warwick", "glasgow", "sheffield",
+      "leeds", "liverpool", "newcastle", "cardiff", "exeter",
+      "queen mary", "durham", "bath", "surrey", "leicester",
+      "hammersmith", "nhs", "wellcome"], "UK"),
+    # Canada
+    (["toronto", "mcgill", "ubc", "university of british columbia",
+      "alberta", "waterloo", "queens university", "dalhousie",
+      "montreal", "ottawa", "calgary", "western university",
+      "mcmaster", "simon fraser", "laval"], "Canada"),
+]
+
+
+def infer_country_from_institution(institution: str) -> str:
+    """Infer country from institution name using keyword matching."""
+    if not institution:
+        return ""
+    inst_lower = institution.lower()
+    for keywords, country in _INST_COUNTRY_MAP:
+        for kw in keywords:
+            if kw in inst_lower:
+                return country
+    return ""
 
 async def enrich_paper_to_supervisor(c: dict) -> dict:
     """Enrich a paper candidate into a supervisor candidate."""
@@ -130,7 +169,10 @@ async def enrich_paper_to_supervisor(c: dict) -> dict:
 
     # Fallbacks for missing fields
     sup["institution"] = sup.get("institution") or "Unknown"
-    sup["country"] = sup.get("country") or "Unknown"
+    # Try to infer country from institution name before giving up
+    if not sup.get("country") or sup.get("country") == "Unknown":
+        inferred = infer_country_from_institution(sup["institution"])
+        sup["country"] = inferred if inferred else (sup.get("country") or "Unknown")
     sup["last_paper_year"] = sup.get("last_paper_year") or c.get("year")
     # Carry forward research_areas from original candidate if enrichment didn't set them
     if not sup.get("research_areas"):

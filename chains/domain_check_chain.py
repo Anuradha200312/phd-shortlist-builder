@@ -69,6 +69,8 @@ def check_keyword_blacklist(
     
     # Check research areas
     for area in candidate_areas:
+        if not area or not isinstance(area, str):
+            continue
         area_lower = area.lower()
         for domain, keywords in DOMAIN_BLACKLIST_KEYWORDS.items():
             for keyword in keywords:
@@ -77,7 +79,7 @@ def check_keyword_blacklist(
     
     # Check paper venues (quick heuristic)
     for paper in candidate_papers[:5]:  # Check first 5 papers
-        venue = paper.get("venue", "").lower()
+        venue = (paper.get("venue") or "").lower()
         for non_cs_venue in NON_CS_VENUES:
             if non_cs_venue.lower() in venue:
                 return False, f"Non-CS venue detected: {paper.get('venue')}"

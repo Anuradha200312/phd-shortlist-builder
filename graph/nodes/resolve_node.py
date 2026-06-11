@@ -56,6 +56,13 @@ async def resolve_node(state: ShortlistState) -> dict:
     llm_checked = state.get("domain_llm_checked", 0)
 
     for c in raw:
+        if not c.get("name"):
+            try:
+                from graph.nodes.verify_pi_node import enrich_paper_to_supervisor
+                c = await enrich_paper_to_supervisor(c)
+            except Exception as e:
+                logger.warning("candidate_enrichment_failed", error=str(e), candidate=c.get("id"))
+
         cid = c.get("id") or c.get("url") or c.get("title")
         orcid_ok = _is_valid_orcid(c.get("orcid"))
         faculty_ok = bool(c.get("faculty_page_confirmed") is True)

@@ -172,11 +172,11 @@ async def verify_pi_llm(candidate: dict) -> tuple[bool, str, float]:
         
         logger.info(
             "pi_verify_llm_complete",
-            is_faculty=result["is_faculty"],
-            career_stage=result["career_stage"],
+            is_faculty=result.is_faculty,
+            career_stage=result.career_stage,
         )
         
-        return result["is_faculty"], result["career_stage"], result["confidence"]
+        return result.is_faculty, result.career_stage, result.confidence
     
     except Exception as e:
         logger.error("pi_verify_llm_failed", error=str(e))

@@ -160,11 +160,11 @@ async def check_domain_llm(
         
         logger.info(
             "domain_check_llm_complete",
-            is_related=result["is_related"],
-            confidence=result["confidence"],
+            is_related=result.is_related,
+            confidence=result.confidence,
         )
         
-        return result["is_related"], result["confidence"]
+        return result.is_related, result.confidence
     
     except Exception as e:
         logger.error("domain_check_llm_failed", error=str(e))

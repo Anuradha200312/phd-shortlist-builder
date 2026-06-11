@@ -79,8 +79,12 @@ async def resolve_node(state: ShortlistState) -> dict:
 
         # 3-Signal Lock: require >=2 True, or permit if no signals are populated/available yet
         signals = [orcid_ok, faculty_ok, embed_ok]
-        has_any_signal = orcid_ok or faculty_ok or embed_ok
+        orcid_populated = c.get("orcid") not in (None, "")
+        faculty_populated = c.get("faculty_page_confirmed") is not None
+        embed_populated = c.get("embedding_similarity") is not None
+        has_any_signal = orcid_populated or faculty_populated or embed_populated
         passed_lock = (sum(1 for s in signals if s) >= 2) or (not has_any_signal)
+
 
         # Run domain check (two-layer chain); import lazily and be permissive on failure
         try:

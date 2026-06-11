@@ -8,7 +8,16 @@ from langchain_core.runnables import RunnableWithFallbacks
 from langchain_core.callbacks import BaseCallbackHandler
 from config.settings import get_settings
 
+from langchain_core.globals import set_llm_cache
+from langchain_community.cache import SQLiteCache
+
 logger = structlog.get_logger()
+
+try:
+    set_llm_cache(SQLiteCache(database_path=".langchain.db"))
+except Exception as e:
+    logger.warning("failed_initialize_llm_cache", error=str(e))
+
 
 
 class TokenBudgetCallback(BaseCallbackHandler):

@@ -118,11 +118,14 @@ def run(
 
     shortlist_count = len(final_state.get("audited_shortlist", []))
     student_id = final_state["student_profile"].get("student_id", "unknown")
+    saved_path = final_state.get("output_file_path") or f"sample_output/{student_id}.json"
+
 
     typer.echo(f"[*] Shortlist generated: {shortlist_count} supervisors")
-    typer.echo(f"[*] Output saved:        sample_output/{student_id}.json")
+    typer.echo(f"[*] Output saved:        {saved_path}")
     typer.echo(f"[*] Duration:            {elapsed:.1f}s")
     typer.echo()
+
 
 
 @app.command()

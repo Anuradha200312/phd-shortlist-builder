@@ -56,6 +56,14 @@ async def resolve_node(state: ShortlistState) -> dict:
     llm_checked = state.get("domain_llm_checked", 0)
 
     for c in raw:
+        cid = c.get("id") or c.get("url") or c.get("title")
+        if cid in disambiguation:
+            # Already checked in a previous attempt, skip to avoid duplicate LLM/API calls
+            info = disambiguation[cid]
+            if info.get("passed_lock") and info.get("domain_passed"):
+                resolved.append(c)
+            continue
+
         if not c.get("name"):
             try:
                 from graph.nodes.verify_pi_node import enrich_paper_to_supervisor
@@ -64,6 +72,7 @@ async def resolve_node(state: ShortlistState) -> dict:
                 logger.warning("candidate_enrichment_failed", error=str(e), candidate=c.get("id"))
 
         cid = c.get("id") or c.get("url") or c.get("title")
+
         orcid_ok = _is_valid_orcid(c.get("orcid"))
         faculty_ok = bool(c.get("faculty_page_confirmed") is True)
         embed_ok = _embedding_pass(c)

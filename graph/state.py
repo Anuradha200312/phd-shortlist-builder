@@ -45,6 +45,8 @@ class ShortlistState(TypedDict):
     data_sources_used: list[str]
     run_start_time: str
     audit_summary: dict                 # Contamination self-audit results
+    output_file_path: Optional[str]     # Path where output JSON was saved
+
 
 
 def create_initial_state(student_profile: dict, run_id: str) -> ShortlistState:
@@ -71,4 +73,6 @@ def create_initial_state(student_profile: dict, run_id: str) -> ShortlistState:
         data_sources_used=[],
         run_start_time="",
         audit_summary={},
+        output_file_path=None,
     )
+

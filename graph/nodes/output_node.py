@@ -101,19 +101,51 @@ async def output_node(state: ShortlistState) -> Dict[str, Any]:
             logger.error("failed_persist_shortlist", error=str(e))
             shortlist_id = None
 
-    # Write a local copy
+    # Write a local copy with auto-incrementing filename
     try:
         output_dir = Path("sample_output")
         output_dir.mkdir(exist_ok=True)
-        output_path = output_dir / f"{output['student_id']}.json"
+
+        base_name = output["student_id"]
+        import re
+        match = re.match(r"^(.*?)(_?)(\d+)$", base_name)
+        if match:
+            prefix, separator, num_str = match.groups()
+            width = len(num_str)
+            counter = int(num_str)
+            while True:
+                filename = f"{prefix}{separator}{str(counter).zfill(width)}.json"
+                output_path = output_dir / filename
+                if not output_path.exists():
+                    break
+                counter += 1
+        else:
+            output_path = output_dir / f"{base_name}.json"
+            if output_path.exists():
+                counter = 1
+                while True:
+                    filename = f"{base_name}_{counter:03d}.json"
+                    output_path = output_dir / filename
+                    if not output_path.exists():
+                        break
+                    counter += 1
+
         output_path.write_text(json.dumps(output, indent=2, default=str), encoding="utf-8")
+        saved_path = str(output_path)
     except Exception as e:
         logger.warning("failed_write_output", error=str(e))
+        saved_path = None
 
     logger.info(
         "output_node_complete",
         shortlist_id=shortlist_id,
         shortlist_count=len(output["shortlist"]),
+        output_file_path=saved_path,
     )
 
-    return {"shortlist_id": shortlist_id, "output_json": output}
+    return {
+        "shortlist_id": shortlist_id,
+        "output_json": output,
+        "output_file_path": saved_path,
+    }
+

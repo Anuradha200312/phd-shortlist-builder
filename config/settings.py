@@ -19,6 +19,8 @@ class Settings(BaseSettings):
 
     ollama_base_url: str = Field(default="http://localhost:11434", alias="OLLAMA_BASE_URL")
     ollama_model: str = Field(default="llama3.2:3b", alias="OLLAMA_MODEL")
+    ollama_api_url: str = Field(default="", alias="OLLAMA_API_URL")
+    ollama_api_key: str = Field(default="", alias="OLLAMA_API_KEY")
 
     # ── LangSmith ──────────────────────────────────────────────────────────────
     langchain_tracing_v2: str = Field(default="false", alias="LANGCHAIN_TRACING_V2")

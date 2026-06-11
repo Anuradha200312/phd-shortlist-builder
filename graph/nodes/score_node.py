@@ -102,6 +102,37 @@ async def score_node(state: ShortlistState) -> dict:
 
     logger.info("score_node_complete", candidates_out=len(scored_sorted))
 
+    # Deduplicate scored_candidates by supervisor identity across retry loops.
+    # Key: (name|institution) or openalex_id or id — same as retrieve_node.
+    all_scored = state.get("scored_candidates", []) + scored_sorted
+    seen: dict = {}
+    for c in all_scored:
+        name = (c.get("name") or "").strip().lower()
+        inst = (c.get("institution") or "").strip().lower()
+        orcid = (c.get("orcid") or "").strip()
+        openalex = (c.get("openalex_id") or "").strip()
+        if name and inst and inst not in ("unknown", ""):
+            key = f"{name}|{inst}"
+        elif orcid:
+            key = orcid
+        elif openalex:
+            key = openalex
+        else:
+            key = c.get("id") or c.get("url") or name or str(id(c))
+        if key not in seen:
+            seen[key] = c
+        else:
+            # Keep the one with higher confidence score
+            if c.get("confidence", 0) > seen[key].get("confidence", 0):
+                seen[key] = c
+
+    deduped_scored = sorted(seen.values(), key=lambda x: x.get("confidence", 0.0), reverse=True)
+    # Re-assign ranks after dedup
+    for idx, c in enumerate(deduped_scored, start=1):
+        c["rank"] = idx
+
+    logger.info("score_node_deduped", unique_candidates=len(deduped_scored))
+
     return {
-        "scored_candidates": state.get("scored_candidates", []) + scored_sorted,
+        "scored_candidates": deduped_scored,
     }

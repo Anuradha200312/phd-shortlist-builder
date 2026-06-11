@@ -27,9 +27,12 @@ async def validate_node(state: Dict[str, Any]) -> Dict[str, Any]:
         sup = c.get("supervisor") or {}
         country = c.get("country") or sup.get("country")
 
-        if target_countries and country and country not in target_countries:
-            blocked_by_country += 1
-            continue
+        if target_countries:
+            # Hard constraint: country must be explicitly in target list.
+            # Unknown/missing country is treated as a fail — we can't confirm eligibility.
+            if not country or country not in target_countries:
+                blocked_by_country += 1
+                continue
 
         evidence = c.get("evidence") or c.get("papers") or c.get("grants") or []
         if not evidence:

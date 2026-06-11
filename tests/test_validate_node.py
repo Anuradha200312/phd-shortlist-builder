@@ -9,25 +9,33 @@ async def _run():
         "enriched_candidates": [
             {
                 "rank": 1,
-                "supervisor": {"name": "A", "country": "USA"},
+                "country": "USA",  # flat dict — real pipeline format
                 "evidence": [{"type": "paper", "title": "X"}],
             },
             {
                 "rank": 2,
-                "supervisor": {"name": "B", "country": "India"},
+                "country": "India",  # not in target list → blocked
                 "evidence": [{"type": "paper", "title": "Y"}],
             },
             {
                 "rank": 3,
-                "supervisor": {"name": "C", "country": "UK"},
-                "evidence": [],
+                "country": "UK",
+                "evidence": [],  # no evidence → blocked
+            },
+            {
+                "rank": 4,
+                "country": "Unknown",  # Unknown → blocked (hard constraint)
+                "evidence": [{"type": "paper", "title": "Z"}],
             },
         ],
     }
 
     res = await validate_node(state)
-    assert res["validation_summary"]["input_count"] == 3
+    assert res["validation_summary"]["input_count"] == 4
+    # Only rank 1 (USA with evidence) should pass
     assert res["validation_summary"]["validated_count"] == 1
+    assert res["validation_summary"]["blocked_by_country"] == 2  # India + Unknown
+    assert res["validation_summary"]["blocked_by_evidence"] == 1  # UK (valid country but no evidence)
 
 
 def test_validate_node():

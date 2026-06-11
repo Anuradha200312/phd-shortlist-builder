@@ -1,20 +1,2693 @@
 {
   "student_id": "test_001",
-  "generated_at": "2026-06-10T11:08:53.096681Z",
+  "generated_at": "2026-06-11T05:35:45.488768Z",
   "pipeline_version": "1.0.0",
-  "shortlist": [],
+  "shortlist": [
+    {
+      "rank": 1,
+      "supervisor": {
+        "name": "J. Gil",
+        "institution": "Hammersmith Hospital",
+        "department": null,
+        "country": "UK",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5021099644",
+        "google_scholar_id": null,
+        "orcid": "0000-0002-4303-6260",
+        "id": "63ddcf90-c031-4c18-b8d7-073c57efbc08"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Brain Computer Interfaces, a Review",
+          "venue": null,
+          "year": 2012,
+          "url": "https://openalex.org/W2128909182",
+          "doi": "https://doi.org/10.3390/s120201211"
+        },
+        {
+          "type": "paper",
+          "title": "Electrophilic compound screening identifies GPX4-dependent ferroptosis as a senescence vulnerability",
+          "year": 2026,
+          "doi": "https://doi.org/10.1038/s41556-026-01921-z"
+        },
+        {
+          "type": "paper",
+          "title": "High-Throughput Proteomics Sample Preparation Using a 96-Channel Pipettor and Magnetic Pin Device",
+          "year": 2026,
+          "doi": "https://doi.org/10.1021/acs.jproteome.5c01020"
+        },
+        {
+          "type": "paper",
+          "title": "Standard treatment against paediatric BRAF-V600E glioma promotes senescence and sensitizes tumours to BCL-xL inhibition",
+          "year": 2026,
+          "doi": "https://doi.org/10.64898/2026.01.13.698644"
+        },
+        {
+          "type": "paper",
+          "title": "Navitoclax acts synergistically with irradiation to induce apoptosis in preclinical models of H3K27M-altered diffuse midline glioma",
+          "year": 2025,
+          "doi": "https://doi.org/10.1038/s41598-025-32676-6"
+        }
+      ],
+      "why_match": "",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.705,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.4,
+        "overlap_score": 0.4,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 72,
+        "hindex_score": 1.0,
+        "total_score": 0.705
+      },
+      "match_dimensions": {
+        "research_overlap": 0.0,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 72,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 2,
+      "supervisor": {
+        "name": "J. Gil",
+        "institution": "Hammersmith Hospital",
+        "department": null,
+        "country": "UK",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5021099644",
+        "google_scholar_id": null,
+        "orcid": "0000-0002-4303-6260",
+        "id": "6cd211be-fd0c-4210-84a8-77062bfab9ef"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Brain Computer Interfaces, a Review",
+          "venue": null,
+          "year": 2012,
+          "url": "https://openalex.org/W2128909182",
+          "doi": "https://doi.org/10.3390/s120201211"
+        },
+        {
+          "type": "paper",
+          "title": "Electrophilic compound screening identifies GPX4-dependent ferroptosis as a senescence vulnerability",
+          "year": 2026,
+          "doi": "https://doi.org/10.1038/s41556-026-01921-z"
+        },
+        {
+          "type": "paper",
+          "title": "High-Throughput Proteomics Sample Preparation Using a 96-Channel Pipettor and Magnetic Pin Device",
+          "year": 2026,
+          "doi": "https://doi.org/10.1021/acs.jproteome.5c01020"
+        },
+        {
+          "type": "paper",
+          "title": "Standard treatment against paediatric BRAF-V600E glioma promotes senescence and sensitizes tumours to BCL-xL inhibition",
+          "year": 2026,
+          "doi": "https://doi.org/10.64898/2026.01.13.698644"
+        },
+        {
+          "type": "paper",
+          "title": "Navitoclax acts synergistically with irradiation to induce apoptosis in preclinical models of H3K27M-altered diffuse midline glioma",
+          "year": 2025,
+          "doi": "https://doi.org/10.1038/s41598-025-32676-6"
+        }
+      ],
+      "why_match": "",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.705,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.4,
+        "overlap_score": 0.4,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 72,
+        "hindex_score": 1.0,
+        "total_score": 0.705
+      },
+      "match_dimensions": {
+        "research_overlap": 0.0,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 72,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 3,
+      "supervisor": {
+        "name": "J. Gil",
+        "institution": "Hammersmith Hospital",
+        "department": null,
+        "country": "UK",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5021099644",
+        "google_scholar_id": null,
+        "orcid": "0000-0002-4303-6260",
+        "id": "e028d4eb-8a06-4a72-8aa3-718fe1a36a32"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Brain Computer Interfaces, a Review",
+          "venue": null,
+          "year": 2012,
+          "url": "https://openalex.org/W2128909182",
+          "doi": "https://doi.org/10.3390/s120201211"
+        },
+        {
+          "type": "paper",
+          "title": "Electrophilic compound screening identifies GPX4-dependent ferroptosis as a senescence vulnerability",
+          "year": 2026,
+          "doi": "https://doi.org/10.1038/s41556-026-01921-z"
+        },
+        {
+          "type": "paper",
+          "title": "High-Throughput Proteomics Sample Preparation Using a 96-Channel Pipettor and Magnetic Pin Device",
+          "year": 2026,
+          "doi": "https://doi.org/10.1021/acs.jproteome.5c01020"
+        },
+        {
+          "type": "paper",
+          "title": "Standard treatment against paediatric BRAF-V600E glioma promotes senescence and sensitizes tumours to BCL-xL inhibition",
+          "year": 2026,
+          "doi": "https://doi.org/10.64898/2026.01.13.698644"
+        },
+        {
+          "type": "paper",
+          "title": "Navitoclax acts synergistically with irradiation to induce apoptosis in preclinical models of H3K27M-altered diffuse midline glioma",
+          "year": 2025,
+          "doi": "https://doi.org/10.1038/s41598-025-32676-6"
+        }
+      ],
+      "why_match": "",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.705,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.4,
+        "overlap_score": 0.4,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 72,
+        "hindex_score": 1.0,
+        "total_score": 0.705
+      },
+      "match_dimensions": {
+        "research_overlap": 0.0,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 72,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 4,
+      "supervisor": {
+        "name": "Alan R. Palmer",
+        "institution": "University of Nottingham",
+        "department": null,
+        "country": "UK",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5080149940",
+        "google_scholar_id": null,
+        "orcid": "0000-0001-5893-4525",
+        "id": "f7a60873-3d85-4432-87d6-ae6db0024358"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Neural Signal Processing",
+          "venue": null,
+          "year": 1995,
+          "url": "https://openalex.org/W2485462537",
+          "doi": "https://doi.org/10.1016/b978-012505626-7/50005-4"
+        },
+        {
+          "type": "paper",
+          "title": "Breathing Rate as a Marker for Noise-Induced Stress in Guinea Pigs",
+          "year": 2025,
+          "doi": "https://doi.org/10.3390/brainsci15111152"
+        },
+        {
+          "type": "paper",
+          "title": "Precise spike-timing information in the brainstem is well aligned with the needs of communication and the perception of environmental sounds",
+          "year": 2025,
+          "doi": "https://doi.org/10.1371/journal.pbio.3003213"
+        },
+        {
+          "type": "paper",
+          "title": "Identifying tinnitus in mice by tracking the motion of body markers in response to an acoustic startle",
+          "year": 2024,
+          "doi": "https://doi.org/10.3389/fnins.2024.1452450"
+        },
+        {
+          "type": "paper",
+          "title": "Neural Plasticity in Tinnitus Mechanisms",
+          "year": 2023,
+          "doi": "https://doi.org/10.3390/brainsci13121615"
+        }
+      ],
+      "why_match": "",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.66,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.25,
+        "overlap_score": 0.25,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 57,
+        "hindex_score": 1.0,
+        "total_score": 0.66
+      },
+      "match_dimensions": {
+        "research_overlap": 0.25,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 57,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2025
+      }
+    },
+    {
+      "rank": 5,
+      "supervisor": {
+        "name": "Alan R. Palmer",
+        "institution": "University of Nottingham",
+        "department": null,
+        "country": "UK",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5080149940",
+        "google_scholar_id": null,
+        "orcid": "0000-0001-5893-4525",
+        "id": "c88ee98e-0641-4f30-bbce-a30cf4a2cd4a"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Neural Signal Processing",
+          "venue": null,
+          "year": 1995,
+          "url": "https://openalex.org/W2485462537",
+          "doi": "https://doi.org/10.1016/b978-012505626-7/50005-4"
+        },
+        {
+          "type": "paper",
+          "title": "Breathing Rate as a Marker for Noise-Induced Stress in Guinea Pigs",
+          "year": 2025,
+          "doi": "https://doi.org/10.3390/brainsci15111152"
+        },
+        {
+          "type": "paper",
+          "title": "Precise spike-timing information in the brainstem is well aligned with the needs of communication and the perception of environmental sounds",
+          "year": 2025,
+          "doi": "https://doi.org/10.1371/journal.pbio.3003213"
+        },
+        {
+          "type": "paper",
+          "title": "Identifying tinnitus in mice by tracking the motion of body markers in response to an acoustic startle",
+          "year": 2024,
+          "doi": "https://doi.org/10.3389/fnins.2024.1452450"
+        },
+        {
+          "type": "paper",
+          "title": "Neural Plasticity in Tinnitus Mechanisms",
+          "year": 2023,
+          "doi": "https://doi.org/10.3390/brainsci13121615"
+        }
+      ],
+      "why_match": "",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.66,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.25,
+        "overlap_score": 0.25,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 57,
+        "hindex_score": 1.0,
+        "total_score": 0.66
+      },
+      "match_dimensions": {
+        "research_overlap": 0.25,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 57,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2025
+      }
+    },
+    {
+      "rank": 6,
+      "supervisor": {
+        "name": "Alan R. Palmer",
+        "institution": "University of Nottingham",
+        "department": null,
+        "country": "UK",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5080149940",
+        "google_scholar_id": null,
+        "orcid": "0000-0001-5893-4525",
+        "id": "14df94b4-64ca-44e6-9b48-31d0fd99e832"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Neural Signal Processing",
+          "venue": null,
+          "year": 1995,
+          "url": "https://openalex.org/W2485462537",
+          "doi": "https://doi.org/10.1016/b978-012505626-7/50005-4"
+        },
+        {
+          "type": "paper",
+          "title": "Breathing Rate as a Marker for Noise-Induced Stress in Guinea Pigs",
+          "year": 2025,
+          "doi": "https://doi.org/10.3390/brainsci15111152"
+        },
+        {
+          "type": "paper",
+          "title": "Precise spike-timing information in the brainstem is well aligned with the needs of communication and the perception of environmental sounds",
+          "year": 2025,
+          "doi": "https://doi.org/10.1371/journal.pbio.3003213"
+        },
+        {
+          "type": "paper",
+          "title": "Identifying tinnitus in mice by tracking the motion of body markers in response to an acoustic startle",
+          "year": 2024,
+          "doi": "https://doi.org/10.3389/fnins.2024.1452450"
+        },
+        {
+          "type": "paper",
+          "title": "Neural Plasticity in Tinnitus Mechanisms",
+          "year": 2023,
+          "doi": "https://doi.org/10.3390/brainsci13121615"
+        }
+      ],
+      "why_match": "",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.66,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.25,
+        "overlap_score": 0.25,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 57,
+        "hindex_score": 1.0,
+        "total_score": 0.66
+      },
+      "match_dimensions": {
+        "research_overlap": 0.25,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 57,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2025
+      }
+    },
+    {
+      "rank": 7,
+      "supervisor": {
+        "name": "Jerry L. Prince",
+        "institution": "Johns Hopkins University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5066682675",
+        "google_scholar_id": null,
+        "orcid": "0000-0002-6553-0876",
+        "id": "ba47dd9b-e4f5-490f-abf9-e7a620fbcc77"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Current Methods in Medical Image Segmentation",
+          "venue": null,
+          "year": 2000,
+          "url": "https://openalex.org/W2118386984",
+          "doi": "https://doi.org/10.1146/annurev.bioeng.2.1.315"
+        },
+        {
+          "type": "paper",
+          "title": "A Severity\u2010Agnostic Atrophy Pattern in Spinocerebellar Ataxia Type 3: Volumetrics from <scp>ENIGMA</scp> \u2010Ataxia",
+          "year": 2026,
+          "doi": "https://doi.org/10.1002/mds.70349"
+        },
+        {
+          "type": "paper",
+          "title": "Harmonizing MR Images Across 100+ Scanners: Multi-site Validation with Traveling Subjects and Real-world Protocols",
+          "year": 2026,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "Harmonizing MR Images Across 100+ Scanners: Multi-site Validation with Traveling Subjects and Real-world Protocols",
+          "year": 2026,
+          "doi": "https://doi.org/10.48550/arxiv.2604.19474"
+        },
+        {
+          "type": "paper",
+          "title": "Proteomic Age Acceleration in Multiple Sclerosis Precedes Symptom Onset and Associates with Severity",
+          "year": 2026,
+          "doi": "https://doi.org/10.64898/2026.04.13.26350634"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.6449999999999999,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.2,
+        "overlap_score": 0.2,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 79,
+        "hindex_score": 1.0,
+        "total_score": 0.6449999999999999
+      },
+      "match_dimensions": {
+        "research_overlap": 0.2,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 79,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 8,
+      "supervisor": {
+        "name": "Jerry L. Prince",
+        "institution": "Johns Hopkins University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5066682675",
+        "google_scholar_id": null,
+        "orcid": "0000-0002-6553-0876",
+        "id": "dc20c842-5869-41a4-a12e-27af705f16c3"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Current Methods in Medical Image Segmentation",
+          "venue": null,
+          "year": 2000,
+          "url": "https://openalex.org/W2118386984",
+          "doi": "https://doi.org/10.1146/annurev.bioeng.2.1.315"
+        },
+        {
+          "type": "paper",
+          "title": "A Severity\u2010Agnostic Atrophy Pattern in Spinocerebellar Ataxia Type 3: Volumetrics from <scp>ENIGMA</scp> \u2010Ataxia",
+          "year": 2026,
+          "doi": "https://doi.org/10.1002/mds.70349"
+        },
+        {
+          "type": "paper",
+          "title": "Harmonizing MR Images Across 100+ Scanners: Multi-site Validation with Traveling Subjects and Real-world Protocols",
+          "year": 2026,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "Harmonizing MR Images Across 100+ Scanners: Multi-site Validation with Traveling Subjects and Real-world Protocols",
+          "year": 2026,
+          "doi": "https://doi.org/10.48550/arxiv.2604.19474"
+        },
+        {
+          "type": "paper",
+          "title": "Proteomic Age Acceleration in Multiple Sclerosis Precedes Symptom Onset and Associates with Severity",
+          "year": 2026,
+          "doi": "https://doi.org/10.64898/2026.04.13.26350634"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.6449999999999999,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.2,
+        "overlap_score": 0.2,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 79,
+        "hindex_score": 1.0,
+        "total_score": 0.6449999999999999
+      },
+      "match_dimensions": {
+        "research_overlap": 0.2,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 79,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 9,
+      "supervisor": {
+        "name": "Jerry L. Prince",
+        "institution": "Johns Hopkins University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5066682675",
+        "google_scholar_id": null,
+        "orcid": "0000-0002-6553-0876",
+        "id": "a26ba1a7-d596-4d30-90c7-cde3df48ad48"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Current Methods in Medical Image Segmentation",
+          "venue": null,
+          "year": 2000,
+          "url": "https://openalex.org/W2118386984",
+          "doi": "https://doi.org/10.1146/annurev.bioeng.2.1.315"
+        },
+        {
+          "type": "paper",
+          "title": "A Severity\u2010Agnostic Atrophy Pattern in Spinocerebellar Ataxia Type 3: Volumetrics from <scp>ENIGMA</scp> \u2010Ataxia",
+          "year": 2026,
+          "doi": "https://doi.org/10.1002/mds.70349"
+        },
+        {
+          "type": "paper",
+          "title": "Harmonizing MR Images Across 100+ Scanners: Multi-site Validation with Traveling Subjects and Real-world Protocols",
+          "year": 2026,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "Harmonizing MR Images Across 100+ Scanners: Multi-site Validation with Traveling Subjects and Real-world Protocols",
+          "year": 2026,
+          "doi": "https://doi.org/10.48550/arxiv.2604.19474"
+        },
+        {
+          "type": "paper",
+          "title": "Proteomic Age Acceleration in Multiple Sclerosis Precedes Symptom Onset and Associates with Severity",
+          "year": 2026,
+          "doi": "https://doi.org/10.64898/2026.04.13.26350634"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.6449999999999999,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.2,
+        "overlap_score": 0.2,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 79,
+        "hindex_score": 1.0,
+        "total_score": 0.6449999999999999
+      },
+      "match_dimensions": {
+        "research_overlap": 0.2,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 79,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 10,
+      "supervisor": {
+        "name": "Bart Kosko",
+        "institution": "University of Southern California",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5065383312",
+        "google_scholar_id": null,
+        "orcid": "0000-0003-4745-8986",
+        "id": "6ca955d7-dec9-445c-a5be-80aca9c5fbd6"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Neural networks for signal processing",
+          "venue": null,
+          "year": 1992,
+          "url": "https://openalex.org/W2061383870",
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "The Agentic Leash: Extracting Causal Feedback Fuzzy Cognitive Maps with LLMs",
+          "year": 2025,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "The Agentic Leash: Extracting Causal Feedback Fuzzy Cognitive Maps with LLMs",
+          "year": 2025,
+          "doi": "https://doi.org/10.48550/arxiv.2601.00097"
+        },
+        {
+          "type": "paper",
+          "title": "Bidirectional Variational Autoencoders",
+          "year": 2025,
+          "doi": "https://doi.org/10.48550/arxiv.2505.16074"
+        },
+        {
+          "type": "paper",
+          "title": "Controlled Causal Hallucinations Can Estimate Phantom Nodes in\u00a0Multiexpert Mixtures of\u00a0Fuzzy Cognitive Maps",
+          "year": 2025,
+          "doi": "https://doi.org/10.1007/978-981-96-7178-6_19"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.6372857142857143,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.21428571428571427,
+        "overlap_score": 0.21428571428571427,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 44,
+        "hindex_score": 0.88,
+        "total_score": 0.6372857142857143
+      },
+      "match_dimensions": {
+        "research_overlap": 0.21428571428571427,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 44,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2025
+      }
+    },
+    {
+      "rank": 11,
+      "supervisor": {
+        "name": "Bart Kosko",
+        "institution": "University of Southern California",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5065383312",
+        "google_scholar_id": null,
+        "orcid": "0000-0003-4745-8986",
+        "id": "8da717c7-0ca5-46ba-be68-35e2883dd51f"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Neural networks for signal processing",
+          "venue": null,
+          "year": 1992,
+          "url": "https://openalex.org/W2061383870",
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "The Agentic Leash: Extracting Causal Feedback Fuzzy Cognitive Maps with LLMs",
+          "year": 2025,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "The Agentic Leash: Extracting Causal Feedback Fuzzy Cognitive Maps with LLMs",
+          "year": 2025,
+          "doi": "https://doi.org/10.48550/arxiv.2601.00097"
+        },
+        {
+          "type": "paper",
+          "title": "Bidirectional Variational Autoencoders",
+          "year": 2025,
+          "doi": "https://doi.org/10.48550/arxiv.2505.16074"
+        },
+        {
+          "type": "paper",
+          "title": "Controlled Causal Hallucinations Can Estimate Phantom Nodes in\u00a0Multiexpert Mixtures of\u00a0Fuzzy Cognitive Maps",
+          "year": 2025,
+          "doi": "https://doi.org/10.1007/978-981-96-7178-6_19"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.6372857142857143,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.21428571428571427,
+        "overlap_score": 0.21428571428571427,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 44,
+        "hindex_score": 0.88,
+        "total_score": 0.6372857142857143
+      },
+      "match_dimensions": {
+        "research_overlap": 0.21428571428571427,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 44,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2025
+      }
+    },
+    {
+      "rank": 12,
+      "supervisor": {
+        "name": "Bart Kosko",
+        "institution": "University of Southern California",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5065383312",
+        "google_scholar_id": null,
+        "orcid": "0000-0003-4745-8986",
+        "id": "e100c8d0-8555-404a-a7ff-a4588735c378"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Neural networks for signal processing",
+          "venue": null,
+          "year": 1992,
+          "url": "https://openalex.org/W2061383870",
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "The Agentic Leash: Extracting Causal Feedback Fuzzy Cognitive Maps with LLMs",
+          "year": 2025,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "The Agentic Leash: Extracting Causal Feedback Fuzzy Cognitive Maps with LLMs",
+          "year": 2025,
+          "doi": "https://doi.org/10.48550/arxiv.2601.00097"
+        },
+        {
+          "type": "paper",
+          "title": "Bidirectional Variational Autoencoders",
+          "year": 2025,
+          "doi": "https://doi.org/10.48550/arxiv.2505.16074"
+        },
+        {
+          "type": "paper",
+          "title": "Controlled Causal Hallucinations Can Estimate Phantom Nodes in\u00a0Multiexpert Mixtures of\u00a0Fuzzy Cognitive Maps",
+          "year": 2025,
+          "doi": "https://doi.org/10.1007/978-981-96-7178-6_19"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.6372857142857143,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.21428571428571427,
+        "overlap_score": 0.21428571428571427,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 44,
+        "hindex_score": 0.88,
+        "total_score": 0.6372857142857143
+      },
+      "match_dimensions": {
+        "research_overlap": 0.21428571428571427,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 44,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2025
+      }
+    },
+    {
+      "rank": 13,
+      "supervisor": {
+        "name": "Daguang Xu",
+        "institution": "Nvidia (United States)",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5052339079",
+        "google_scholar_id": null,
+        "orcid": "0000-0002-4621-881X",
+        "id": "bdb68bc3-24b9-4149-ab3f-d9c96c6b3e4e"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "UNETR: Transformers for 3D Medical Image Segmentation",
+          "venue": null,
+          "year": 2022,
+          "url": "https://openalex.org/W4212875960",
+          "doi": "https://doi.org/10.1109/wacv51458.2022.00181"
+        },
+        {
+          "type": "paper",
+          "title": "A comprehensive survey of computer vision methods for spatial transcriptomics",
+          "year": 2026,
+          "doi": "https://doi.org/10.1093/bib/bbag255"
+        },
+        {
+          "type": "paper",
+          "title": "MRI-To-CT Synthesis with Cranial Suture Segmentations Using a Variational Autoencoder Framework",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/isbi61048.2026.11515739"
+        },
+        {
+          "type": "paper",
+          "title": "Distilling Photon-Counting CT into Routine Chest CT through Clinically Validated Degradation Modeling",
+          "year": 2026,
+          "doi": "https://doi.org/10.48550/arxiv.2604.07329"
+        },
+        {
+          "type": "paper",
+          "title": "Distilling Photon-Counting CT into Routine Chest CT through Clinically Validated Degradation Modeling",
+          "year": 2026,
+          "doi": null
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.63325,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.1875,
+        "overlap_score": 0.1875,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 46,
+        "hindex_score": 0.92,
+        "total_score": 0.63325
+      },
+      "match_dimensions": {
+        "research_overlap": 0.1875,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 46,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 14,
+      "supervisor": {
+        "name": "Daguang Xu",
+        "institution": "Nvidia (United States)",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5052339079",
+        "google_scholar_id": null,
+        "orcid": "0000-0002-4621-881X",
+        "id": "ba9b093a-281e-4d15-a576-e6eb56632280"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "UNETR: Transformers for 3D Medical Image Segmentation",
+          "venue": null,
+          "year": 2022,
+          "url": "https://openalex.org/W4212875960",
+          "doi": "https://doi.org/10.1109/wacv51458.2022.00181"
+        },
+        {
+          "type": "paper",
+          "title": "A comprehensive survey of computer vision methods for spatial transcriptomics",
+          "year": 2026,
+          "doi": "https://doi.org/10.1093/bib/bbag255"
+        },
+        {
+          "type": "paper",
+          "title": "MRI-To-CT Synthesis with Cranial Suture Segmentations Using a Variational Autoencoder Framework",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/isbi61048.2026.11515739"
+        },
+        {
+          "type": "paper",
+          "title": "Distilling Photon-Counting CT into Routine Chest CT through Clinically Validated Degradation Modeling",
+          "year": 2026,
+          "doi": "https://doi.org/10.48550/arxiv.2604.07329"
+        },
+        {
+          "type": "paper",
+          "title": "Distilling Photon-Counting CT into Routine Chest CT through Clinically Validated Degradation Modeling",
+          "year": 2026,
+          "doi": null
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.63325,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.1875,
+        "overlap_score": 0.1875,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 46,
+        "hindex_score": 0.92,
+        "total_score": 0.63325
+      },
+      "match_dimensions": {
+        "research_overlap": 0.1875,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 46,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 15,
+      "supervisor": {
+        "name": "Daguang Xu",
+        "institution": "Nvidia (United States)",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5052339079",
+        "google_scholar_id": null,
+        "orcid": "0000-0002-4621-881X",
+        "id": "dd90c05f-70fb-4e09-bb34-ec2fa5e9b278"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "UNETR: Transformers for 3D Medical Image Segmentation",
+          "venue": null,
+          "year": 2022,
+          "url": "https://openalex.org/W4212875960",
+          "doi": "https://doi.org/10.1109/wacv51458.2022.00181"
+        },
+        {
+          "type": "paper",
+          "title": "A comprehensive survey of computer vision methods for spatial transcriptomics",
+          "year": 2026,
+          "doi": "https://doi.org/10.1093/bib/bbag255"
+        },
+        {
+          "type": "paper",
+          "title": "MRI-To-CT Synthesis with Cranial Suture Segmentations Using a Variational Autoencoder Framework",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/isbi61048.2026.11515739"
+        },
+        {
+          "type": "paper",
+          "title": "Distilling Photon-Counting CT into Routine Chest CT through Clinically Validated Degradation Modeling",
+          "year": 2026,
+          "doi": "https://doi.org/10.48550/arxiv.2604.07329"
+        },
+        {
+          "type": "paper",
+          "title": "Distilling Photon-Counting CT into Routine Chest CT through Clinically Validated Degradation Modeling",
+          "year": 2026,
+          "doi": null
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.63325,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.1875,
+        "overlap_score": 0.1875,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 46,
+        "hindex_score": 0.92,
+        "total_score": 0.63325
+      },
+      "match_dimensions": {
+        "research_overlap": 0.1875,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 46,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 16,
+      "supervisor": {
+        "name": "Daniel W. Moran",
+        "institution": "Saint Louis University",
+        "department": null,
+        "country": "ES",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5088896883",
+        "google_scholar_id": null,
+        "orcid": "0000-0002-7503-565X",
+        "id": "efbc42e7-befc-4ebb-b230-56fb6bd7a4ac"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "A brain\u2013computer interface using electrocorticographic signals in humans",
+          "venue": null,
+          "year": 2004,
+          "url": "https://openalex.org/W2135825876",
+          "doi": "https://doi.org/10.1088/1741-2560/1/2/001"
+        },
+        {
+          "type": "paper",
+          "title": "A method for quantitative spatial analysis of immunolabeled fibers at regenerative electrode interfaces",
+          "year": 2024,
+          "doi": "https://doi.org/10.1016/j.jneumeth.2024.110295"
+        },
+        {
+          "type": "paper",
+          "title": "High gamma coherence between task-responsive sensory-motor cortical regions in a motor reaction-time task",
+          "year": 2023,
+          "doi": "https://doi.org/10.1152/jn.00172.2023"
+        },
+        {
+          "type": "paper",
+          "title": "Supplementary material accompanying \"High gamma coherence between task-responsive sensory-motor cortical regions in a motor reaction-time task\"",
+          "year": 2023,
+          "doi": "https://doi.org/10.5281/zenodo.8160805"
+        },
+        {
+          "type": "paper",
+          "title": "Dataset and code accompanying publication: \"High gamma coherence between task-responsive sensory-motor cortical regions in a motor reaction-time task\"",
+          "year": 2023,
+          "doi": "https://doi.org/10.5281/zenodo.7882222"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.629,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.4,
+        "overlap_score": 0.4,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 42,
+        "hindex_score": 0.84,
+        "total_score": 0.629
+      },
+      "match_dimensions": {
+        "research_overlap": 0.0,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 42,
+        "country_match": false,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2024
+      }
+    },
+    {
+      "rank": 17,
+      "supervisor": {
+        "name": "Daniel W. Moran",
+        "institution": "Saint Louis University",
+        "department": null,
+        "country": "ES",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5088896883",
+        "google_scholar_id": null,
+        "orcid": "0000-0002-7503-565X",
+        "id": "047f719a-8db7-40bd-9592-65bb096f1ee7"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "A brain\u2013computer interface using electrocorticographic signals in humans",
+          "venue": null,
+          "year": 2004,
+          "url": "https://openalex.org/W2135825876",
+          "doi": "https://doi.org/10.1088/1741-2560/1/2/001"
+        },
+        {
+          "type": "paper",
+          "title": "A method for quantitative spatial analysis of immunolabeled fibers at regenerative electrode interfaces",
+          "year": 2024,
+          "doi": "https://doi.org/10.1016/j.jneumeth.2024.110295"
+        },
+        {
+          "type": "paper",
+          "title": "High gamma coherence between task-responsive sensory-motor cortical regions in a motor reaction-time task",
+          "year": 2023,
+          "doi": "https://doi.org/10.1152/jn.00172.2023"
+        },
+        {
+          "type": "paper",
+          "title": "Supplementary material accompanying \"High gamma coherence between task-responsive sensory-motor cortical regions in a motor reaction-time task\"",
+          "year": 2023,
+          "doi": "https://doi.org/10.5281/zenodo.8160805"
+        },
+        {
+          "type": "paper",
+          "title": "Dataset and code accompanying publication: \"High gamma coherence between task-responsive sensory-motor cortical regions in a motor reaction-time task\"",
+          "year": 2023,
+          "doi": "https://doi.org/10.5281/zenodo.7882222"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.629,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.4,
+        "overlap_score": 0.4,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 42,
+        "hindex_score": 0.84,
+        "total_score": 0.629
+      },
+      "match_dimensions": {
+        "research_overlap": 0.0,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 42,
+        "country_match": false,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2024
+      }
+    },
+    {
+      "rank": 18,
+      "supervisor": {
+        "name": "Daniel W. Moran",
+        "institution": "Saint Louis University",
+        "department": null,
+        "country": "ES",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5088896883",
+        "google_scholar_id": null,
+        "orcid": "0000-0002-7503-565X",
+        "id": "82e2fc33-13b8-4e90-bef7-cf71c248f535"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "A brain\u2013computer interface using electrocorticographic signals in humans",
+          "venue": null,
+          "year": 2004,
+          "url": "https://openalex.org/W2135825876",
+          "doi": "https://doi.org/10.1088/1741-2560/1/2/001"
+        },
+        {
+          "type": "paper",
+          "title": "A method for quantitative spatial analysis of immunolabeled fibers at regenerative electrode interfaces",
+          "year": 2024,
+          "doi": "https://doi.org/10.1016/j.jneumeth.2024.110295"
+        },
+        {
+          "type": "paper",
+          "title": "High gamma coherence between task-responsive sensory-motor cortical regions in a motor reaction-time task",
+          "year": 2023,
+          "doi": "https://doi.org/10.1152/jn.00172.2023"
+        },
+        {
+          "type": "paper",
+          "title": "Supplementary material accompanying \"High gamma coherence between task-responsive sensory-motor cortical regions in a motor reaction-time task\"",
+          "year": 2023,
+          "doi": "https://doi.org/10.5281/zenodo.8160805"
+        },
+        {
+          "type": "paper",
+          "title": "Dataset and code accompanying publication: \"High gamma coherence between task-responsive sensory-motor cortical regions in a motor reaction-time task\"",
+          "year": 2023,
+          "doi": "https://doi.org/10.5281/zenodo.7882222"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.629,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.4,
+        "overlap_score": 0.4,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 42,
+        "hindex_score": 0.84,
+        "total_score": 0.629
+      },
+      "match_dimensions": {
+        "research_overlap": 0.0,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 42,
+        "country_match": false,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2024
+      }
+    },
+    {
+      "rank": 19,
+      "supervisor": {
+        "name": "Fei Wang",
+        "institution": "DEVCOM Army Research Laboratory",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5100455803",
+        "google_scholar_id": null,
+        "orcid": "0000-0002-2057-5130",
+        "id": "dbcd1a85-4f54-4038-baec-a21fa4c87ee9"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Federated Learning for Healthcare Informatics",
+          "venue": null,
+          "year": 2020,
+          "url": "https://openalex.org/W3100779497",
+          "doi": "https://doi.org/10.1007/s41666-020-00082-4"
+        },
+        {
+          "type": "paper",
+          "title": "Correction to \u201cLiquid Structure with Nano-Heterogeneity Promotes Cationic Transport in Concentrated Electrolytes\u201d",
+          "year": 2026,
+          "doi": "https://doi.org/10.1021/acsnano.6c07568"
+        },
+        {
+          "type": "paper",
+          "title": "A Fluorine\u2010Free Chaotropic Electrolyte Promoting Zinc Peroxide Chemistry for Non\u2010Alkaline Zinc\u2013Air Batteries",
+          "year": 2025,
+          "doi": "https://doi.org/10.1002/anie.202522708"
+        },
+        {
+          "type": "paper",
+          "title": "A Fluorine\u2010Free Chaotropic Electrolyte Promoting Zinc Peroxide Chemistry for Non\u2010Alkaline Zinc\u2013Air Batteries",
+          "year": 2025,
+          "doi": "https://doi.org/10.1002/ange.202522708"
+        },
+        {
+          "type": "paper",
+          "title": "Suppressing Fe Migration for Highly Reversible Oxygen Redox of Sodium-Ion Layered Oxide Cathode",
+          "year": 2025,
+          "doi": "https://doi.org/10.1021/jacs.5c15943"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.6249999999999999,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.13333333333333333,
+        "overlap_score": 0.13333333333333333,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 81,
+        "hindex_score": 1.0,
+        "total_score": 0.6249999999999999
+      },
+      "match_dimensions": {
+        "research_overlap": 0.13333333333333333,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 81,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 20,
+      "supervisor": {
+        "name": "Fei Wang",
+        "institution": "DEVCOM Army Research Laboratory",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5100455803",
+        "google_scholar_id": null,
+        "orcid": "0000-0002-2057-5130",
+        "id": "3a063e77-4a36-4d30-8fc2-7d93d79103ce"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Federated Learning for Healthcare Informatics",
+          "venue": null,
+          "year": 2020,
+          "url": "https://openalex.org/W3100779497",
+          "doi": "https://doi.org/10.1007/s41666-020-00082-4"
+        },
+        {
+          "type": "paper",
+          "title": "Correction to \u201cLiquid Structure with Nano-Heterogeneity Promotes Cationic Transport in Concentrated Electrolytes\u201d",
+          "year": 2026,
+          "doi": "https://doi.org/10.1021/acsnano.6c07568"
+        },
+        {
+          "type": "paper",
+          "title": "A Fluorine\u2010Free Chaotropic Electrolyte Promoting Zinc Peroxide Chemistry for Non\u2010Alkaline Zinc\u2013Air Batteries",
+          "year": 2025,
+          "doi": "https://doi.org/10.1002/anie.202522708"
+        },
+        {
+          "type": "paper",
+          "title": "A Fluorine\u2010Free Chaotropic Electrolyte Promoting Zinc Peroxide Chemistry for Non\u2010Alkaline Zinc\u2013Air Batteries",
+          "year": 2025,
+          "doi": "https://doi.org/10.1002/ange.202522708"
+        },
+        {
+          "type": "paper",
+          "title": "Suppressing Fe Migration for Highly Reversible Oxygen Redox of Sodium-Ion Layered Oxide Cathode",
+          "year": 2025,
+          "doi": "https://doi.org/10.1021/jacs.5c15943"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.6249999999999999,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.13333333333333333,
+        "overlap_score": 0.13333333333333333,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 81,
+        "hindex_score": 1.0,
+        "total_score": 0.6249999999999999
+      },
+      "match_dimensions": {
+        "research_overlap": 0.13333333333333333,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 81,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 21,
+      "supervisor": {
+        "name": "Fei Wang",
+        "institution": "DEVCOM Army Research Laboratory",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5100455803",
+        "google_scholar_id": null,
+        "orcid": "0000-0002-2057-5130",
+        "id": "2188bfde-9500-4f84-bec7-3c5825fb1527"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Federated Learning for Healthcare Informatics",
+          "venue": null,
+          "year": 2020,
+          "url": "https://openalex.org/W3100779497",
+          "doi": "https://doi.org/10.1007/s41666-020-00082-4"
+        },
+        {
+          "type": "paper",
+          "title": "Correction to \u201cLiquid Structure with Nano-Heterogeneity Promotes Cationic Transport in Concentrated Electrolytes\u201d",
+          "year": 2026,
+          "doi": "https://doi.org/10.1021/acsnano.6c07568"
+        },
+        {
+          "type": "paper",
+          "title": "A Fluorine\u2010Free Chaotropic Electrolyte Promoting Zinc Peroxide Chemistry for Non\u2010Alkaline Zinc\u2013Air Batteries",
+          "year": 2025,
+          "doi": "https://doi.org/10.1002/anie.202522708"
+        },
+        {
+          "type": "paper",
+          "title": "A Fluorine\u2010Free Chaotropic Electrolyte Promoting Zinc Peroxide Chemistry for Non\u2010Alkaline Zinc\u2013Air Batteries",
+          "year": 2025,
+          "doi": "https://doi.org/10.1002/ange.202522708"
+        },
+        {
+          "type": "paper",
+          "title": "Suppressing Fe Migration for Highly Reversible Oxygen Redox of Sodium-Ion Layered Oxide Cathode",
+          "year": 2025,
+          "doi": "https://doi.org/10.1021/jacs.5c15943"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.6249999999999999,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.13333333333333333,
+        "overlap_score": 0.13333333333333333,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 81,
+        "hindex_score": 1.0,
+        "total_score": 0.6249999999999999
+      },
+      "match_dimensions": {
+        "research_overlap": 0.13333333333333333,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 81,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 22,
+      "supervisor": {
+        "name": "Emmett Witchel",
+        "institution": "The University of Texas at Austin",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5004286577",
+        "google_scholar_id": null,
+        "orcid": "0000-0002-1391-2880",
+        "id": "7b77ae5e-24fd-4f5c-af10-bed9600641b1"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Chiron: Privacy-preserving Machine Learning as a Service",
+          "venue": null,
+          "year": 2018,
+          "url": "https://openalex.org/W2793398195",
+          "doi": "https://doi.org/10.48550/arxiv.1803.05961"
+        },
+        {
+          "type": "paper",
+          "title": "C <scp>xlalloc</scp> : Safe and Efficient Memory Allocation for a CXL Pod",
+          "year": 2026,
+          "doi": "https://doi.org/10.1145/3779212.3790149"
+        },
+        {
+          "type": "paper",
+          "title": "Impeller: Stream Processing on Shared Logs",
+          "year": 2025,
+          "doi": "https://doi.org/10.1145/3689031.3717485"
+        },
+        {
+          "type": "paper",
+          "title": "Lupin: Tolerating Partial Failures in a CXL Pod",
+          "year": 2024,
+          "doi": "https://doi.org/10.1145/3698783.3699377"
+        },
+        {
+          "type": "paper",
+          "title": "Boki: Towards Data Consistency and Fault Tolerance with Shared Logs in Stateful Serverless Computing",
+          "year": 2024,
+          "doi": "https://doi.org/10.1145/3653072"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.6212500000000001,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.1875,
+        "overlap_score": 0.1875,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 40,
+        "hindex_score": 0.8,
+        "total_score": 0.6212500000000001
+      },
+      "match_dimensions": {
+        "research_overlap": 0.1875,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 40,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 23,
+      "supervisor": {
+        "name": "Emmett Witchel",
+        "institution": "The University of Texas at Austin",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5004286577",
+        "google_scholar_id": null,
+        "orcid": "0000-0002-1391-2880",
+        "id": "dcca03bf-1618-4c89-975f-969af3f867e5"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Chiron: Privacy-preserving Machine Learning as a Service",
+          "venue": null,
+          "year": 2018,
+          "url": "https://openalex.org/W2793398195",
+          "doi": "https://doi.org/10.48550/arxiv.1803.05961"
+        },
+        {
+          "type": "paper",
+          "title": "C <scp>xlalloc</scp> : Safe and Efficient Memory Allocation for a CXL Pod",
+          "year": 2026,
+          "doi": "https://doi.org/10.1145/3779212.3790149"
+        },
+        {
+          "type": "paper",
+          "title": "Impeller: Stream Processing on Shared Logs",
+          "year": 2025,
+          "doi": "https://doi.org/10.1145/3689031.3717485"
+        },
+        {
+          "type": "paper",
+          "title": "Lupin: Tolerating Partial Failures in a CXL Pod",
+          "year": 2024,
+          "doi": "https://doi.org/10.1145/3698783.3699377"
+        },
+        {
+          "type": "paper",
+          "title": "Boki: Towards Data Consistency and Fault Tolerance with Shared Logs in Stateful Serverless Computing",
+          "year": 2024,
+          "doi": "https://doi.org/10.1145/3653072"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.6212500000000001,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.1875,
+        "overlap_score": 0.1875,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 40,
+        "hindex_score": 0.8,
+        "total_score": 0.6212500000000001
+      },
+      "match_dimensions": {
+        "research_overlap": 0.1875,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 40,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 24,
+      "supervisor": {
+        "name": "Emmett Witchel",
+        "institution": "The University of Texas at Austin",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5004286577",
+        "google_scholar_id": null,
+        "orcid": "0000-0002-1391-2880",
+        "id": "60289cd2-c66b-4826-9445-dc14bcb85336"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Chiron: Privacy-preserving Machine Learning as a Service",
+          "venue": null,
+          "year": 2018,
+          "url": "https://openalex.org/W2793398195",
+          "doi": "https://doi.org/10.48550/arxiv.1803.05961"
+        },
+        {
+          "type": "paper",
+          "title": "C <scp>xlalloc</scp> : Safe and Efficient Memory Allocation for a CXL Pod",
+          "year": 2026,
+          "doi": "https://doi.org/10.1145/3779212.3790149"
+        },
+        {
+          "type": "paper",
+          "title": "Impeller: Stream Processing on Shared Logs",
+          "year": 2025,
+          "doi": "https://doi.org/10.1145/3689031.3717485"
+        },
+        {
+          "type": "paper",
+          "title": "Lupin: Tolerating Partial Failures in a CXL Pod",
+          "year": 2024,
+          "doi": "https://doi.org/10.1145/3698783.3699377"
+        },
+        {
+          "type": "paper",
+          "title": "Boki: Towards Data Consistency and Fault Tolerance with Shared Logs in Stateful Serverless Computing",
+          "year": 2024,
+          "doi": "https://doi.org/10.1145/3653072"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.6212500000000001,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.1875,
+        "overlap_score": 0.1875,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 40,
+        "hindex_score": 0.8,
+        "total_score": 0.6212500000000001
+      },
+      "match_dimensions": {
+        "research_overlap": 0.1875,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 40,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 25,
+      "supervisor": {
+        "name": "M. Jorge Cardoso",
+        "institution": "St Thomas' Hospital",
+        "department": null,
+        "country": "UK",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5077080413",
+        "google_scholar_id": null,
+        "orcid": "0000-0003-1284-2558",
+        "id": "e700ef14-7021-46ad-9501-d486107f7137"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "The future of digital health with federated learning",
+          "venue": null,
+          "year": 2020,
+          "url": "https://openalex.org/W3012501605",
+          "doi": "https://doi.org/10.1038/s41746-020-00323-1"
+        },
+        {
+          "type": "paper",
+          "title": "In silico modelling of changes in spinal cord blood flow after endovascular aortic aneurysm repair",
+          "year": 2025,
+          "doi": "https://doi.org/10.48550/arxiv.2512.10048"
+        },
+        {
+          "type": "paper",
+          "title": "RWD85 FLAME: An Open-Source Federated Platform for Deeply Phenotyped and Multimodal Studies at Population Scale",
+          "year": 2025,
+          "doi": "https://doi.org/10.1016/j.jval.2025.09.2835"
+        },
+        {
+          "type": "paper",
+          "title": "Diffusion-Based Quality Control of Medical Image Segmentations across Organs",
+          "year": 2025,
+          "doi": "https://doi.org/10.48550/arxiv.2511.09588"
+        },
+        {
+          "type": "paper",
+          "title": "The multi-dimensional equity of predictive models in acute ischaemic stroke",
+          "year": 2025,
+          "doi": "https://doi.org/10.21203/rs.3.rs-8056415/v1"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.6183333333333333,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.1111111111111111,
+        "overlap_score": 0.1111111111111111,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 72,
+        "hindex_score": 1.0,
+        "total_score": 0.6183333333333333
+      },
+      "match_dimensions": {
+        "research_overlap": 0.1111111111111111,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 72,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2025
+      }
+    },
+    {
+      "rank": 26,
+      "supervisor": {
+        "name": "M. Jorge Cardoso",
+        "institution": "St Thomas' Hospital",
+        "department": null,
+        "country": "UK",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5077080413",
+        "google_scholar_id": null,
+        "orcid": "0000-0003-1284-2558",
+        "id": "9a372d26-dcc7-4099-947f-44c432e0de20"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "The future of digital health with federated learning",
+          "venue": null,
+          "year": 2020,
+          "url": "https://openalex.org/W3012501605",
+          "doi": "https://doi.org/10.1038/s41746-020-00323-1"
+        },
+        {
+          "type": "paper",
+          "title": "In silico modelling of changes in spinal cord blood flow after endovascular aortic aneurysm repair",
+          "year": 2025,
+          "doi": "https://doi.org/10.48550/arxiv.2512.10048"
+        },
+        {
+          "type": "paper",
+          "title": "RWD85 FLAME: An Open-Source Federated Platform for Deeply Phenotyped and Multimodal Studies at Population Scale",
+          "year": 2025,
+          "doi": "https://doi.org/10.1016/j.jval.2025.09.2835"
+        },
+        {
+          "type": "paper",
+          "title": "Diffusion-Based Quality Control of Medical Image Segmentations across Organs",
+          "year": 2025,
+          "doi": "https://doi.org/10.48550/arxiv.2511.09588"
+        },
+        {
+          "type": "paper",
+          "title": "The multi-dimensional equity of predictive models in acute ischaemic stroke",
+          "year": 2025,
+          "doi": "https://doi.org/10.21203/rs.3.rs-8056415/v1"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.6183333333333333,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.1111111111111111,
+        "overlap_score": 0.1111111111111111,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 72,
+        "hindex_score": 1.0,
+        "total_score": 0.6183333333333333
+      },
+      "match_dimensions": {
+        "research_overlap": 0.1111111111111111,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 72,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2025
+      }
+    },
+    {
+      "rank": 27,
+      "supervisor": {
+        "name": "M. Jorge Cardoso",
+        "institution": "St Thomas' Hospital",
+        "department": null,
+        "country": "UK",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5077080413",
+        "google_scholar_id": null,
+        "orcid": "0000-0003-1284-2558",
+        "id": "d669e2b8-b2d7-49cf-b64f-fc1bdfe0c082"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "The future of digital health with federated learning",
+          "venue": null,
+          "year": 2020,
+          "url": "https://openalex.org/W3012501605",
+          "doi": "https://doi.org/10.1038/s41746-020-00323-1"
+        },
+        {
+          "type": "paper",
+          "title": "In silico modelling of changes in spinal cord blood flow after endovascular aortic aneurysm repair",
+          "year": 2025,
+          "doi": "https://doi.org/10.48550/arxiv.2512.10048"
+        },
+        {
+          "type": "paper",
+          "title": "RWD85 FLAME: An Open-Source Federated Platform for Deeply Phenotyped and Multimodal Studies at Population Scale",
+          "year": 2025,
+          "doi": "https://doi.org/10.1016/j.jval.2025.09.2835"
+        },
+        {
+          "type": "paper",
+          "title": "Diffusion-Based Quality Control of Medical Image Segmentations across Organs",
+          "year": 2025,
+          "doi": "https://doi.org/10.48550/arxiv.2511.09588"
+        },
+        {
+          "type": "paper",
+          "title": "The multi-dimensional equity of predictive models in acute ischaemic stroke",
+          "year": 2025,
+          "doi": "https://doi.org/10.21203/rs.3.rs-8056415/v1"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.6183333333333333,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.1111111111111111,
+        "overlap_score": 0.1111111111111111,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 72,
+        "hindex_score": 1.0,
+        "total_score": 0.6183333333333333
+      },
+      "match_dimensions": {
+        "research_overlap": 0.1111111111111111,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 72,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2025
+      }
+    },
+    {
+      "rank": 28,
+      "supervisor": {
+        "name": "John D. E. Gabrieli",
+        "institution": "McGovern Institute for Brain Research",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5042018430",
+        "google_scholar_id": null,
+        "orcid": "0000-0003-1158-5692",
+        "id": "dadd6853-f679-482a-aee0-d8c7bd3364dc"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Neural Correlates of the Automatic Processing of Threat Facial Signals",
+          "venue": null,
+          "year": 2003,
+          "url": "https://openalex.org/W2156516005",
+          "doi": "https://doi.org/10.1523/jneurosci.23-13-05627.2003"
+        },
+        {
+          "type": "paper",
+          "title": "Reading Disabilities With and Without Co-Occurring ADHD: No Evidence for Additive Impact on Reading Skills",
+          "year": 2026,
+          "doi": "https://doi.org/10.1080/10888438.2026.2672100"
+        },
+        {
+          "type": "paper",
+          "title": "Neurodiversity in the brain: More variable localization of face regions in autism",
+          "year": 2026,
+          "doi": "https://doi.org/10.64898/2026.05.14.724682"
+        },
+        {
+          "type": "paper",
+          "title": "Integrating digital technologies in shared reading: Effects of conversational agents on adult\u2013child interaction and children\u2019s language learning.",
+          "year": 2026,
+          "doi": "https://doi.org/10.1037/dev0002178"
+        },
+        {
+          "type": "paper",
+          "title": "Large Language Model\u2013Generated Tutoring Responses Receive Higher Ratings but Are Penalized by Source-Based Evaluation Bias",
+          "year": 2026,
+          "doi": "https://doi.org/10.31234/osf.io/stek7_v1"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.616578947368421,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.10526315789473684,
+        "overlap_score": 0.10526315789473684,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 156,
+        "hindex_score": 1.0,
+        "total_score": 0.616578947368421
+      },
+      "match_dimensions": {
+        "research_overlap": 0.10526315789473684,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 156,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 29,
+      "supervisor": {
+        "name": "John D. E. Gabrieli",
+        "institution": "McGovern Institute for Brain Research",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5042018430",
+        "google_scholar_id": null,
+        "orcid": "0000-0003-1158-5692",
+        "id": "7eff3f6f-2a34-49f9-8e91-fc8b70bd3046"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Neural Correlates of the Automatic Processing of Threat Facial Signals",
+          "venue": null,
+          "year": 2003,
+          "url": "https://openalex.org/W2156516005",
+          "doi": "https://doi.org/10.1523/jneurosci.23-13-05627.2003"
+        },
+        {
+          "type": "paper",
+          "title": "Reading Disabilities With and Without Co-Occurring ADHD: No Evidence for Additive Impact on Reading Skills",
+          "year": 2026,
+          "doi": "https://doi.org/10.1080/10888438.2026.2672100"
+        },
+        {
+          "type": "paper",
+          "title": "Neurodiversity in the brain: More variable localization of face regions in autism",
+          "year": 2026,
+          "doi": "https://doi.org/10.64898/2026.05.14.724682"
+        },
+        {
+          "type": "paper",
+          "title": "Integrating digital technologies in shared reading: Effects of conversational agents on adult\u2013child interaction and children\u2019s language learning.",
+          "year": 2026,
+          "doi": "https://doi.org/10.1037/dev0002178"
+        },
+        {
+          "type": "paper",
+          "title": "Large Language Model\u2013Generated Tutoring Responses Receive Higher Ratings but Are Penalized by Source-Based Evaluation Bias",
+          "year": 2026,
+          "doi": "https://doi.org/10.31234/osf.io/stek7_v1"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.616578947368421,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.10526315789473684,
+        "overlap_score": 0.10526315789473684,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 156,
+        "hindex_score": 1.0,
+        "total_score": 0.616578947368421
+      },
+      "match_dimensions": {
+        "research_overlap": 0.10526315789473684,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 156,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 30,
+      "supervisor": {
+        "name": "John D. E. Gabrieli",
+        "institution": "McGovern Institute for Brain Research",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5042018430",
+        "google_scholar_id": null,
+        "orcid": "0000-0003-1158-5692",
+        "id": "c8970c0a-2b9d-46e5-9943-e8f3d5f28686"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Neural Correlates of the Automatic Processing of Threat Facial Signals",
+          "venue": null,
+          "year": 2003,
+          "url": "https://openalex.org/W2156516005",
+          "doi": "https://doi.org/10.1523/jneurosci.23-13-05627.2003"
+        },
+        {
+          "type": "paper",
+          "title": "Reading Disabilities With and Without Co-Occurring ADHD: No Evidence for Additive Impact on Reading Skills",
+          "year": 2026,
+          "doi": "https://doi.org/10.1080/10888438.2026.2672100"
+        },
+        {
+          "type": "paper",
+          "title": "Neurodiversity in the brain: More variable localization of face regions in autism",
+          "year": 2026,
+          "doi": "https://doi.org/10.64898/2026.05.14.724682"
+        },
+        {
+          "type": "paper",
+          "title": "Integrating digital technologies in shared reading: Effects of conversational agents on adult\u2013child interaction and children\u2019s language learning.",
+          "year": 2026,
+          "doi": "https://doi.org/10.1037/dev0002178"
+        },
+        {
+          "type": "paper",
+          "title": "Large Language Model\u2013Generated Tutoring Responses Receive Higher Ratings but Are Penalized by Source-Based Evaluation Bias",
+          "year": 2026,
+          "doi": "https://doi.org/10.31234/osf.io/stek7_v1"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.616578947368421,
+      "confidence_breakdown": {
+        "orcid_verified": true,
+        "orcid_score": 1.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.10526315789473684,
+        "overlap_score": 0.10526315789473684,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 156,
+        "hindex_score": 1.0,
+        "total_score": 0.616578947368421
+      },
+      "match_dimensions": {
+        "research_overlap": 0.10526315789473684,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 156,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    }
+  ],
   "metadata": {
-    "total_candidates_considered": 0,
-    "data_sources": [],
-    "llm_provider_used": "stub",
-    "langgraph_run_id": "d483d1b8",
-    "run_duration_seconds": 0.0,
+    "total_candidates_considered": 102,
+    "data_sources": [
+      "openalex",
+      "nih_reporter"
+    ],
+    "llm_provider_used": "",
+    "langgraph_run_id": "90fe0a32",
+    "run_duration_seconds": 2391.7,
     "audit_summary": {
-      "total_audited": 0,
-      "clean": 0,
-      "flagged": 0,
-      "tier_downgraded": 0,
-      "removed": 0
+      "top_n": 30,
+      "flagged_count": 30,
+      "flagged": [
+        {
+          "id": "https://openalex.org/W2128909182",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2128909182",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2128909182",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2485462537",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2485462537",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2485462537",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2118386984",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2118386984",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2118386984",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2061383870",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2061383870",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2061383870",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4212875960",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4212875960",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4212875960",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2135825876",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2135825876",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2135825876",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W3100779497",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W3100779497",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W3100779497",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2793398195",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2793398195",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2793398195",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W3012501605",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W3012501605",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W3012501605",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2156516005",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2156516005",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2156516005",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        }
+      ]
     }
   }
 }

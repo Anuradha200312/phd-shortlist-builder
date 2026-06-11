@@ -10,19 +10,22 @@ from graph.state import ShortlistState
 logger = structlog.get_logger()
 
 
+from chains.query_expansion_chain import expand_queries
+
 async def ingest_node(state: ShortlistState) -> dict:
     """Parse student profile and generate search queries."""
     profile = state["student_profile"]
     logger.info("ingest_node_start", student_id=profile.get("student_id"))
 
-    # Phase 1 stub: use raw research interests as queries
-    # Phase 2 will replace this with LLM query_expansion_chain
-    interests = profile.get("research_interests", [])
-    education = profile.get("education", [])
-    thesis_titles = [e.get("thesis_title", "") for e in education if e.get("thesis_title")]
+    # Call LLM query expansion chain
+    queries = await expand_queries(profile)
 
-    # Combine interests + thesis keywords as initial queries
-    queries = list(set(interests + thesis_titles))[:15]
+    # Fallback/merge with raw interests if empty
+    if not queries:
+        interests = profile.get("research_interests", [])
+        education = profile.get("education", [])
+        thesis_titles = [e.get("thesis_title", "") for e in education if e.get("thesis_title")]
+        queries = list(set(interests + thesis_titles))[:15]
 
     logger.info("ingest_node_complete", queries_generated=len(queries))
 

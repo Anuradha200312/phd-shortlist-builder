@@ -5,6 +5,7 @@ Provides `search_nih_reporter(query, limit=10)` returning normalized grant/proje
 """
 from __future__ import annotations
 from typing import List
+import httpx
 import structlog
 from langchain.tools import tool
 
@@ -14,13 +15,38 @@ logger = structlog.get_logger()
 
 
 class NIHReporterClient(BaseDataSource):
-    BASE_URL = "https://api.reporter.nih.gov/v1"
+    BASE_URL = "https://api.reporter.nih.gov/v2"
     SOURCE_NAME = "nih_reporter"
 
     async def search_projects(self, query: str, limit: int = 10) -> dict:
         endpoint = "projects/search"
-        params = {"query": query, "size": limit}
-        return await self._get(endpoint, params=params)
+        url = f"{self.BASE_URL}/{endpoint}"
+        
+        # NIH RePORTER API v2 requires a POST request with specific payload
+        payload = {
+            "criteria": {
+                "advanced_text_search": {
+                    "search_text": query,
+                    "search_field": "projecttitle,terms"
+                }
+            },
+            "include_fields": [
+                "ProjectNum",
+                "ApplId",
+                "ProjectTitle",
+                "OrgName",
+                "Fy",
+                "AwardAmount",
+                "AbstractText",
+                "PrincipalInvestigators"
+            ],
+            "limit": limit
+        }
+        
+        async with httpx.AsyncClient(timeout=self.timeout) as client:
+            resp = await client.post(url, json=payload)
+            resp.raise_for_status()
+            return resp.json()
 
 
 @tool
@@ -28,23 +54,33 @@ async def search_nih_reporter(query: str, limit: int = 10) -> List[dict]:
     """
     Search NIH RePORTER for projects matching `query` and return normalized grant records.
 
-    Returns list of dicts each with: `id`, `source`, `title`, `pi_name`, `organization`, `year`, `award_amount`, `abstract`.
+    Returns list of dicts each with: `id`, `source`, `title`, `authors`, `pi_name`, `organization`, `year`, `award_amount`, `abstract`.
     """
     client = NIHReporterClient()
     try:
         resp = await client.search_projects(query, limit=limit)
-        results = resp.get("results") or resp.get("projects") or []
+        results = resp.get("results") or []
         out = []
         for p in results:
+            pi_list = p.get("PrincipalInvestigators") or []
+            pi_name = None
+            if pi_list:
+                contact_pi = next((pi for pi in pi_list if pi.get("is_contact_pi")), pi_list[0])
+                pi_name = contact_pi.get("full_name") or f"{contact_pi.get('first_name', '')} {contact_pi.get('last_name', '')}".strip()
+                if pi_name and "," in pi_name:
+                    parts = pi_name.split(",")
+                    pi_name = f"{parts[1].strip()} {parts[0].strip()}"
+
             item = {
-                "id": p.get("projectNumber") or p.get("applicationId") or p.get("id"),
+                "id": p.get("ProjectNum") or str(p.get("ApplId")) or p.get("id"),
                 "source": "nih_reporter",
-                "title": p.get("projectTitle") or p.get("title"),
-                "pi_name": (p.get("piNames") or [p.get("principal_investigator")])[0] if (p.get("piNames") or p.get("principal_investigator")) else None,
-                "organization": p.get("organizationName") or p.get("org_name"),
-                "year": p.get("fy") or p.get("projectStartYear"),
-                "award_amount": p.get("awardAmount") or p.get("totalCost"),
-                "abstract": p.get("abstractText") or p.get("abstract") or None,
+                "title": p.get("ProjectTitle"),
+                "authors": [pi_name] if pi_name else [],
+                "pi_name": pi_name,
+                "organization": p.get("OrgName"),
+                "year": p.get("Fy"),
+                "award_amount": p.get("AwardAmount"),
+                "abstract": p.get("AbstractText") or None,
             }
             out.append(item)
         logger.info("nih_reporter_search", query=query, results=len(out))

@@ -8,13 +8,21 @@ import uuid
 from datetime import datetime
 from pathlib import Path
 
+import sys
+if sys.platform.startswith('win'):
+    try:
+        sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+        sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+    except Exception:
+        pass
+
 import typer
 import structlog
 
 structlog.configure(
     processors=[
         structlog.stdlib.add_log_level,
-        structlog.dev.ConsoleRenderer(colors=True),
+        structlog.dev.ConsoleRenderer(colors=False),
     ],
     wrapper_class=structlog.stdlib.BoundLogger,
     context_class=dict,

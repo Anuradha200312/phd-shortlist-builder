@@ -80,5 +80,8 @@ async def audit_node(state: Dict[str, Any], top_n: int = 30) -> Dict[str, Any]:
         "flagged": flagged,
     }
     logger.info("audit_node_complete", **state["audit_summary"]) if logger else None
-    return state
+    return {
+        "audited_shortlist": top,
+        "audit_summary": state["audit_summary"]
+    }
 

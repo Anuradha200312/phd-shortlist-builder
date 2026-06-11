@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # Install Python dependencies
 COPY pyproject.toml .
+RUN mkdir api chains config data_sources db entity_resolution feedback graph llm scoring tools vectorstore
 RUN pip install --no-cache-dir -e .
 
 # Copy application code

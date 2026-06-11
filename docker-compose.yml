@@ -4,7 +4,7 @@ services:
   # ── PostgreSQL Database ─────────────────────────────────────────
   postgres:
     image: pgvector/pgvector:pg16
-    ports: ["5432:5432"]
+    ports: ["5433:5432"]
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-phd_user}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-phd_pass}

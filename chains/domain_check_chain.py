@@ -8,7 +8,7 @@ Output: domain_confidence score (0.0-1.0) + contamination flags
 from __future__ import annotations
 import structlog
 from typing import Optional
-from langchain import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
 from pydantic import BaseModel, Field
 from llm.providers import build_llm_chain, get_ollama_llm

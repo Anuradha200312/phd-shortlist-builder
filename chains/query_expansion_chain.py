@@ -9,7 +9,7 @@ from __future__ import annotations
 import json
 import structlog
 from typing import Optional
-from langchain import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 from pydantic import BaseModel, Field
 from llm.providers import build_llm_chain

@@ -6,6 +6,7 @@ returns normalized position/PhD-advert records.
 """
 from __future__ import annotations
 from typing import List
+import urllib.parse
 import structlog
 from langchain.tools import tool
 import httpx
@@ -22,7 +23,7 @@ async def search_findaphd(query: str, limit: int = 10) -> List[dict]:
     Each item includes: `id`, `source`, `title`, `institution`, `location`, `url`, `summary`.
     """
     base = "https://www.findaphd.com"
-    search_url = f"{base}/search.aspx?Keywords={httpx.utils.quote(query)}"
+    search_url = f"{base}/search.aspx?Keywords={urllib.parse.quote(query)}"
     out = []
     try:
         async with httpx.AsyncClient(timeout=15) as client:

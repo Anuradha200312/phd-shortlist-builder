@@ -5,6 +5,8 @@ from datetime import datetime
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from api.routes.indexing import router as indexing_router
+from api.routes.shortlist import router as shortlist_router
+from api.routes.feedback import router as feedback_router
 
 app = FastAPI(
     title="PhD Shortlist Builder API",
@@ -22,6 +24,8 @@ app.add_middleware(
 
 # Register routers
 app.include_router(indexing_router)
+app.include_router(shortlist_router)
+app.include_router(feedback_router)
 
 
 @app.get("/api/v1/health")

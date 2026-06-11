@@ -7,7 +7,7 @@ Output: why_match (str, 200-400 words with grounded evidence)
 """
 from __future__ import annotations
 import structlog
-from langchain import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from llm.providers import build_llm_chain
 

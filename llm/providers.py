@@ -69,6 +69,24 @@ def build_llm_chain(
         callbacks=[_token_tracker],
     )
 
+    groq_fallback_llm = ChatGroq(
+        model="llama-3.1-8b-instant",
+        temperature=temperature,
+        max_tokens=max_tokens,
+        api_key=settings.groq_api_key,
+        timeout=15,
+        max_retries=2,
+    )
+
+    mixtral_fallback_llm = ChatGroq(
+        model="mixtral-8x7b-32768",
+        temperature=temperature,
+        max_tokens=max_tokens,
+        api_key=settings.groq_api_key,
+        timeout=15,
+        max_retries=2,
+    )
+
     ollama_llm = ChatOllama(
         model=settings.ollama_model,
         base_url=settings.ollama_base_url,
@@ -77,7 +95,7 @@ def build_llm_chain(
     )
 
     return groq_llm.with_fallbacks(
-        fallbacks=[ollama_llm],
+        fallbacks=[groq_fallback_llm, mixtral_fallback_llm, ollama_llm],
         exceptions_to_handle=(Exception,),
     )
 

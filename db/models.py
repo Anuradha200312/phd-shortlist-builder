@@ -5,10 +5,12 @@ from datetime import datetime
 from typing import Optional
 
 from sqlalchemy import (
-    String, Integer, Boolean, Numeric, Text, ForeignKey, UniqueConstraint, CheckConstraint,
+    String, Integer, Boolean, Numeric, Text, ForeignKey, UniqueConstraint, CheckConstraint, TIMESTAMP
 )
-from sqlalchemy.dialects.postgresql import ARRAY, JSONB, TIMESTAMPTZ, UUID
+from sqlalchemy.dialects.postgresql import ARRAY, JSONB, UUID
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
+
+TIMESTAMPTZ = TIMESTAMP(timezone=True)
 
 
 class Base(DeclarativeBase):
@@ -164,3 +166,17 @@ class ApiCacheModel(Base):
     response_json: Mapped[dict] = mapped_column(JSONB, nullable=False)
     fetched_at: Mapped[Optional[datetime]] = mapped_column(TIMESTAMPTZ, default=datetime.utcnow)
     expires_at: Mapped[datetime] = mapped_column(TIMESTAMPTZ, nullable=False)
+
+
+class OutcomeSignalModel(Base):
+    __tablename__ = "outcome_signals"
+
+    id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), primary_key=True, default=uuid.uuid4
+    )
+    supervisor_id: Mapped[str] = mapped_column(String, nullable=False)
+    student_id: Mapped[str] = mapped_column(String, nullable=False)
+    outcome: Mapped[str] = mapped_column(String, nullable=False)  # 'ADMIT', 'REJECT', 'INTERVIEW'
+    details: Mapped[Optional[str]] = mapped_column(Text)
+    created_at: Mapped[Optional[datetime]] = mapped_column(TIMESTAMPTZ, default=datetime.utcnow)
+

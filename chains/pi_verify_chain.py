@@ -9,7 +9,7 @@ from __future__ import annotations
 import structlog
 from datetime import datetime
 from typing import Optional
-from langchain import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
 from pydantic import BaseModel, Field
 from llm.providers import get_ollama_llm

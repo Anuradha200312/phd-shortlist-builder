@@ -5,37 +5,41 @@ from graph.nodes.validate_node import validate_node
 
 async def _run():
     state = {
-        "target_countries": ["USA", "UK"],
+        "target_countries": ["USA", "UK", "Canada"],
         "enriched_candidates": [
-            {
-                "rank": 1,
-                "country": "USA",  # flat dict — real pipeline format
-                "evidence": [{"type": "paper", "title": "X"}],
-            },
-            {
-                "rank": 2,
-                "country": "India",  # not in target list → blocked
-                "evidence": [{"type": "paper", "title": "Y"}],
-            },
-            {
-                "rank": 3,
-                "country": "UK",
-                "evidence": [],  # no evidence → blocked
-            },
-            {
-                "rank": 4,
-                "country": "Unknown",  # Unknown → blocked (hard constraint)
-                "evidence": [{"type": "paper", "title": "Z"}],
-            },
+            # 1. Explicit country in target — passes
+            {"rank": 1, "country": "USA", "institution": "MIT",
+             "evidence": [{"type": "paper", "title": "X"}]},
+
+            # 2. No country but UK institution — inferred UK, passes
+            {"rank": 2, "country": None, "institution": "University of Oxford",
+             "evidence": [{"type": "paper", "title": "Y"}]},
+
+            # 3. NIH source with no country — defaults to USA, passes
+            {"rank": 3, "source": "nih_reporter", "country": None, "institution": "Unknown",
+             "evidence": [{"type": "paper", "title": "Z"}]},
+
+            # 4. Unresolvable country (FR) — blocked
+            {"rank": 4, "country": "FR", "institution": "Sorbonne",
+             "evidence": [{"type": "paper", "title": "W"}]},
+
+            # 5. Valid UK country but no evidence — blocked by evidence
+            {"rank": 5, "country": "UK", "institution": "Edinburgh",
+             "evidence": []},
         ],
     }
 
     res = await validate_node(state)
-    assert res["validation_summary"]["input_count"] == 4
-    # Only rank 1 (USA with evidence) should pass
-    assert res["validation_summary"]["validated_count"] == 1
-    assert res["validation_summary"]["blocked_by_country"] == 2  # India + Unknown
-    assert res["validation_summary"]["blocked_by_evidence"] == 1  # UK (valid country but no evidence)
+    summary = res["validation_summary"]
+    assert summary["input_count"] == 5
+    assert summary["validated_count"] == 3   # ranks 1, 2, 3 pass
+    assert summary["blocked_by_country"] == 1  # rank 4 (FR)
+    assert summary["blocked_by_evidence"] == 1  # rank 5 (no evidence)
+
+    # Check inferred countries were written back
+    names = [c.get("country") for c in res["validated_shortlist"]]
+    assert "USA" in names
+    assert "UK" in names
 
 
 def test_validate_node():

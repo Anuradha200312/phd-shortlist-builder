@@ -78,6 +78,8 @@ async def search_nih_reporter(query: str, limit: int = 10) -> List[dict]:
                 "authors": [pi_name] if pi_name else [],
                 "pi_name": pi_name,
                 "organization": p.get("OrgName"),
+                "institution": p.get("OrgName"),  # carry forward for dedup/country
+                "country": "USA",  # NIH is a US federal agency — all grants are USA
                 "year": p.get("Fy"),
                 "award_amount": p.get("AwardAmount"),
                 "abstract": p.get("AbstractText") or None,

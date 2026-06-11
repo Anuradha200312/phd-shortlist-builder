@@ -40,7 +40,32 @@ async def search_openalex(query: str, limit: int = 10) -> List[dict]:
         results = resp.get("results") or resp.get("data") or []
         out = []
         for w in results:
-            authors = [a.get("author", {}).get("display_name") for a in w.get("authorships", [])]
+            authorships = w.get("authorships", [])
+            authors = [a.get("author", {}).get("display_name") for a in authorships]
+
+            # Extract last author's institution + country (most likely to be the PI)
+            institution = None
+            raw_country = None
+            if authorships:
+                last_auth = authorships[-1]
+                insts = last_auth.get("institutions") or []
+                if insts:
+                    institution = insts[0].get("display_name")
+                    raw_country = insts[0].get("country_code")
+
+            # Normalise country code
+            country = None
+            if raw_country:
+                cc = raw_country.upper()
+                if cc in ("US", "USA"):
+                    country = "USA"
+                elif cc in ("GB", "UK"):
+                    country = "UK"
+                elif cc in ("CA", "CAN"):
+                    country = "Canada"
+                else:
+                    country = raw_country  # keep ISO code, validate_node will filter
+
             item = {
                 "id": w.get("id"),
                 "source": "openalex",
@@ -51,6 +76,8 @@ async def search_openalex(query: str, limit: int = 10) -> List[dict]:
                 "url": w.get("id"),
                 "citation_count": w.get("cited_by_count"),
                 "abstract": w.get("abstract") or None,
+                "institution": institution,
+                "country": country,
             }
             out.append(item)
         logger.info("openalex_search", query=query, results=len(out))

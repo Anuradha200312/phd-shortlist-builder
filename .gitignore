@@ -47,3 +47,6 @@ data/
 # PDF (assignment)
 *.pdf
 CODEBASE_ANALYSIS.md
+pdf_content.txt
+implementation_plan*
+

@@ -13,8 +13,8 @@ from typing import Dict, Any
 
 from graph.state import ShortlistState
 
-from db.crud import create_shortlist
-from db.engine import AsyncSessionLocal
+# DB imports are lazy (inside function body) so this module can be imported
+# without asyncpg/postgres being available (e.g., CI unit tests).
 
 logger = structlog.get_logger()
 
@@ -98,13 +98,19 @@ async def output_node(state: ShortlistState) -> Dict[str, Any]:
 
     output = build_shortlist_output(state)
 
-    # Persist using an AsyncSession; create_shortlist will handle upserts
-    async with AsyncSessionLocal() as session:
-        try:
-            shortlist_id = await create_shortlist(session, output["student_id"], output, run_metadata={"run_id": state.get("run_id")})
-        except Exception as e:
-            logger.error("failed_persist_shortlist", error=str(e))
-            shortlist_id = None
+    # Persist to DB if available (lazy import so module works without asyncpg)
+    shortlist_id = None
+    try:
+        from db.crud import create_shortlist
+        from db.engine import AsyncSessionLocal
+        async with AsyncSessionLocal() as session:
+            shortlist_id = await create_shortlist(
+                session, output["student_id"], output,
+                run_metadata={"run_id": state.get("run_id")}
+            )
+    except Exception as e:
+        logger.warning("db_persist_skipped", error=str(e))
+        shortlist_id = None
 
     # Write a local copy with auto-incrementing filename
     try:

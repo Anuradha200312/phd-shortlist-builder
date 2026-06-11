@@ -122,8 +122,8 @@ Return only valid JSON with no markdown:
 """,
     )
     
-    # Use Ollama for bulk domain checks (saves Groq budget)
-    llm_chain = get_ollama_llm(temperature=0.0)
+    # Use build_llm_chain for resilient fallbacks (saves Groq budget while failing over gracefully)
+    llm_chain = build_llm_chain(temperature=0.0)
     parser = PydanticOutputParser(pydantic_object=DomainCheckOutput)
     
     chain = prompt | llm_chain | parser

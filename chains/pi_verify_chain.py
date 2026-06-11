@@ -12,7 +12,7 @@ from typing import Optional
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
 from pydantic import BaseModel, Field
-from llm.providers import get_ollama_llm
+from llm.providers import build_llm_chain
 
 logger = structlog.get_logger()
 
@@ -139,7 +139,7 @@ Return only JSON:
 """,
     )
     
-    llm_chain = get_ollama_llm(temperature=0.0)
+    llm_chain = build_llm_chain(temperature=0.0)
     parser = PydanticOutputParser(pydantic_object=PIVerifyOutput)
     
     chain = prompt | llm_chain | parser

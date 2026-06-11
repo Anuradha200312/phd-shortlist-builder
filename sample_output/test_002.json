@@ -1,0 +1,1961 @@
+{
+  "student_id": "test_001",
+  "generated_at": "2026-06-11T10:18:53.608018Z",
+  "pipeline_version": "1.0.0",
+  "shortlist": [
+    {
+      "rank": 1,
+      "supervisor": {
+        "name": "S. Churchland",
+        "institution": "University of California San Diego",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5053764911",
+        "google_scholar_id": null,
+        "orcid": null,
+        "id": "fe0deb0b-43c8-4c22-83bc-b22ef011e18b"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Computational Neuroscience",
+          "venue": null,
+          "year": 2014,
+          "url": "https://openalex.org/W2911607583",
+          "doi": "https://doi.org/10.1016/c2012-0-00157-3"
+        },
+        {
+          "type": "paper",
+          "title": "Certain brain injuries may be linked to violent crime \u2013 identifying them could help reveal how people make moral choices",
+          "year": 2026,
+          "doi": "https://doi.org/10.64628/aai.6rva3gpgd"
+        },
+        {
+          "type": "paper",
+          "title": "White matter disconnection in acquired criminality",
+          "year": 2025,
+          "doi": "https://doi.org/10.1038/s41380-025-03076-z"
+        },
+        {
+          "type": "paper",
+          "title": "How Might a \u2018Philosopher's Toolkit\u2019 Help Advance Neuroscience? Let's Ask Some Neuroscientists",
+          "year": 2025,
+          "doi": "https://doi.org/10.1111/ejn.70074"
+        },
+        {
+          "type": "paper",
+          "title": "Author response for \"How Might a 'Philosopher's Toolkit' Help Advance Neuroscience? Let's Ask Some Neuroscientists\"",
+          "year": 2025,
+          "doi": "https://doi.org/10.1111/ejn.70074/v2/response1"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.493,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.4,
+        "overlap_score": 0.4,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 44,
+        "hindex_score": 0.88,
+        "total_score": 0.493
+      },
+      "match_dimensions": {
+        "research_overlap": 0.0,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 44,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 2,
+      "supervisor": {
+        "name": "Patricia Smith Churchland",
+        "institution": "University of California San Diego",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5053764911",
+        "google_scholar_id": null,
+        "orcid": null,
+        "id": "9f5e3ab8-8c00-4f29-b187-7835c60fe2e0"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Computational Neuroscience",
+          "venue": null,
+          "year": 1988,
+          "url": "https://openalex.org/W4211182857",
+          "doi": "https://doi.org/10.1126/science.3045969"
+        },
+        {
+          "type": "paper",
+          "title": "Certain brain injuries may be linked to violent crime \u2013 identifying them could help reveal how people make moral choices",
+          "year": 2026,
+          "doi": "https://doi.org/10.64628/aai.6rva3gpgd"
+        },
+        {
+          "type": "paper",
+          "title": "White matter disconnection in acquired criminality",
+          "year": 2025,
+          "doi": "https://doi.org/10.1038/s41380-025-03076-z"
+        },
+        {
+          "type": "paper",
+          "title": "How Might a \u2018Philosopher's Toolkit\u2019 Help Advance Neuroscience? Let's Ask Some Neuroscientists",
+          "year": 2025,
+          "doi": "https://doi.org/10.1111/ejn.70074"
+        },
+        {
+          "type": "paper",
+          "title": "Author response for \"How Might a 'Philosopher's Toolkit' Help Advance Neuroscience? Let's Ask Some Neuroscientists\"",
+          "year": 2025,
+          "doi": "https://doi.org/10.1111/ejn.70074/v2/response1"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.493,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.4,
+        "overlap_score": 0.4,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 44,
+        "hindex_score": 0.88,
+        "total_score": 0.493
+      },
+      "match_dimensions": {
+        "research_overlap": 0.0,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 44,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 3,
+      "supervisor": {
+        "name": "S. Churchland",
+        "institution": "University of California San Diego",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5053764911",
+        "google_scholar_id": null,
+        "orcid": null,
+        "id": "8c5446e2-a77f-412a-be98-2236491e7266"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Computational Neuroscience",
+          "venue": null,
+          "year": 2014,
+          "url": "https://openalex.org/W2911607583",
+          "doi": "https://doi.org/10.1016/c2012-0-00157-3"
+        },
+        {
+          "type": "paper",
+          "title": "Certain brain injuries may be linked to violent crime \u2013 identifying them could help reveal how people make moral choices",
+          "year": 2026,
+          "doi": "https://doi.org/10.64628/aai.6rva3gpgd"
+        },
+        {
+          "type": "paper",
+          "title": "White matter disconnection in acquired criminality",
+          "year": 2025,
+          "doi": "https://doi.org/10.1038/s41380-025-03076-z"
+        },
+        {
+          "type": "paper",
+          "title": "How Might a \u2018Philosopher's Toolkit\u2019 Help Advance Neuroscience? Let's Ask Some Neuroscientists",
+          "year": 2025,
+          "doi": "https://doi.org/10.1111/ejn.70074"
+        },
+        {
+          "type": "paper",
+          "title": "Author response for \"How Might a 'Philosopher's Toolkit' Help Advance Neuroscience? Let's Ask Some Neuroscientists\"",
+          "year": 2025,
+          "doi": "https://doi.org/10.1111/ejn.70074/v2/response1"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.493,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.4,
+        "overlap_score": 0.4,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 44,
+        "hindex_score": 0.88,
+        "total_score": 0.493
+      },
+      "match_dimensions": {
+        "research_overlap": 0.0,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 44,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 4,
+      "supervisor": {
+        "name": "Patricia Smith Churchland",
+        "institution": "University of California San Diego",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5053764911",
+        "google_scholar_id": null,
+        "orcid": null,
+        "id": "36d4fb3c-59cb-4cf4-8aee-c9e619141440"
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Computational Neuroscience",
+          "venue": null,
+          "year": 1988,
+          "url": "https://openalex.org/W4211182857",
+          "doi": "https://doi.org/10.1126/science.3045969"
+        },
+        {
+          "type": "paper",
+          "title": "Certain brain injuries may be linked to violent crime \u2013 identifying them could help reveal how people make moral choices",
+          "year": 2026,
+          "doi": "https://doi.org/10.64628/aai.6rva3gpgd"
+        },
+        {
+          "type": "paper",
+          "title": "White matter disconnection in acquired criminality",
+          "year": 2025,
+          "doi": "https://doi.org/10.1038/s41380-025-03076-z"
+        },
+        {
+          "type": "paper",
+          "title": "How Might a \u2018Philosopher's Toolkit\u2019 Help Advance Neuroscience? Let's Ask Some Neuroscientists",
+          "year": 2025,
+          "doi": "https://doi.org/10.1111/ejn.70074"
+        },
+        {
+          "type": "paper",
+          "title": "Author response for \"How Might a 'Philosopher's Toolkit' Help Advance Neuroscience? Let's Ask Some Neuroscientists\"",
+          "year": 2025,
+          "doi": "https://doi.org/10.1111/ejn.70074/v2/response1"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.493,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.4,
+        "overlap_score": 0.4,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 44,
+        "hindex_score": 0.88,
+        "total_score": 0.493
+      },
+      "match_dimensions": {
+        "research_overlap": 0.0,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 44,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 5,
+      "supervisor": {
+        "name": "S. Churchland",
+        "institution": "University of California San Diego",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5053764911",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Computational Neuroscience",
+          "venue": null,
+          "year": 2014,
+          "url": "https://openalex.org/W2911607583",
+          "doi": "https://doi.org/10.1016/c2012-0-00157-3"
+        },
+        {
+          "type": "paper",
+          "title": "Certain brain injuries may be linked to violent crime \u2013 identifying them could help reveal how people make moral choices",
+          "year": 2026,
+          "doi": "https://doi.org/10.64628/aai.6rva3gpgd"
+        },
+        {
+          "type": "paper",
+          "title": "White matter disconnection in acquired criminality",
+          "year": 2025,
+          "doi": "https://doi.org/10.1038/s41380-025-03076-z"
+        },
+        {
+          "type": "paper",
+          "title": "How Might a \u2018Philosopher's Toolkit\u2019 Help Advance Neuroscience? Let's Ask Some Neuroscientists",
+          "year": 2025,
+          "doi": "https://doi.org/10.1111/ejn.70074"
+        },
+        {
+          "type": "paper",
+          "title": "Author response for \"How Might a 'Philosopher's Toolkit' Help Advance Neuroscience? Let's Ask Some Neuroscientists\"",
+          "year": 2025,
+          "doi": "https://doi.org/10.1111/ejn.70074/v2/response1"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.493,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.4,
+        "overlap_score": 0.4,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 44,
+        "hindex_score": 0.88,
+        "total_score": 0.493
+      },
+      "match_dimensions": {
+        "research_overlap": 0.0,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 44,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 6,
+      "supervisor": {
+        "name": "Patricia Smith Churchland",
+        "institution": "University of California San Diego",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5053764911",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Computational Neuroscience",
+          "venue": null,
+          "year": 1988,
+          "url": "https://openalex.org/W4211182857",
+          "doi": "https://doi.org/10.1126/science.3045969"
+        },
+        {
+          "type": "paper",
+          "title": "Certain brain injuries may be linked to violent crime \u2013 identifying them could help reveal how people make moral choices",
+          "year": 2026,
+          "doi": "https://doi.org/10.64628/aai.6rva3gpgd"
+        },
+        {
+          "type": "paper",
+          "title": "White matter disconnection in acquired criminality",
+          "year": 2025,
+          "doi": "https://doi.org/10.1038/s41380-025-03076-z"
+        },
+        {
+          "type": "paper",
+          "title": "How Might a \u2018Philosopher's Toolkit\u2019 Help Advance Neuroscience? Let's Ask Some Neuroscientists",
+          "year": 2025,
+          "doi": "https://doi.org/10.1111/ejn.70074"
+        },
+        {
+          "type": "paper",
+          "title": "Author response for \"How Might a 'Philosopher's Toolkit' Help Advance Neuroscience? Let's Ask Some Neuroscientists\"",
+          "year": 2025,
+          "doi": "https://doi.org/10.1111/ejn.70074/v2/response1"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.493,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.4,
+        "overlap_score": 0.4,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 44,
+        "hindex_score": 0.88,
+        "total_score": 0.493
+      },
+      "match_dimensions": {
+        "research_overlap": 0.0,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 44,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 7,
+      "supervisor": {
+        "name": "Taghi M. Khoshgoftaar",
+        "institution": "Florida Atlantic University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5089170562",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "A survey on Image Data Augmentation for Deep Learning",
+          "venue": null,
+          "year": 2019,
+          "url": "https://openalex.org/W2954996726",
+          "doi": "https://doi.org/10.1186/s40537-019-0197-0"
+        },
+        {
+          "type": "paper",
+          "title": "PoS-FedFraud: A Robust Proof-of-Stake Framework for Decentralized Financial Fraud Detection in Federated Learning",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/ichora69329.2026.11537106"
+        },
+        {
+          "type": "paper",
+          "title": "Predictive modeling for auto repossession success: a comparative evaluation",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01428-2"
+        },
+        {
+          "type": "paper",
+          "title": "Order-based frameworks for predicting and classifying absence duration following an occupational injury",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01445-1"
+        },
+        {
+          "type": "paper",
+          "title": "A bibliometric analysis of the first decade of the Journal of Big Data",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01412-w"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.41657894736842105,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.10526315789473684,
+        "overlap_score": 0.10526315789473684,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 82,
+        "hindex_score": 1.0,
+        "total_score": 0.41657894736842105
+      },
+      "match_dimensions": {
+        "research_overlap": 0.10526315789473684,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 82,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 8,
+      "supervisor": {
+        "name": "Taghi M. Khoshgoftaar",
+        "institution": "Florida Atlantic University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5089170562",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "A survey on Image Data Augmentation for Deep Learning",
+          "venue": null,
+          "year": 2019,
+          "url": "https://openalex.org/W2954996726",
+          "doi": "https://doi.org/10.1186/s40537-019-0197-0"
+        },
+        {
+          "type": "paper",
+          "title": "PoS-FedFraud: A Robust Proof-of-Stake Framework for Decentralized Financial Fraud Detection in Federated Learning",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/ichora69329.2026.11537106"
+        },
+        {
+          "type": "paper",
+          "title": "Predictive modeling for auto repossession success: a comparative evaluation",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01428-2"
+        },
+        {
+          "type": "paper",
+          "title": "Order-based frameworks for predicting and classifying absence duration following an occupational injury",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01445-1"
+        },
+        {
+          "type": "paper",
+          "title": "A bibliometric analysis of the first decade of the Journal of Big Data",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01412-w"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.41657894736842105,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.10526315789473684,
+        "overlap_score": 0.10526315789473684,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 82,
+        "hindex_score": 1.0,
+        "total_score": 0.41657894736842105
+      },
+      "match_dimensions": {
+        "research_overlap": 0.10526315789473684,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 82,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 9,
+      "supervisor": {
+        "name": "Taghi M. Khoshgoftaar",
+        "institution": "Florida Atlantic University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5089170562",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "A survey on Image Data Augmentation for Deep Learning",
+          "venue": null,
+          "year": 2019,
+          "url": "https://openalex.org/W2954996726",
+          "doi": "https://doi.org/10.1186/s40537-019-0197-0"
+        },
+        {
+          "type": "paper",
+          "title": "PoS-FedFraud: A Robust Proof-of-Stake Framework for Decentralized Financial Fraud Detection in Federated Learning",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/ichora69329.2026.11537106"
+        },
+        {
+          "type": "paper",
+          "title": "Predictive modeling for auto repossession success: a comparative evaluation",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01428-2"
+        },
+        {
+          "type": "paper",
+          "title": "Order-based frameworks for predicting and classifying absence duration following an occupational injury",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01445-1"
+        },
+        {
+          "type": "paper",
+          "title": "A bibliometric analysis of the first decade of the Journal of Big Data",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01412-w"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.41657894736842105,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.10526315789473684,
+        "overlap_score": 0.10526315789473684,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 82,
+        "hindex_score": 1.0,
+        "total_score": 0.41657894736842105
+      },
+      "match_dimensions": {
+        "research_overlap": 0.10526315789473684,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 82,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 10,
+      "supervisor": {
+        "name": "Taghi M. Khoshgoftaar",
+        "institution": "Florida Atlantic University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5089170562",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "A survey on Image Data Augmentation for Deep Learning",
+          "venue": null,
+          "year": 2019,
+          "url": "https://openalex.org/W2954996726",
+          "doi": "https://doi.org/10.1186/s40537-019-0197-0"
+        },
+        {
+          "type": "paper",
+          "title": "PoS-FedFraud: A Robust Proof-of-Stake Framework for Decentralized Financial Fraud Detection in Federated Learning",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/ichora69329.2026.11537106"
+        },
+        {
+          "type": "paper",
+          "title": "Predictive modeling for auto repossession success: a comparative evaluation",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01428-2"
+        },
+        {
+          "type": "paper",
+          "title": "Order-based frameworks for predicting and classifying absence duration following an occupational injury",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01445-1"
+        },
+        {
+          "type": "paper",
+          "title": "A bibliometric analysis of the first decade of the Journal of Big Data",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01412-w"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.41657894736842105,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.10526315789473684,
+        "overlap_score": 0.10526315789473684,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 82,
+        "hindex_score": 1.0,
+        "total_score": 0.41657894736842105
+      },
+      "match_dimensions": {
+        "research_overlap": 0.10526315789473684,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 82,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 11,
+      "supervisor": {
+        "name": "Taghi M. Khoshgoftaar",
+        "institution": "Florida Atlantic University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5089170562",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "A survey on Image Data Augmentation for Deep Learning",
+          "venue": null,
+          "year": 2019,
+          "url": "https://openalex.org/W2954996726",
+          "doi": "https://doi.org/10.1186/s40537-019-0197-0"
+        },
+        {
+          "type": "paper",
+          "title": "PoS-FedFraud: A Robust Proof-of-Stake Framework for Decentralized Financial Fraud Detection in Federated Learning",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/ichora69329.2026.11537106"
+        },
+        {
+          "type": "paper",
+          "title": "Predictive modeling for auto repossession success: a comparative evaluation",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01428-2"
+        },
+        {
+          "type": "paper",
+          "title": "Order-based frameworks for predicting and classifying absence duration following an occupational injury",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01445-1"
+        },
+        {
+          "type": "paper",
+          "title": "A bibliometric analysis of the first decade of the Journal of Big Data",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01412-w"
+        }
+      ],
+      "why_match": "",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.41657894736842105,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.10526315789473684,
+        "overlap_score": 0.10526315789473684,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 82,
+        "hindex_score": 1.0,
+        "total_score": 0.41657894736842105
+      },
+      "match_dimensions": {
+        "research_overlap": 0.10526315789473684,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 82,
+        "country_match": true,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 12,
+      "supervisor": {
+        "name": "H. Brendan McMahan",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5040311844",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Advances and Open Problems in Federated Learning",
+          "venue": null,
+          "year": 2020,
+          "url": "https://openalex.org/W2995022099",
+          "doi": "https://doi.org/10.1561/2200000083"
+        },
+        {
+          "type": "paper",
+          "title": "A Hassle-free Algorithm for Strong Differential Privacy in Federated Learning Systems",
+          "year": 2024,
+          "doi": "https://doi.org/10.18653/v1/2024.emnlp-industry.64"
+        },
+        {
+          "type": "paper",
+          "title": "Differentially Private Learning with Adaptive Clipping",
+          "year": 2021,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "A Field Guide to Federated Optimization",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2107.06917"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "low_confidence",
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.3322941176470588,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.11764705882352941,
+        "overlap_score": 0.11764705882352941,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 36,
+        "hindex_score": 0.72,
+        "total_score": 0.3322941176470588
+      },
+      "match_dimensions": {
+        "research_overlap": 0.11764705882352941,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 36,
+        "country_match": false,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2024
+      }
+    },
+    {
+      "rank": 13,
+      "supervisor": {
+        "name": "H. Brendan McMahan",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5040311844",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Advances and Open Problems in Federated Learning",
+          "venue": null,
+          "year": 2020,
+          "url": "https://openalex.org/W2995022099",
+          "doi": "https://doi.org/10.1561/2200000083"
+        },
+        {
+          "type": "paper",
+          "title": "A Hassle-free Algorithm for Strong Differential Privacy in Federated Learning Systems",
+          "year": 2024,
+          "doi": "https://doi.org/10.18653/v1/2024.emnlp-industry.64"
+        },
+        {
+          "type": "paper",
+          "title": "Differentially Private Learning with Adaptive Clipping",
+          "year": 2021,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "A Field Guide to Federated Optimization",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2107.06917"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "low_confidence",
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.3322941176470588,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.11764705882352941,
+        "overlap_score": 0.11764705882352941,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 36,
+        "hindex_score": 0.72,
+        "total_score": 0.3322941176470588
+      },
+      "match_dimensions": {
+        "research_overlap": 0.11764705882352941,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 36,
+        "country_match": false,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2024
+      }
+    },
+    {
+      "rank": 14,
+      "supervisor": {
+        "name": "H. Brendan McMahan",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5040311844",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Advances and Open Problems in Federated Learning",
+          "venue": null,
+          "year": 2020,
+          "url": "https://openalex.org/W2995022099",
+          "doi": "https://doi.org/10.1561/2200000083"
+        },
+        {
+          "type": "paper",
+          "title": "A Hassle-free Algorithm for Strong Differential Privacy in Federated Learning Systems",
+          "year": 2024,
+          "doi": "https://doi.org/10.18653/v1/2024.emnlp-industry.64"
+        },
+        {
+          "type": "paper",
+          "title": "Differentially Private Learning with Adaptive Clipping",
+          "year": 2021,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "A Field Guide to Federated Optimization",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2107.06917"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "low_confidence",
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.3322941176470588,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.11764705882352941,
+        "overlap_score": 0.11764705882352941,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 36,
+        "hindex_score": 0.72,
+        "total_score": 0.3322941176470588
+      },
+      "match_dimensions": {
+        "research_overlap": 0.11764705882352941,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 36,
+        "country_match": false,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2024
+      }
+    },
+    {
+      "rank": 15,
+      "supervisor": {
+        "name": "H. Brendan McMahan",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5040311844",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Advances and Open Problems in Federated Learning",
+          "venue": null,
+          "year": 2020,
+          "url": "https://openalex.org/W2995022099",
+          "doi": "https://doi.org/10.1561/2200000083"
+        },
+        {
+          "type": "paper",
+          "title": "A Hassle-free Algorithm for Strong Differential Privacy in Federated Learning Systems",
+          "year": 2024,
+          "doi": "https://doi.org/10.18653/v1/2024.emnlp-industry.64"
+        },
+        {
+          "type": "paper",
+          "title": "Differentially Private Learning with Adaptive Clipping",
+          "year": 2021,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "A Field Guide to Federated Optimization",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2107.06917"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "low_confidence",
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.3322941176470588,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.11764705882352941,
+        "overlap_score": 0.11764705882352941,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 36,
+        "hindex_score": 0.72,
+        "total_score": 0.3322941176470588
+      },
+      "match_dimensions": {
+        "research_overlap": 0.11764705882352941,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 36,
+        "country_match": false,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2024
+      }
+    },
+    {
+      "rank": 16,
+      "supervisor": {
+        "name": "Guido Dornhege",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5022882383",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Toward Brain-Computer Interfacing",
+          "venue": null,
+          "year": 2007,
+          "url": "https://openalex.org/W1967167074",
+          "doi": "https://doi.org/10.7551/mitpress/7493.001.0001"
+        },
+        {
+          "type": "paper",
+          "title": "BNCI2003_IVa Motor Imagery dataset",
+          "year": 2026,
+          "doi": "https://doi.org/10.82901/nemar.nm000143.v1.0.0"
+        },
+        {
+          "type": "paper",
+          "title": "BNCI2003_IVa Motor Imagery dataset",
+          "year": 2026,
+          "doi": "https://doi.org/10.82901/nemar.nm000143"
+        },
+        {
+          "type": "paper",
+          "title": "Robustifying EEG data analysis by removing outliers",
+          "year": 2009,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "The Berlin Brain-Computer Interface: Accurate performance from first-session in BCI-naive subjects",
+          "year": 2008,
+          "doi": "https://doi.org/10.1109/tbme.2008.923152"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "low_confidence",
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.30042857142857143,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.07142857142857142,
+        "overlap_score": 0.07142857142857142,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 27,
+        "hindex_score": 0.54,
+        "total_score": 0.30042857142857143
+      },
+      "match_dimensions": {
+        "research_overlap": 0.07142857142857142,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 27,
+        "country_match": false,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 17,
+      "supervisor": {
+        "name": "Guido Dornhege",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5022882383",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Toward Brain-Computer Interfacing",
+          "venue": null,
+          "year": 2007,
+          "url": "https://openalex.org/W1967167074",
+          "doi": "https://doi.org/10.7551/mitpress/7493.001.0001"
+        },
+        {
+          "type": "paper",
+          "title": "BNCI2003_IVa Motor Imagery dataset",
+          "year": 2026,
+          "doi": "https://doi.org/10.82901/nemar.nm000143.v1.0.0"
+        },
+        {
+          "type": "paper",
+          "title": "BNCI2003_IVa Motor Imagery dataset",
+          "year": 2026,
+          "doi": "https://doi.org/10.82901/nemar.nm000143"
+        },
+        {
+          "type": "paper",
+          "title": "Robustifying EEG data analysis by removing outliers",
+          "year": 2009,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "The Berlin Brain-Computer Interface: Accurate performance from first-session in BCI-naive subjects",
+          "year": 2008,
+          "doi": "https://doi.org/10.1109/tbme.2008.923152"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "low_confidence",
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.30042857142857143,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.07142857142857142,
+        "overlap_score": 0.07142857142857142,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 27,
+        "hindex_score": 0.54,
+        "total_score": 0.30042857142857143
+      },
+      "match_dimensions": {
+        "research_overlap": 0.07142857142857142,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 27,
+        "country_match": false,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 18,
+      "supervisor": {
+        "name": "Guido Dornhege",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5022882383",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Toward Brain-Computer Interfacing",
+          "venue": null,
+          "year": 2007,
+          "url": "https://openalex.org/W1967167074",
+          "doi": "https://doi.org/10.7551/mitpress/7493.001.0001"
+        },
+        {
+          "type": "paper",
+          "title": "BNCI2003_IVa Motor Imagery dataset",
+          "year": 2026,
+          "doi": "https://doi.org/10.82901/nemar.nm000143.v1.0.0"
+        },
+        {
+          "type": "paper",
+          "title": "BNCI2003_IVa Motor Imagery dataset",
+          "year": 2026,
+          "doi": "https://doi.org/10.82901/nemar.nm000143"
+        },
+        {
+          "type": "paper",
+          "title": "Robustifying EEG data analysis by removing outliers",
+          "year": 2009,
+          "doi": null
+        },
+        {
+          "type": "paper",
+          "title": "The Berlin Brain-Computer Interface: Accurate performance from first-session in BCI-naive subjects",
+          "year": 2008,
+          "doi": "https://doi.org/10.1109/tbme.2008.923152"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "low_confidence",
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.30042857142857143,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.07142857142857142,
+        "overlap_score": 0.07142857142857142,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 27,
+        "hindex_score": 0.54,
+        "total_score": 0.30042857142857143
+      },
+      "match_dimensions": {
+        "research_overlap": 0.07142857142857142,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 27,
+        "country_match": false,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 19,
+      "supervisor": {
+        "name": "J.J. Vidal",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5108113353",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Toward Direct Brain-Computer Communication",
+          "venue": null,
+          "year": 1973,
+          "url": "https://openalex.org/W2164497299",
+          "doi": "https://doi.org/10.1146/annurev.bb.02.060173.001105"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Data Release 2. Observations of solar system objects",
+          "year": 2021,
+          "doi": "https://doi.org/10.48350/158410"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Data Release 2. Observational Hertzsprung-Russell diagrams",
+          "year": 2021,
+          "doi": "https://doi.org/10.48350/158408"
+        },
+        {
+          "type": "paper",
+          "title": "<i>Gaia</i> Early Data Release 3",
+          "year": 2021,
+          "doi": "https://doi.org/10.1051/0004-6361/202140735"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Photometric Science Alerts",
+          "year": 2021,
+          "doi": "https://doi.org/10.26093/cds/vizier.36520076"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "low_confidence",
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.216,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.06666666666666667,
+        "overlap_score": 0.06666666666666667,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 23,
+        "hindex_score": 0.46,
+        "total_score": 0.216
+      },
+      "match_dimensions": {
+        "research_overlap": 0.06666666666666667,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 23,
+        "country_match": false,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2021
+      }
+    },
+    {
+      "rank": 20,
+      "supervisor": {
+        "name": "J.J. Vidal",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5108113353",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Toward Direct Brain-Computer Communication",
+          "venue": null,
+          "year": 1973,
+          "url": "https://openalex.org/W2164497299",
+          "doi": "https://doi.org/10.1146/annurev.bb.02.060173.001105"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Data Release 2. Observations of solar system objects",
+          "year": 2021,
+          "doi": "https://doi.org/10.48350/158410"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Data Release 2. Observational Hertzsprung-Russell diagrams",
+          "year": 2021,
+          "doi": "https://doi.org/10.48350/158408"
+        },
+        {
+          "type": "paper",
+          "title": "<i>Gaia</i> Early Data Release 3",
+          "year": 2021,
+          "doi": "https://doi.org/10.1051/0004-6361/202140735"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Photometric Science Alerts",
+          "year": 2021,
+          "doi": "https://doi.org/10.26093/cds/vizier.36520076"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "low_confidence",
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.216,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.06666666666666667,
+        "overlap_score": 0.06666666666666667,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 23,
+        "hindex_score": 0.46,
+        "total_score": 0.216
+      },
+      "match_dimensions": {
+        "research_overlap": 0.06666666666666667,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 23,
+        "country_match": false,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2021
+      }
+    },
+    {
+      "rank": 21,
+      "supervisor": {
+        "name": "J.J. Vidal",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5108113353",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Toward Direct Brain-Computer Communication",
+          "venue": null,
+          "year": 1973,
+          "url": "https://openalex.org/W2164497299",
+          "doi": "https://doi.org/10.1146/annurev.bb.02.060173.001105"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Data Release 2. Observations of solar system objects",
+          "year": 2021,
+          "doi": "https://doi.org/10.48350/158410"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Data Release 2. Observational Hertzsprung-Russell diagrams",
+          "year": 2021,
+          "doi": "https://doi.org/10.48350/158408"
+        },
+        {
+          "type": "paper",
+          "title": "<i>Gaia</i> Early Data Release 3",
+          "year": 2021,
+          "doi": "https://doi.org/10.1051/0004-6361/202140735"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Photometric Science Alerts",
+          "year": 2021,
+          "doi": "https://doi.org/10.26093/cds/vizier.36520076"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "low_confidence",
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.216,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.06666666666666667,
+        "overlap_score": 0.06666666666666667,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 23,
+        "hindex_score": 0.46,
+        "total_score": 0.216
+      },
+      "match_dimensions": {
+        "research_overlap": 0.06666666666666667,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 23,
+        "country_match": false,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2021
+      }
+    },
+    {
+      "rank": 22,
+      "supervisor": {
+        "name": "J.J. Vidal",
+        "institution": "Unknown",
+        "department": null,
+        "country": "Unknown",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5108113353",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Toward Direct Brain-Computer Communication",
+          "venue": null,
+          "year": 1973,
+          "url": "https://openalex.org/W2164497299",
+          "doi": "https://doi.org/10.1146/annurev.bb.02.060173.001105"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Data Release 2. Observations of solar system objects",
+          "year": 2021,
+          "doi": "https://doi.org/10.48350/158410"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Data Release 2. Observational Hertzsprung-Russell diagrams",
+          "year": 2021,
+          "doi": "https://doi.org/10.48350/158408"
+        },
+        {
+          "type": "paper",
+          "title": "<i>Gaia</i> Early Data Release 3",
+          "year": 2021,
+          "doi": "https://doi.org/10.1051/0004-6361/202140735"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Photometric Science Alerts",
+          "year": 2021,
+          "doi": "https://doi.org/10.26093/cds/vizier.36520076"
+        }
+      ],
+      "why_match": "",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "low_confidence",
+        "missing_pi_verified"
+      ],
+      "confidence_score": 0.216,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.06666666666666667,
+        "overlap_score": 0.06666666666666667,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": false,
+        "eligibility_score": 0.0,
+        "h_index": 23,
+        "hindex_score": 0.46,
+        "total_score": 0.216
+      },
+      "match_dimensions": {
+        "research_overlap": 0.06666666666666667,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 23,
+        "country_match": false,
+        "domain_confidence": 0.0,
+        "last_paper_year": 2021
+      }
+    }
+  ],
+  "metadata": {
+    "total_candidates_considered": 204,
+    "data_sources": [
+      "nih_reporter",
+      "openalex"
+    ],
+    "llm_provider_used": "",
+    "langgraph_run_id": "35d034ee",
+    "run_duration_seconds": 1713.7,
+    "audit_summary": {
+      "top_n": 22,
+      "flagged_count": 22,
+      "flagged": [
+        {
+          "id": "https://openalex.org/W2911607583",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4211182857",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2911607583",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4211182857",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2911607583",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4211182857",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2954996726",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2954996726",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2954996726",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2954996726",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2954996726",
+          "reasons": [
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2995022099",
+          "reasons": [
+            "low_confidence",
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2995022099",
+          "reasons": [
+            "low_confidence",
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2995022099",
+          "reasons": [
+            "low_confidence",
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2995022099",
+          "reasons": [
+            "low_confidence",
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1967167074",
+          "reasons": [
+            "low_confidence",
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1967167074",
+          "reasons": [
+            "low_confidence",
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1967167074",
+          "reasons": [
+            "low_confidence",
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2164497299",
+          "reasons": [
+            "low_confidence",
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2164497299",
+          "reasons": [
+            "low_confidence",
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2164497299",
+          "reasons": [
+            "low_confidence",
+            "missing_pi_verified"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2164497299",
+          "reasons": [
+            "low_confidence",
+            "missing_pi_verified"
+          ]
+        }
+      ]
+    }
+  }
+}

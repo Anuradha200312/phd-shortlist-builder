@@ -1,0 +1,5003 @@
+{
+  "student_id": "test_001",
+  "generated_at": "2026-06-12T07:01:24.983684Z",
+  "pipeline_version": "1.0.0",
+  "shortlist": [
+    {
+      "rank": 1,
+      "supervisor": {
+        "name": "Sina Azadnajafabad",
+        "institution": "University of Washington",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5046122984",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5046122984",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Global, regional, and national burden of diabetes from 1990 to 2021, with projections of prevalence to 2050: a systematic analysis for the Global Burden of Disease Study 2021",
+          "year": 2023,
+          "doi": "https://doi.org/10.1016/s0140-6736(23)01301-6",
+          "url": "https://openalex.org/W4381799391",
+          "citation_count": 4168
+        },
+        {
+          "type": "paper",
+          "title": "Global, regional, and national burden of diabetes from 1990 to 2021, with projections of prevalence to 2050: a systematic analysis for the Global Burden of Disease Study 2021",
+          "year": 2023,
+          "doi": "https://doi.org/10.1016/s0140-6736(23)01301-6",
+          "url": "https://openalex.org/W4381799391",
+          "citation_count": 4168
+        },
+        {
+          "type": "paper",
+          "title": "Global, regional, and national burden of diabetes from 1990 to 2021, with projections of prevalence to 2050: a systematic analysis for the Global Burden of Disease Study 2021",
+          "year": 2023,
+          "doi": "https://doi.org/10.1016/s0140-6736(23)01301-6",
+          "url": "https://openalex.org/W4381799391",
+          "citation_count": 4168
+        }
+      ],
+      "why_match": "Sina Azadnajafabad at University of Washington (USA) works on deep learning for medical imaging, directly relevant to your research interests. Recent work includes: \"Global, regional, and national burden of diabetes from 1990 to 2021, with projections of prevalence to 2050: a systematic analysis for the Global Burden of Disease Study 2021\" and \"Global, regional, and national burden of diabetes from 1990 to 2021, with projections of prevalence to 2050: a systematic analysis for the Global Burden of Disease Study 2021\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.895,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": true,
+        "recency_score": 0.7,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.895
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2023
+      }
+    },
+    {
+      "rank": 2,
+      "supervisor": {
+        "name": "Ryan Wright",
+        "institution": "College of Charleston",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5060691228",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5060691228",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Opinion Paper: “So what if ChatGPT wrote it?” Multidisciplinary perspectives on opportunities, challenges and implications of generative conversational AI for research, practice and policy",
+          "year": 2023,
+          "doi": "https://doi.org/10.1016/j.ijinfomgt.2023.102642",
+          "url": "https://openalex.org/W4360620450",
+          "citation_count": 3663
+        },
+        {
+          "type": "paper",
+          "title": "Opinion Paper: “So what if ChatGPT wrote it?” Multidisciplinary perspectives on opportunities, challenges and implications of generative conversational AI for research, practice and policy",
+          "year": 2023,
+          "doi": "https://doi.org/10.1016/j.ijinfomgt.2023.102642",
+          "url": "https://openalex.org/W4360620450",
+          "citation_count": 3663
+        }
+      ],
+      "why_match": "Ryan Wright at College of Charleston (USA) works on deep learning for medical imaging, directly relevant to your research interests. Recent work includes: \"Opinion Paper: “So what if ChatGPT wrote it?” Multidisciplinary perspectives on opportunities, challenges and implications of generative conversational AI for research, practice and policy\" and \"Opinion Paper: “So what if ChatGPT wrote it?” Multidisciplinary perspectives on opportunities, challenges and implications of generative conversational AI for research, practice and policy\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.89,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": true,
+        "recency_score": 0.7,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.89
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2023
+      }
+    },
+    {
+      "rank": 3,
+      "supervisor": {
+        "name": "Joel T. Dudley",
+        "institution": "Icahn School of Medicine at Mount Sinai",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5043599202",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5043599202",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "deep learning"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Deep learning for healthcare: review, opportunities and challenges",
+          "year": 2017,
+          "doi": "https://doi.org/10.1093/bib/bbx044",
+          "url": "https://openalex.org/W2610332124",
+          "citation_count": 2976
+        },
+        {
+          "type": "paper",
+          "title": "Deep learning for healthcare: review, opportunities and challenges",
+          "year": 2017,
+          "doi": "https://doi.org/10.1093/bib/bbx044",
+          "url": "https://openalex.org/W2610332124",
+          "citation_count": 2976
+        },
+        {
+          "type": "paper",
+          "title": "Deep learning for healthcare: review, opportunities and challenges",
+          "year": 2017,
+          "doi": "https://doi.org/10.1093/bib/bbx044",
+          "url": "https://openalex.org/W2610332124",
+          "citation_count": 2976
+        },
+        {
+          "type": "paper",
+          "title": "Deep learning for healthcare: review, opportunities and challenges",
+          "year": 2017,
+          "doi": "https://doi.org/10.1093/bib/bbx044",
+          "url": "https://openalex.org/W2610332124",
+          "citation_count": 2976
+        },
+        {
+          "type": "paper",
+          "title": "Deep learning for healthcare: review, opportunities and challenges",
+          "year": 2017,
+          "doi": "https://doi.org/10.1093/bib/bbx044",
+          "url": "https://openalex.org/W2610332124",
+          "citation_count": 2976
+        }
+      ],
+      "why_match": "Joel T. Dudley at Icahn School of Medicine at Mount Sinai (USA) works on federated learning, directly relevant to your research interests. Recent work includes: \"Deep learning for healthcare: review, opportunities and challenges\" and \"Deep learning for healthcare: review, opportunities and challenges\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.885,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.885
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2017
+      }
+    },
+    {
+      "rank": 4,
+      "supervisor": {
+        "name": "M. Jorge Cardoso",
+        "institution": "King's College London",
+        "department": null,
+        "country": "UK",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": null,
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "The future of digital health with federated learning",
+          "year": 2020,
+          "doi": "https://doi.org/10.1038/s41746-020-00323-1",
+          "url": "https://openalex.org/W3012501605",
+          "citation_count": 2490
+        },
+        {
+          "type": "paper",
+          "title": "The future of digital health with federated learning",
+          "year": 2020,
+          "doi": "https://doi.org/10.1038/s41746-020-00323-1",
+          "url": "https://openalex.org/W3012501605",
+          "citation_count": 2490
+        },
+        {
+          "type": "paper",
+          "title": "The future of digital health with federated learning",
+          "year": 2020,
+          "doi": "https://doi.org/10.1038/s41746-020-00323-1",
+          "url": "https://openalex.org/W3012501605",
+          "citation_count": 2490
+        }
+      ],
+      "why_match": "M. Jorge Cardoso at King's College London (UK) works on federated learning, directly relevant to your research interests. Recent work includes: \"The future of digital health with federated learning\" and \"The future of digital health with federated learning\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.88,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.88
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2020
+      }
+    },
+    {
+      "rank": 5,
+      "supervisor": {
+        "name": "Chris Barlow",
+        "institution": "Risk Management Solutions (United Kingdom)",
+        "department": null,
+        "country": "UK",
+        "profile_url": "https://openalex.org/A5003263146",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5003263146",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Digital Twin: Enabling Technologies, Challenges and Open Research",
+          "year": 2020,
+          "doi": "https://doi.org/10.1109/access.2020.2998358",
+          "url": "https://openalex.org/W2982936646",
+          "citation_count": 2454
+        },
+        {
+          "type": "paper",
+          "title": "Digital Twin: Enabling Technologies, Challenges and Open Research",
+          "year": 2020,
+          "doi": "https://doi.org/10.1109/access.2020.2998358",
+          "url": "https://openalex.org/W2982936646",
+          "citation_count": 2454
+        },
+        {
+          "type": "paper",
+          "title": "Digital Twin: Enabling Technologies, Challenges and Open Research",
+          "year": 2020,
+          "doi": "https://doi.org/10.1109/access.2020.2998358",
+          "url": "https://openalex.org/W2982936646",
+          "citation_count": 2454
+        }
+      ],
+      "why_match": "Chris Barlow at Risk Management Solutions (United Kingdom) (UK) has published relevant work including \"Digital Twin: Enabling Technologies, Challenges and Open Research\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.875,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.875
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2020
+      }
+    },
+    {
+      "rank": 6,
+      "supervisor": {
+        "name": "Lajos Hanzo",
+        "institution": "University of Southampton",
+        "department": null,
+        "country": "UK",
+        "profile_url": "https://openalex.org/A5091122305",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5091122305",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "On the Road to 6G: Visions, Requirements, Key Technologies, and Testbeds",
+          "year": 2023,
+          "doi": "https://doi.org/10.1109/comst.2023.3249835",
+          "url": "https://openalex.org/W4322576964",
+          "citation_count": 1912
+        },
+        {
+          "type": "paper",
+          "title": "On the Road to 6G: Visions, Requirements, Key Technologies, and Testbeds",
+          "year": 2023,
+          "doi": "https://doi.org/10.1109/comst.2023.3249835",
+          "url": "https://openalex.org/W4322576964",
+          "citation_count": 1912
+        }
+      ],
+      "why_match": "Lajos Hanzo at University of Southampton (UK) has published relevant work including \"On the Road to 6G: Visions, Requirements, Key Technologies, and Testbeds\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.87,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": true,
+        "recency_score": 0.7,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.87
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2023
+      }
+    },
+    {
+      "rank": 7,
+      "supervisor": {
+        "name": "Russell A. Poldrack",
+        "institution": "Stanford University",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5046868253",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5046868253",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments",
+          "year": 2016,
+          "doi": "https://doi.org/10.1038/sdata.2016.44",
+          "url": "https://openalex.org/W2951103577",
+          "citation_count": 1897
+        }
+      ],
+      "why_match": "Russell A. Poldrack at Stanford University (USA) works on deep learning for medical imaging, directly relevant to your research interests. Recent work includes: \"The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.865,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.865
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2016
+      }
+    },
+    {
+      "rank": 8,
+      "supervisor": {
+        "name": "Osman Ratib",
+        "institution": "University of California, Los Angeles",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5013347061",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5013347061",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "OsiriX: An Open-Source Software for Navigating in Multidimensional DICOM Images",
+          "year": 2004,
+          "doi": "https://doi.org/10.1007/s10278-004-1014-6",
+          "url": "https://openalex.org/W2161971256",
+          "citation_count": 1758
+        }
+      ],
+      "why_match": "Osman Ratib at University of California, Los Angeles (USA) works on medical image segmentation, directly relevant to your research interests. Recent work includes: \"OsiriX: An Open-Source Software for Navigating in Multidimensional DICOM Images\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.86,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.86
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2004
+      }
+    },
+    {
+      "rank": 9,
+      "supervisor": {
+        "name": "Amir Hussain",
+        "institution": "Edinburgh Napier University",
+        "department": null,
+        "country": "UK",
+        "profile_url": "https://openalex.org/A5062211930",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5062211930",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Interpreting Black-Box Models: A Review on Explainable Artificial Intelligence",
+          "year": 2023,
+          "doi": "https://doi.org/10.1007/s12559-023-10179-8",
+          "url": "https://openalex.org/W4386142022",
+          "citation_count": 1690
+        },
+        {
+          "type": "paper",
+          "title": "Interpreting Black-Box Models: A Review on Explainable Artificial Intelligence",
+          "year": 2023,
+          "doi": "https://doi.org/10.1007/s12559-023-10179-8",
+          "url": "https://openalex.org/W4386142022",
+          "citation_count": 1690
+        },
+        {
+          "type": "paper",
+          "title": "Interpreting Black-Box Models: A Review on Explainable Artificial Intelligence",
+          "year": 2023,
+          "doi": "https://doi.org/10.1007/s12559-023-10179-8",
+          "url": "https://openalex.org/W4386142022",
+          "citation_count": 1690
+        }
+      ],
+      "why_match": "Amir Hussain at Edinburgh Napier University (UK) has published relevant work including \"Interpreting Black-Box Models: A Review on Explainable Artificial Intelligence\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.855,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": true,
+        "recency_score": 0.7,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.855
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2023
+      }
+    },
+    {
+      "rank": 10,
+      "supervisor": {
+        "name": "Amir Houmansadr",
+        "institution": "University of Massachusetts Amherst",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5018588864",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5018588864",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "deep learning",
+        "privacy"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Comprehensive Privacy Analysis of Deep Learning: Passive and Active White-box Inference Attacks against Centralized and Federated Learning",
+          "year": 2019,
+          "doi": "https://doi.org/10.1109/sp.2019.00065",
+          "url": "https://openalex.org/W2930926105",
+          "citation_count": 1543
+        }
+      ],
+      "why_match": "Amir Houmansadr at University of Massachusetts Amherst (USA) works on federated learning, directly relevant to your research interests. Recent work includes: \"Comprehensive Privacy Analysis of Deep Learning: Passive and Active White-box Inference Attacks against Centralized and Federated Learning\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.85,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.85
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2019
+      }
+    },
+    {
+      "rank": 11,
+      "supervisor": {
+        "name": "Fei Wang",
+        "institution": "Cornell University",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5100455768",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5100455768",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Federated Learning for Healthcare Informatics",
+          "year": 2020,
+          "doi": "https://doi.org/10.1007/s41666-020-00082-4",
+          "url": "https://openalex.org/W3100779497",
+          "citation_count": 1396
+        },
+        {
+          "type": "paper",
+          "title": "Federated Learning for Healthcare Informatics",
+          "year": 2020,
+          "doi": "https://doi.org/10.1007/s41666-020-00082-4",
+          "url": "https://openalex.org/W3100779497",
+          "citation_count": 1396
+        },
+        {
+          "type": "paper",
+          "title": "Federated Learning for Healthcare Informatics",
+          "year": 2020,
+          "doi": "https://doi.org/10.1007/s41666-020-00082-4",
+          "url": "https://openalex.org/W3100779497",
+          "citation_count": 1396
+        },
+        {
+          "type": "paper",
+          "title": "Federated Learning for Healthcare Informatics",
+          "year": 2020,
+          "doi": "https://doi.org/10.1007/s41666-020-00082-4",
+          "url": "https://openalex.org/W3100779497",
+          "citation_count": 1396
+        }
+      ],
+      "why_match": "Fei Wang at Cornell University (USA) works on federated learning, directly relevant to your research interests. Recent work includes: \"Federated Learning for Healthcare Informatics\" and \"Federated Learning for Healthcare Informatics\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.845,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.845
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2020
+      }
+    },
+    {
+      "rank": 12,
+      "supervisor": {
+        "name": "Andrew I. Su",
+        "institution": "Genomics Institute of the Novartis Research Foundation",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5045408201",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5045408201",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "BioGPS: an extensible and customizable portal for querying and organizing gene annotation resources",
+          "year": 2009,
+          "doi": "https://doi.org/10.1186/gb-2009-10-11-r130",
+          "url": "https://openalex.org/W2109108939",
+          "citation_count": 1377
+        }
+      ],
+      "why_match": "Andrew I. Su at Genomics Institute of the Novartis Research Foundation (USA) works on deep learning for medical imaging, directly relevant to your research interests. Recent work includes: \"BioGPS: an extensible and customizable portal for querying and organizing gene annotation resources\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.8400000000000001,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.8400000000000001
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2009
+      }
+    },
+    {
+      "rank": 13,
+      "supervisor": {
+        "name": "Alexander A. Alemi",
+        "institution": "Google (United States)",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5036325834",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5036325834",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning",
+          "year": 2017,
+          "doi": "https://doi.org/10.1609/aaai.v31i1.11231",
+          "url": "https://openalex.org/W2964350391",
+          "citation_count": 12611
+        },
+        {
+          "type": "paper",
+          "title": "Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning",
+          "year": 2017,
+          "doi": "https://doi.org/10.1609/aaai.v31i1.11231",
+          "url": "https://openalex.org/W2274287116",
+          "citation_count": 4493
+        }
+      ],
+      "why_match": "Alexander A. Alemi at Google (United States) (USA) works on federated learning, directly relevant to your research interests. Recent work includes: \"Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning\" and \"Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.835,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.835
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2017
+      }
+    },
+    {
+      "rank": 14,
+      "supervisor": {
+        "name": "Taghi M. Khoshgoftaar",
+        "institution": "Florida Atlantic University",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5089170562",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5089170562",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "deep learning"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "A survey on Image Data Augmentation for Deep Learning",
+          "year": 2019,
+          "doi": "https://doi.org/10.1186/s40537-019-0197-0",
+          "url": "https://openalex.org/W2954996726",
+          "citation_count": 12336
+        },
+        {
+          "type": "paper",
+          "title": "A survey on Image Data Augmentation for Deep Learning",
+          "year": 2019,
+          "doi": "https://doi.org/10.1186/s40537-019-0197-0",
+          "url": "https://openalex.org/W2954996726",
+          "citation_count": 12336
+        },
+        {
+          "type": "paper",
+          "title": "A survey on Image Data Augmentation for Deep Learning",
+          "year": 2019,
+          "doi": "https://doi.org/10.1186/s40537-019-0197-0",
+          "url": "https://openalex.org/W2954996726",
+          "citation_count": 12336
+        }
+      ],
+      "why_match": "Taghi M. Khoshgoftaar at Florida Atlantic University (USA) works on federated learning, directly relevant to your research interests. Recent work includes: \"A survey on Image Data Augmentation for Deep Learning\" and \"A survey on Image Data Augmentation for Deep Learning\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.8300000000000001,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.8300000000000001
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2019
+      }
+    },
+    {
+      "rank": 15,
+      "supervisor": {
+        "name": "Jianming Liang",
+        "institution": "Arizona State University",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5040454904",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5040454904",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "image segmentation",
+        "medical image segmentation"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "UNet++: A Nested U-Net Architecture for Medical Image Segmentation",
+          "year": 2018,
+          "doi": "https://doi.org/10.1007/978-3-030-00889-5_1",
+          "url": "https://openalex.org/W2884436604",
+          "citation_count": 8895
+        }
+      ],
+      "why_match": "Jianming Liang at Arizona State University (USA) works on medical image segmentation, directly relevant to your research interests. Recent work includes: \"UNet++: A Nested U-Net Architecture for Medical Image Segmentation\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.8250000000000001,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.8250000000000001
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2018
+      }
+    },
+    {
+      "rank": 16,
+      "supervisor": {
+        "name": "Ron Kikinis",
+        "institution": "Harvard University",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5012263767",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5012263767",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "3D Slicer as an image computing platform for the Quantitative Imaging Network",
+          "year": 2012,
+          "doi": "https://doi.org/10.1016/j.mri.2012.05.001",
+          "url": "https://openalex.org/W2026616100",
+          "citation_count": 8798
+        },
+        {
+          "type": "paper",
+          "title": "3D Slicer as an image computing platform for the Quantitative Imaging Network",
+          "year": 2012,
+          "doi": "https://doi.org/10.1016/j.mri.2012.05.001",
+          "url": "https://openalex.org/W2026616100",
+          "citation_count": 8798
+        },
+        {
+          "type": "paper",
+          "title": "3D Slicer as an image computing platform for the Quantitative Imaging Network",
+          "year": 2012,
+          "doi": "https://doi.org/10.1016/j.mri.2012.05.001",
+          "url": "https://openalex.org/W2026616100",
+          "citation_count": 8798
+        }
+      ],
+      "why_match": "Ron Kikinis at Harvard University (USA) works on medical image segmentation, directly relevant to your research interests. Recent work includes: \"3D Slicer as an image computing platform for the Quantitative Imaging Network\" and \"3D Slicer as an image computing platform for the Quantitative Imaging Network\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.8200000000000001,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.8200000000000001
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2012
+      }
+    },
+    {
+      "rank": 17,
+      "supervisor": {
+        "name": "Laith Farhan",
+        "institution": "Manchester Metropolitan University",
+        "department": null,
+        "country": "UK",
+        "profile_url": "https://openalex.org/A5059266881",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5059266881",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "deep learning"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Review of deep learning: concepts, CNN architectures, challenges, applications, future directions",
+          "year": 2021,
+          "doi": "https://doi.org/10.1186/s40537-021-00444-8",
+          "url": "https://openalex.org/W3140854437",
+          "citation_count": 7498
+        },
+        {
+          "type": "paper",
+          "title": "Review of deep learning: concepts, CNN architectures, challenges, applications, future directions",
+          "year": 2021,
+          "doi": "https://doi.org/10.1186/s40537-021-00444-8",
+          "url": "https://openalex.org/W3140854437",
+          "citation_count": 7498
+        },
+        {
+          "type": "paper",
+          "title": "Review of deep learning: concepts, CNN architectures, challenges, applications, future directions",
+          "year": 2021,
+          "doi": "https://doi.org/10.1186/s40537-021-00444-8",
+          "url": "https://openalex.org/W3140854437",
+          "citation_count": 7498
+        },
+        {
+          "type": "paper",
+          "title": "Review of deep learning: concepts, CNN architectures, challenges, applications, future directions",
+          "year": 2021,
+          "doi": "https://doi.org/10.1186/s40537-021-00444-8",
+          "url": "https://openalex.org/W3140854437",
+          "citation_count": 7498
+        },
+        {
+          "type": "paper",
+          "title": "Review of deep learning: concepts, CNN architectures, challenges, applications, future directions",
+          "year": 2021,
+          "doi": "https://doi.org/10.1186/s40537-021-00444-8",
+          "url": "https://openalex.org/W3140854437",
+          "citation_count": 7498
+        }
+      ],
+      "why_match": "Laith Farhan at Manchester Metropolitan University (UK) works on federated learning, directly relevant to your research interests. Recent work includes: \"Review of deep learning: concepts, CNN architectures, challenges, applications, future directions\" and \"Review of deep learning: concepts, CNN architectures, challenges, applications, future directions\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.8150000000000001,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": true,
+        "recency_score": 0.7,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.8150000000000001
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2021
+      }
+    },
+    {
+      "rank": 18,
+      "supervisor": {
+        "name": "Koen Van Leemput",
+        "institution": "Harvard University",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5047520245",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5047520245",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "image segmentation"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "The Multimodal Brain Tumor Image Segmentation Benchmark (BRATS)",
+          "year": 2014,
+          "doi": "https://doi.org/10.1109/tmi.2014.2377694",
+          "url": "https://openalex.org/W1641498739",
+          "citation_count": 6484
+        },
+        {
+          "type": "paper",
+          "title": "The Multimodal Brain Tumor Image Segmentation Benchmark (BRATS)",
+          "year": 2014,
+          "doi": "https://doi.org/10.1109/tmi.2014.2377694",
+          "url": "https://openalex.org/W1641498739",
+          "citation_count": 6484
+        },
+        {
+          "type": "paper",
+          "title": "The Multimodal Brain Tumor Image Segmentation Benchmark (BRATS)",
+          "year": 2014,
+          "doi": "https://doi.org/10.1109/tmi.2014.2377694",
+          "url": "https://openalex.org/W1641498739",
+          "citation_count": 6484
+        },
+        {
+          "type": "paper",
+          "title": "The Multimodal Brain Tumor Image Segmentation Benchmark (BRATS)",
+          "year": 2014,
+          "doi": "https://doi.org/10.1109/tmi.2014.2377694",
+          "url": "https://openalex.org/W1641498739",
+          "citation_count": 6484
+        },
+        {
+          "type": "paper",
+          "title": "The Multimodal Brain Tumor Image Segmentation Benchmark (BRATS)",
+          "year": 2014,
+          "doi": "https://doi.org/10.1109/tmi.2014.2377694",
+          "url": "https://openalex.org/W1641498739",
+          "citation_count": 6484
+        }
+      ],
+      "why_match": "Koen Van Leemput at Harvard University (USA) works on medical image segmentation, directly relevant to your research interests. Recent work includes: \"The Multimodal Brain Tumor Image Segmentation Benchmark (BRATS)\" and \"The Multimodal Brain Tumor Image Segmentation Benchmark (BRATS)\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.81,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.81
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2014
+      }
+    },
+    {
+      "rank": 19,
+      "supervisor": {
+        "name": "Liu Yang",
+        "institution": "Brown University",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5100760787",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5100760787",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "machine learning"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Physics-informed machine learning",
+          "year": 2021,
+          "doi": "https://doi.org/10.1038/s42254-021-00314-5",
+          "url": "https://openalex.org/W3163993681",
+          "citation_count": 6475
+        },
+        {
+          "type": "paper",
+          "title": "Physics-informed machine learning",
+          "year": 2021,
+          "doi": "https://doi.org/10.1038/s42254-021-00314-5",
+          "url": "https://openalex.org/W3163993681",
+          "citation_count": 6475
+        },
+        {
+          "type": "paper",
+          "title": "Physics-informed machine learning",
+          "year": 2021,
+          "doi": "https://doi.org/10.1038/s42254-021-00314-5",
+          "url": "https://openalex.org/W3163993681",
+          "citation_count": 6475
+        }
+      ],
+      "why_match": "Liu Yang at Brown University (USA) works on federated learning, directly relevant to your research interests. Recent work includes: \"Physics-informed machine learning\" and \"Physics-informed machine learning\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.805,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": true,
+        "recency_score": 0.7,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.805
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2021
+      }
+    },
+    {
+      "rank": 20,
+      "supervisor": {
+        "name": "Hugo J.W.L. Aerts",
+        "institution": "Brigham and Women's Hospital",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5001452511",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5001452511",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Computational Radiomics System to Decode the Radiographic Phenotype",
+          "year": 2017,
+          "doi": "https://doi.org/10.1158/0008-5472.can-17-0339",
+          "url": "https://openalex.org/W2767128594",
+          "citation_count": 6452
+        }
+      ],
+      "why_match": "Hugo J.W.L. Aerts at Brigham and Women's Hospital (USA) has published relevant work including \"Computational Radiomics System to Decode the Radiographic Phenotype\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "target",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.8,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.8
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2017
+      }
+    },
+    {
+      "rank": 21,
+      "supervisor": {
+        "name": "Venkat Ramaswamy",
+        "institution": "University of Michigan",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5109090841",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5109090841",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Co-creation experiences: The next practice in value creation",
+          "year": 2004,
+          "doi": "https://doi.org/10.1002/dir.20015",
+          "url": "https://openalex.org/W2093505263",
+          "citation_count": 6277
+        }
+      ],
+      "why_match": "Venkat Ramaswamy at University of Michigan (USA) has published relevant work including \"Co-creation experiences: The next practice in value creation\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.795,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.795
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2004
+      }
+    },
+    {
+      "rank": 22,
+      "supervisor": {
+        "name": "Lisa L. Conant",
+        "institution": "Medical College of Wisconsin",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5066330351",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5066330351",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Where Is the Semantic System? A Critical Review and Meta-Analysis of 120 Functional Neuroimaging Studies",
+          "year": 2009,
+          "doi": "https://doi.org/10.1093/cercor/bhp055",
+          "url": "https://openalex.org/W2112891119",
+          "citation_count": 4159
+        },
+        {
+          "type": "paper",
+          "title": "Where Is the Semantic System? A Critical Review and Meta-Analysis of 120 Functional Neuroimaging Studies",
+          "year": 2009,
+          "doi": "https://doi.org/10.1093/cercor/bhp055",
+          "url": "https://openalex.org/W2112891119",
+          "citation_count": 4159
+        }
+      ],
+      "why_match": "Lisa L. Conant at Medical College of Wisconsin (USA) works on deep learning for medical imaging, directly relevant to your research interests. Recent work includes: \"Where Is the Semantic System? A Critical Review and Meta-Analysis of 120 Functional Neuroimaging Studies\" and \"Where Is the Semantic System? A Critical Review and Meta-Analysis of 120 Functional Neuroimaging Studies\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.79,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.79
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2009
+      }
+    },
+    {
+      "rank": 23,
+      "supervisor": {
+        "name": "Thomas E. Ferrin",
+        "institution": "University of California, San Francisco",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5086093811",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5086093811",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "<scp>UCSF ChimeraX</scp>: Tools for structure building and analysis",
+          "year": 2023,
+          "doi": "https://doi.org/10.1002/pro.4792",
+          "url": "https://openalex.org/W4387164156",
+          "citation_count": 4090
+        },
+        {
+          "type": "paper",
+          "title": "<scp>UCSF ChimeraX</scp>: Tools for structure building and analysis",
+          "year": 2023,
+          "doi": "https://doi.org/10.1002/pro.4792",
+          "url": "https://openalex.org/W4387164156",
+          "citation_count": 4090
+        }
+      ],
+      "why_match": "Thomas E. Ferrin at University of California, San Francisco (USA) works on deep learning for medical imaging, directly relevant to your research interests. Recent work includes: \"<scp>UCSF ChimeraX</scp>: Tools for structure building and analysis\" and \"<scp>UCSF ChimeraX</scp>: Tools for structure building and analysis\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.785,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": true,
+        "recency_score": 0.7,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.785
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2023
+      }
+    },
+    {
+      "rank": 24,
+      "supervisor": {
+        "name": "Michael D. Williams",
+        "institution": "Swansea University",
+        "department": null,
+        "country": "UK",
+        "profile_url": "https://openalex.org/A5002569790",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5002569790",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Artificial Intelligence (AI): Multidisciplinary perspectives on emerging challenges, opportunities, and agenda for research, practice and policy",
+          "year": 2019,
+          "doi": "https://doi.org/10.1016/j.ijinfomgt.2019.08.002",
+          "url": "https://openalex.org/W2969625533",
+          "citation_count": 4021
+        },
+        {
+          "type": "paper",
+          "title": "Artificial Intelligence (AI): Multidisciplinary perspectives on emerging challenges, opportunities, and agenda for research, practice and policy",
+          "year": 2019,
+          "doi": "https://doi.org/10.1016/j.ijinfomgt.2019.08.002",
+          "url": "https://openalex.org/W2969625533",
+          "citation_count": 4021
+        },
+        {
+          "type": "paper",
+          "title": "Artificial Intelligence (AI): Multidisciplinary perspectives on emerging challenges, opportunities, and agenda for research, practice and policy",
+          "year": 2019,
+          "doi": "https://doi.org/10.1016/j.ijinfomgt.2019.08.002",
+          "url": "https://openalex.org/W2969625533",
+          "citation_count": 4021
+        },
+        {
+          "type": "paper",
+          "title": "Artificial Intelligence (AI): Multidisciplinary perspectives on emerging challenges, opportunities, and agenda for research, practice and policy",
+          "year": 2019,
+          "doi": "https://doi.org/10.1016/j.ijinfomgt.2019.08.002",
+          "url": "https://openalex.org/W2969625533",
+          "citation_count": 4021
+        }
+      ],
+      "why_match": "Michael D. Williams at Swansea University (UK) works on deep learning for medical imaging, directly relevant to your research interests. Recent work includes: \"Artificial Intelligence (AI): Multidisciplinary perspectives on emerging challenges, opportunities, and agenda for research, practice and policy\" and \"Artificial Intelligence (AI): Multidisciplinary perspectives on emerging challenges, opportunities, and agenda for research, practice and policy\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.78,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.78
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2019
+      }
+    },
+    {
+      "rank": 25,
+      "supervisor": {
+        "name": "Ravi Kalakota",
+        "institution": "Deloitte (United States)",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5019692219",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5019692219",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "The potential for artificial intelligence in healthcare",
+          "year": 2019,
+          "doi": "https://doi.org/10.7861/futurehosp.6-2-94",
+          "url": "https://openalex.org/W2953532875",
+          "citation_count": 3612
+        },
+        {
+          "type": "paper",
+          "title": "The potential for artificial intelligence in healthcare",
+          "year": 2019,
+          "doi": "https://doi.org/10.7861/futurehosp.6-2-94",
+          "url": "https://openalex.org/W2953532875",
+          "citation_count": 3612
+        },
+        {
+          "type": "paper",
+          "title": "The potential for artificial intelligence in healthcare",
+          "year": 2019,
+          "doi": "https://doi.org/10.7861/futurehosp.6-2-94",
+          "url": "https://openalex.org/W2953532875",
+          "citation_count": 3612
+        },
+        {
+          "type": "paper",
+          "title": "The potential for artificial intelligence in healthcare",
+          "year": 2019,
+          "doi": "https://doi.org/10.7861/futurehosp.6-2-94",
+          "url": "https://openalex.org/W2953532875",
+          "citation_count": 3612
+        }
+      ],
+      "why_match": "Ravi Kalakota at Deloitte (United States) (USA) works on healthcare AI, directly relevant to your research interests. Recent work includes: \"The potential for artificial intelligence in healthcare\" and \"The potential for artificial intelligence in healthcare\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.775,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.775
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2019
+      }
+    },
+    {
+      "rank": 26,
+      "supervisor": {
+        "name": "Karen I. Kroeker",
+        "institution": "University of Alberta",
+        "department": null,
+        "country": "Canada",
+        "profile_url": "https://openalex.org/A5062886406",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5062886406",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "clinical decision"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "An overview of clinical decision support systems: benefits, risks, and strategies for success",
+          "year": 2020,
+          "doi": "https://doi.org/10.1038/s41746-020-0221-y",
+          "url": "https://openalex.org/W3004612364",
+          "citation_count": 2791
+        },
+        {
+          "type": "paper",
+          "title": "An overview of clinical decision support systems: benefits, risks, and strategies for success",
+          "year": 2020,
+          "doi": "https://doi.org/10.1038/s41746-020-0221-y",
+          "url": "https://openalex.org/W3004612364",
+          "citation_count": 2791
+        }
+      ],
+      "why_match": "Karen I. Kroeker at University of Alberta (Canada) works on clinical NLP, directly relevant to your research interests. Recent work includes: \"An overview of clinical decision support systems: benefits, risks, and strategies for success\" and \"An overview of clinical decision support systems: benefits, risks, and strategies for success\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.77,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.77
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2020
+      }
+    },
+    {
+      "rank": 27,
+      "supervisor": {
+        "name": "Philip S. Yu",
+        "institution": "University of Illinois Chicago",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5036357902",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5036357902",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "knowledge graph"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "A Survey on Knowledge Graphs: Representation, Acquisition, and Applications",
+          "year": 2021,
+          "doi": "https://doi.org/10.1109/tnnls.2021.3070843",
+          "url": "https://openalex.org/W3003265726",
+          "citation_count": 2678
+        }
+      ],
+      "why_match": "Philip S. Yu at University of Illinois Chicago (USA) has published relevant work including \"A Survey on Knowledge Graphs: Representation, Acquisition, and Applications\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.765,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": true,
+        "recency_score": 0.7,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.765
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2021
+      }
+    },
+    {
+      "rank": 28,
+      "supervisor": {
+        "name": "David S. Wishart",
+        "institution": "University of Alberta",
+        "department": null,
+        "country": "Canada",
+        "profile_url": "https://openalex.org/A5003573061",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5003573061",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "DrugBank 6.0: the DrugBank Knowledgebase for 2024",
+          "year": 2023,
+          "doi": "https://doi.org/10.1093/nar/gkad976",
+          "url": "https://openalex.org/W4388615774",
+          "citation_count": 1495
+        }
+      ],
+      "why_match": "David S. Wishart at University of Alberta (Canada) works on deep learning for medical imaging, directly relevant to your research interests. Recent work includes: \"DrugBank 6.0: the DrugBank Knowledgebase for 2024\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.76,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": true,
+        "recency_score": 0.7,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.76
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2023
+      }
+    },
+    {
+      "rank": 29,
+      "supervisor": {
+        "name": "Adnan Ćustović",
+        "institution": "Imperial College London",
+        "department": null,
+        "country": "UK",
+        "profile_url": "https://openalex.org/A5021298553",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5021298553",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Epidemiology of Asthma in Children and Adults",
+          "year": 2019,
+          "doi": "https://doi.org/10.3389/fped.2019.00246",
+          "url": "https://openalex.org/W2946995148",
+          "citation_count": 1204
+        }
+      ],
+      "why_match": "Adnan Ćustović at Imperial College London (UK) has published relevant work including \"Epidemiology of Asthma in Children and Adults\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.755,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.755
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2019
+      }
+    },
+    {
+      "rank": 30,
+      "supervisor": {
+        "name": "Moussa Ayyash",
+        "institution": "Chicago State University",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5050702557",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5050702557",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Internet of Things: A Survey on Enabling Technologies, Protocols, and Applications",
+          "year": 2015,
+          "doi": "https://doi.org/10.1109/comst.2015.2444095",
+          "url": "https://openalex.org/W2134295053",
+          "citation_count": 8296
+        },
+        {
+          "type": "paper",
+          "title": "Internet of Things: A Survey on Enabling Technologies, Protocols, and Applications",
+          "year": 2015,
+          "doi": "https://doi.org/10.1109/comst.2015.2444095",
+          "url": "https://openalex.org/W2134295053",
+          "citation_count": 8296
+        }
+      ],
+      "why_match": "Moussa Ayyash at Chicago State University (USA) has published relevant work including \"Internet of Things: A Survey on Enabling Technologies, Protocols, and Applications\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.75,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.75
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2015
+      }
+    },
+    {
+      "rank": 31,
+      "supervisor": {
+        "name": "Laura W. Harris",
+        "institution": "European Bioinformatics Institute",
+        "department": null,
+        "country": "UK",
+        "profile_url": "https://openalex.org/A5101772101",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5101772101",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "The NHGRI-EBI GWAS Catalog: knowledgebase and deposition resource",
+          "year": 2022,
+          "doi": "https://doi.org/10.1093/nar/gkac1010",
+          "url": "https://openalex.org/W4308616307",
+          "citation_count": 1715
+        }
+      ],
+      "why_match": "Laura W. Harris at European Bioinformatics Institute (UK) has published relevant work including \"The NHGRI-EBI GWAS Catalog: knowledgebase and deposition resource\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.745,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": true,
+        "recency_score": 0.7,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.745
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2022
+      }
+    },
+    {
+      "rank": 32,
+      "supervisor": {
+        "name": "H. Vincent Poor",
+        "institution": "Princeton University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": null,
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Federated Learning for Internet of Things: A Comprehensive Survey",
+          "year": 2021,
+          "doi": "https://doi.org/10.1109/comst.2021.3075439",
+          "url": "https://openalex.org/W3155912831",
+          "citation_count": 1303
+        }
+      ],
+      "why_match": "H. Vincent Poor at Princeton University (USA) works on federated learning, directly relevant to your research interests. Recent work includes: \"Federated Learning for Internet of Things: A Comprehensive Survey\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.74,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": true,
+        "recency_score": 0.7,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.74
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2021
+      }
+    },
+    {
+      "rank": 33,
+      "supervisor": {
+        "name": "Richard Socher",
+        "institution": "Salesforce (United States)",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5059955534",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5059955534",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "deep learning",
+        "computer vision"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Deep learning-enabled medical computer vision",
+          "year": 2021,
+          "doi": "https://doi.org/10.1038/s41746-020-00376-2",
+          "url": "https://openalex.org/W3120894151",
+          "citation_count": 1275
+        }
+      ],
+      "why_match": "Richard Socher at Salesforce (United States) (USA) works on federated learning, directly relevant to your research interests. Recent work includes: \"Deep learning-enabled medical computer vision\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.735,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": true,
+        "recency_score": 0.7,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.735
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2021
+      }
+    },
+    {
+      "rank": 34,
+      "supervisor": {
+        "name": "Eric J. Topol",
+        "institution": "Scripps Research Institute",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5084515381",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5084515381",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Multimodal biomedical AI",
+          "year": 2022,
+          "doi": "https://doi.org/10.1038/s41591-022-01981-2",
+          "url": "https://openalex.org/W4295951577",
+          "citation_count": 1097
+        },
+        {
+          "type": "paper",
+          "title": "Multimodal biomedical AI",
+          "year": 2022,
+          "doi": "https://doi.org/10.1038/s41591-022-01981-2",
+          "url": "https://openalex.org/W4295951577",
+          "citation_count": 1097
+        }
+      ],
+      "why_match": "Eric J. Topol at Scripps Research Institute (USA) works on medical image segmentation, directly relevant to your research interests. Recent work includes: \"Multimodal biomedical AI\" and \"Multimodal biomedical AI\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.73,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": true,
+        "recency_score": 0.7,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.73
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2022
+      }
+    },
+    {
+      "rank": 35,
+      "supervisor": {
+        "name": "Ronald M. Summers",
+        "institution": "National Institutes of Health Clinical Center",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": null,
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "medical imaging",
+        "deep learning"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "A Review of Deep Learning in Medical Imaging: Imaging Traits, Technology Trends, Case Studies With Progress Highlights, and Future Promises",
+          "year": 2021,
+          "doi": "https://doi.org/10.1109/jproc.2021.3054390",
+          "url": "https://openalex.org/W3074741277",
+          "citation_count": 988
+        }
+      ],
+      "why_match": "Ronald M. Summers at National Institutes of Health Clinical Center (USA) works on federated learning, directly relevant to your research interests. Recent work includes: \"A Review of Deep Learning in Medical Imaging: Imaging Traits, Technology Trends, Case Studies With Progress Highlights, and Future Promises\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.725,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": true,
+        "recency_score": 0.7,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.725
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2021
+      }
+    },
+    {
+      "rank": 36,
+      "supervisor": {
+        "name": "Su‐In Lee",
+        "institution": "University of Washington",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5028723221",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5028723221",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "explainable AI"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "From local explanations to global understanding with explainable AI for trees",
+          "year": 2020,
+          "doi": "https://doi.org/10.1038/s42256-019-0138-9",
+          "url": "https://openalex.org/W2999615587",
+          "citation_count": 8776
+        }
+      ],
+      "why_match": "Su‐In Lee at University of Washington (USA) works on deep learning for medical imaging, directly relevant to your research interests. Recent work includes: \"From local explanations to global understanding with explainable AI for trees\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.72,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.72
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2020
+      }
+    },
+    {
+      "rank": 37,
+      "supervisor": {
+        "name": " Francisco M. De La Vega ",
+        "institution": "Cornell University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": null,
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "An integrated map of genetic variation from 1,092 human genomes",
+          "year": 2012,
+          "doi": "https://doi.org/10.1038/nature11632",
+          "url": "https://openalex.org/W2096791516",
+          "citation_count": 8213
+        }
+      ],
+      "why_match": " Francisco M. De La Vega  at Cornell University (USA) has published relevant work including \"An integrated map of genetic variation from 1,092 human genomes\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.7150000000000001,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.7150000000000001
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2012
+      }
+    },
+    {
+      "rank": 38,
+      "supervisor": {
+        "name": "Abdelhamid Bouchachia",
+        "institution": "Bournemouth University",
+        "department": null,
+        "country": "UK",
+        "profile_url": "https://openalex.org/A5063662012",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5063662012",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "A survey on concept drift adaptation",
+          "year": 2014,
+          "doi": "https://doi.org/10.1145/2523813",
+          "url": "https://openalex.org/W2099419573",
+          "citation_count": 3303
+        }
+      ],
+      "why_match": "Abdelhamid Bouchachia at Bournemouth University (UK) has published relevant work including \"A survey on concept drift adaptation\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.71,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.71
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2014
+      }
+    },
+    {
+      "rank": 39,
+      "supervisor": {
+        "name": "Wojciech Ziarko",
+        "institution": "University of Regina",
+        "department": null,
+        "country": "Canada",
+        "profile_url": "https://openalex.org/A5108192254",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5108192254",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Rough sets",
+          "year": 1995,
+          "doi": "https://doi.org/10.1145/219717.219791",
+          "url": "https://openalex.org/W2340020088",
+          "citation_count": 3212
+        }
+      ],
+      "why_match": "Wojciech Ziarko at University of Regina (Canada) has published relevant work including \"Rough sets\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.7050000000000001,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.7050000000000001
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 1995
+      }
+    },
+    {
+      "rank": 40,
+      "supervisor": {
+        "name": "Dominic King",
+        "institution": "Google (United Kingdom)",
+        "department": null,
+        "country": "UK",
+        "profile_url": "https://openalex.org/A5009550607",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5009550607",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Key challenges for delivering clinical impact with artificial intelligence",
+          "year": 2019,
+          "doi": "https://doi.org/10.1186/s12916-019-1426-2",
+          "url": "https://openalex.org/W2982580298",
+          "citation_count": 2469
+        }
+      ],
+      "why_match": "Dominic King at Google (United Kingdom) (UK) works on clinical NLP, directly relevant to your research interests. Recent work includes: \"Key challenges for delivering clinical impact with artificial intelligence\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.7,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.7
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2019
+      }
+    },
+    {
+      "rank": 41,
+      "supervisor": {
+        "name": "Georgios C. Trichopoulos",
+        "institution": "Arizona State University",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5007666035",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5007666035",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Wireless Communications and Applications Above 100 GHz: Opportunities and Challenges for 6G and Beyond",
+          "year": 2019,
+          "doi": "https://doi.org/10.1109/access.2019.2921522",
+          "url": "https://openalex.org/W2955897898",
+          "citation_count": 2449
+        }
+      ],
+      "why_match": "Georgios C. Trichopoulos at Arizona State University (USA) works on deep learning for medical imaging, directly relevant to your research interests. Recent work includes: \"Wireless Communications and Applications Above 100 GHz: Opportunities and Challenges for 6G and Beyond\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.6950000000000001,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.6950000000000001
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2019
+      }
+    },
+    {
+      "rank": 42,
+      "supervisor": {
+        "name": "Yogesh K. Dwivedi",
+        "institution": "Swansea University",
+        "department": null,
+        "country": "UK",
+        "profile_url": "https://openalex.org/A5048622877",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5048622877",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Artificial intelligence for decision making in the era of Big Data – evolution, challenges and research agenda",
+          "year": 2019,
+          "doi": "https://doi.org/10.1016/j.ijinfomgt.2019.01.021",
+          "url": "https://openalex.org/W2934302500",
+          "citation_count": 2434
+        },
+        {
+          "type": "paper",
+          "title": "The unified theory of acceptance and use of technology (UTAUT): a literature review",
+          "year": 2015,
+          "doi": "https://doi.org/10.1108/jeim-09-2014-0088",
+          "url": "https://openalex.org/W2062723458",
+          "citation_count": 1277
+        }
+      ],
+      "why_match": "Yogesh K. Dwivedi at Swansea University (UK) works on deep learning for medical imaging, directly relevant to your research interests. Recent work includes: \"Artificial intelligence for decision making in the era of Big Data – evolution, challenges and research agenda\" and \"The unified theory of acceptance and use of technology (UTAUT): a literature review\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.6900000000000001,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.6900000000000001
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2019
+      }
+    },
+    {
+      "rank": 43,
+      "supervisor": {
+        "name": "Brenda Milner",
+        "institution": "Montreal Neurological Institute and Hospital",
+        "department": null,
+        "country": "Canada",
+        "profile_url": "https://openalex.org/A5110913081",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5110913081",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "LOSS OF RECENT MEMORY AFTER BILATERAL HIPPOCAMPAL LESIONS",
+          "year": 1957,
+          "doi": "https://doi.org/10.1136/jnnp.20.1.11",
+          "url": "https://openalex.org/W2410446460",
+          "citation_count": 7349
+        }
+      ],
+      "why_match": "Brenda Milner at Montreal Neurological Institute and Hospital (Canada) has published relevant work including \"LOSS OF RECENT MEMORY AFTER BILATERAL HIPPOCAMPAL LESIONS\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.685,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.685
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 1957
+      }
+    },
+    {
+      "rank": 44,
+      "supervisor": {
+        "name": "Padmanee Sharma",
+        "institution": "The University of Texas MD Anderson Cancer Center",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5071033599",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5071033599",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Nivolumab versus Everolimus in Advanced Renal-Cell Carcinoma",
+          "year": 2015,
+          "doi": "https://doi.org/10.1056/nejmoa1510665",
+          "url": "https://openalex.org/W2222086386",
+          "citation_count": 5881
+        }
+      ],
+      "why_match": "Padmanee Sharma at The University of Texas MD Anderson Cancer Center (USA) has published relevant work including \"Nivolumab versus Everolimus in Advanced Renal-Cell Carcinoma\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.68,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.68
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2015
+      }
+    },
+    {
+      "rank": 45,
+      "supervisor": {
+        "name": "Mitchell M. Levy",
+        "institution": "Brown University",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5000157972",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5000157972",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Surviving sepsis campaign: international guidelines for management of sepsis and septic shock 2021",
+          "year": 2021,
+          "doi": "https://doi.org/10.1007/s00134-021-06506-y",
+          "url": "https://openalex.org/W3202964273",
+          "citation_count": 4964
+        }
+      ],
+      "why_match": "Mitchell M. Levy at Brown University (USA) works on deep learning for medical imaging, directly relevant to your research interests. Recent work includes: \"Surviving sepsis campaign: international guidelines for management of sepsis and septic shock 2021\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.675,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": true,
+        "recency_score": 0.7,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.675
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2021
+      }
+    },
+    {
+      "rank": 46,
+      "supervisor": {
+        "name": "Michael B. Wallace",
+        "institution": "Mayo Clinic in Florida",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5010559287",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5010559287",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Colorectal cancer",
+          "year": 2019,
+          "doi": "https://doi.org/10.1016/s0140-6736(19)32319-0",
+          "url": "https://openalex.org/W4211168195",
+          "citation_count": 4952
+        },
+        {
+          "type": "paper",
+          "title": "Colorectal cancer",
+          "year": 2019,
+          "doi": "https://doi.org/10.1016/s0140-6736(19)32319-0",
+          "url": "https://openalex.org/W4211168195",
+          "citation_count": 4952
+        }
+      ],
+      "why_match": "Michael B. Wallace at Mayo Clinic in Florida (USA) has published relevant work including \"Colorectal cancer\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.67,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.67
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2019
+      }
+    },
+    {
+      "rank": 47,
+      "supervisor": {
+        "name": "Sudha Seshadri",
+        "institution": "American Heart Association",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5011863508",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5011863508",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Vascular Contributions to Cognitive Impairment and Dementia",
+          "year": 2011,
+          "doi": "https://doi.org/10.1161/str.0b013e3182299496",
+          "url": "https://openalex.org/W2527609605",
+          "citation_count": 3742
+        },
+        {
+          "type": "paper",
+          "title": "Vascular Contributions to Cognitive Impairment and Dementia",
+          "year": 2011,
+          "doi": "https://doi.org/10.1161/str.0b013e3182299496",
+          "url": "https://openalex.org/W2527609605",
+          "citation_count": 3742
+        }
+      ],
+      "why_match": "Sudha Seshadri at American Heart Association (USA) has published relevant work including \"Vascular Contributions to Cognitive Impairment and Dementia\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.665,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.665
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2011
+      }
+    },
+    {
+      "rank": 48,
+      "supervisor": {
+        "name": "Winnie Yip",
+        "institution": "University of Oxford",
+        "department": null,
+        "country": "UK",
+        "profile_url": "https://openalex.org/A5073611041",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5073611041",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Global Surgery 2030: evidence and solutions for achieving health, welfare, and economic development",
+          "year": 2015,
+          "doi": "https://doi.org/10.1016/s0140-6736(15)60160-x",
+          "url": "https://openalex.org/W2043861297",
+          "citation_count": 3698
+        }
+      ],
+      "why_match": "Winnie Yip at University of Oxford (UK) works on deep learning for medical imaging, directly relevant to your research interests. Recent work includes: \"Global Surgery 2030: evidence and solutions for achieving health, welfare, and economic development\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.66,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.66
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2015
+      }
+    },
+    {
+      "rank": 49,
+      "supervisor": {
+        "name": "Kenneth W. Witwer",
+        "institution": "College Board",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5078835957",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5078835957",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Minimal information for studies of extracellular vesicles (MISEV2023): From basic to advanced approaches",
+          "year": 2024,
+          "doi": "https://doi.org/10.1002/jev2.12404",
+          "url": "https://openalex.org/W4391649568",
+          "citation_count": 3569
+        }
+      ],
+      "why_match": "Kenneth W. Witwer at College Board (USA) works on deep learning for medical imaging, directly relevant to your research interests. Recent work includes: \"Minimal information for studies of extracellular vesicles (MISEV2023): From basic to advanced approaches\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.655,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": true,
+        "recency_score": 0.7,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.655
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2024
+      }
+    },
+    {
+      "rank": 50,
+      "supervisor": {
+        "name": "Henry H. Ting",
+        "institution": "Association of Chartered Certified Accountants",
+        "department": null,
+        "country": "UK",
+        "profile_url": "https://openalex.org/A5052906199",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5052906199",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "2011 ACCF/AHA/SCAI Guideline for Percutaneous Coronary Intervention",
+          "year": 2011,
+          "doi": "https://doi.org/10.1161/cir.0b013e31823ba622",
+          "url": "https://openalex.org/W2165349656",
+          "citation_count": 3298
+        }
+      ],
+      "why_match": "Henry H. Ting at Association of Chartered Certified Accountants (UK) works on deep learning for medical imaging, directly relevant to your research interests. Recent work includes: \"2011 ACCF/AHA/SCAI Guideline for Percutaneous Coronary Intervention\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.65,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.65
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2011
+      }
+    },
+    {
+      "rank": 51,
+      "supervisor": {
+        "name": "Alexander Wong",
+        "institution": "University of Waterloo",
+        "department": null,
+        "country": "Canada",
+        "profile_url": "https://openalex.org/A5034161060",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5034161060",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "neural network"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "COVID-Net: a tailored deep convolutional neural network design for detection of COVID-19 cases from chest X-ray images",
+          "year": 2020,
+          "doi": "https://doi.org/10.1038/s41598-020-76550-z",
+          "url": "https://openalex.org/W3105081694",
+          "citation_count": 3147
+        }
+      ],
+      "why_match": "Alexander Wong at University of Waterloo (Canada) works on medical image segmentation, directly relevant to your research interests. Recent work includes: \"COVID-Net: a tailored deep convolutional neural network design for detection of COVID-19 cases from chest X-ray images\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.645,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.645
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2020
+      }
+    },
+    {
+      "rank": 52,
+      "supervisor": {
+        "name": "David Moher",
+        "institution": "University of Ottawa",
+        "department": null,
+        "country": "Canada",
+        "profile_url": "https://openalex.org/A5068353058",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5068353058",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews",
+          "year": 2021,
+          "doi": "https://doi.org/10.1136/bmj.n71",
+          "url": "https://openalex.org/W3118615836",
+          "citation_count": 93368
+        },
+        {
+          "type": "paper",
+          "title": "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews",
+          "year": 2021,
+          "doi": "https://doi.org/10.1186/s13643-021-01626-4",
+          "url": "https://openalex.org/W3144543375",
+          "citation_count": 13424
+        },
+        {
+          "type": "paper",
+          "title": "The PRISMA 2020 statement: An updated guideline for reporting systematic reviews",
+          "year": 2021,
+          "doi": "https://doi.org/10.1016/j.ijsu.2021.105906",
+          "url": "https://openalex.org/W3146142859",
+          "citation_count": 11412
+        },
+        {
+          "type": "paper",
+          "title": "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews",
+          "year": 2020,
+          "doi": "https://doi.org/10.31222/osf.io/v7gm2",
+          "url": "https://openalex.org/W4236476849",
+          "citation_count": 5290
+        }
+      ],
+      "why_match": "David Moher at University of Ottawa (Canada) works on deep learning for medical imaging, directly relevant to your research interests. Recent work includes: \"The PRISMA 2020 statement: an updated guideline for reporting systematic reviews\" and \"The PRISMA 2020 statement: an updated guideline for reporting systematic reviews\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.64,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": true,
+        "recency_score": 0.7,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.64
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2021
+      }
+    },
+    {
+      "rank": 53,
+      "supervisor": {
+        "name": "Melissa A. Hensley",
+        "institution": "Washington University in St. Louis",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5090922148",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5090922148",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Outcomes for Implementation Research: Conceptual Distinctions, Measurement Challenges, and Research Agenda",
+          "year": 2010,
+          "doi": "https://doi.org/10.1007/s10488-010-0319-7",
+          "url": "https://openalex.org/W2140092196",
+          "citation_count": 8721
+        }
+      ],
+      "why_match": "Melissa A. Hensley at Washington University in St. Louis (USA) works on deep learning for medical imaging, directly relevant to your research interests. Recent work includes: \"Outcomes for Implementation Research: Conceptual Distinctions, Measurement Challenges, and Research Agenda\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.635,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.635
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2010
+      }
+    },
+    {
+      "rank": 54,
+      "supervisor": {
+        "name": "Roger G. Mark",
+        "institution": "Beth Israel Deaconess Medical Center",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5074887163",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5074887163",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "MIMIC-III, a freely accessible critical care database",
+          "year": 2016,
+          "doi": "https://doi.org/10.1038/sdata.2016.35",
+          "url": "https://openalex.org/W2396881363",
+          "citation_count": 8105
+        }
+      ],
+      "why_match": "Roger G. Mark at Beth Israel Deaconess Medical Center (USA) has published relevant work including \"MIMIC-III, a freely accessible critical care database\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.63,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.63
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2016
+      }
+    },
+    {
+      "rank": 55,
+      "supervisor": {
+        "name": "James Thomas",
+        "institution": "University College London",
+        "department": null,
+        "country": "UK",
+        "profile_url": "https://openalex.org/A5090183643",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5090183643",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Updated guidance for trusted systematic reviews: a new edition of the Cochrane Handbook for Systematic Reviews of Interventions",
+          "year": 2019,
+          "doi": "https://doi.org/10.1002/14651858.ed000142",
+          "url": "https://openalex.org/W2978795816",
+          "citation_count": 6986
+        }
+      ],
+      "why_match": "James Thomas at University College London (UK) works on deep learning for medical imaging, directly relevant to your research interests. Recent work includes: \"Updated guidance for trusted systematic reviews: a new edition of the Cochrane Handbook for Systematic Reviews of Interventions\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.625,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.625
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2019
+      }
+    },
+    {
+      "rank": 56,
+      "supervisor": {
+        "name": "Ramachandran S. Vasan",
+        "institution": "Framingham Heart Study",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5004656494",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5004656494",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Evaluating the added predictive ability of a new marker: From area under the ROC curve to reclassification and beyond",
+          "year": 2007,
+          "doi": "https://doi.org/10.1002/sim.2929",
+          "url": "https://openalex.org/W2112316706",
+          "citation_count": 6300
+        }
+      ],
+      "why_match": "Ramachandran S. Vasan at Framingham Heart Study (USA) has published relevant work including \"Evaluating the added predictive ability of a new marker: From area under the ROC curve to reclassification and beyond\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.62,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.62
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2007
+      }
+    },
+    {
+      "rank": 57,
+      "supervisor": {
+        "name": "David B. Ascher",
+        "institution": "University of Cambridge",
+        "department": null,
+        "country": "UK",
+        "profile_url": "https://openalex.org/A5091903225",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5091903225",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "pkCSM: Predicting Small-Molecule Pharmacokinetic and Toxicity Properties Using Graph-Based Signatures",
+          "year": 2015,
+          "doi": "https://doi.org/10.1021/acs.jmedchem.5b00104",
+          "url": "https://openalex.org/W2009867031",
+          "citation_count": 5333
+        }
+      ],
+      "why_match": "David B. Ascher at University of Cambridge (UK) has published relevant work including \"pkCSM: Predicting Small-Molecule Pharmacokinetic and Toxicity Properties Using Graph-Based Signatures\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.615,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.615
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2015
+      }
+    },
+    {
+      "rank": 58,
+      "supervisor": {
+        "name": "Dong Yu",
+        "institution": "Microsoft (United States)",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5034476404",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5034476404",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "deep learning"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Deep Learning: Methods and Applications",
+          "year": 2014,
+          "doi": "https://doi.org/10.1561/2000000039",
+          "url": "https://openalex.org/W4205947740",
+          "citation_count": 3332
+        }
+      ],
+      "why_match": "Dong Yu at Microsoft (United States) (USA) works on federated learning, directly relevant to your research interests. Recent work includes: \"Deep Learning: Methods and Applications\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.6100000000000001,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.6100000000000001
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2014
+      }
+    },
+    {
+      "rank": 59,
+      "supervisor": {
+        "name": "Viju Raghupathi",
+        "institution": "City University of New York",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5061805847",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5061805847",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Big data analytics in healthcare: promise and potential",
+          "year": 2014,
+          "doi": "https://doi.org/10.1186/2047-2501-2-3",
+          "url": "https://openalex.org/W2120751691",
+          "citation_count": 3013
+        }
+      ],
+      "why_match": "Viju Raghupathi at City University of New York (USA) works on healthcare AI, directly relevant to your research interests. Recent work includes: \"Big data analytics in healthcare: promise and potential\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.605,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.605
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2014
+      }
+    },
+    {
+      "rank": 60,
+      "supervisor": {
+        "name": "Alan R. Aronson",
+        "institution": "National Institutes of Health",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5018615989",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5018615989",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Effective mapping of biomedical text to the UMLS Metathesaurus: the MetaMap program.",
+          "year": 2001,
+          "doi": "https://doi.org/10.1002/pds.4850",
+          "url": "https://openalex.org/W1550258693",
+          "citation_count": 2013
+        }
+      ],
+      "why_match": "Alan R. Aronson at National Institutes of Health (USA) works on medical image segmentation, directly relevant to your research interests. Recent work includes: \"Effective mapping of biomedical text to the UMLS Metathesaurus: the MetaMap program.\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.6000000000000001,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.6000000000000001
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2001
+      }
+    },
+    {
+      "rank": 61,
+      "supervisor": {
+        "name": "Jordan W. Smoller",
+        "institution": "Broad Institute",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5044998046",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5044998046",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Polygenic prediction via Bayesian regression and continuous shrinkage priors",
+          "year": 2019,
+          "doi": "https://doi.org/10.1038/s41467-019-09718-5",
+          "url": "https://openalex.org/W2951553270",
+          "citation_count": 1979
+        }
+      ],
+      "why_match": "Jordan W. Smoller at Broad Institute (USA) has published relevant work including \"Polygenic prediction via Bayesian regression and continuous shrinkage priors\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.595,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.595
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2019
+      }
+    },
+    {
+      "rank": 62,
+      "supervisor": {
+        "name": "Steven Horng",
+        "institution": "Beth Israel Deaconess Medical Center",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5076012713",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5076012713",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "MIMIC-CXR, a de-identified publicly available database of chest radiographs with free-text reports",
+          "year": 2019,
+          "doi": "https://doi.org/10.1038/s41597-019-0322-0",
+          "url": "https://openalex.org/W2995225687",
+          "citation_count": 1606
+        }
+      ],
+      "why_match": "Steven Horng at Beth Israel Deaconess Medical Center (USA) has published relevant work including \"MIMIC-CXR, a de-identified publicly available database of chest radiographs with free-text reports\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.5900000000000001,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.5900000000000001
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2019
+      }
+    },
+    {
+      "rank": 63,
+      "supervisor": {
+        "name": "Pranav Rajpurkar",
+        "institution": "Harvard University",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5001094226",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5001094226",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Foundation models for generalist medical artificial intelligence",
+          "year": 2023,
+          "doi": "https://doi.org/10.1038/s41586-023-05881-4",
+          "url": "https://openalex.org/W4365143687",
+          "citation_count": 1534
+        }
+      ],
+      "why_match": "Pranav Rajpurkar at Harvard University (USA) works on medical image segmentation, directly relevant to your research interests. Recent work includes: \"Foundation models for generalist medical artificial intelligence\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.585,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": true,
+        "recency_score": 0.7,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.585
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2023
+      }
+    },
+    {
+      "rank": 64,
+      "supervisor": {
+        "name": "Marlene S. Williams",
+        "institution": "Joint Commission",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5047074031",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5047074031",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines",
+          "year": 2023,
+          "doi": "https://doi.org/10.1161/cir.0000000000001168",
+          "url": "https://openalex.org/W4384922756",
+          "citation_count": 1354
+        }
+      ],
+      "why_match": "Marlene S. Williams at Joint Commission (USA) works on clinical NLP, directly relevant to your research interests. Recent work includes: \"2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.5800000000000001,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": true,
+        "recency_score": 0.7,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.5800000000000001
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2023
+      }
+    },
+    {
+      "rank": 65,
+      "supervisor": {
+        "name": "Peter N. Robinson",
+        "institution": "University of Connecticut",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5033225381",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5033225381",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "The Human Phenotype Ontology in 2021",
+          "year": 2020,
+          "doi": "https://doi.org/10.1093/nar/gkaa1043",
+          "url": "https://openalex.org/W3106811464",
+          "citation_count": 1235
+        }
+      ],
+      "why_match": "Peter N. Robinson at University of Connecticut (USA) has published relevant work including \"The Human Phenotype Ontology in 2021\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.575,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.575
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2020
+      }
+    },
+    {
+      "rank": 66,
+      "supervisor": {
+        "name": "Lincoln Sheets",
+        "institution": "University of Missouri",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5027966236",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5027966236",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "A Systematic Review of Healthcare Applications for Smartphones",
+          "year": 2012,
+          "doi": "https://doi.org/10.1186/1472-6947-12-67",
+          "url": "https://openalex.org/W2168217134",
+          "citation_count": 1233
+        }
+      ],
+      "why_match": "Lincoln Sheets at University of Missouri (USA) works on healthcare AI, directly relevant to your research interests. Recent work includes: \"A Systematic Review of Healthcare Applications for Smartphones\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.5700000000000001,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.5700000000000001
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2012
+      }
+    },
+    {
+      "rank": 67,
+      "supervisor": {
+        "name": "J. P. Ginsberg",
+        "institution": "Wm. Jennings Bryan Dorn VA Medical Center",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5025976119",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5025976119",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "An Overview of Heart Rate Variability Metrics and Norms",
+          "year": 2017,
+          "doi": "https://doi.org/10.3389/fpubh.2017.00258",
+          "url": "https://openalex.org/W2759190050",
+          "citation_count": 6730
+        }
+      ],
+      "why_match": "J. P. Ginsberg at Wm. Jennings Bryan Dorn VA Medical Center (USA) has published relevant work including \"An Overview of Heart Rate Variability Metrics and Norms\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.565,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.565
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2017
+      }
+    },
+    {
+      "rank": 68,
+      "supervisor": {
+        "name": "Jia Qian Wu",
+        "institution": "Texas Medical Center",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5060109423",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5060109423",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "An RNA-Sequencing Transcriptome and Splicing Database of Glia, Neurons, and Vascular Cells of the Cerebral Cortex",
+          "year": 2014,
+          "doi": "https://doi.org/10.1523/jneurosci.1860-14.2014",
+          "url": "https://openalex.org/W2054275187",
+          "citation_count": 5339
+        }
+      ],
+      "why_match": "Jia Qian Wu at Texas Medical Center (USA) has published relevant work including \"An RNA-Sequencing Transcriptome and Splicing Database of Glia, Neurons, and Vascular Cells of the Cerebral Cortex\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.56,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.56
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2014
+      }
+    },
+    {
+      "rank": 69,
+      "supervisor": {
+        "name": "Li Fei-Fei",
+        "institution": "Stanford University",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5100450462",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5100450462",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Visual Genome: Connecting Language and Vision Using Crowdsourced Dense Image Annotations",
+          "year": 2017,
+          "doi": "https://doi.org/10.1007/s11263-016-0981-7",
+          "url": "https://openalex.org/W2277195237",
+          "citation_count": 5176
+        }
+      ],
+      "why_match": "Li Fei-Fei at Stanford University (USA) works on medical image segmentation, directly relevant to your research interests. Recent work includes: \"Visual Genome: Connecting Language and Vision Using Crowdsourced Dense Image Annotations\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.5549999999999999,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.5549999999999999
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2017
+      }
+    },
+    {
+      "rank": 70,
+      "supervisor": {
+        "name": "Patrick J. Flynn",
+        "institution": "The Ohio State University",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5039987576",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5039987576",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Data clustering",
+          "year": 1999,
+          "doi": "https://doi.org/10.1145/331499.331504",
+          "url": "https://openalex.org/W1992419399",
+          "citation_count": 13169
+        }
+      ],
+      "why_match": "Patrick J. Flynn at The Ohio State University (USA) has published relevant work including \"Data clustering\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.55,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.55
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 1999
+      }
+    },
+    {
+      "rank": 71,
+      "supervisor": {
+        "name": "Nina Silverberg",
+        "institution": "Alzheimer's Association",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5014841268",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5014841268",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "NIA‐AA Research Framework: Toward a biological definition of Alzheimer's disease",
+          "year": 2018,
+          "doi": "https://doi.org/10.1016/j.jalz.2018.02.018",
+          "url": "https://openalex.org/W2798054687",
+          "citation_count": 10309
+        }
+      ],
+      "why_match": "Nina Silverberg at Alzheimer's Association (USA) has published relevant work including \"NIA‐AA Research Framework: Toward a biological definition of Alzheimer's disease\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.545,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.545
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2018
+      }
+    },
+    {
+      "rank": 72,
+      "supervisor": {
+        "name": "Olaf Sporns",
+        "institution": "Indiana University Bloomington",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5002202464",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5002202464",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Mapping the Structural Core of Human Cerebral Cortex",
+          "year": 2008,
+          "doi": "https://doi.org/10.1371/journal.pbio.0060159",
+          "url": "https://openalex.org/W2159929956",
+          "citation_count": 4367
+        }
+      ],
+      "why_match": "Olaf Sporns at Indiana University Bloomington (USA) has published relevant work including \"Mapping the Structural Core of Human Cerebral Cortex\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.54,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.54
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2008
+      }
+    },
+    {
+      "rank": 73,
+      "supervisor": {
+        "name": "Ben Glocker",
+        "institution": "Institute of Group Analysis",
+        "department": null,
+        "country": "UK",
+        "profile_url": "https://openalex.org/A5007222325",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5007222325",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Efficient multi-scale 3D CNN with fully connected CRF for accurate brain lesion segmentation",
+          "year": 2016,
+          "doi": "https://doi.org/10.1016/j.media.2016.10.004",
+          "url": "https://openalex.org/W2301358467",
+          "citation_count": 3503
+        }
+      ],
+      "why_match": "Ben Glocker at Institute of Group Analysis (UK) works on medical image segmentation, directly relevant to your research interests. Recent work includes: \"Efficient multi-scale 3D CNN with fully connected CRF for accurate brain lesion segmentation\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.535,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.535
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2016
+      }
+    },
+    {
+      "rank": 74,
+      "supervisor": {
+        "name": "Peter T. Fox",
+        "institution": "Imaging Center",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5014310950",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5014310950",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Automated Talairach Atlas labels for functional brain mapping",
+          "year": 2000,
+          "doi": "https://doi.org/10.1002/1097-0193(200007)10:3<120::aid-hbm30>3.0.co;2-8",
+          "url": "https://openalex.org/W2169366712",
+          "citation_count": 3432
+        }
+      ],
+      "why_match": "Peter T. Fox at Imaging Center (USA) works on deep learning for medical imaging, directly relevant to your research interests. Recent work includes: \"Automated Talairach Atlas labels for functional brain mapping\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.53,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.53
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2000
+      }
+    },
+    {
+      "rank": 75,
+      "supervisor": {
+        "name": "Vince D. Calhoun",
+        "institution": "Mind Research Network",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5032850756",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5032850756",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Tracking Whole-Brain Connectivity Dynamics in the Resting State",
+          "year": 2012,
+          "doi": "https://doi.org/10.1093/cercor/bhs352",
+          "url": "https://openalex.org/W2170702893",
+          "citation_count": 3208
+        }
+      ],
+      "why_match": "Vince D. Calhoun at Mind Research Network (USA) has published relevant work including \"Tracking Whole-Brain Connectivity Dynamics in the Resting State\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.525,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.525
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2012
+      }
+    },
+    {
+      "rank": 76,
+      "supervisor": {
+        "name": "Christos Davatzikos",
+        "institution": "University of Pennsylvania",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5034999945",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5034999945",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "MRI"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Advancing The Cancer Genome Atlas glioma MRI collections with expert segmentation labels and radiomic features",
+          "year": 2017,
+          "doi": "https://doi.org/10.1038/sdata.2017.117",
+          "url": "https://openalex.org/W2751069891",
+          "citation_count": 2940
+        }
+      ],
+      "why_match": "Christos Davatzikos at University of Pennsylvania (USA) works on medical image segmentation, directly relevant to your research interests. Recent work includes: \"Advancing The Cancer Genome Atlas glioma MRI collections with expert segmentation labels and radiomic features\". Their background aligns with your focus on federated learning and medical image segmentation.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.52,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.52
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2017
+      }
+    },
+    {
+      "rank": 77,
+      "supervisor": {
+        "name": "Essa Yacoub",
+        "institution": "University of Minnesota",
+        "department": null,
+        "country": "USA",
+        "profile_url": "https://openalex.org/A5034283066",
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5034283066",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "federated learning",
+        "medical image segmentation",
+        "clinical NLP"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "The Human Connectome Project: A data acquisition perspective",
+          "year": 2012,
+          "doi": "https://doi.org/10.1016/j.neuroimage.2012.02.018",
+          "url": "https://openalex.org/W2020519533",
+          "citation_count": 2813
+        }
+      ],
+      "why_match": "Essa Yacoub at University of Minnesota (USA) has published relevant work including \"The Human Connectome Project: A data acquisition perspective\", which intersects with your interests in federated learning, medical image segmentation. Their research programme covers topics central to your stated PhD focus.",
+      "tier": "reach",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [],
+      "confidence_score": 0.515,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.7,
+        "overlap_score": 0.7,
+        "recent_activity": false,
+        "recency_score": 0.3,
+        "eligibility_clear": true,
+        "eligibility_score": 0.8,
+        "h_index": 0,
+        "hindex_score": 0.0,
+        "total_score": 0.515
+      },
+      "match_dimensions": {
+        "research_overlap": 0.7,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 0,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2012
+      }
+    }
+  ],
+  "metadata": {
+    "total_candidates_considered": 77,
+    "data_sources": [
+      "openalex",
+      "nih_reporter"
+    ],
+    "llm_provider_used": "fallback_template",
+    "langgraph_run_id": "",
+    "run_duration_seconds": 0.0,
+    "audit_summary": {
+      "top_n": 60,
+      "flagged_count": 0,
+      "flagged": []
+    }
+  }
+}

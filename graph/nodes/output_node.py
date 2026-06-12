@@ -19,6 +19,72 @@ from graph.state import ShortlistState
 logger = structlog.get_logger()
 
 
+# Domain keyword vocabulary for research_focus extraction from text
+_DOMAIN_KEYWORDS = [
+    # AI / ML core
+    "machine learning", "deep learning", "neural network", "artificial intelligence",
+    "reinforcement learning", "federated learning", "transfer learning",
+    "natural language processing", "NLP", "large language model", "LLM",
+    "computer vision", "image recognition", "object detection",
+    "generative model", "GAN", "diffusion model", "transformer",
+    # Medical / Clinical AI
+    "medical imaging", "clinical decision", "electronic health record",
+    "precision medicine", "drug discovery", "bioinformatics",
+    "genomics", "proteomics", "cancer", "radiology", "pathology",
+    "brain", "neuroscience", "EHR", "clinical NLP",
+    # Data science
+    "data mining", "knowledge graph", "graph neural network",
+    "anomaly detection", "time series", "explainable AI", "XAI",
+    "fairness", "privacy", "differential privacy",
+    # Systems
+    "distributed systems", "cloud computing", "edge computing",
+    "Internet of Things", "IoT", "cybersecurity",
+]
+
+
+def _extract_research_focus(c: dict) -> list:
+    """Build a research_focus list from all available candidate signals."""
+    focus = []
+
+    # 1. Best source: pre-extracted research_areas / keywords / topics
+    for field in ("research_areas", "keywords", "topics", "x_concepts"):
+        val = c.get(field) or []
+        if isinstance(val, list):
+            for item in val:
+                if isinstance(item, str) and item.strip():
+                    focus.append(item.strip())
+                elif isinstance(item, dict):
+                    name = item.get("display_name") or item.get("name") or ""
+                    if name.strip():
+                        focus.append(name.strip())
+
+    # 2. Scan paper titles + abstract for domain keywords
+    if len(focus) < 3:
+        text_sources = []
+        for paper in (c.get("papers") or c.get("evidence") or [])[:5]:
+            if isinstance(paper, dict):
+                text_sources.append(paper.get("title") or "")
+                text_sources.append(paper.get("abstract") or "")
+        text_sources.append(c.get("abstract") or "")
+        combined = " ".join(text_sources).lower()
+
+        for kw in _DOMAIN_KEYWORDS:
+            if kw.lower() in combined and kw not in focus:
+                focus.append(kw)
+                if len(focus) >= 8:
+                    break
+
+    # Deduplicate, preserve order, cap at 10
+    seen = set()
+    result = []
+    for f in focus:
+        fl = f.lower()
+        if fl not in seen:
+            seen.add(fl)
+            result.append(f)
+    return result[:10]
+
+
 def build_shortlist_output(state: ShortlistState, max_results: int = 100) -> dict:
     """Convert pipeline state into the final ShortlistOutput JSON."""
     profile = state.get("student_profile", {})
@@ -40,12 +106,7 @@ def build_shortlist_output(state: ShortlistState, max_results: int = 100) -> dic
                 "google_scholar_id": c.get("google_scholar_id"),
                 "orcid": c.get("orcid"),
             },
-            "research_focus": (
-                c.get("research_areas")
-                or c.get("keywords")
-                or c.get("topics")
-                or []
-            ),
+            "research_focus": _extract_research_focus(c),
             "evidence": (c.get("papers", []) or [])[:5] + (c.get("grants", []) or [])[:3],
             "why_match": c.get("why_match", ""),
             "tier": c.get("tier", "target"),

@@ -96,10 +96,21 @@ async def validate_node(state: Dict[str, Any]) -> Dict[str, Any]:
             if country and country not in ("Unknown", ""):
                 c["country"] = country
 
-            # Hard constraint: block if still not in target list
-            if not country or country not in target_countries:
+            # Hard block ONLY if country is a known non-target country.
+            # Unknown country is NOT the same as wrong country — it means
+            # we couldn't determine it from OpenAlex/NIH metadata.
+            # Accept unknown-country candidates with a flag rather than losing them.
+            if country and country not in target_countries and country not in ("Unknown", ""):
                 blocked_by_country += 1
                 continue
+
+            # If country still unknown, flag it but allow through
+            if not country or country in ("Unknown", ""):
+                c["country"] = "Unknown"
+                flags = c.get("eligibility_flags") or []
+                if "country_unverified" not in flags:
+                    flags.append("country_unverified")
+                c["eligibility_flags"] = flags
 
         evidence = c.get("evidence") or c.get("papers") or c.get("grants") or []
         if not evidence:
@@ -117,5 +128,11 @@ async def validate_node(state: Dict[str, Any]) -> Dict[str, Any]:
         "blocked_by_evidence": blocked_by_evidence,
     }
 
-    logger.info("validate_node_complete", **state["validation_summary"]) if logger else None
+    logger.info(
+        "validate_node_complete: input=%s validated=%s blocked_country=%s blocked_evidence=%s",
+        state["validation_summary"]["input_count"],
+        state["validation_summary"]["validated_count"],
+        state["validation_summary"]["blocked_by_country"],
+        state["validation_summary"]["blocked_by_evidence"],
+    )
     return state

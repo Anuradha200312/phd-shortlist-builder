@@ -1,0 +1,17 @@
+{
+  "student_id": "test_001",
+  "generated_at": "2026-06-12T04:31:43.123957Z",
+  "pipeline_version": "1.0.0",
+  "shortlist": [],
+  "metadata": {
+    "total_candidates_considered": 445,
+    "data_sources": [
+      "nih_reporter",
+      "openalex"
+    ],
+    "llm_provider_used": "",
+    "langgraph_run_id": "98271ec2",
+    "run_duration_seconds": 318.6,
+    "audit_summary": {}
+  }
+}

@@ -104,8 +104,8 @@ async def retrieve_node(state: ShortlistState) -> dict:
     attempt = state.get("retrieval_attempts", 0)
 
     settings = get_settings()
-    per_tool_limit = 25   # 25 results per source per query
-    max_queries = min(len(queries), 10)  # 10 queries × 5 sources = up to 1250 raw records
+    per_tool_limit = 25   # increased from 15 — more raw candidates per source
+    max_queries = min(len(queries), 20)  # increased from 12 — use more query variants
 
     logger.info(
         "retrieve_node_start",

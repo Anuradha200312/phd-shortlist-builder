@@ -1,0 +1,392 @@
+{
+  "student_id": "test_001",
+  "generated_at": "2026-06-12T04:09:13.719194Z",
+  "pipeline_version": "1.0.0",
+  "shortlist": [
+    {
+      "rank": 1,
+      "supervisor": {
+        "name": "Taghi M. Khoshgoftaar",
+        "institution": "Florida Atlantic University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5089170562",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "deep learning",
+        "federated learning"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "A survey on Image Data Augmentation for Deep Learning",
+          "venue": null,
+          "year": 2019,
+          "url": "https://openalex.org/W2954996726",
+          "doi": "https://doi.org/10.1186/s40537-019-0197-0"
+        },
+        {
+          "type": "paper",
+          "title": "PoS-FedFraud: A Robust Proof-of-Stake Framework for Decentralized Financial Fraud Detection in Federated Learning",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/ichora69329.2026.11537106"
+        },
+        {
+          "type": "paper",
+          "title": "Predictive modeling for auto repossession success: a comparative evaluation",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01428-2"
+        },
+        {
+          "type": "paper",
+          "title": "Order-based frameworks for predicting and classifying absence duration following an occupational injury",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01445-1"
+        },
+        {
+          "type": "paper",
+          "title": "A bibliometric analysis of the first decade of the Journal of Big Data",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01412-w"
+        }
+      ],
+      "why_match": "Taghi M. Khoshgoftaar has expertise in , which aligns with your research interests.",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.41657894736842105,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.10526315789473684,
+        "overlap_score": 0.10526315789473684,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 82,
+        "hindex_score": 1.0,
+        "total_score": 0.41657894736842105
+      },
+      "match_dimensions": {
+        "research_overlap": 0.10526315789473684,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 82,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 2,
+      "supervisor": {
+        "name": "Vijay Devabhaktuni",
+        "institution": "Illinois State University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5111712571",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "artificial intelligence",
+        "LLM"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "U-Net and Its Variants for Medical Image Segmentation: A Review of Theory and Applications",
+          "venue": null,
+          "year": 2021,
+          "url": "https://openalex.org/W3096947210",
+          "doi": "https://doi.org/10.1109/access.2021.3086020"
+        },
+        {
+          "type": "paper",
+          "title": "Artificial Intelligence in Healthcare: Applications, Benefits, Challenges, and Future Directions",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/iatmsi68868.2026.11465943"
+        },
+        {
+          "type": "paper",
+          "title": "A Distributed Policy Gradient Method for Multiagent Control with Uncertain Cost Functions",
+          "year": 2025,
+          "doi": "https://doi.org/10.1109/indin64977.2025.11279131"
+        },
+        {
+          "type": "paper",
+          "title": "A framework for mitigating malicious RLHF feedback in LLM training using consensus based reward",
+          "year": 2025,
+          "doi": "https://doi.org/10.1038/s41598-025-92889-7"
+        },
+        {
+          "type": "paper",
+          "title": "A return-to-home unmanned aerial vehicle navigation solution in global positioning system denied environments via bidirectional long short-term memory reverse flightpath prediction",
+          "year": 2024,
+          "doi": "https://doi.org/10.1016/j.engappai.2024.109729"
+        }
+      ],
+      "why_match": "Vijay Devabhaktuni has expertise in , which aligns with your research interests.",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.38108695652173913,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.08695652173913043,
+        "overlap_score": 0.08695652173913043,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 35,
+        "hindex_score": 0.7,
+        "total_score": 0.38108695652173913
+      },
+      "match_dimensions": {
+        "research_overlap": 0.08695652173913043,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 35,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 3,
+      "supervisor": {
+        "name": "Brent J Lance",
+        "institution": "DEVCOM Army Research Laboratory",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5042017468",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "neural network",
+        "brain"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "EEGNet: a compact convolutional neural network for EEG-based brain\u2013computer interfaces",
+          "venue": null,
+          "year": 2018,
+          "url": "https://openalex.org/W2559463885",
+          "doi": "https://doi.org/10.1088/1741-2552/aace8c"
+        },
+        {
+          "type": "paper",
+          "title": "Modeling and analysis of motion data from dynamic soldier state estimation to enable situational understanding",
+          "year": 2022,
+          "doi": "https://doi.org/10.1117/12.2618634"
+        },
+        {
+          "type": "paper",
+          "title": "Does Optimal Source Task Performance Imply Optimal Pre-training for a\\n Target Task?",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2106.11174"
+        },
+        {
+          "type": "paper",
+          "title": "Does Optimal Source Task Performance Imply Optimal Pre-training for a Target Task?",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2106.11174"
+        },
+        {
+          "type": "paper",
+          "title": "Alpha Correlates of Practice During Mental Preparation for Motor Imagery",
+          "year": 2020,
+          "doi": "https://doi.org/10.1109/tcds.2020.3026530"
+        }
+      ],
+      "why_match": "Brent J Lance has expertise in , which aligns with your research interests.",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.286,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.1,
+        "overlap_score": 0.1,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 23,
+        "hindex_score": 0.46,
+        "total_score": 0.286
+      },
+      "match_dimensions": {
+        "research_overlap": 0.1,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 23,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2022
+      }
+    },
+    {
+      "rank": 4,
+      "supervisor": {
+        "name": "J.J. Vidal",
+        "institution": "University of California, Los Angeles",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5108113353",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "brain"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Toward Direct Brain-Computer Communication",
+          "venue": null,
+          "year": 1973,
+          "url": "https://openalex.org/W2164497299",
+          "doi": "https://doi.org/10.1146/annurev.bb.02.060173.001105"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Data Release 2. Observations of solar system objects",
+          "year": 2021,
+          "doi": "https://doi.org/10.48350/158410"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Data Release 2. Observational Hertzsprung-Russell diagrams",
+          "year": 2021,
+          "doi": "https://doi.org/10.48350/158408"
+        },
+        {
+          "type": "paper",
+          "title": "<i>Gaia</i> Early Data Release 3",
+          "year": 2021,
+          "doi": "https://doi.org/10.1051/0004-6361/202140735"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Photometric Science Alerts",
+          "year": 2021,
+          "doi": "https://doi.org/10.26093/cds/vizier.36520076"
+        }
+      ],
+      "why_match": "J.J. Vidal has expertise in , which aligns with your research interests.",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.27599999999999997,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.06666666666666667,
+        "overlap_score": 0.06666666666666667,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 23,
+        "hindex_score": 0.46,
+        "total_score": 0.27599999999999997
+      },
+      "match_dimensions": {
+        "research_overlap": 0.06666666666666667,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 23,
+        "country_match": true,
+        "domain_confidence": 0.8,
+        "last_paper_year": 2021
+      }
+    }
+  ],
+  "metadata": {
+    "total_candidates_considered": 564,
+    "data_sources": [
+      "openalex",
+      "nih_reporter"
+    ],
+    "llm_provider_used": "",
+    "langgraph_run_id": "8e01fc4d",
+    "run_duration_seconds": 4103.4,
+    "audit_summary": {
+      "top_n": 4,
+      "flagged_count": 4,
+      "flagged": [
+        {
+          "id": "https://openalex.org/W2954996726",
+          "reasons": [
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W3096947210",
+          "reasons": [
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2559463885",
+          "reasons": [
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2164497299",
+          "reasons": [
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        }
+      ]
+    }
+  }
+}

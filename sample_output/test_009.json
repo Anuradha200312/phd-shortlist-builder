@@ -1,0 +1,573 @@
+{
+  "student_id": "test_001",
+  "generated_at": "2026-06-12T05:15:04.320653Z",
+  "pipeline_version": "1.0.0",
+  "shortlist": [
+    {
+      "rank": 1,
+      "supervisor": {
+        "name": "Moustafa Abdalla",
+        "institution": "University Health Network",
+        "department": null,
+        "country": "Canada",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5073159181",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "medical imaging",
+        "cancer"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "The Grey Hoodie Project: Big Tobacco, Big Tech, and the Threat on Academic Integrity",
+          "venue": null,
+          "year": 2021,
+          "url": "https://openalex.org/W3091454361",
+          "doi": "https://doi.org/10.1145/3461702.3462563"
+        },
+        {
+          "type": "paper",
+          "title": "Empirical data drift detection experiments on real-world medical imaging data",
+          "year": 2024,
+          "doi": "https://doi.org/10.1038/s41467-024-46142-w"
+        },
+        {
+          "type": "paper",
+          "title": "Haemosuccus pancreaticus and seven episodes of recurrent unlocalised upper gastrointestinal bleeding",
+          "year": 2024,
+          "doi": "https://doi.org/10.1136/bcr-2023-256960"
+        },
+        {
+          "type": "paper",
+          "title": "Reliability and Variability of Ki-67 Digital Image Analysis Methods for Clinical Diagnostics in Breast Cancer",
+          "year": 2024,
+          "doi": "https://doi.org/10.1016/j.labinv.2024.100341"
+        },
+        {
+          "type": "paper",
+          "title": "Indigenous Americans \u2014 The <i>Journal</i> \u2019s Historical \u201cIndian Problem\u201d",
+          "year": 2023,
+          "doi": "https://doi.org/10.1056/nejmp2307311"
+        }
+      ],
+      "why_match": "Moustafa Abdalla's research in medical imaging, as evident from the paper \"Empirical data drift detection experiments on real-world medical imaging data,\" aligns with the student's interest in medical image segmentation. The student's M.Tech thesis, \"Deep Learning for Medical Image Segmentation,\" and their publication, \"FedSeg: Federated Learning for Multi-Organ Segmentation in CT Scans,\" demonstrate a strong foundation in this area. Abdalla's work on reliability and variability of digital image analysis methods for clinical diagnostics in breast cancer also shows a focus on the clinical applications of medical imaging, which is a crucial aspect of the student's research interests.\n\nThe University Health Network, where Abdalla is based, provides a rich environment for collaboration and access to medical imaging data, which would be beneficial for the student's research. Although Abdalla's specific research areas are not specified, his recent papers suggest a diverse range of interests, including medical imaging and clinical diagnostics. The student's expertise in federated learning, as demonstrated by their publication, could also complement Abdalla's work on empirical data drift detection experiments.\n\nWhile there is no direct overlap between Abdalla's published work and the student's interests in brain-computer interfaces and neural signal processing, the supervisor's experience in medical imaging and clinical diagnostics could still provide a valuable foundation for exploring these areas. However, it is worth noting that Abdalla's research focus appears to be broader, and some of his recent papers, such as \"The Grey Hoodie Project\" and \"Indigenous Americans \u2014 The Journal\u2019s Historical \u201cIndian Problem\u201d,\" may not be directly related to the student's research interests. Nevertheless, the connection between Abdalla's medical imaging work and the student's research focus provides a solid foundation for a productive collaboration.",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.44499999999999995,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.4,
+        "overlap_score": 0.4,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 20,
+        "hindex_score": 0.4,
+        "total_score": 0.44499999999999995
+      },
+      "match_dimensions": {
+        "research_overlap": 0.0,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 20,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2024
+      }
+    },
+    {
+      "rank": 2,
+      "supervisor": {
+        "name": "Taghi M. Khoshgoftaar",
+        "institution": "Florida Atlantic University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5089170562",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "deep learning",
+        "federated learning"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "A survey on Image Data Augmentation for Deep Learning",
+          "venue": null,
+          "year": 2019,
+          "url": "https://openalex.org/W2954996726",
+          "doi": "https://doi.org/10.1186/s40537-019-0197-0"
+        },
+        {
+          "type": "paper",
+          "title": "PoS-FedFraud: A Robust Proof-of-Stake Framework for Decentralized Financial Fraud Detection in Federated Learning",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/ichora69329.2026.11537106"
+        },
+        {
+          "type": "paper",
+          "title": "Predictive modeling for auto repossession success: a comparative evaluation",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01428-2"
+        },
+        {
+          "type": "paper",
+          "title": "Order-based frameworks for predicting and classifying absence duration following an occupational injury",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01445-1"
+        },
+        {
+          "type": "paper",
+          "title": "A bibliometric analysis of the first decade of the Journal of Big Data",
+          "year": 2026,
+          "doi": "https://doi.org/10.1186/s40537-026-01412-w"
+        }
+      ],
+      "why_match": "Taghi M. Khoshgoftaar's research in federated learning, as seen in the recent paper \"PoS-FedFraud: A Robust Proof-of-Stake Framework for Decentralized Financial Fraud Detection in Federated Learning,\" directly aligns with the student's interest in federated learning, particularly in the context of medical image segmentation. The student's publication, \"FedSeg: Federated Learning for Multi-Organ Segmentation in CT Scans,\" demonstrates a strong foundation in this area, and working with Khoshgoftaar could provide valuable insights and expertise to further develop this research.\n\nAdditionally, Khoshgoftaar's work on \"A survey on Image Data Augmentation for Deep Learning\" showcases his expertise in deep learning techniques, which is a crucial aspect of the student's research interests, including medical image segmentation and neural signal processing. The survey paper highlights Khoshgoftaar's ability to provide a comprehensive overview of the field, which could be beneficial for the student's research.\n\nThe student's background in deep learning for medical image segmentation, as evident from their M.Tech thesis, and their experience with federated learning, as seen in their publication, make them a strong candidate to collaborate with Khoshgoftaar. The lack of grants listed may indicate an opportunity for the student to contribute to securing funding and developing new research projects.\n\nAt Florida Atlantic University, the student would have access to a research environment that could support their interests in privacy-preserving machine learning and brain-computer interfaces. While Khoshgoftaar's research areas are not explicitly stated, his recent publications suggest a strong focus on machine learning and data analysis, which could provide a solid foundation for the student's research. Overall, the alignment between Khoshgoftaar's research and the student's interests, combined with the potential for collaboration and growth, make this a promising supervisor-student match.",
+      "tier": "safety",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.41657894736842105,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.10526315789473684,
+        "overlap_score": 0.10526315789473684,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 82,
+        "hindex_score": 1.0,
+        "total_score": 0.41657894736842105
+      },
+      "match_dimensions": {
+        "research_overlap": 0.10526315789473684,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 82,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 3,
+      "supervisor": {
+        "name": "Vijay Devabhaktuni",
+        "institution": "Illinois State University",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5111712571",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "artificial intelligence",
+        "LLM"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "U-Net and Its Variants for Medical Image Segmentation: A Review of Theory and Applications",
+          "venue": null,
+          "year": 2021,
+          "url": "https://openalex.org/W3096947210",
+          "doi": "https://doi.org/10.1109/access.2021.3086020"
+        },
+        {
+          "type": "paper",
+          "title": "Artificial Intelligence in Healthcare: Applications, Benefits, Challenges, and Future Directions",
+          "year": 2026,
+          "doi": "https://doi.org/10.1109/iatmsi68868.2026.11465943"
+        },
+        {
+          "type": "paper",
+          "title": "A Distributed Policy Gradient Method for Multiagent Control with Uncertain Cost Functions",
+          "year": 2025,
+          "doi": "https://doi.org/10.1109/indin64977.2025.11279131"
+        },
+        {
+          "type": "paper",
+          "title": "A framework for mitigating malicious RLHF feedback in LLM training using consensus based reward",
+          "year": 2025,
+          "doi": "https://doi.org/10.1038/s41598-025-92889-7"
+        },
+        {
+          "type": "paper",
+          "title": "A return-to-home unmanned aerial vehicle navigation solution in global positioning system denied environments via bidirectional long short-term memory reverse flightpath prediction",
+          "year": 2024,
+          "doi": "https://doi.org/10.1016/j.engappai.2024.109729"
+        }
+      ],
+      "why_match": "Vijay Devabhaktuni's research in medical image segmentation, as evident from the paper \"U-Net and Its Variants for Medical Image Segmentation: A Review of Theory and Applications,\" directly aligns with the student's research interests and master's thesis on deep learning for medical image segmentation. This shared interest creates a solid foundation for a productive supervisor-student relationship. Furthermore, the student's project, FedSeg, which focuses on federated learning for multi-organ segmentation in CT scans, demonstrates expertise that could be leveraged in collaboration with Devabhaktuni, given his work on distributed policy gradient methods and potential applications in medical imaging.\n\nDevabhaktuni's recent publications, such as \"Artificial Intelligence in Healthcare: Applications, Benefits, Challenges, and Future Directions,\" indicate a broad interest in AI applications in healthcare, which encompasses the student's interests in brain-computer interfaces and neural signal processing. Although specific metrics like h-index and citation count are not available, the diversity and recency of Devabhaktuni's publications suggest an active and versatile researcher.\n\nThe lack of listed grants might indicate an opportunity for the student to contribute to grant writing and funding applications, potentially in areas like privacy-preserving machine learning, which is another of the student's interests. Collaborative opportunities could arise from exploring how Devabhaktuni's work on distributed policy gradient methods and the student's experience with federated learning could be applied to enhance privacy in medical image segmentation or other healthcare applications.\n\nBeing at Illinois State University provides a focused research environment that could foster close mentorship and collaboration. Overall, the alignment between Devabhaktuni's research areas and the student's interests, combined with the potential for collaborative projects and expertise sharing, makes for a promising match.",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.38108695652173913,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.08695652173913043,
+        "overlap_score": 0.08695652173913043,
+        "recent_activity": true,
+        "recency_score": 1.0,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 35,
+        "hindex_score": 0.7,
+        "total_score": 0.38108695652173913
+      },
+      "match_dimensions": {
+        "research_overlap": 0.08695652173913043,
+        "recent_activity": true,
+        "is_pi_verified": true,
+        "h_index": 35,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2026
+      }
+    },
+    {
+      "rank": 4,
+      "supervisor": {
+        "name": "Brent J Lance",
+        "institution": "DEVCOM Army Research Laboratory",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5042017468",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "neural network",
+        "brain"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "EEGNet: a compact convolutional neural network for EEG-based brain\u2013computer interfaces",
+          "venue": null,
+          "year": 2018,
+          "url": "https://openalex.org/W2559463885",
+          "doi": "https://doi.org/10.1088/1741-2552/aace8c"
+        },
+        {
+          "type": "paper",
+          "title": "Modeling and analysis of motion data from dynamic soldier state estimation to enable situational understanding",
+          "year": 2022,
+          "doi": "https://doi.org/10.1117/12.2618634"
+        },
+        {
+          "type": "paper",
+          "title": "Does Optimal Source Task Performance Imply Optimal Pre-training for a\\n Target Task?",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2106.11174"
+        },
+        {
+          "type": "paper",
+          "title": "Does Optimal Source Task Performance Imply Optimal Pre-training for a Target Task?",
+          "year": 2021,
+          "doi": "https://doi.org/10.48550/arxiv.2106.11174"
+        },
+        {
+          "type": "paper",
+          "title": "Alpha Correlates of Practice During Mental Preparation for Motor Imagery",
+          "year": 2020,
+          "doi": "https://doi.org/10.1109/tcds.2020.3026530"
+        }
+      ],
+      "why_match": "Brent J Lance's research in brain-computer interfaces, as evident in his paper \"EEGNet: a compact convolutional neural network for EEG-based brain\u2013computer interfaces,\" directly aligns with the student's interest in brain-computer interfaces and neural signal processing. This shared interest creates a solid foundation for a productive supervisor-student relationship. Furthermore, Lance's work on modeling and analysis of motion data, such as in \"Modeling and analysis of motion data from dynamic soldier state estimation to enable situational understanding,\" demonstrates his ability to handle complex data, which could be beneficial in exploring medical image segmentation, another area of interest for the student.\n\nThe student's publication, \"FedSeg: Federated Learning for Multi-Organ Segmentation in CT Scans,\" showcases their expertise in federated learning and medical image segmentation. While Lance's recent papers do not explicitly focus on these areas, his experience with neural networks and signal processing could provide valuable insights and guidance. The lack of available grants does not necessarily hinder the potential collaboration, as the student's research interests and Lance's expertise could attract future funding opportunities.\n\nThe DEVCOM Army Research Laboratory, where Lance is based, offers a unique research environment that could expose the student to interdisciplinary projects and collaborations. Although there is no direct overlap between Lance's recent papers and the student's research interests in privacy-preserving machine learning, the supervisor's background in neural networks and signal processing could still provide a useful perspective. Overall, the connection between Lance's work and the student's interests, particularly in brain-computer interfaces and neural signal processing, makes him a suitable supervisor, with opportunities for collaborative growth and knowledge sharing.",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.286,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.1,
+        "overlap_score": 0.1,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 23,
+        "hindex_score": 0.46,
+        "total_score": 0.286
+      },
+      "match_dimensions": {
+        "research_overlap": 0.1,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 23,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2022
+      }
+    },
+    {
+      "rank": 5,
+      "supervisor": {
+        "name": "P J Lachmann",
+        "institution": "University of Cambridge",
+        "department": null,
+        "country": "UK",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5109933867",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "The Academy of Medical Sciences",
+          "venue": null,
+          "year": 2018,
+          "url": "https://openalex.org/W2410463586",
+          "doi": "https://doi.org/10.1007/978-1-349-94186-5_9"
+        },
+        {
+          "type": "paper",
+          "title": "Primary pneumococcal peritonitis can be the first presentation of a familial complement factor I deficiency1",
+          "year": 2020,
+          "doi": "https://doi.org/10.1111/cei.13490"
+        },
+        {
+          "type": "paper",
+          "title": "Combined OSL-RL measurements for dosimetry in mixed LET proton fields",
+          "year": 2019,
+          "doi": "https://doi.org/10.1109/nss/mic42101.2019.9059926"
+        },
+        {
+          "type": "paper",
+          "title": "A teenager with primary pneumococcal peritonitis",
+          "year": 2017,
+          "doi": "https://doi.org/10.1016/j.molimm.2017.06.116"
+        },
+        {
+          "type": "paper",
+          "title": "2nd European Meeting on Complement in Human Disease",
+          "year": 2017,
+          "doi": "https://doi.org/10.1159/000463055"
+        }
+      ],
+      "why_match": "P J Lachmann's research experience in medical fields, as evident from papers like \"Primary pneumococcal peritonitis can be the first presentation of a familial complement factor I deficiency,\" demonstrates a strong foundation in medical research that can complement the student's interests in medical image segmentation. The student's work on FedSeg: Federated Learning for Multi-Organ Segmentation in CT Scans aligns with the potential for exploring medical imaging applications in Lachmann's research group. \n\nAlthough Lachmann's specific research areas are not detailed, the diversity in topics from pneumococcal peritonitis to complement in human disease suggests an openness to interdisciplinary approaches, which could encompass the student's broader interests in federated learning, brain-computer interfaces, and privacy-preserving machine learning. The University of Cambridge provides a rich research environment that can foster collaboration and innovation, potentially bridging the gap between Lachmann's medical research background and the student's technical interests.\n\nGiven the lack of detailed information on Lachmann's current research focus and grants, the match relies on the potential for alignment between medical research applications and the student's technical expertise. The student's educational background, including a thesis on deep learning for medical image segmentation from IIT Delhi and a publication in MICCAI 2024, indicates a strong foundation for contributing to and benefiting from a research environment like Cambridge's. \n\nCollaborative opportunities could arise from exploring how Lachmann's medical insights could inform and improve the student's projects, such as applying federated learning to medical image segmentation tasks relevant to Lachmann's research. Despite the indirect connection, the combination of the student's technical skills and Lachmann's medical research experience, set against the backdrop of Cambridge's academic excellence, presents a unique opportunity for interdisciplinary collaboration and knowledge exchange.",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.28375,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.0625,
+        "overlap_score": 0.0625,
+        "recent_activity": false,
+        "recency_score": 0.2,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 57,
+        "hindex_score": 1.0,
+        "total_score": 0.28375
+      },
+      "match_dimensions": {
+        "research_overlap": 0.0625,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 57,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2020
+      }
+    },
+    {
+      "rank": 6,
+      "supervisor": {
+        "name": "J.J. Vidal",
+        "institution": "University of California, Los Angeles",
+        "department": null,
+        "country": "USA",
+        "profile_url": null,
+        "email": null,
+        "semantic_scholar_id": null,
+        "openalex_id": "https://openalex.org/A5108113353",
+        "google_scholar_id": null,
+        "orcid": null
+      },
+      "research_focus": [
+        "brain"
+      ],
+      "evidence": [
+        {
+          "type": "paper",
+          "title": "Toward Direct Brain-Computer Communication",
+          "venue": null,
+          "year": 1973,
+          "url": "https://openalex.org/W2164497299",
+          "doi": "https://doi.org/10.1146/annurev.bb.02.060173.001105"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Data Release 2. Observations of solar system objects",
+          "year": 2021,
+          "doi": "https://doi.org/10.48350/158410"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Data Release 2. Observational Hertzsprung-Russell diagrams",
+          "year": 2021,
+          "doi": "https://doi.org/10.48350/158408"
+        },
+        {
+          "type": "paper",
+          "title": "<i>Gaia</i> Early Data Release 3",
+          "year": 2021,
+          "doi": "https://doi.org/10.1051/0004-6361/202140735"
+        },
+        {
+          "type": "paper",
+          "title": "Gaia Photometric Science Alerts",
+          "year": 2021,
+          "doi": "https://doi.org/10.26093/cds/vizier.36520076"
+        }
+      ],
+      "why_match": "J.J. Vidal's research in brain-computer interfaces, as evident from the 1973 paper \"Toward Direct Brain-Computer Communication,\" aligns with the student's interest in brain-computer interfaces and neural signal processing. Although the supervisor's recent publications focus on Gaia data releases, the earlier work demonstrates a foundation in neural interfaces that could be leveraged to explore contemporary applications in medical image segmentation and privacy-preserving machine learning, also of interest to the student.\n\nThe student's experience in federated learning, particularly through the project \"FedSeg: Federated Learning for Multi-Organ Segmentation in CT Scans,\" could complement Vidal's work in brain-computer communication, potentially leading to innovative approaches in neural signal processing and privacy-preserving aspects of medical imaging. Vidal's involvement in large-scale projects like Gaia suggests an ability to manage complex data sets, which could be beneficial in guiding the student's research in medical image segmentation.\n\nThe University of California, Los Angeles, provides a vibrant research environment that could foster collaboration between Vidal and the student, with access to state-of-the-art facilities and interdisciplinary expertise. While there is a noticeable gap in Vidal's recent research focus and the student's interests, the supervisor's historical contribution to brain-computer interfaces and the potential for collaborative exploration of contemporary applications in medical imaging and federated learning present a compelling basis for a productive supervisory relationship.",
+      "tier": "review_needed",
+      "open_positions": [],
+      "eligibility_flags": [],
+      "contamination_risk": [
+        "low_confidence",
+        "evidence_domain_mismatch"
+      ],
+      "confidence_score": 0.27599999999999997,
+      "confidence_breakdown": {
+        "orcid_verified": false,
+        "orcid_score": 0.0,
+        "faculty_page_confirmed": null,
+        "faculty_score": 0.5,
+        "paper_topic_overlap": 0.06666666666666667,
+        "overlap_score": 0.06666666666666667,
+        "recent_activity": true,
+        "recency_score": 0.5,
+        "eligibility_clear": true,
+        "eligibility_score": 0.6,
+        "h_index": 23,
+        "hindex_score": 0.46,
+        "total_score": 0.27599999999999997
+      },
+      "match_dimensions": {
+        "research_overlap": 0.06666666666666667,
+        "recent_activity": false,
+        "is_pi_verified": true,
+        "h_index": 23,
+        "country_match": true,
+        "domain_confidence": 0.7,
+        "last_paper_year": 2021
+      }
+    }
+  ],
+  "metadata": {
+    "total_candidates_considered": 423,
+    "data_sources": [
+      "openalex",
+      "nih_reporter"
+    ],
+    "llm_provider_used": "",
+    "langgraph_run_id": "5dfaeab0",
+    "run_duration_seconds": 1493.3,
+    "audit_summary": {
+      "top_n": 6,
+      "flagged_count": 6,
+      "flagged": [
+        {
+          "id": "https://openalex.org/W3091454361",
+          "reasons": [
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2954996726",
+          "reasons": [
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W3096947210",
+          "reasons": [
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2559463885",
+          "reasons": [
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2410463586",
+          "reasons": [
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2164497299",
+          "reasons": [
+            "low_confidence",
+            "evidence_domain_mismatch"
+          ]
+        }
+      ]
+    }
+  }
+}

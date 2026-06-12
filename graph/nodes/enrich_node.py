@@ -142,8 +142,18 @@ async def enrich_node(state: ShortlistState) -> dict:
                 or why_map.get(c.get("url"))
                 or ""
             )
-            # NEVER leave why_match blank — use meaningful fallback if LLM returned nothing
-            if not why or not why.strip():
+            # NEVER leave why_match blank or as a stub.
+            # The LLM chain falls back to "X has expertise in , which aligns..." when
+            # research_areas is empty — detect this and replace with our proper fallback.
+            _is_stub = (
+                not why
+                or not why.strip()
+                or len(why.strip()) < 80
+                or "has expertise in ," in why  # chain stub with empty areas
+                or why.strip().endswith("which aligns with your research interests.")
+                and "has expertise in" in why
+            )
+            if _is_stub:
                 why = _build_fallback_why_match(c, student_profile)
 
             c2["why_match"] = why

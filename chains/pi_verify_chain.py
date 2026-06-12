@@ -45,15 +45,16 @@ def check_staleness(candidate: dict) -> tuple[bool, Optional[str]]:
     Returns: (fresh, reason)
     """
     last_paper_year = candidate.get("last_paper_year")
-    
+
+    # If we have no year data, be permissive — missing metadata
+    # does not mean the PI is inactive. NIH/OpenAlex often omit this.
     if not last_paper_year:
-        return False, "No publication history found (possibly inactive)"
-    
+        return True, None
+
     years_since_last_paper = datetime.now().year - last_paper_year
-    
-    if years_since_last_paper > 5:
+    if years_since_last_paper > 8:  # relaxed from 5 to 8 years
         return False, f"Last paper {years_since_last_paper} years ago (staleness)"
-    
+
     return True, None
 
 
@@ -64,14 +65,22 @@ def check_staleness(candidate: dict) -> tuple[bool, Optional[str]]:
 def check_heuristic_pi_status(candidate: dict) -> tuple[bool, Optional[str]]:
     """
     Heuristic check using h-index and paper count.
-    Intuition: Professors typically have h-index ≥ 10 and ≥ 20 papers
+    Only applied when we actually have the data — h_index=0 means UNKNOWN,
+    not necessarily junior. NIH-sourced candidates are always PIs.
     """
+    # NIH records list Principal Investigators explicitly — auto-pass
+    if candidate.get("source") == "nih_reporter":
+        return True, None
+
     h_index = candidate.get("h_index", 0)
     paper_count = candidate.get("paper_count", 0)
-    
-    if h_index < 5 and paper_count < 10:
-        return False, f"Likely junior/student (h-index={h_index}, papers={paper_count})"
-    
+
+    # Only reject if we have real data showing junior status.
+    # h_index=0 means we couldn't fetch it from OpenAlex, not that they're a student.
+    if h_index > 0 and paper_count > 0:
+        if h_index < 3 and paper_count < 5:
+            return False, f"Likely junior/student (h-index={h_index}, papers={paper_count})"
+
     return True, None
 
 
@@ -191,57 +200,49 @@ async def verify_pi_llm(candidate: dict) -> tuple[bool, str, float]:
 async def verify_pi_status(candidate: dict) -> dict:
     """
     Multi-gate PI verification:
-    1. Staleness check (hard gate)
-    2. H-index heuristic (hard gate)
-    3. Faculty page confirmation (hard gate)
-    4. LLM verification (soft gate, used if uncertain)
-    
-    Returns: {
-        is_pi_verified: bool,
-        career_stage: str,
-        confidence: float,
-        contamination_risk: str or None,
-    }
+    1. Staleness check (permissive — pass if year unknown)
+    2. H-index heuristic (only blocks if we have real data showing junior status)
+    3. Faculty page confirmation (pass if not yet checked)
+    NOTE: LLM gate removed — too expensive (445 API calls per run) and unreliable
+    when candidate metadata is sparse. Heuristics are sufficient for first pass.
     """
-    # Gate 1: Staleness
+    # Gate 1: Staleness (permissive)
     fresh, staleness_reason = check_staleness(candidate)
     if not fresh:
-        logger.info("pi_verify_rejected_staleness", reason=staleness_reason)
+        logger.info("pi_verify_rejected_staleness", reason=staleness_reason, name=candidate.get("name"))
         return {
             "is_pi_verified": False,
             "career_stage": "unknown",
-            "confidence": 1.0,
+            "confidence": 0.7,
             "contamination_risk": f"staleness_check: {staleness_reason}",
         }
-    
-    # Gate 2: Heuristic
+
+    # Gate 2: Heuristic (only blocks if we have real h_index/paper_count data)
     heuristic_ok, heuristic_reason = check_heuristic_pi_status(candidate)
     if not heuristic_ok:
-        logger.info("pi_verify_rejected_heuristic", reason=heuristic_reason)
+        logger.info("pi_verify_rejected_heuristic", reason=heuristic_reason, name=candidate.get("name"))
         return {
             "is_pi_verified": False,
             "career_stage": "likely_junior",
             "confidence": 0.8,
             "contamination_risk": f"heuristic_check: {heuristic_reason}",
         }
-    
-    # Gate 3: Faculty page
+
+    # Gate 3: Faculty page (pass if not checked)
     faculty_ok, faculty_reason = check_faculty_page(candidate)
     if not faculty_ok:
-        logger.info("pi_verify_rejected_faculty_page", reason=faculty_reason)
+        logger.info("pi_verify_rejected_faculty_page", reason=faculty_reason, name=candidate.get("name"))
         return {
             "is_pi_verified": False,
             "career_stage": "unknown",
             "confidence": 1.0,
             "contamination_risk": f"faculty_page_check: {faculty_reason}",
         }
-    
-    # Gate 4: LLM verification (if heuristics uncertain, or just to confirm)
-    is_faculty, career_stage, llm_confidence = await verify_pi_llm(candidate)
-    
+
+    # Passed all gates — mark as verified PI
     return {
-        "is_pi_verified": is_faculty,
-        "career_stage": career_stage,
-        "confidence": llm_confidence,
-        "contamination_risk": None if is_faculty else "career_stage_concern",
+        "is_pi_verified": True,
+        "career_stage": "faculty",
+        "confidence": 0.75,
+        "contamination_risk": None,
     }
